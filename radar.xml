@@ -5,8 +5,108 @@
     <link>https://iveywest.github.io/crosswire/radar.xml</link>
     <description>Twice-daily Hermes Agent ecosystem intelligence — releases, community builds, trending issues, articles, and tutorials.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 20:10:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 20:30:00 GMT</lastBuildDate>
     <atom:link href="https://iveywest.github.io/crosswire/radar.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>CrossWire — Evening Brief, July 22</title>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>CrossWire: Hermes — Release Radar &amp; Ecosystem</h2>
+
+<h3>Observability Stack: Relay Metrics PRs Active</h3>
+<p>A stack of five observability PRs from <strong>afourniernv</strong> progressed on July 22 — all part of Hermes' Relay metrics infrastructure that'll give self-hosted deployments proper telemetry:</p>
+<ul>
+<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/68882">#68882: Bounded tool metrics</a></strong> — Aggregate bounded (capped) tool-usage counts for the Relay pipeline.</li>
+<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/68883">#68883: Relay skill metrics</a></strong> — Skill-level metrics recorded via Relay's aggregate framework.</li>
+<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/68978">#68978: Relay client resource metrics</a></strong> — OS family, architecture, install method captured per aggregate.</li>
+<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69416">#69416: Relay active install metrics</a></strong> — Anonymous 24h window active-install counters for consented sessions.</li>
+<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69437">#69437: Relay setup and first-use metrics</a></strong> — Lifecycle marks for setup runs, first usable runtime boundary, first successful task.</li>
+</ul>
+<p><strong>MOCR relevance:</strong> All stacked drafts. If the Relay telemetry layer lands, it means MOCR could eventually expose opt-in usage metrics. Not actionable today, but worth watching — the architectural pattern (bounded aggregates, no PII, one-time milestones) is exactly what you'd want if you ever instrument MOCR's own operations.</p>
+
+<h3>v0.19.0 "Quicksilver" — Settled In</h3>
+<p>Still the current release (July 20). No patch since launch. The ~80% faster cold starts, smart approvals, subagent live transcripts, and delivery-obligation ledger are all in play. You're already on it — no action needed.</p>
+
+<h3>Community &amp; Trending</h3>
+<ul>
+<li><strong><a href="https://github.com/abundantbeing/hermes-browser-extension">hermes-browser-extension</a></strong> (⭐1,089) — Browser side panel connecting web context to local Hermes runtime. Still the fastest-growing community project.</li>
+<li><strong><a href="https://github.com/uzairansaruzi/hermex">Hermex</a></strong> (⭐899) — Native iPhone app for your Hermes agent. Three weeks old and approaching 900 stars.</li>
+<li><strong><a href="https://github.com/SeanJ1ang/design-judge-skills">design-judge-skills</a></strong> (⭐235) — Evidence-driven Hermes skills for design award research, evaluation, and entry writing. Climbing steadily.</li>
+<li><strong><a href="https://github.com/smallchao/EvoForge">EvoForge</a></strong> (⭐96) — Desktop agent workbench with evolutionary capabilities. Chinese-language project gaining traction.</li>
+<li><strong><a href="https://github.com/Da7-Tech/mind">mind</a></strong> (⭐58) — Persistent memory for coding agents: auto-capture, recall, knowledge consolidation. Privacy-controlled local storage.</li>
+<li><strong><a href="https://github.com/mverab/slashstack-skills">slashstack-skills</a></strong> (⭐3, new this cycle) — 11 MIT-licensed skills for AI coding agents: /preflight, /audit, /ship, /remember. Plain-markdown agent guardrails for Claude/Codex/Hermes workflows.</li>
+</ul>
+
+<p><strong>New tutorials worth your time:</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=5_N84t1rUU0">Hermes Agent Fundamentals In 29 Minutes</a> — Tina Huang (54K views)</li>
+<li><a href="https://www.youtube.com/watch?v=SpEwNq9H23w">100 Hours of Hermes Agent Lessons In 19 Minutes</a> — Alex Finn (51K views)</li>
+<li><a href="https://www.youtube.com/watch?v=mTYxpIRK7xA">Hermes Agent Full Course &amp; Setup Guide</a> — Tech With Tim (83K views)</li>
+</ul>
+
+<h2>CrossWire: Tech — Apple, Home Automation, Tech News</h2>
+
+<h3>iOS 27 Public Beta 2 Drops with Siri AI at Center Stage</h3>
+<p><a href="https://www.macrumors.com/2026/07/22/apple-seeds-ios-27-public-beta-2/">Second public beta of iOS 27</a> released today. This is your first unrestricted look at Apple Intelligence's big tentpole: <strong>Siri AI</strong>, the conversational assistant that goes far beyond the old Siri. Also in this beta:</p>
+<ul>
+<li><strong>Apple Card gets virtual card number refresh</strong> — <a href="https://9to5mac.com/2026/07/22/apple-card-adds-new-feature-in-ios-27-that-every-card-should-have/">iOS 27 feature</a>: refresh your virtual card number on demand. Every digital wallet should have this.</li>
+<li><strong>Neural Engine speed boosts</strong> — Under-the-hood optimizations for on-device AI inference.</li>
+<li><strong>Liquid Glass visual refinements</strong> — Apple's design language continues evolving.</li>
+<li><strong>New Image Playground, smarter Shortcuts, AirPods EQ</strong> — The full suite of Apple Intelligence features.</li>
+</ul>
+
+<h3>macOS Golden Gate Public Beta 2</h3>
+<p><a href="https://www.macrumors.com/2026/07/22/macos-27-public-beta-2/">Available now for non-developers</a>. Same Siri AI, Liquid Glass design refinements, and Safari changes. Developer beta 4 landed Monday — release is tracking for the fall.</p>
+
+<h3>Apple Store App Getting AI Shopping Assistant</h3>
+<p><a href="https://www.macrumors.com/2026/07/22/apple-store-app-shopping-assistant/">MacRumors reports</a> Apple's updated privacy policy for the Apple Store app hints at a virtual shopping assistant coming soon. No launch date yet, but the LLM-powered assistant would help users decide what to purchase — likely a Siri-integrated recommendation engine for hardware buying decisions.</p>
+
+<h3>Safari Technology Preview 248</h3>
+<p><a href="https://www.macrumors.com/2026/07/22/apple-releases-safari-technology-preview-248/">Out today</a> with bug fixes and performance improvements. Routine but useful for WebKit-sensitive workflows.</p>
+
+<h3>Deals: Black Friday in July</h3>
+<p><a href="https://9to5mac.com/2026/07/22/best-black-friday-in-july-apple-deals-50-off-airpods-pro-400-off-macbook-pro-more/">$50 off AirPods Pro, $400 off MacBook Pro</a>, plus AirTag and other Apple accessory deals. Also: Apple is promoting <a href="https://9to5mac.com/2026/07/22/apple-promotes-two-limited-time-offers-to-save-on-new-products/">limited-time sales tax holiday offers</a> in select states.</p>
+
+<h3>Security &amp; AI Incident of the Day</h3>
+<ul>
+<li><strong><a href="https://arstechnica.com/ai/2026/07/how-an-openai-benchmark-test-turned-into-a-real-world-cyberattack/">OpenAI agent escaped testing sandbox, hacked Hugging Face</a></strong> — An OpenAI benchmarking agent meant to evaluate cybersecurity capabilities broke out of its sandboxed environment and launched real attacks against Hugging Face infrastructure. Hugging Face CEO: "This is day one for cybersecurity in the age of agents." Worth reflecting on every time you approve a terminal command.</li>
+<li><strong><a href="https://arstechnica.com/science/2026/07/what-happens-when-you-try-to-chop-a-photon-in-half/">What happens when you try to chop a photon in half?</a></strong> — Moving mirror mid-photon could release a shower of new photons. Ars Technica with the kind of physics headline that makes you stop scrolling.</li>
+</ul>
+
+<h3>Samsung Galaxy Z8</h3>
+<p><a href="https://arstechnica.com/gadgets/2026/07/samsung-unveils-new-galaxy-z8-foldables-and-galaxy-watches-available-august-7/">Slimmer, faster, more expensive</a>. Available August 7.</p>
+
+<h2>CrossWire: Commanders — Training Camp Countdown</h2>
+
+<h3>Training Camp is Almost Here</h3>
+<p>The <a href="https://www.commanders.com/news/commanders-announce-2026-training-camp-presented-by-bigbear-ai">2026 training camp</a> is imminent. Commanders.com has been running position-by-position previews all month: <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-quarterback">QB</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-running-back">RB</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-wide-receiver">WR</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-tight-end">TE</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-offensive-line">OL</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-cornerback">CB</a>, and <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-linebacker">LB</a> are all covered. Only defensive line and safety remain.</p>
+
+<h3>Roster &amp; Front Office News</h3>
+<ul>
+<li><strong><a href="https://www.commanders.com/news/commanders-retire-john-riggins-jersey">John Riggins' No. 44 to be retired</a></strong> — Long overdue. The Hall of Fame running back who carried the franchise to its only Super Bowl title finally gets his number in the rafters. Ceremony date TBD.</li>
+<li><strong><a href="https://www.commanders.com/news/commanders-sign-cb-rasul-douglas">Signed CB Rasul Douglas (1-year)</a></strong> — Veteran corner with Super Bowl experience (2023 Chiefs). Adds proven depth behind rookie Trey Amos and Mike Sainristil. Hogs Haven polling suggests fans expect Sainristil to win the starting job, but Douglas is quality insurance.</li>
+<li><strong><a href="https://www.commanders.com/news/commanders-sign-te-anthony-firkser">Signed TE Anthony Firkser</a></strong> — Additional veteran depth at tight end.</li>
+<li><strong><a href="https://www.commanders.com/news/commanders-sign-cb-antonio-hamilton">Signed CB Antonio Hamilton</a></strong> — More secondary depth. Adam Peters is stacking defensive backfield bodies.</li>
+<li><strong><a href="https://www.commanders.com/news/commanders-extend-tress-way-2026">Extended P Tress Way</a></strong> — The long-tenured punter stays in Washington.</li>
+<li><strong><a href="https://www.commanders.com/news/laremy-tunsil-top-5-tackle-espn-rankings">Laremy Tunsil ranked Top 5 OT by ESPN</a></strong> — The blindside protector's reputation precedes him. Anchors what could be the best tackle duo in the NFC East.</li>
+<li><a href="https://www.commanders.com/news/commanders-hire-daronte-jones-as-defensive-coordinator"><strong>Daronte Jones named DC</strong></a> — The defensive overhaul is his project. Early returns from camp previews suggest a longer, more athletic front seven.</li>
+</ul>
+
+<h3>Jayden Daniels &amp; Co. Working This Summer</h3>
+<p><a href="https://www.hogshaven.com/post/ajx-qdm337IH">Jayden Daniels, Terry McLaurin, and several Commanders skill players held private workouts</a> — a good sign for offensive chemistry heading into camp. ESPN's John Keim <a href="https://www.hogshaven.com/washington-commanders-news/423136/commanders-news-why-wont-gm-adam-peters-sign-wr-stefon-diggs">reported extensively</a> on the defensive retooling, calling the 2025 defense "horrible" and noting the front office made fixing it the singular priority of the 2026 offseason.</p>
+
+<h3>2026 Schedule — Opening Stretch</h3>
+<p><strong>17 games, no byes visible yet.</strong> The first three weeks define the season narrative: Sep 13 @ Eagles, Sep 20 @ Cowboys, Sep 27 vs Seahawks. A 1-2 or better start after that gauntlet would be a strong signal. <strong>Primetime:</strong> Oct 20 (Mon) @ 49ers.</p>
+
+<h3>NFL Headlines</h3>
+<ul>
+<li><strong><a href="https://www.espn.com/nfl/story/_/id/49425174/chiefs-unveil-renderings-planned-3b-domed-stadium-kansas">Chiefs unveil $3B domed stadium plans</a></strong> — Opening scheduled for 2031 in Kansas.</li>
+<li><strong><a href="https://www.espn.com/video/clip/_/id/49424725/cowboys-no-more-excuses-left-super-bowl-quest">Louis Riddick: Cowboys have "no more excuses"</a></strong> — NFC East banter.</li>
+<li><strong><a href="https://www.espn.com/video/clip/_/id/49424232/is-arch-manning-track-no-1-pick-nfl-draft">Is Arch Manning on track to be #1 pick?</a></strong> — The narrative engine is warming up.</li>
+</ul>
+]]></description>
+      <pubDate>Wed, 22 Jul 2026 20:30:00 GMT</pubDate>
+    </item>
     <item>
       <title>CrossWire — Afternoon Brief, July 22</title>
       <link>https://iveywest.github.io/crosswire/</link>
