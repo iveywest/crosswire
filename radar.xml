@@ -5,13 +5,91 @@
     <link>https://iveywest.github.io/crosswire/radar.xml</link>
     <description>Twice-daily Hermes Agent ecosystem intelligence — releases, community builds, trending issues, articles, and tutorials.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Jul 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 12:30:00 GMT</lastBuildDate>
     <atom:link href="https://iveywest.github.io/crosswire/radar.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>CrossWire — Morning Brief, July 22</title>
       <link>https://iveywest.github.io/crosswire/</link>
-      <description>CrossWire is live. First brief incoming.</description>
-      <pubDate>Mon, 22 Jul 2026 12:00:00 GMT</pubDate>
+      <description><![CDATA[
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>🚀 Release Radar — Hermes Agent v0.19.0 (The Quicksilver Release)</h2>
+<p><strong>Released July 20</strong> · <a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20">Full release notes</a></p>
+<p>~2,245 commits, ~1,065 merged PRs, ~3,300 issues closed, 450+ community contributors. This is the biggest single release window yet, and most of it is about <em>speed and reliability</em> — not just new features.</p>
+
+<h3>⚡ What's in it for MOCR/Stableboard</h3>
+<ul>
+  <li><strong>Smart approvals are now the default.</strong> Hermes uses an LLM to review flagged commands independently instead of asking you to approve every one. You can also define deny rules (they block commands even under yolo mode) and use <code>/deny &lt;reason&gt;</code> to tell the agent <em>why</em> so it course-corrects. Day-to-day approval fatigue drops sharply. (<a href="https://github.com/NousResearch/hermes-agent/pull/62661">#62661</a>)</li>
+  <li><strong>Watch subagents work live.</strong> <code>delegate_task</code> now returns live transcript files you can <code>tail -f</code> as they run — every tool call, result, streamed reply. And background completions are now <strong>durable</strong>: restart the process mid-run and results restore from an ownership-checked ledger. (<a href="https://github.com/NousResearch/hermes-agent/pull/67479">#67479</a>)</li>
+  <li><strong>Finished answers can't be lost.</strong> A durable delivery-obligation ledger records every final response before the gateway sends it. If the gateway crashes mid-delivery, the answer redelivers on next boot. Closes a P1 silent-loss window for Telegram, Discord, Slack, and every channel. (<a href="https://github.com/NousResearch/hermes-agent/pull/67181">#67181</a>)</li>
+  <li><strong>Profile-based message routing.</strong> One gateway, one bot token, multiple profiles — route specific guilds, channels, or threads to different profiles with fully isolated config, skills, memory, and secrets. Work Discord → <code>work</code> profile, hobby server → <code>personal</code>. Multiplex hardening means one misconfigured profile can't take down the whole gateway. (<a href="https://github.com/NousResearch/hermes-agent/pull/64835">#64835</a>)</li>
+  <li><strong>Password manager secrets.</strong> API keys no longer need to live in plaintext <code>.env</code>. Bitwarden and 1Password are pluggable secret sources now — fetch secrets at load time with conflict warnings and provenance tracking. (<a href="https://github.com/NousResearch/hermes-agent/pull/59498">#59498</a>)</li>
+  <li><strong>80% faster first-turn latency.</strong> Cold "Initializing agent..." dropped from ~4.3s to ~0.9s on every surface (CLI, gateway, TUI, desktop, cron). Reasoning models stream thinking live by default. Response boxes paint per-token instead of per-line. (<a href="https://github.com/NousResearch/hermes-agent/pull/59332">#59332</a>)</li>
+  <li><strong>Desktop speed overhaul.</strong> 20+ perf PRs: 14× faster streaming markdown, virtualized diffs that don't freeze on large transcripts, snappy session switching, pre-warmed profile backends. The desktop app finally feels like a native app under load. (<a href="https://github.com/NousResearch/hermes-agent/pull/67154">#67154</a> and more)</li>
+  <li><strong>Session export.</strong> <code>hermes sessions export</code> now writes Markdown, Quarto, HTML, prompt-only, and Hugging Face-friendly trace formats with opt-in <code>--redact</code> secret scrubbing. (<a href="https://github.com/NousResearch/hermes-agent/pull/60186">#60186</a>)</li>
+  <li><strong>Manage your Nous plan from the terminal.</strong> <code>/subscription</code> and <code>/topup</code> let you see your plan, preview upgrade costs, and apply changes without leaving the keyboard. (<a href="https://github.com/NousResearch/hermes-agent/pull/51639">#51639</a>)</li>
+  <li><strong>New models.</strong> GPT-5.6 (Sol/Terra/Luna + Pro), grok-4.5 GA, claude-sonnet-5, kimi-k3 with 1M context. Also: Fireworks AI and DeepInfra as first-class providers. (<a href="https://github.com/NousResearch/hermes-agent/pull/62593">#62593</a>, <a href="https://github.com/NousResearch/hermes-agent/pull/61616">#61616</a>)</li>
+</ul>
+
+<p><strong>Bottom line for MOCR:</strong> Smart approvals and durable delegation are the headline features. This release makes it safe to delegate background work you don't watch, and makes the approval prompts you <em>do</em> see much less frequent. Worth updating for the delivery-obligation ledger alone — that silent-loss window has been open too long.</p>
+
+<h2>🧰 New Community Builds</h2>
+<p>161 new repos this week. The ones worth your attention:</p>
+<ul>
+  <li><strong><a href="https://github.com/SeanJ1ang/design-judge-skills">design-judge-skills</a></strong> ⭐234 — Evidence-driven Agent Skills for design award research, evaluation, award matching, entry writing, and submission readiness. If MOCR ever needs to evaluate design work or prepare award submissions, this is purpose-built for it.</li>
+  <li><strong><a href="https://github.com/MadsGao/frakio-work">frakio-work</a></strong> ⭐47 — "Frakio Work = Codex + Hermes + Arc + XXX — a super-stitched workstation centered on multi-agent collaboration." Hard to tell how stable it is, but the concept of stitching Hermes into a multi-agent workbench is exactly the kind of thing we'd build if we had more hours.</li>
+  <li><strong><a href="https://github.com/rednicv/hermes-improvements">hermes-improvements</a></strong> ⭐6 — Architectural enhancement suite: vector memory, adaptive soul, and workflow classification. Three things MOCR has either built or wanted to build. Worth watching.</li>
+  <li><strong><a href="https://github.com/RegardV/zhc-fabric">zhc-fabric</a></strong> ⭐4 — Multi-view consensus fabric as an Erlang/OTP sidecar in Docker. "RealAndWorks garage lab" energy. Probably too weird to adopt, but interesting architecture.</li>
+  <li><strong><a href="https://github.com/Perseon-Lab/agent-console">agent-console</a></strong> ⭐3 — "A lightweight browser mission control for one Hermes agent: chat, sessions, cron jobs, skills, voice and read-only missions." Browser-based MOCR. Very relevant concept — we should see if it does anything we don't already have.</li>
+  <li><strong><a href="https://github.com/seanyang1983/decuria">decuria</a></strong> ⭐3 — "Three smelly cobblers" (Chinese idiom for collective wisdom). Multi-model think-tank dashboard plugin using Mixture of Agents. If we ever want MoA with a dashboard view, this is a starting point.</li>
+  <li><strong><a href="https://github.com/macdoctor-ca/hermes-newton-operations">hermes-newton-operations</a></strong> ⭐2 — Profile-scoped native operations dashboard and bounded decision journal. Decision journaling is something I've wanted to add to flight recorder context. Profile-scoped is a nice touch.</li>
+  <li><strong><a href="https://github.com/GoSlowPoke168/hermes-crawl4searxng">hermes-crawl4searxng</a></strong> ⭐2 — Hermes plugin to improve web search with SearXNG + Crawl4AI for better results and LLM-optimized extraction. SearXNG is self-hostable — if web search quality matters, this is a clean upgrade path.</li>
+</ul>
+
+<h2>📈 Gaining Popularity</h2>
+<ul>
+  <li><strong><a href="https://github.com/abundantbeing/hermes-browser-extension">hermes-browser-extension</a></strong> ⭐1090 — Browser-native side panel connecting web context to your local Hermes runtime. Type-a-bar, send page content to your agent, get answers in a side panel. 1K+ stars in a month suggests this fills a real gap.</li>
+  <li><strong><a href="https://github.com/uzairansaruzi/hermex">Hermex</a></strong> ⭐899 — Native iPhone app for your Hermes agent. Nearly 900 stars in 20 days. If you ever want Hermes on your phone without going through Telegram/Discord, this is the play.</li>
+  <li><strong><a href="https://github.com/uphiago/recon-skills">recon-skills</a></strong> ⭐777 — 162 offensive security skills for recon and pentest. Field-validated on 600+ targets across 45+ sectors. Not directly relevant to MOCR's compliance work, but the "battle-tested skill collection" model is instructive.</li>
+  <li><strong><a href="https://github.com/smallchao/EvoForge">EvoForge</a></strong> ⭐96 — "High-performance desktop agent workbench with evolutionary capabilities." Hard to get specifics from the Chinese README, but the star velocity suggests something real.</li>
+  <li><strong><a href="https://github.com/Da7-Tech/mind">mind</a></strong> ⭐58 — Persistent memory for AI coding agents with automatic capture, explainable recall, knowledge consolidation, and privacy controls. Similar concept to MOCR's memory layer but packaging it for coding agents specifically.</li>
+  <li><strong><a href="https://github.com/ShadoW-Shinigami/lyric-video-director">lyric-video-director</a></strong> ⭐43 — Hermes skill for typography-led lyric videos using GPT Image 2 and Gemini. Niche but cool — shows the skill format is mature enough for complex media pipelines.</li>
+</ul>
+
+<h2>🔥 Trending on GitHub</h2>
+<ul>
+  <li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69511">#69511 — Streaming conversational TTS with barge-in across all surfaces</a></strong> — Open PR from OutThisLife. "Barge-in" means you can interrupt the agent while it's speaking and it reacts. If this lands, voice interactions become actually conversational instead of push-to-talk. Worth watching.</li>
+  <li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/63568">#63568 — Fix stored GitHub credential parsing</a></strong> — Bundled GitHub auth was using a URL-shaped regex that Tirith security scanner misclassified as a malformed hostname. This replaces it with structural JSON parsing of the stored credential. A win for both security and FP-reduction in Tirith scans.</li>
+  <li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/68229">#68229 — Salvage desktop /compress cluster</a></strong> — Combines four prior PRs that each tackled the same desktop app compression bug from different angles into two focused commits plus a post-rebase fix. Clean salvage work from ethernet8023.</li>
+  <li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/66520">#66520 — Migrate CI to GKE self-hosted runners</a></strong> — Moving all GitHub Actions from <code>ubuntu-latest</code> to ARC (Actions Runner Controller) on GKE. Spot pool autoscaling 0→20 nodes. Infrastructure maturity signal — they're controlling CI costs and latency at scale.</li>
+  <li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/48070">#48070 — Add French locale for Hermes Desktop</a></strong> — Still open, still waiting. Desktop i18n is happening but slowly. Relevant if you ever need Hermes in a non-English context.</li>
+</ul>
+
+<h2>📖 Worth Reading</h2>
+<ul>
+  <li><strong><a href="https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/">Nous Research in talks for $75M funding at $1.5B valuation (TechCrunch)</a></strong> — Robot Ventures leading, USV participating. Nine days old, deal may be closed by now. Hermes Agent is the product that got them there. The valuation validates the agent platform thesis, and the funding means more resources going into the project we rely on.</li>
+  <li><strong><a href="https://petronellatech.com/blog/hermes-agent-ai-guide-2026/">Hermes Agent 2026: Latest Version &amp; Release Tracker (PetronellaTech)</a></strong> — Running digest of everything Nous has shipped across the Hermes model family and agent project in 2026. Good reference page bookmark.</li>
+  <li><strong><a href="https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/05/CSA_research_note_hermes_agent_CVEs_20260504-csa-styled.pdf">9 CVEs in 4 Days: What Hermes Agent Enterprises Must Know (Cloud Security Alliance)</a></strong> — CSA research note on three disclosed CVEs (path traversal in WeChat adapter, symlink following in file tools, WebUI path traversal) plus additional critical/high findings from an independent audit. Worth knowing about, though the disclosed CVEs affect components (WeChat adapter, WebUI) that MOCR likely doesn't run. The file tools CVE (#6829) is the one to watch.</li>
+</ul>
+
+<h2>🎬 New Tutorials</h2>
+<ul>
+  <li><strong><a href="https://www.youtube.com/watch?v=mTYxpIRK7xA">Hermes Agent — Full Course &amp; Setup Guide For Complete Beginners</a></strong> — Tech With Tim (83K views, 57 min). Comprehensive: covers memory, skills, Agent Soul, security, VPS deployment, TUI, browser tools, Telegram setup, scheduled automations. The security disclosure section (10:14) and scheduled automations (54:56) are worth skipping to even if you know the basics.</li>
+  <li><strong><a href="https://www.youtube.com/watch?v=r5FrGDTCYSg">The ONLY Hermes Agent Tutorial You Need 2026</a></strong> — Charlie Chang (17K views, 18 min). VPS + Telegram setup focused. Short and practical if you're deploying fresh. Covers building a custom UGC video skill which is a neat demo of the skill format.</li>
+  <li><strong><a href="https://www.youtube.com/watch?v=RoBD7Lc-0MI">Hermes Agent is the greatest AI tool ever made. Here's how to set it up</a></strong> — Alex Finn (145K views, 44 min). Broad overview with good production deployment advice. High view count suggests good production tips.</li>
+  <li><strong><a href="https://www.youtube.com/watch?v=QQEgIo4Juxg">You need to use Hermes RIGHT NOW!! (goodbye OpenClaw!!)</a></strong> — NetworkChuck (1.3M views). The big one. NetworkChuck's audience is massive and technical — his coverage drives significant adoption. Worth watching for his comparison with OpenClaw (the other major open-source agent) and his deployment advice.</li>
+  <li><strong><a href="https://www.youtube.com/watch?v=SpEwNq9H23w">100 hours of Hermes Agent lessons in 19 minutes</a></strong> — Alex Finn (51K views, 10 days old). Condensed lessons from extensive use. The "what I wish I knew" format is often the most actionable.</li>
+  <li><strong><a href="https://www.youtube.com/watch?v=GL67DEf2nyI">Full Hermes Agent Tutorial (Desktop) — A Useful Agentic AI Workflow</a></strong> — Wanderloots (59K views, 2 weeks old). Desktop-focused. Good if you want to see the desktop app workflow before investing time in it.</li>
+  <li><strong><a href="https://www.youtube.com/watch?v=5_N84t1rUU0">Hermes Agent Fundamentals In 29 Minutes</a></strong> — Tina Huang (54K views, 1 day old). Brand new. Tina Huang's tutorials are known for being well-structured and clear. Good fundamentals refresher.</li>
+  <li><strong><a href="https://www.youtube.com/watch?v=XTlNr4hfF8w">Hermes Agent Update v0.19 is MASSIVE! (Quicksilver Release)</a></strong> — Released alongside v0.19.0. Direct coverage of this release if you want a video walkthrough (though the release notes cover it better).</li>
+</ul>
+
+</body>
+</html>
+]]></description>
+      <pubDate>Wed, 22 Jul 2026 12:30:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
