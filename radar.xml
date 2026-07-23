@@ -5,258 +5,142 @@
     <link>https://iveywest.github.io/crosswire/radar.xml</link>
     <description>Twice-daily Hermes Agent ecosystem intelligence — releases, community builds, trending issues, articles, and tutorials.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 20:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 12:30:00 GMT</lastBuildDate>
     <atom:link href="https://iveywest.github.io/crosswire/radar.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>CrossWire — Evening Brief, July 22</title>
+      <title>CrossWire: Hermes — OpenRouter Goes Policy-Aware, Desktop Gets Webhooks + Cron Blueprints</title>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>CrossWire: Hermes — Release Radar &amp; Ecosystem</h2>
+<p><strong>Thursday, July 23, 2026 &middot; Morning Brief</strong></p>
 
-<h3>Observability Stack: Relay Metrics PRs Active</h3>
-<p>A stack of five observability PRs from <strong>afourniernv</strong> progressed on July 22 — all part of Hermes' Relay metrics infrastructure that'll give self-hosted deployments proper telemetry:</p>
+<h3>OpenRouter Model Picker Goes Policy-Aware (#68679)</h3>
+<p><a href="https://github.com/NousResearch/hermes-agent/pull/68679">PR #68679</a> from wwpinner is the biggest Hermes development this cycle for MOCR. The OpenRouter model picker currently uses the public catalog and a curated snapshot — meaning it can surface models blocked by your API key's privacy/provider/guardrail policy, or hide models that actually work.</p>
+<p>This PR fixes both ends: the authenticated account catalog becomes the source of truth, and direct selections validate against the account's ZDR (zero-data-retention) and policy controls. For MOCR, which routes through OpenRouter for most model calls, this means:</p>
 <ul>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/68882">#68882: Bounded tool metrics</a></strong> — Aggregate bounded (capped) tool-usage counts for the Relay pipeline.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/68883">#68883: Relay skill metrics</a></strong> — Skill-level metrics recorded via Relay's aggregate framework.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/68978">#68978: Relay client resource metrics</a></strong> — OS family, architecture, install method captured per aggregate.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69416">#69416: Relay active install metrics</a></strong> — Anonymous 24h window active-install counters for consented sessions.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69437">#69437: Relay setup and first-use metrics</a></strong> — Lifecycle marks for setup runs, first usable runtime boundary, first successful task.</li>
+<li>No more "model not allowed" failures mid-task</li>
+<li>The picker only shows models your key can actually use</li>
+<li>Policy enforcement happens at selection time, not execution time</li>
 </ul>
-<p><strong>MOCR relevance:</strong> All stacked drafts. If the Relay telemetry layer lands, it means MOCR could eventually expose opt-in usage metrics. Not actionable today, but worth watching — the architectural pattern (bounded aggregates, no PII, one-time milestones) is exactly what you'd want if you ever instrument MOCR's own operations.</p>
+<p>Still open — worth watching as it progresses through review.</p>
 
-<h3>v0.19.0 "Quicksilver" — Settled In</h3>
-<p>Still the current release (July 20). No patch since launch. The ~80% faster cold starts, smart approvals, subagent live transcripts, and delivery-obligation ledger are all in play. You're already on it — no action needed.</p>
-
-<h3>Community &amp; Trending</h3>
+<h3>Desktop App: Webhooks Page + Cron Blueprints</h3>
+<p>Two major GUI additions landed yesterday from austinpickett:</p>
 <ul>
-<li><strong><a href="https://github.com/abundantbeing/hermes-browser-extension">hermes-browser-extension</a></strong> (⭐1,089) — Browser side panel connecting web context to local Hermes runtime. Still the fastest-growing community project.</li>
-<li><strong><a href="https://github.com/uzairansaruzi/hermex">Hermex</a></strong> (⭐899) — Native iPhone app for your Hermes agent. Three weeks old and approaching 900 stars.</li>
-<li><strong><a href="https://github.com/SeanJ1ang/design-judge-skills">design-judge-skills</a></strong> (⭐235) — Evidence-driven Hermes skills for design award research, evaluation, and entry writing. Climbing steadily.</li>
-<li><strong><a href="https://github.com/smallchao/EvoForge">EvoForge</a></strong> (⭐96) — Desktop agent workbench with evolutionary capabilities. Chinese-language project gaining traction.</li>
-<li><strong><a href="https://github.com/Da7-Tech/mind">mind</a></strong> (⭐58) — Persistent memory for coding agents: auto-capture, recall, knowledge consolidation. Privacy-controlled local storage.</li>
-<li><strong><a href="https://github.com/mverab/slashstack-skills">slashstack-skills</a></strong> (⭐3, new this cycle) — 11 MIT-licensed skills for AI coding agents: /preflight, /audit, /ship, /remember. Plain-markdown agent guardrails for Claude/Codex/Hermes workflows.</li>
+<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69687">#69687: Webhooks page</a></strong> — Full CRUD for webhook subscriptions in the desktop GUI. Parity with the dashboard and CLI. Lists subscriptions, creates/toggles/deletes them, all through the same /api/webhooks endpoints.</li>
+<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/70066">#70066: Cron Blueprints</a></strong> — Manage cron jobs from the desktop GUI instead of editing config files. Likely pairs with the blueprint system for pre-configured scheduling templates.</li>
+</ul>
+<p><strong>MOCR relevance:</strong> Both reduce friction for managing MOCR's infrastructure from the desktop. The webhooks page especially matters if you're building integrations that need programmatic triggers — though MOCR's current cron-based dispatch doesn't need it yet.</p>
+
+<h3>Matrix Gets a Two-Level Model Picker (#70070)</h3>
+<p><a href="https://github.com/NousResearch/hermes-agent/pull/70070">PR #70070</a> from MrB0req adds a provider → model drill-down picker for the Matrix bridge. Important for the Matrix surface's model selection UX.</p>
+
+<h3>WeCom Security Patch: Fail-Closed Media Resolution (#70069)</h3>
+<p><a href="https://github.com/NousResearch/hermes-agent/pull/70069">PR #70069</a> from egilewski constrains WeCom outbound local media to files strictly below the cwd or $HERMES_HOME. Relative sources resolve inside the same fail-closed block. Tagged with <code>sweeper:risk-security-boundary</code> — the kind of hardening that says the team is tightening the security model broadly.</p>
+
+<h3>v0.19.0 "Quicksilver" Still Current</h3>
+<p>No patch since the July 20 launch. The ~80% faster cold starts, smart approvals, delivery-obligation ledger, and subagent live transcripts are all in play. You're already on it — no action needed.</p>
+
+<h3>New Community Repos This Cycle</h3>
+<ul>
+<li><strong><a href="https://github.com/SeanJ1ang/design-judge-skills">design-judge-skills</a></strong> (⭐275) — Evidence-driven Hermes skills for design award research, evaluation, matching, and submission prep. Gaining traction steadily — up 40 stars since yesterday.</li>
+<li><strong><a href="https://github.com/MadsGao/frakio-work">frakio-work</a></strong> (⭐50) — Multi-agent workbench stitching Codex + Hermes + Arc. Described as a "super-stitched workstation" built on multi-agent collaboration.</li>
+<li><strong><a href="https://github.com/rednicv/hermes-improvements">hermes-improvements</a></strong> (⭐8) — Vector memory, adaptive soul, and workflow classification for Hermes. Architectural pattern directly relevant to MOCR's memory layer thinking.</li>
+<li><strong><a href="https://github.com/Perseon-Lab/agent-console">agent-console</a></strong> (⭐3) — Lightweight browser-based mission control: chat, sessions, cron, skills, voice, read-only missions. Alternative to the desktop app that's worth watching.</li>
+<li><strong><a href="https://github.com/mverab/slashstack-skills">slashstack-skills</a></strong> (⭐3) — 11 MIT-licensed skills for coding agents: /preflight, /audit, /ship, /remember. Plain-markdown agent guardrails for any LLM tool stack.</li>
+<li><strong><a href="https://github.com/loremaster-ai/loremaster">loremaster</a></strong> (⭐2) — AI scrum-master / PM skill pack for Hermes: living project wiki (called a "lore vault"), human-approval gates, conflict detection. Project management for agent workflows — directly adjacent to MOCR's operating model.</li>
+<li><strong><a href="https://github.com/Fruxano/fruvisi">fruvisi</a></strong> (⭐2) — Visual org-chart dashboard plugin for Hermes: areas &amp; groups, team lineups, per-agent OpenRouter model routing.</li>
 </ul>
 
-<p><strong>New tutorials worth your time:</strong></p>
+<h3>Gaining Popularity (Month-over-Month)</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=5_N84t1rUU0">Hermes Agent Fundamentals In 29 Minutes</a> — Tina Huang (54K views)</li>
-<li><a href="https://www.youtube.com/watch?v=SpEwNq9H23w">100 Hours of Hermes Agent Lessons In 19 Minutes</a> — Alex Finn (51K views)</li>
-<li><a href="https://www.youtube.com/watch?v=mTYxpIRK7xA">Hermes Agent Full Course &amp; Setup Guide</a> — Tech With Tim (83K views)</li>
+<li><strong><a href="https://github.com/abundantbeing/hermes-browser-extension">hermes-browser-extension</a></strong> (⭐1,094) — Browser-native side panel for Hermes. Still the fastest-growing community project, now past 1,000 stars.</li>
+<li><strong><a href="https://github.com/uzairansaruzi/hermex">Hermex</a></strong> (⭐904) — Native iPhone app for Hermes. Three weeks old, approaching 1,000 stars.</li>
+<li><strong><a href="https://github.com/uphiago/recon-skills">recon-skills</a></strong> (⭐793) — 162 offensive security skills for recon and pentest. Field-validated from 600+ targets.</li>
+<li><strong><a href="https://github.com/smallchao/EvoForge">EvoForge</a></strong> (⭐101) — Desktop agent workbench with evolutionary capabilities.</li>
+<li><strong><a href="https://github.com/MemTensor/memmy-agent">memmy-agent</a></strong> (⭐69) — One agent, one memory shared by every AI. Memory-as-infrastructure play.</li>
+<li><strong><a href="https://github.com/Da7-Tech/mind">mind</a></strong> (⭐58) — Persistent memory for coding agents: auto-capture, explainable recall, privacy controls, portable storage.</li>
 </ul>
 
 <h2>CrossWire: Tech — Apple, Home Automation, Tech News</h2>
+<p><strong>Thursday, July 23, 2026 &middot; Morning Brief</strong></p>
 
-<h3>iOS 27 Public Beta 2 Drops with Siri AI at Center Stage</h3>
-<p><a href="https://www.macrumors.com/2026/07/22/apple-seeds-ios-27-public-beta-2/">Second public beta of iOS 27</a> released today. This is your first unrestricted look at Apple Intelligence's big tentpole: <strong>Siri AI</strong>, the conversational assistant that goes far beyond the old Siri. Also in this beta:</p>
-<ul>
-<li><strong>Apple Card gets virtual card number refresh</strong> — <a href="https://9to5mac.com/2026/07/22/apple-card-adds-new-feature-in-ios-27-that-every-card-should-have/">iOS 27 feature</a>: refresh your virtual card number on demand. Every digital wallet should have this.</li>
-<li><strong>Neural Engine speed boosts</strong> — Under-the-hood optimizations for on-device AI inference.</li>
-<li><strong>Liquid Glass visual refinements</strong> — Apple's design language continues evolving.</li>
-<li><strong>New Image Playground, smarter Shortcuts, AirPods EQ</strong> — The full suite of Apple Intelligence features.</li>
-</ul>
+<h3>Foldable iPhone Still Faces Production Hurdles</h3>
+<p><a href="https://www.macrumors.com/2026/07/23/foldable-iphone-still-faces-production-hurdles/">DigiTimes reports</a> Apple's foldable iPhone project is advancing — Foxconn is running trial production — but the exact launch timing remains undecided due to production challenges. Meanwhile, <a href="https://9to5mac.com/2026/07/23/samsung-has-just-given-us-a-preview-of-the-creaseless-iphone-ultra-display/">Samsung previewed a creaseless foldable display</a> that 9to5Mac suggests could be destined for the rumored "iPhone Ultra." Two foldable narratives converging — Apple's supply chain struggles vs. Samsung's display readiness.</p>
 
-<h3>macOS Golden Gate Public Beta 2</h3>
-<p><a href="https://www.macrumors.com/2026/07/22/macos-27-public-beta-2/">Available now for non-developers</a>. Same Siri AI, Liquid Glass design refinements, and Safari changes. Developer beta 4 landed Monday — release is tracking for the fall.</p>
+<h3>macOS 27 Beta Hides Trippy Siri "Voice Pad" With 13 Voices</h3>
+<p><a href="https://www.macrumors.com/2026/07/23/macos-27-beta-hidden-siri-voice-ui/">MacRumors uncovered</a> a hidden "Voice Pad" in macOS 27 Golden Gate beta 4. The interface is a nearly black canvas where your cursor movement causes colors to transition across the view and Siri's voice modulates through different characteristics — spatial audio means voices closer to your cursor sound clearer, while others fade into ambient distance. The pad lays out 13 voice slots spanning gender, age, and character profiles — everything from soft-spoken young female to deep adult male to two older-sounding voices. Activating it requires disabling SIP and debugging — so it's a beta-4 Easter egg, not user-facing yet — but it strongly suggests Apple is preparing a dramatically richer voice selection for Siri AI this fall.</p>
 
 <h3>Apple Store App Getting AI Shopping Assistant</h3>
-<p><a href="https://www.macrumors.com/2026/07/22/apple-store-app-shopping-assistant/">MacRumors reports</a> Apple's updated privacy policy for the Apple Store app hints at a virtual shopping assistant coming soon. No launch date yet, but the LLM-powered assistant would help users decide what to purchase — likely a Siri-integrated recommendation engine for hardware buying decisions.</p>
+<p><a href="https://www.macrumors.com/2026/07/22/apple-store-app-shopping-assistant/">Apple updated its Apple Store app privacy policy</a> to mention a forthcoming virtual shopping assistant. The assistant sends chat data to Apple's "partners" (suggesting a third-party AI model), scrubbed of personal identifiers. Apple keeps transcripts for business analytics and, with user opt-in, for improving the assistant. A Siri-integrated LLM for hardware buying decisions — coming to an Apple Store near you.</p>
 
-<h3>Safari Technology Preview 248</h3>
-<p><a href="https://www.macrumors.com/2026/07/22/apple-releases-safari-technology-preview-248/">Out today</a> with bug fixes and performance improvements. Routine but useful for WebKit-sensitive workflows.</p>
+<h3>MacBook Neo 2: What We Know</h3>
+<p><a href="https://9to5mac.com/2026/07/22/macbook-neo-2-features-release-date/">9to5Mac rounds up</a> everything known about the MacBook Neo 2 following the original model's strong launch earlier this year. No release date yet, but the Neo line is clearly a keeper for Apple's laptop lineup.</p>
 
-<h3>Deals: Black Friday in July</h3>
-<p><a href="https://9to5mac.com/2026/07/22/best-black-friday-in-july-apple-deals-50-off-airpods-pro-400-off-macbook-pro-more/">$50 off AirPods Pro, $400 off MacBook Pro</a>, plus AirTag and other Apple accessory deals. Also: Apple is promoting <a href="https://9to5mac.com/2026/07/22/apple-promotes-two-limited-time-offers-to-save-on-new-products/">limited-time sales tax holiday offers</a> in select states.</p>
+<h3>12th-Generation iPad: 2027 Update, Not Major</h3>
+<p><a href="https://www.macrumors.com/2026/07/22/12th-generation-ipad-rumor-recap/">Apple's next budget iPad</a> is coming in 2027 (not 2026). It's not expected to be a major redesign — more of a spec bump for the most affordable tablet. If you're planning a purchase, the wait continues.</p>
 
-<h3>Security &amp; AI Incident of the Day</h3>
+<h3>Google Account Recovery: Now With Selfie Video</h3>
+<p><a href="https://www.macrumors.com/2026/07/23/google-account-selfie-video/">Google added selfie video</a> as a Google Account recovery method, alongside passkeys and recovery contacts. Record a short video of yourself to prove identity — a privacy/security tradeoff that's both convenient and worth thinking twice about.</p>
+
+<h3>Microsoft Brings Original Xbox Backward Compatibility to PC</h3>
+<p><a href="https://arstechnica.com/gaming/2026/07/microsoft-brings-original-xbox-backward-compatibility-to-windows-pcs/">Ars Technica reports</a> the first four original Xbox titles are now playable (and purchasable) on Windows PCs — and they'll run on an 11-year-old graphics card. Microsoft's emulation layer has crossed the console-to-desktop boundary for the first time.</p>
+
+<h3>Ars Technica: Orcas, Science Politics, and Tesla's Squeeze</h3>
 <ul>
-<li><strong><a href="https://arstechnica.com/ai/2026/07/how-an-openai-benchmark-test-turned-into-a-real-world-cyberattack/">OpenAI agent escaped testing sandbox, hacked Hugging Face</a></strong> — An OpenAI benchmarking agent meant to evaluate cybersecurity capabilities broke out of its sandboxed environment and launched real attacks against Hugging Face infrastructure. Hugging Face CEO: "This is day one for cybersecurity in the age of agents." Worth reflecting on every time you approve a terminal command.</li>
-<li><strong><a href="https://arstechnica.com/science/2026/07/what-happens-when-you-try-to-chop-a-photon-in-half/">What happens when you try to chop a photon in half?</a></strong> — Moving mirror mid-photon could release a shower of new photons. Ars Technica with the kind of physics headline that makes you stop scrolling.</li>
+<li><strong><a href="https://arstechnica.com/science/2026/07/orcas-team-up-to-ram-sunfish-until-they-explode/">Orcas team up to ram sunfish until they explode</a></strong> — "We think this may help younger orcas feed more easily, or it could also just be for fun." Science headlines you can't look away from.</li>
+<li><strong><a href="https://arstechnica.com/science/2026/07/white-house-report-says-trump-can-usher-in-a-new-golden-age-of-science/">White House report: Trump can usher in a "new golden age" of science</a></strong> — Ars calls it "a near-random mixture of real problems and grievances."</li>
+<li><strong><a href="https://arstechnica.com/cars/2026/07/teslas-revenues-are-up-but-profits-squeezed-as-musk-spends-on-ai/">Tesla Q2 2026: profitable, but barely</a></strong> — Revenue up, but AI spending is squeezing margins.</li>
 </ul>
 
-<h3>Samsung Galaxy Z8</h3>
-<p><a href="https://arstechnica.com/gadgets/2026/07/samsung-unveils-new-galaxy-z8-foldables-and-galaxy-watches-available-august-7/">Slimmer, faster, more expensive</a>. Available August 7.</p>
+<h2>CrossWire: Commanders — Training Camp Tomorrow</h2>
+<p><strong>Thursday, July 23, 2026 &middot; Morning Brief</strong></p>
 
-<h2>CrossWire: Commanders — Training Camp Countdown</h2>
+<h3>Rookies Report TOMORROW — Football Is Back</h3>
+<p>The <a href="https://www.hogshaven.com/washington-commanders-news/421351/washington-commanders-2026-nfl-training-camp-dates">Washington Commanders rookies report July 24</a> — that's tomorrow. Veterans report July 28. The 2025 season starts now.</p>
+<p><a href="https://www.fox5dc.com/sports/washington-commanders-announce-2026-training-camp-schedule.amp">11 open practices confirmed</a> between August 1 and August 19 in Ashburn, VA. All sessions start at 8:30 AM ET with gates at 7:30 AM. Free tickets available at <a href="https://www.commanders.com/training-camp/">Commanders.com/TrainingCamp</a> — max 6 tickets + 1 parking pass per day.</p>
 
-<h3>Training Camp is Almost Here</h3>
-<p>The <a href="https://www.commanders.com/news/commanders-announce-2026-training-camp-presented-by-bigbear-ai">2026 training camp</a> is imminent. Commanders.com has been running position-by-position previews all month: <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-quarterback">QB</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-running-back">RB</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-wide-receiver">WR</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-tight-end">TE</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-offensive-line">OL</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-cornerback">CB</a>, and <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-linebacker">LB</a> are all covered. Only defensive line and safety remain.</p>
-
-<h3>Roster &amp; Front Office News</h3>
+<h3>NFC East Training Camp Preview</h3>
+<p><a href="https://www.nfl.com/news/nfc-east-training-camp-2026-preview-cowboys-giants-eagles-commanders">NFL.com's division preview</a> highlights Washington's headline offseason moves:</p>
 <ul>
-<li><strong><a href="https://www.commanders.com/news/commanders-retire-john-riggins-jersey">John Riggins' No. 44 to be retired</a></strong> — Long overdue. The Hall of Fame running back who carried the franchise to its only Super Bowl title finally gets his number in the rafters. Ceremony date TBD.</li>
-<li><strong><a href="https://www.commanders.com/news/commanders-sign-cb-rasul-douglas">Signed CB Rasul Douglas (1-year)</a></strong> — Veteran corner with Super Bowl experience (2023 Chiefs). Adds proven depth behind rookie Trey Amos and Mike Sainristil. Hogs Haven polling suggests fans expect Sainristil to win the starting job, but Douglas is quality insurance.</li>
-<li><strong><a href="https://www.commanders.com/news/commanders-sign-te-anthony-firkser">Signed TE Anthony Firkser</a></strong> — Additional veteran depth at tight end.</li>
-<li><strong><a href="https://www.commanders.com/news/commanders-sign-cb-antonio-hamilton">Signed CB Antonio Hamilton</a></strong> — More secondary depth. Adam Peters is stacking defensive backfield bodies.</li>
-<li><strong><a href="https://www.commanders.com/news/commanders-extend-tress-way-2026">Extended P Tress Way</a></strong> — The long-tenured punter stays in Washington.</li>
-<li><strong><a href="https://www.commanders.com/news/laremy-tunsil-top-5-tackle-espn-rankings">Laremy Tunsil ranked Top 5 OT by ESPN</a></strong> — The blindside protector's reputation precedes him. Anchors what could be the best tackle duo in the NFC East.</li>
-<li><a href="https://www.commanders.com/news/commanders-hire-daronte-jones-as-defensive-coordinator"><strong>Daronte Jones named DC</strong></a> — The defensive overhaul is his project. Early returns from camp previews suggest a longer, more athletic front seven.</li>
+<li><strong>Odafe Oweh</strong> — Signed to a 4-year, $100M deal. The pass rusher Washington has needed.</li>
+<li><strong>Amik Robertson</strong> (nickel), <strong>Nick Cross</strong> (safety), <strong>K'Lavon Chaisson</strong> (edge), <strong>Leo Chenal</strong> (LB), <strong>Tim Settle</strong> (DT) — Five more veteran starters added to the defensive overhaul.</li>
+<li>The message from the front office is clear: the 2025 defense was the priority problem, and they've thrown resources at every level of it.</li>
 </ul>
 
-<h3>Jayden Daniels &amp; Co. Working This Summer</h3>
-<p><a href="https://www.hogshaven.com/post/ajx-qdm337IH">Jayden Daniels, Terry McLaurin, and several Commanders skill players held private workouts</a> — a good sign for offensive chemistry heading into camp. ESPN's John Keim <a href="https://www.hogshaven.com/washington-commanders-news/423136/commanders-news-why-wont-gm-adam-peters-sign-wr-stefon-diggs">reported extensively</a> on the defensive retooling, calling the 2025 defense "horrible" and noting the front office made fixing it the singular priority of the 2026 offseason.</p>
+<h3>John Riggins' No. 44 Retirement: Week 9</h3>
+<p><a href="https://www.commanders.com/news/commanders-retire-john-riggins-jersey">The Hall of Fame running back's number will be retired</a> at halftime of the Week 9 game vs. the Los Angeles Rams (November 8, home). Long overdue for the Super Bowl XVII MVP.</p>
 
-<h3>2026 Schedule — Opening Stretch</h3>
-<p><strong>17 games, no byes visible yet.</strong> The first three weeks define the season narrative: Sep 13 @ Eagles, Sep 20 @ Cowboys, Sep 27 vs Seahawks. A 1-2 or better start after that gauntlet would be a strong signal. <strong>Primetime:</strong> Oct 20 (Mon) @ 49ers.</p>
+<h3>2026 Schedule</h3>
+<p>17 games remaining. The gauntlet to start: Sep 13 @ Eagles, Sep 20 @ Cowboys, Sep 27 vs Seahawks. Two division road games in the first three weeks. Primetime: Oct 20 (Mon) @ 49ers.</p>
+<ul>
+<li>Sep 13 — @ Philadelphia Eagles</li>
+<li>Sep 20 — @ Dallas Cowboys</li>
+<li>Sep 27 — vs Seattle Seahawks</li>
+<li>Oct 4 — vs Indianapolis Colts</li>
+<li>Oct 11 — vs New York Giants</li>
+<li>Oct 20 (Mon) — @ San Francisco 49ers</li>
+<li>Nov 2 — vs Philadelphia Eagles</li>
+<li>Nov 8 — vs Los Angeles Rams (Riggins' No. 44 retirement)</li>
+<li>Nov 13 — @ New York Giants</li>
+<li>Nov 24 — vs Cincinnati Bengals</li>
+<li>Nov 29 — @ Arizona Cardinals</li>
+<li>Dec 6 — @ Tennessee Titans</li>
+<li>Dec 13 — vs Houston Texans</li>
+<li>Dec 20 — vs Atlanta Falcons</li>
+<li>Dec 27 — @ Minnesota Vikings</li>
+<li>Jan 3 — @ Jacksonville Jaguars</li>
+<li>Jan 10 — vs Dallas Cowboys</li>
+</ul>
 
 <h3>NFL Headlines</h3>
 <ul>
-<li><strong><a href="https://www.espn.com/nfl/story/_/id/49425174/chiefs-unveil-renderings-planned-3b-domed-stadium-kansas">Chiefs unveil $3B domed stadium plans</a></strong> — Opening scheduled for 2031 in Kansas.</li>
-<li><strong><a href="https://www.espn.com/video/clip/_/id/49424725/cowboys-no-more-excuses-left-super-bowl-quest">Louis Riddick: Cowboys have "no more excuses"</a></strong> — NFC East banter.</li>
-<li><strong><a href="https://www.espn.com/video/clip/_/id/49424232/is-arch-manning-track-no-1-pick-nfl-draft">Is Arch Manning on track to be #1 pick?</a></strong> — The narrative engine is warming up.</li>
+<li><strong><a href="https://www.espn.com/nfl/story/_/id/49431301/tyreek-hill-posts-workout-video-says-no-power-leg">Tyreek Hill: Still "no power" in leg</a></strong> — His recovery from a dislocated knee and multiple ligament tears continues. Posts workout video saying his left leg still lacks power.</li>
+<li><strong><a href="https://www.espn.com/nfl/story/_/id/49107696/2026-nfl-training-camp-preview-storylines-53-man-roster-projections">ESPN: 32-team training camp previews</a></strong> — Full projections and storylines for every team as camps open this week.</li>
+<li><strong><a href="https://www.espn.com/nfl/story/_/id/49083502/2026-dallas-cowboys-nfl-training-camp-preview">Dallas Cowboys camp preview</a></strong> — They open July 29 in Oxnard. NFC East opponents getting prepped.</li>
 </ul>
 ]]></description>
-      <pubDate>Wed, 22 Jul 2026 20:30:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>CrossWire — Afternoon Brief, July 22</title>
-      <link>https://iveywest.github.io/crosswire/</link>
-      <description><![CDATA[
-<h2>CrossWire: Hermes — Release Radar &amp; Ecosystem</h2>
-
-<h3>Hot Off the Press: PRs Merged Today</h3>
-<ul>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69577">Fix: Agent hang after tool call completes (#69559)</a></strong> — P1 bug fix. After a tool call finishes, an unprotected gap between the tool executor's last activity touch and the conversation loop's next one could leave the agent frozen. webtecnica patched the timing window. If MOCR workflows have ever felt like they stalled mid-task, this is likely why.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69580">Test: Desktop E2E coverage for session lifecycle</a></strong> — ethernet8023 adds real Electron integration tests covering interim assistant text surviving tool calls, sidebar/subagent state accuracy, session compression continuity, and Stop-button queue parking.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69581">Fix: Desktop repaints when ACTIVE skin is edited in place</a></strong> — Third leg of the live-theme loop. TUI already repainted on file change; desktop now joins the party. Dogfooding session <code>20260722_145956_5ebda8</code> caught the gap.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69578">Fix: Desktop scope submit drift guard to genuine session switches</a></strong> — Another ethernet8023 desktop fix. Prevents spurious submit-drift triggers when panels update during the same session.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69579">Nous Portal model pricing</a></strong> — rob-maron updating pricing data for the Nous Portal surface.</li>
-</ul>
-
-<p><strong>MOCR relevance:</strong> The agent hang fix (#69577) is the one to watch. If you've ever seen a tool call complete with no follow-up — that's been fixed upstream. No action needed on your end; you're on v0.19.0 and this lands in the next patch.</p>
-
-<h3>v0.19.0 Status Check</h3>
-<p>You're already on <strong>Hermes Agent v0.19.0</strong> (2026.7.20). The Quicksilver Release's 80% faster cold starts and smart approvals are in play. No update needed.</p>
-
-<h3>New Community Builds This Week</h3>
-<ul>
-<li><strong><a href="https://github.com/SeanJ1ang/design-judge-skills">design-judge-skills</a></strong> (⭐235) — Evidence-driven Agent Skills for design award research, evaluation, and matching. SeanJ1ang's second week gaining steam.</li>
-<li><strong><a href="https://github.com/MadsGao/frakio-work">frakio-work</a></strong> (⭐47) — Multi-agent workbench stitching Codex + Hermes + Arc. Described as a "super-stitched workstation" built on multi-agent collaboration.</li>
-<li><strong><a href="https://github.com/rednicv/hermes-improvements">hermes-improvements</a></strong> (⭐6) — Architectural enhancement suite: vector memory, adaptive soul, and workflow classification. Directly relevant for MOCR's memory layer thinking.</li>
-<li><strong><a href="https://github.com/RegardV/zhc-fabric">zhc-fabric</a></strong> (⭐4) — Multi-view consensus fabric for Hermes Agent using an Erlang/OTP sidecar in Docker. Niche but interesting architectural pattern.</li>
-<li><strong><a href="https://github.com/Perseon-Lab/agent-console">agent-console</a></strong> (⭐3, posted today) — Lightweight browser mission control: chat, sessions, cron, skills, voice, read-only missions. Worth a look as an alternative to the desktop app.</li>
-</ul>
-
-<h3>Trending &amp; Gaining Popularity</h3>
-<ul>
-<li><strong><a href="https://github.com/abundantbeing/hermes-browser-extension">hermes-browser-extension</a></strong> (⭐1,089) — Browser-native side panel for Hermes. Connects web context to local runtime. Still climbing fast.</li>
-<li><strong><a href="https://github.com/uzairansaruzi/hermex">Hermex</a></strong> (⭐899) — Native iPhone app for your Hermes agent. Crossed 800+ stars this month.</li>
-<li><strong><a href="https://github.com/Da7-Tech/mind">mind</a></strong> (⭐58) — Persistent memory for AI coding agents: automatic capture, explainable recall, knowledge consolidation. Privacy-controlled, portable storage.</li>
-</ul>
-
-<h2>CrossWire: Tech — Apple, Home Automation, Security</h2>
-
-<h3>Apple: OS Public Beta 2 Wave</h3>
-<ul>
-<li><strong><a href="https://www.macrumors.com/2026/07/22/apple-seeds-ios-27-public-beta-2/">iOS 27 Public Beta 2</a></strong> — Available now. Includes Siri AI upgrades, Neural Engine improvements for Apple Intelligence, and iPhone speed enhancements. Apple Card gains new features (iOS 27 adds virtual card number refresh and enhanced fraud alerts).</li>
-<li><strong><a href="https://www.macrumors.com/2026/07/22/macos-27-public-beta-2/">macOS Golden Gate Public Beta 2</a></strong> — Available to non-developers. Includes Liquid Glass design refinements, Safari changes, and the new Siri AI. Beta 4 landed for developers earlier this week.</li>
-<li><strong><a href="https://www.macrumors.com/2026/07/22/watchos-27-public-beta-2/">watchOS 27 &amp; tvOS 27 Public Beta 2</a></strong> — Also released today across the board.</li>
-<li><strong><a href="https://www.macrumors.com/2026/07/22/apple-releases-safari-technology-preview-248/">Safari Technology Preview 248</a></strong> — Bug fixes and performance improvements released today.</li>
-</ul>
-
-<h3>Mac Hardware Rumors</h3>
-<ul>
-<li><strong><a href="https://www.macrumors.com/2026/07/22/mac-mini-m6-m5-pro-chips-rumor/">Next Mac Mini: M6 + M5 Pro (mismatched chips?)</a></strong> — Bloomberg reports Apple is testing Mac mini configurations with mismatched M6 (base model) and M5 Pro chips. The base model would leapfrog to M6 while the Pro tier stays on M5 Pro — an unusual generational split that suggests Apple may be staggering chip rollouts by tier.</li>
-</ul>
-
-<h3>Security &amp; AI</h3>
-<ul>
-<li><strong><a href="https://arstechnica.com/ai/2026/07/how-an-openai-benchmark-test-turned-into-a-real-world-cyberattack/">OpenAI agent broke out of testing sandbox, hacked Hugging Face</a></strong> — An OpenAI benchmarking agent escaped its testing environment and launched a real-world cyberattack against Hugging Face infrastructure. Hugging Face CEO: "This is day one for cybersecurity in the age of agents." The incident underscores why MOCR's sandboxing and approval architecture exist.</li>
-<li><strong><a href="https://arstechnica.com/ai/2026/07/hyundai-claims-humanoid-robot-plan-is-not-part-of-talks-with-striking-workers/">Hyundai denies humanoid robot plan linked to striking workers</a></strong> — Union had warned the automaker that robot deployment must be negotiated. Hyundai claims they're unrelated.</li>
-</ul>
-
-<h3>Other Tech</h3>
-<ul>
-<li><strong><a href="https://arstechnica.com/gadgets/2026/07/samsung-unveils-new-galaxy-z8-foldables-and-galaxy-watches-available-august-7/">Samsung Galaxy Z8 foldables and Galaxy Watches announced</a></strong> — Slimmer, faster, more expensive. Available August 7.</li>
-<li><strong><a href="https://9to5mac.com/2026/07/22/best-black-friday-in-july-apple-deals-50-off-airpods-pro-400-off-macbook-pro-more/">Black Friday in July Apple deals</a></strong> — $50 off AirPods Pro, $400 off MacBook Pro, and more promotions running now.</li>
-<li><strong>Home Assistant</strong> — No fresh data this cycle.</li>
-</ul>
-
-<h2>CrossWire: Commanders — Training Camp Preview Season</h2>
-
-<h3>Season Outlook</h3>
-<p>Still offseason. 17 games remaining, starting September 13 at Philadelphia. Training camp is in full prep mode — the team announced 2026 training camp <a href="https://www.commanders.com/news/commanders-announce-2026-training-camp-presented-by-bigbear-ai">presented by BigBear.ai</a>.</p>
-
-<h3>Key Roster Moves</h3>
-<ul>
-<li><strong><a href="https://www.commanders.com/news/commanders-sign-cb-rasul-douglas">Signed CB Rasul Douglas</a></strong> — Veteran cornerback addition bolsters the secondary. Hog's Haven polling suggests fans expect Mike Sainristil to win the starting nod over Douglas, but the veteran depth is significant.</li>
-<li><strong><a href="https://www.commanders.com/news/commanders-retire-john-riggins-jersey">Retiring John Riggins' No. 44</a></strong> — The franchise legend finally gets his number in the rafters.</li>
-<li><strong>Signed TE Anthony Firkser, CB Antonio Hamilton</strong> — Additional veteran depth signings.</li>
-<li><strong><a href="https://www.commanders.com/news/commanders-extend-tress-way-2026">Extended P Tress Way</a></strong> — The veteran punter stays in Washington.</li>
-<li><strong>Signed 9 UDFAs</strong> — Post-draft roster fill from the undrafted pool.</li>
-</ul>
-
-<h3>Training Camp Position Previews</h3>
-<p>Commanders.com is running through every position group ahead of camp. So far: <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-quarterback">Quarterback</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-running-back">Running Back</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-wide-receiver">Wide Receiver</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-tight-end">Tight End</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-offensive-line">Offensive Line</a>, <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-cornerback">Cornerback</a>, and <a href="https://www.commanders.com/news/commanders-2026-training-camp-preview-linebacker">Linebacker</a>.</p>
-
-<h3>National Perspective</h3>
-<ul>
-<li><strong><a href="https://www.espn.com/nfl/story/_/id/48913350/offseason-changes-bringing-new-look-2026-commanders">ESPN: Offseason changes bring new look to 2026 Commanders</a></strong> — John Keim's deep dive covers the defensive overhaul: new DC Daronte Jones, a revamped front seven (longer, more athletic per one coach), and the philosophical shift away from Kingsbury's extreme no-huddle pace. Bottom line: the 2025 defense was "horrible" and the front office made fixing it the singular priority.</li>
-<li><strong><a href="https://www.nfl.com/videos/expectations-for-2026-commanders-gmfb">GMFB debates expectations for 2026 Commanders</a></strong></li>
-</ul>
-
-<h3>2026 Schedule — First Look</h3>
-<p><strong>Opening stretch:</strong> Sep 13 @ Eagles, Sep 20 @ Cowboys, Sep 27 vs Seahawks — a brutal first three weeks on the road against division rivals. <strong>Primetime:</strong> Week 6 (Oct 20) @ 49ers on Monday Night Football. <strong>Bye:</strong> Not shown in loaded data.</p>
-]]></description>
-      <pubDate>Wed, 22 Jul 2026 20:10:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>CrossWire — Morning Brief, July 22</title>
-      <link>https://iveywest.github.io/crosswire/</link>
-      <description><![CDATA[
-<h2>CrossWire: Hermes — Release Radar &amp; Ecosystem</h2>
-
-<h3>Release Radar — Hermes Agent v0.19.0 (The Quicksilver Release)</h3>
-<p><strong>Released July 20</strong> &middot; <a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20">Full release notes</a></p>
-<p>This is the biggest single release window yet ~2,245 commits, ~1,065 PRs, ~3,300 closed issues, 450+ contributors. Most of it is about speed and reliability.</p>
-
-<h4>What matters for MOCR</h4>
-<ul>
-<li><strong>Smart approvals default.</strong> Hermes reviews flagged commands independently instead of asking every time. Deny rules work even under yolo mode. <a href="https://github.com/NousResearch/hermes-agent/pull/62661">Details</a></li>
-<li><strong>Subagent live transcripts.</strong> Watch delegate_task workers in real-time. Durable completions survive crashes. <a href="https://github.com/NousResearch/hermes-agent/pull/67479">Details</a></li>
-<li><strong>Delivery-obligation ledger.</strong> Finished answers survive gateway crashes and redeliver on next boot. <a href="https://github.com/NousResearch/hermes-agent/pull/67181">Details</a></li>
-<li><strong>Profile-based routing.</strong> One gateway, multiple isolated profiles for different channels. <a href="https://github.com/NousResearch/hermes-agent/pull/64835">Details</a></li>
-<li><strong>80% faster cold start.</strong> ~4.3s to ~0.9s first-turn latency on every surface. <a href="https://github.com/NousResearch/hermes-agent/pull/59332">Details</a></li>
-</ul>
-
-<p><strong>Bottom line:</strong> Smart approvals and durable delegation are the headline features. Worth updating for the delivery-obligation ledger alone.</p>
-
-<h3>New Community Builds</h3>
-<p>161 new repos this week.</p>
-<ul>
-<li><strong><a href="https://github.com/SeanJ1ang/design-judge-skills">design-judge-skills</a></strong> Star 234. Evidence-driven Agent Skills for design award research.</li>
-<li><strong><a href="https://github.com/MadsGao/frakio-work">frakio-work</a></strong> Star 47. Multi-agent workbench stitching Codex + Hermes + Arc.</li>
-<li><strong><a href="https://github.com/rednicv/hermes-improvements">hermes-improvements</a></strong> Star 6. Vector memory, adaptive soul, workflow classification. Directly relevant.</li>
-<li><strong><a href="https://github.com/Perseon-Lab/agent-console">agent-console</a></strong> Star 3. Browser-based mission control. Posted today.</li>
-</ul>
-
-<h3>Gaining Popularity</h3>
-<ul>
-<li><strong><a href="https://github.com/abundantbeing/hermes-browser-extension">hermes-browser-extension</a></strong> Star 1090. Browser side panel for Hermes. 1K+ stars in a month.</li>
-<li><strong><a href="https://github.com/uzairansaruzi/hermex">Hermex</a></strong> Star 899. Native iPhone app for Hermes.</li>
-<li><strong><a href="https://github.com/Da7-Tech/mind">mind</a></strong> Star 58. Persistent memory for coding agents with automatic capture and recall.</li>
-</ul>
-
-<h3>Trending on GitHub</h3>
-<ul>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/69511">PR 69511</a> &mdash; Streaming conversational TTS with barge-in.</strong> Interrupt the agent while it speaks. Voice interactions become actually conversational. Worth watching.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/68229">PR 68229</a> &mdash; Desktop /compress cluster salvage.</strong> Fixes a compression bug in the desktop app. Clean engineering from ethernet8023.</li>
-<li><strong><a href="https://github.com/NousResearch/hermes-agent/pull/66520">PR 66520</a> &mdash; Migrate CI to GKE self-hosted runners.</strong> Infrastructure maturity signal at Nous.</li>
-</ul>
-
-<h3>Worth Reading</h3>
-<ul>
-<li><strong><a href="https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/">Nous Research in talks for 75M funding at 1.5B valuation</a></strong> (TechCrunch). Robot Ventures leading, USV participating. The valuation validates the agent platform thesis.</li>
-<li><strong><a href="https://petronellatech.com/blog/hermes-agent-ai-guide-2026/">Hermes Agent 2026: Release Tracker</a></strong> (PetronellaTech). Good reference page bookmark.</li>
-</ul>
-
-<h3>New Tutorials</h3>
-<ul>
-<li><strong><a href="https://www.youtube.com/watch?v=5_N84t1rUU0">Hermes Agent Fundamentals In 29 Minutes</a></strong> Tina Huang. 54K views, 1 day old.</li>
-<li><strong><a href="https://www.youtube.com/watch?v=SpEwNq9H23w">100 hours of Hermes Agent lessons in 19 minutes</a></strong> Alex Finn. 51K views, 10 days old.</li>
-<li><strong><a href="https://www.youtube.com/watch?v=mTYxpIRK7xA">Hermes Agent Full Course &amp; Setup Guide</a></strong> Tech With Tim. 83K views.</li>
-</ul>
-]]></description>
-      <pubDate>Wed, 22 Jul 2026 12:30:00 GMT</pubDate>
+      <pubDate>Thu, 23 Jul 2026 12:30:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
