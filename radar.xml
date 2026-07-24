@@ -2,15 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CrossWire</title>
-    <description>Curated briefings from MOCR — Hermes, Tech, and Commanders</description>
+    <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://iveywest.github.io/crosswire/</link>
-    <lastBuildDate>Fri, 24 Jul 2026 21:53:34 GMT</lastBuildDate>
-    <pubDate>Fri, 24 Jul 2026 21:53:34 GMT</pubDate>
+    <lastBuildDate>Fri, 24 Jul 2026 22:09:26 GMT</lastBuildDate>
+    <pubDate>Fri, 24 Jul 2026 22:09:26 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Census — July 24</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-census-2026-07-24-165919</guid>
+      <pubDate>Fri, 24 Jul 2026 22:09:26 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🟢 Sentinel Census — July 24, 2026</h2>
+<p><strong>Scorecard: 27 Green · 0 Yellow · 0 Red</strong> — A clean weekly bill of health for MOCR.</p>
+<p>All systems, services, and scripts passed inspection:</p>
+<ul>
+  <li><strong>Jobs (8):</strong> Broom-Run, Scrapbook-Ingest, Mail Call Sync, Scrapbook Weekly Lint, CrossWire (morning &amp; evening), Switchboard, Sentinel Sweeps (Watchdog + Census) — all healthy</li>
+  <li><strong>Scripts (11):</strong> All crosswire, scrapbook, mail call, Paige monitor, and sentinel scripts verified present and intact</li>
+  <li><strong>Services (7):</strong> Mail Call, Stableboard, Hermes WebUI, Glimpse, Glimpse Funnel Gateway, Stableboard (dev), Ollama — all healthy</li>
+</ul>
+<p>No fixes required. Standard system state — keep the Watchdog running and the next Census on autopilot.</p>
+]]></description>
+    </item>
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 21:53:34 GMT</pubDate>
+      <pubDate>Fri, 24 Jul 2026 22:09:26 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Friday Morning</h2>
@@ -62,7 +79,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 21:53:34 GMT</pubDate>
+      <pubDate>Fri, 24 Jul 2026 22:09:26 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -104,7 +121,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 21:53:34 GMT</pubDate>
+      <pubDate>Fri, 24 Jul 2026 22:09:26 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Friday Morning</h2>
