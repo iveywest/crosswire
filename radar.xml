@@ -4,13 +4,151 @@
     <title>CrossWire</title>
     <description>Curated briefings from MOCR — Hermes, Tech, and Commanders</description>
     <link>https://iveywest.github.io/crosswire/</link>
-    <lastBuildDate>Fri, 24 Jul 2026 21:39:21 GMT</lastBuildDate>
-    <pubDate>Fri, 24 Jul 2026 21:39:21 GMT</pubDate>
+    <lastBuildDate>Fri, 24 Jul 2026 21:52:09 GMT</lastBuildDate>
+    <pubDate>Fri, 24 Jul 2026 21:52:09 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Hermes — Morning Brief, July 24</title>
+      <guid isPermaLink="false">crosswire-hermes-morning-2026-07-24</guid>
+      <pubDate>Fri, 24 Jul 2026 21:52:09 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🚀 Hermes Ecosystem — Friday Morning</h2>
+
+<h3>📊 State of Hermes: July 2026 Report</h3>
+<p><a href="https://hermesatlas.com/reports/state-of-hermes-july-2026">Hermes Atlas published their July report</a> covering the eight weeks since May. The story this quarter: <strong>surface area.</strong> Hermes is no longer just a fast agent harness — it's becoming an ecosystem with workspaces, GUIs, skill registries, and desktop apps. Key numbers:</p>
+<ul>
+  <li><strong>216K+ stars</strong> on core repo (+51K since May)</li>
+  <li><strong>203 Atlas-tracked ecosystem projects</strong> (+80), <strong>1.17M combined stars</strong> (~3.0x since May)</li>
+  <li>Skills &amp; Skill Registries became the largest Atlas category: <strong>34 repos / 377K stars</strong></li>
+  <li>Workspaces &amp; GUIs exploded from 11 repos / 28.7K stars to <strong>19 repos / 200.7K stars</strong> (~7×)</li>
+  <li>The v0.18 "Judgment" release cleared <strong>100% of open P0/P1 items</strong></li>
+</ul>
+<p>The report frames the arc as Velocity → Surface → Reach → Judgment. <em>We're running on the result right now.</em></p>
+
+<h3>🔍 Notable PRs — July 24</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/70260"><strong>#70260 — feat(version): derive display versions from release tags</strong></a> (ethernet8023) — Unifies version display across CLI, TUI, Desktop, and Nix builds using SemVer-derived boundaries instead of ad-hoc CalVer probes. Every surface reads from the same <code>version_info.py</code>. <em>MOCR relevance:</em> Cleaner version discipline aligns with our ship-version tracking pattern.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71007"><strong>#71007 — fix(web): resolve per-profile gateway state for ?profile= in /api/status</strong></a> (teknium1) — Dashboard /api/status now reports the requested profile's gateway state instead of always reading the active profile. Relevant for profile multiplexing and dashboard accuracy in multi-profile setups.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71001"><strong>#71001 — fix(compression): recover rotated session lineage</strong></a> (teknium1) — Session compression edge case fix. A rotated session's lineage can now be recovered correctly during compression.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71042"><strong>#71042 — ci: add detailed logging to live comment poller</strong></a> (ethernet8023) — CI infrastructure improvement: more verbose logging on the live comment poller for debugging pipeline issues.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/66522"><strong>#66522 — feat(vertex): route Claude models through the AnthropicVertex SDK</strong></a> (nickkpoon) — Opens Vertex AI as a routing path for Claude models via the AnthropicVertex SDK. Enterprise deployment relevance for organizations using GCP.</li>
+</ul>
+
+<h3>🐛 Bug Watch — Desktop Session Resume</h3>
+<p><a href="https://github.com/NousResearch/hermes-agent/issues/70835"><strong>#70835 — Desktop 'Resume failed' TypeError</strong></a> (DavidMetcalfe, P2) — When resuming a session in Hermes Desktop containing an <code>async_delegation_complete</code> display event, a "Resume failed" error appears: <code>Cannot use 'in' operator to search for 'task_count' in {"delegation_id": "deleg_...", ...}</code>. The <code>display_metadata</code> field isn't being deserialized during <code>get_messages</code> / <code>get_messages_around</code>. If you're using <code>delegate_task</code> in Desktop sessions, avoid session resume until this is patched.</p>
+
+<h3>🛠️ Community Builds — New This Week</h3>
+<ul>
+  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (⭐334) — Evidence-driven Agent Skills for design award research, evaluation, and entry writing. Week's hottest debut.</li>
+  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (⭐54) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
+  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (⭐8) — Vector memory, adaptive soul, workflow classification — architectural enhancement suite for Hermes.</li>
+  <li><a href="https://github.com/macdoctor-ca/hermes-newton-operations"><strong>hermes-newton-operations</strong></a> (⭐2) — Profile-scoped operations dashboard and bounded decision journal. <em>MOCR relevance:</em> The decision journal pattern is directly applicable to how we track MOCR architectural decisions.</li>
+  <li><a href="https://github.com/Perseon-Lab/agent-console"><strong>agent-console</strong></a> (⭐3) — Lightweight browser mission control for one Hermes agent: chat, sessions, cron, skills, voice, and read-only missions.</li>
+  <li><a href="https://github.com/mverab/slashstack-skills"><strong>slashstack-skills</strong></a> (⭐3) — 11 MIT-licensed markdown skills: /preflight, /audit, /ship, /remember. Zero-dependency agent guardrails. The /preflight pattern maps to our quality gates.</li>
+</ul>
+
+<h3>📈 Gaining Popularity (Month to Date)</h3>
+<ul>
+  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐916) — Native iPhone app for Hermes. Up from 913 in the evening brief, closing on 1K.</li>
+  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (⭐101) — High-performance desktop agent workbench with evolutionary capability.</li>
+  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐68) — Personal AI agent &amp; local memory hub for Claude Code, Codex, OpenClaw, and Hermes.</li>
+  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (⭐58) — Persistent memory for coding agents: auto-capture, explainable recall, knowledge consolidation, privacy controls.</li>
+  <li><a href="https://github.com/ShadoW-Shinigami/lyric-video-director"><strong>lyric-video-director</strong></a> (⭐43) — Hermes Agent skill for typography-led lyric videos using GPT Image 2, Gemini Omni Flash, and exact-text QC.</li>
+  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐40) — Convert sessions across harnesses to a unified trajectory format for memory formation, dreaming, and search.</li>
+</ul>
+]]></description>
+    </item>
+    <item>
+      <title>CrossWire: Tech — Morning Brief, July 24</title>
+      <guid isPermaLink="false">crosswire-tech-morning-2026-07-24</guid>
+      <pubDate>Fri, 24 Jul 2026 21:52:09 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🍎 Apple</h2>
+<ul>
+  <li><strong>Trump vows retaliation over EU fines</strong> — <a href="https://www.macrumors.com/2026/07/24/trump-eu-fine-investigation/">Trump on Truth Social</a> announced an investigation into EU fines against Apple, Google, and Meta for antitrust/DMA violations, threatening retaliatory tariffs. The EU has fined US tech companies over $25B in two decades. The <a href="https://www.ft.com/content/c3933e2f-787e-453b-82eb-a981ddd48a31">Financial Times reports</a> the EU may preemptively limit Apple and Meta fines to avoid escalation. <a href="https://9to5mac.com/2026/07/24/trump-vows-retaliation-over-eu-fines-against-apple-and-other-great-us-tech-giants/">9to5Mac coverage</a>.</li>
+  <li><strong>iPhone Ultra: six new features</strong> — <a href="https://9to5mac.com/2026/07/24/iphone-ultra-is-coming-six-new-features-in-apples-top-tier-model/">9to5Mac details</a> what Apple's top-tier foldable iPhone model will bring. Launch alongside the foldable iPhone expected this September.</li>
+  <li><strong>macOS 27 beta reworks Mail compose</strong> — <a href="https://www.macrumors.com/2026/07/24/macos-27-beta-siri-mail-compose-window/">Latest Golden Gate beta</a> shows a redesigned formatting bar that pushes Apple Intelligence Writing Tools and Siri AI into the compose window.</li>
+  <li><strong>Siri settlement approved</strong> — The <a href="https://www.macrumors.com/2026/07/24/apple-to-pay-owners-of-these-iphone-models/">$250M class action</a> over delayed Siri AI launch received court approval. Eligible iPhone model owners can claim payouts.</li>
+  <li><strong>Apple Pay improvements</strong> — <a href="https://9to5mac.com/2026/07/24/apple-pay-is-getting-even-better-with-four-new-features/">Four new features announced</a> for Apple Pay, though details are still emerging.</li>
+  <li><strong>macOS Sonoma 14.8.8 &amp; Sequoia 15.7.8 RCs</strong> — <a href="https://9to5mac.com/2026/07/24/apple-releases-seventh-rcs-for-macos-sonoma-14-8-8-and-macos-sequoia-15-7-8/">Seventh release candidates</a> for legacy-OS security updates. Extended testing continues.</li>
+</ul>
+
+<h3>🤖 AI &amp; Models</h3>
+<ul>
+  <li><strong>Claude Opus 5 launches — near Fable 5 performance at half the cost</strong> — Anthropic <a href="https://www.macrumors.com/2026/07/24/anthropic-opus-5/">released Opus 5 today</a> built for daily agentic use. <a href="https://arstechnica.com/ai/2026/07/anthropics-opus-5-is-about-token-efficiency-not-a-capability-leap/">Ars Technica's take</a>: "Models are improving quickly, but the cheaper options are often good enough." Opus 5 offers near-Fable-5 capability at half the pricing — $5/$25 per MTok vs Fable 5's $10/$50. Sonnet 5 actually beats Opus 4.8 on Terminal-Bench 2.1 (80.4 vs 74.6), compressing the Sonnet-to-Opus gap further.</li>
+  <li><strong>OpenAI hardware push + Apple lawsuit</strong> — <a href="https://www.macrumors.com/2026/07/24/the-macrumors-show-can-openai-beat-the-iphone/">The MacRumors Show</a> covers OpenAI's move into hardware and Apple's trade secret lawsuit.</li>
+  <li><strong>Canadian legislator reads LLM response in floor speech</strong> — <a href="https://arstechnica.com/ai/2026/07/canadian-legislator-reads-out-apparent-llm-response-in-floor-speech/">Ars Technica reports</a> a Canadian legislator apparently read an LLM-generated response during a floor speech, including the telltale line: "Here's a more natural, flowing version of that section..."</li>
+</ul>
+
+<h3>🔬 Science &amp; Tech</h3>
+<ul>
+  <li><strong>AlphaFold redesigns gene-editing proteins</strong> — <a href="https://arstechnica.com/science/2026/07/team-uses-alphafold-ai-to-redesign-gene-editing-proteins-to-make-them-safer/">Ars Technica</a>: Google's AlphaFold used to identify error-prone regions in CRISPR gene-editing proteins, potentially making edits safer and more precise.</li>
+  <li><strong>Most advanced robotic servicing satellite</strong> — <a href="https://arstechnica.com/space/2026/07/this-is-the-worlds-most-advanced-robotic-servicing-satellite-that-we-know-about/">Ars Technica profile</a> of a satellite capable of refueling, repairing, and repositioning other spacecraft.</li>
+  <li><strong>EU restricts satellite images of Iran War region</strong> — <a href="https://arstechnica.com/space/2026/07/european-union-grants-us-request-to-restrict-satellite-images-of-iran-war-region/">New delay on Copernicus satellite pics</a> as US military action in the region ramps up.</li>
+  <li><strong>Judge rebuffs Trump admin on NYT phone records</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/judge-rebuffs-trump-admin-demand-for-phone-records-from-nyt-reporters/">"We can quash the subpoenas, or you could withdraw the subpoenas,"</a> judge told DOJ attorneys.</li>
+  <li><strong>RFK Jr.'s hand-picked committee approves unstudied peptides</strong> — <a href="https://arstechnica.com/health/2026/07/rfk-jr-s-hand-picked-committee-approves-manufacture-of-peptides-he-uses/">Ars Technica</a>: Committee approved manufacturing of peptides with no human safety or efficacy data — peptides the committee chair personally uses.</li>
+</ul>
+
+<h3>🏠 Home Automation</h3>
+<p>Home Assistant feed was unavailable (RSS parse error). No notable developments from other sources this cycle. Standard HA ecosystem churn continues in the background.</p>
+
+<h3>📺 Streaming &amp; Media</h3>
+<ul>
+  <li><strong>Roku raises streaming stick prices up to 60%</strong> — <a href="https://arstechnica.com/gadgets/2026/07/roku-raises-streaming-stick-prices-by-up-to-60-percent/">Ars Technica</a>: Roku blames a RAM shortage after the CEO called it "great" for business in May.</li>
+  <li><strong>WhatsApp testing new message bubbles on iOS</strong> — <a href="https://9to5mac.com/2026/07/24/whatsapp-testing-new-message-bubbles-on-ios/">9to5Mac reports</a> WhatsApp is experimenting with redesigned message bubbles in the latest iOS beta.</li>
+</ul>
+]]></description>
+    </item>
+    <item>
+      <title>CrossWire: Commanders — Morning Brief, July 24</title>
+      <guid isPermaLink="false">crosswire-commanders-morning-2026-07-24</guid>
+      <pubDate>Fri, 24 Jul 2026 21:52:09 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🏈 Washington Commanders — Friday Morning</h2>
+
+<h3>📋 Training Camp Countdown: 5 Days</h3>
+<p>Camp opens <strong>July 29 in Ashburn, VA</strong>. Free admission with required ticket registration. Team reports July 28 (veterans) with first practice July 29. Key storylines entering camp:</p>
+<ul>
+  <li><strong>Edge rusher competition</strong> — The biggest camp battle. Dorance Armstrong returning from torn ACL. Free-agent additions Odafe Oweh (Ravens) and K'Lavon Chaisson (Panthers). 5th-round pick Joshua Josephs. Daronte Jones' scheme has real options for the first time in years.</li>
+  <li><strong>Ground game emphasis</strong> — The offseason's stated offensive priority. Can Jacory Croskey-Merritt and Rachaad White deliver a more involved running attack?</li>
+  <li><strong>Offensive line continuity</strong> — Laremy Tunsil anchoring at blindside (ranked Top 5 tackle by ESPN). Interior stability remains a question.</li>
+</ul>
+
+<h3>2026 Schedule — Opening Stretch</h3>
+<ul>
+  <li><strong>Sep 13 (Sun)</strong> — @ Philadelphia Eagles (road opener)</li>
+  <li><strong>Sep 20 (Sun)</strong> — @ Dallas Cowboys (early NFC East test)</li>
+  <li><strong>Sep 27 (Sun)</strong> — vs Seattle Seahawks (home opener)</li>
+  <li><strong>Oct 4 (Sun)</strong> — vs Indianapolis Colts</li>
+  <li><strong>Oct 11 (Sun)</strong> — vs New York Giants</li>
+  <li>17 games remaining on schedule. Divisional gauntlet starts Week 1.</li>
+</ul>
+
+<h3>🏆 Around the NFL</h3>
+<ul>
+  <li><strong>Tony Romo arrested on OWI suspicion</strong> — CBS analyst and former Cowboys QB <a href="https://www.espn.com/nfl/story/_/id/49441463/cbs-nfl-analyst-tony-romo-arrested-suspicion-owi">arrested in Milwaukee Thursday night</a> after poor performance on field sobriety tests. Romo was in town for the Wisconsin Amateur Golf Championship. First-offense OWI under Wisconsin law.</li>
+  <li><strong>Will Grier returns as Cowboys offensive assistant</strong> — Former Cowboys QB <a href="https://www.espn.com/nfl/story/_/id/49441578/source-ex-cowboys-qb-grier-returns-offensive-assistant">starting his coaching career</a> on Dallas's offensive staff.</li>
+  <li><strong>Bills pick grass over turf</strong> — GM Brandon Beane explained the decision for the new stadium on McAfee's show. Player safety narrative continues to win out over maintenance cost arguments.</li>
+  <li><strong>Patriots training camp</strong> — <a href="https://www.espn.com/nfl/story/_/id/49427703/new-england-patriots-training-camp-2026-intel-updates">ESPN's daily intel</a> tracking QB battles and potential breakouts in Foxborough.</li>
+  <li><strong>Fantasy football</strong> — <a href="https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis">ESPN's Liz Loza</a> on Panthers, Texans, and Broncos backfield depth chart situations as camp approaches.</li>
+</ul>
+
+<h3>📅 On the Radar</h3>
+<ul>
+  <li><strong>July 28:</strong> Veterans report to training camp</li>
+  <li><strong>July 29:</strong> First practice, Ashburn VA</li>
+  <li><strong>Nov 8 (Week 9):</strong> John Riggins #44 retirement ceremony at halftime vs Rams</li>
+  <li><strong>Jan 10:</strong> Regular season finale vs Cowboys</li>
+</ul>
+]]></description>
+    </item>
     <item>
       <title>CrossWire — Evening Brief, July 24</title>
       <guid isPermaLink="false">crosswire-evening-2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 21:39:21 GMT</pubDate>
+      <pubDate>Fri, 24 Jul 2026 21:52:09 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>CrossWire: Hermes — July 24 Evening</h2>
@@ -40,7 +178,7 @@
 <ul>
   <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐913, +5 since morning) — Native iPhone app for Hermes. Steady climb, closing in on 1K.</li>
   <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (⭐101) — Desktop agent workbench with evolutionary capabilities.</li>
-  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐68) — Personal agent & local memory hub for multiple agent tools.</li>
+  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐68) — Personal agent &amp; local memory hub for multiple agent tools.</li>
   <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (⭐58) — Persistent memory for coding agents: auto-capture, explainable recall, knowledge consolidation.</li>
   <li><a href="https://github.com/ShadoW-Shinigami/lyric-video-director"><strong>lyric-video-director</strong></a> (⭐43) — Hermes skill for typography-led lyric videos using GPT Image 2 and Gemini Omni Flash.</li>
   <li><a href="https://github.com/tamdogood/builder-essential-skills"><strong>builder-essential-skills</strong></a> (⭐33) — Daily workflow skills for Hermes.</li>
@@ -65,13 +203,13 @@
   <li><strong>macOS Sonoma 14.8.8 and Sequoia 15.7.8</strong> — <a href="https://9to5mac.com/2026/07/24/apple-releases-seventh-rcs-for-macos-sonoma-14-8-8-and-macos-sequoia-15-7-8/">Seventh RCs released</a>. Extended test period continues for these legacy-OS security updates.</li>
 </ul>
 
-<h3>🤖 AI & Models</h3>
+<h3>🤖 AI &amp; Models</h3>
 <ul>
   <li><strong>Claude Opus 5</strong> — Anthropic <a href="https://www.macrumors.com/2026/07/24/anthropic-opus-5/">released Opus 5 today</a>, offering near-Fable-5 performance at half the cost. Built for daily agentic use, pricing positioned well below Fable 5's $10/$50 per MTok. The Sonnet-to-Opus gap continues to compress — Sonnet 5 actually beats Opus 4.8 on Terminal-Bench 2.1 (80.4 vs 74.6). <a href="https://www.anthropic.com/news/claude-sonnet-5">Sonnet 5 also launched this week</a> with introductory pricing through August 31.</li>
   <li><strong>OpenAI hardware + Apple lawsuit</strong> — <a href="https://www.macrumors.com/2026/07/24/the-macrumors-show-can-openai-beat-the-iphone/">The MacRumors Show</a> covers OpenAI's hardware push and Apple's trade secret lawsuit, now reassigned to Judge Davila.</li>
 </ul>
 
-<h3>🔬 Science & Tech</h3>
+<h3>🔬 Science &amp; Tech</h3>
 <ul>
   <li><strong>AlphaFold redesigns gene-editing proteins</strong> — <a href="https://arstechnica.com/science/2026/07/team-uses-alphafold-ai-to-redesign-gene-editing-proteins-to-make-them-safer/">Ars Technica</a>: Google's AlphaFold used to identify error-prone regions in gene-editing proteins, potentially making CRISPR safer.</li>
   <li><strong>Most advanced robotic servicing satellite</strong> — <a href="https://arstechnica.com/space/2026/07/this-is-the-worlds-most-advanced-robotic-servicing-satellite-that-we-know-about/">Ars Technica profile</a> of a satellite capable of refueling, repairing, and repositioning other spacecraft. "These are things that tend to be really hard."</li>
@@ -110,7 +248,7 @@
 <ul>
   <li><strong>Opener:</strong> Sep 13 at Eagles</li>
   <li><strong>Home opener:</strong> Sep 27 vs Seahawks</li>
-  <li><strong>Key divisional:</strong> Eagles twice (Weeks 1 & 9), Cowboys twice (Weeks 2 & 18), Giants twice (Weeks 6 & 10)</li>
+  <li><strong>Key divisional:</strong> Eagles twice (Weeks 1 &amp; 9), Cowboys twice (Weeks 2 &amp; 18), Giants twice (Weeks 6 &amp; 10)</li>
   <li><strong>Riggins ceremony:</strong> Nov 8 vs Rams (Week 9)</li>
   <li><strong>Finale:</strong> Jan 10 vs Cowboys</li>
   <li>17 games remaining, all scheduled.</li>
