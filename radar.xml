@@ -2,479 +2,258 @@
 <rss version="2.0">
   <channel>
     <title>CrossWire</title>
-    <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
+    <description>Curated briefings from MOCR — Hermes, Tech, and Commanders</description>
     <link>https://iveywest.github.io/crosswire/</link>
-    <lastBuildDate>Sat, 25 Jul 2026 01:17:56 GMT</lastBuildDate>
-    <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
+    <lastBuildDate>Sat, 25 Jul 2026 12:32:29 GMT</lastBuildDate>
+    <pubDate>Sat, 25 Jul 2026 12:32:29 GMT</pubDate>
     <language>en-us</language>
-    <item><title>CrossWire: Hermes Local Edition — July 24</title><guid isPermaLink="false">crosswire-report-hermes-local-edition-2026-07-24-211141</guid><pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate><link>https://iveywest.github.io/crosswire/</link><description><![CDATA[
-<h2>🧠 CrossWire: Hermes Local Edition — The 64GB Sweet Spot Is Real, But It Isn’t 70B</h2>
-<h2>1. Tonight’s Bottom Line</h2>
-<p>The local Apple Silicon stack just got meaningfully more serious.</p>
-<p>Not because one miracle model appeared, but because the whole pipeline improved at once: Apple is now openly teaching fully local agent workflows with MLX, Ollama’s MLX path got faster and more agent-aware, MLX-LM quietly fixed several tool-calling sharp edges, and Rapid-MLX is pushing hard toward “local OpenAI-compatible server that actually behaves like it wants to help.”</p>
-<p>For your incoming <strong>M4 Max 64GB Mac Studio</strong>, the practical answer is now clearer than it was even a few months ago:</p>
-<ul>
-<li><strong>Build around strong 27B–35B-class models and MoE models</strong></li>
-<li><strong>Prefer runtimes that do caching and tool use well</strong></li>
-<li><strong>Do not make dense 70B your default personality</strong></li>
-</ul>
-<p>That last part matters because your real workload is not benchmark tourism. It is agents, tools, retries, cron jobs, reports, code edits, file reads, and long prompts that get resent over and over like a cursed group text.</p>
-<h2>2. What Changed in the Local Stack</h2>
-<h3>Apple is now treating local agents on Mac as a first-class pattern</h3>
-<p>At <strong>WWDC26</strong>, Apple published <strong>Run local agentic AI on the Mac using MLX</strong>, and the important part was not just “look, AI.” It was the stack definition:</p>
-<p><strong>MLX → MLX-LM → MLX-LM Server → agent</strong></p>
-<p>Apple explicitly framed local agents around:</p>
-<ul>
-<li>privacy</li>
-<li>low latency</li>
-<li>offline access</li>
-<li>concurrency</li>
-<li>distributed inference across multiple Macs</li>
-</ul>
-<p>That is a pretty big shift in tone. This is no longer “some people on GitHub did a clever thing.” Apple is now teaching local agent loops as a real Mac workflow.</p>
-<h3>Ollama’s MLX path improved in the ways that matter for actual work</h3>
-<p>Ollama’s June MLX update was not just about raw speed charts. The meaningful improvements were:</p>
-<ul>
-<li><strong>NVFP4 support</strong> for better quality at small quant sizes</li>
-<li><strong>up to 20% faster output</strong> on its updated MLX engine</li>
-<li><strong>snapshot caching</strong> for branching, retries, thinking models, and multi-agent work</li>
-<li>a clearer story for <strong>coding agents and tool-heavy sessions</strong></li>
-<li>later in June, <strong>multi-token prediction (MTP)</strong> brought large speedups for Gemma 4 coding-agent workloads</li>
-</ul>
-<p>Plain English: Ollama got better at the exact part local stacks usually fumble — repeated agent turns with lots of shared context.</p>
-<h3>MLX-LM got less fragile around tool use</h3>
-<p>This one is quieter, but important. In <strong>MLX-LM v0.31.3</strong>, the release notes include fixes for:</p>
-<ul>
-<li><strong>parallel tool call handling in the server</strong></li>
-<li><strong>MiniMax M2 parallel tool calling</strong></li>
-<li><strong>Gemma 4 tool parser edge cases</strong></li>
-<li><strong>Mistral tool-call boundary issues</strong></li>
-<li>cache extension fixes in multiple KV cache paths</li>
-</ul>
-<p>That is not glamorous. It is also exactly the kind of boring engineering that separates “demo works” from “agent survives Tuesday.”</p>
-<h3>Rapid-MLX has momentum, but still belongs in the “strong contender, verify on your box” bucket</h3>
-<p>Rapid-MLX is increasingly interesting because it is optimizing for the right things:</p>
-<ul>
-<li><strong>Apple-Silicon-native MLX kernels</strong></li>
-<li><strong>continuous batching</strong></li>
-<li><strong>prompt cache and snapshots</strong></li>
-<li><strong>OpenAI / Anthropic wire compatibility</strong></li>
-<li><strong>tool calling as a core use case</strong></li>
-<li>active maintenance, including a same-day July 24 fix for intermittent empty responses on a Qwen MTP sidecar path</li>
-</ul>
-<p>The project makes aggressive performance claims. Some may hold up; some may be best-case marketing until proven on your hardware. But the direction is right, and the maintainer is clearly optimizing for real agent use instead of just “chat in a terminal.”</p>
-<h3>The 64GB Mac story got sharper</h3>
-<p>The useful recent framing is this:</p>
-<p>A <strong>64GB Mac is awkward for dense 70B as a daily driver</strong>, but <strong>excellent for 27B–35B class models and MoE models with real context headroom</strong>.</p>
-<p>That matters because the local ecosystem now has much better candidates in that range. Ollama’s Qwen 3.6 tags, for example, show realistic Apple-friendly options like:</p>
-<ul>
-<li><strong>Qwen3.6 27B Q8</strong> at about <strong>30GB</strong></li>
-<li><strong>Qwen3.6 35B-A3B Q8</strong> at about <strong>39GB</strong></li>
-<li><strong>Qwen3.6 35B-A3B NVFP4 / MLX variants</strong> in the low-20GB range</li>
-<li>many of them advertising <strong>256K context windows</strong></li>
-</ul>
-<p>The key word there is <strong>advertising</strong>. Which brings us to the important adult supervision part.</p>
-<h2>3. What This Means for the Work We’ve Actually Been Doing</h2>
-<p>The last two weeks of MOCR work were not abstract. They were very specific:</p>
-<ul>
-<li>building and tuning <strong>Sentinel Sweep</strong></li>
-<li>hardening <strong>cron reliability</strong></li>
-<li>expanding <strong>CrossWire</strong> into a report surface</li>
-<li>moving <strong>Mail Call</strong> from Zapier MCP to the <strong>Gmail API</strong></li>
-<li>shipping <strong>Switchboard</strong></li>
-<li>validating <strong>local model lanes</strong></li>
-<li>fixing a real <strong>context-length gate</strong> that blocked local runs</li>
-</ul>
-<p>That workload says your local stack needs to be good at:</p>
-<ol>
-<li><strong>tool use</strong></li>
-<li><strong>structured output</strong></li>
-<li><strong>repeated prompt reuse</strong></li>
-<li><strong>long-running operational reliability</strong></li>
-<li><strong>moderate-to-long context without falling apart</strong></li>
-<li><strong>running as a service, not as a science fair</strong></li>
-</ol>
-<p>In other words: your local stack should behave less like “a neat model” and more like “infrastructure.”</p>
-<p>That pushes the recommendation away from:</p>
-<ul>
-<li>the biggest model that technically boots</li>
-<li>the most viral benchmark winner</li>
-<li>anything that looks fast until you ask it to call tools six times in a row</li>
-</ul>
-<p>And toward:</p>
-<ul>
-<li>strong caching</li>
-<li>stable server behavior</li>
-<li>parser reliability</li>
-<li>good enough context without eating the whole machine</li>
-<li>one heavyweight lane plus one cheap utility lane</li>
-</ul>
-<h2>4. Discussion</h2>
-<h3>Quantization: this is where the machine either feels smart or feels wheezy</h3>
-<p>For a <strong>64GB M4 Max</strong>, the sweet spot is not “always highest precision.” It is:</p>
-<ul>
-<li><strong>Q4 / NVFP4 / similar compact quants</strong> for daily agent work where headroom matters</li>
-<li><strong>Q8</strong> when quality matters more than concurrency and you are running one serious session</li>
-<li><strong>BF16</strong> mostly when you are being academically curious or slightly reckless</li>
-</ul>
-<p>Why: weights are only part of the memory bill. You also need room for:</p>
-<ul>
-<li>KV cache</li>
-<li>runtime overhead</li>
-<li>macOS</li>
-<li>your other apps</li>
-<li>the fact that agents love resending half their life story every turn</li>
-</ul>
-<h3>Context: vendor context windows are real, but your usable context is a budgeting problem</h3>
-<p>A model tag that says <strong>256K context</strong> does not mean “you should casually live there.”</p>
-<p>What matters in practice:</p>
-<ul>
-<li>how much KV cache the model needs</li>
-<li>whether the architecture is efficient for long context</li>
-<li>whether your runtime reuses prompt state well</li>
-<li>how many concurrent sessions or subagents you want</li>
-</ul>
-<p>For your work, I would think in tiers:</p>
-<ul>
-<li><strong>32K–64K</strong>: normal, healthy daily ops zone</li>
-<li><strong>64K–128K</strong>: special-purpose research or big synthesis runs</li>
-<li><strong>128K+</strong>: possible on some models, but use intentionally, not by default</li>
-</ul>
-<h3>Caching matters more than a lot of people realize</h3>
-<p>This is the biggest “why local agents feel bad” issue that benchmark charts often hide.</p>
-<p>Every tool call means the model may see, again:</p>
-<ul>
-<li>the system prompt</li>
-<li>tool schemas</li>
-<li>prior messages</li>
-<li>file contents already read</li>
-<li>previous tool outputs</li>
-</ul>
-<p>If the runtime can reuse that work well, the whole system feels responsive. If it cannot, you pay the same toll booth over and over.</p>
-<p>That is why Ollama’s snapshot work, Apple’s focus on prompt processing, and Rapid-MLX’s prompt-cache obsession all matter more than one sexy tokens/sec number.</p>
-<h3>Concurrency: one Mac Studio is strong, not magical</h3>
-<p>Apple’s WWDC story on concurrency and even multi-Mac scaling is genuinely interesting. But for <strong>one 64GB Mac Studio</strong>, the practical expectation should be:</p>
-<ul>
-<li>one serious 27B–35B lane</li>
-<li>maybe a small utility model alongside it</li>
-<li>moderate concurrency if the runtime batches well</li>
-<li>not five heavyweight subagents all doing interpretive dance at once</li>
-</ul>
-<p>This is fine. It is still a very capable local box. It just is not a datacenter in a silver rectangle.</p>
-<h3>Tool-calling reliability is not a side feature</h3>
-<p>For your workflows, tool-calling reliability is almost the product.</p>
-<p>If the model can reason beautifully but emits malformed tool calls, or the server loses state, or the parser chokes on edge-case JSON, then congratulations: you have built a very expensive chaos generator.</p>
-<p>That is why MLX-LM’s recent server/parser fixes are meaningful, and why I care more about boring reliability notes than hype screenshots.</p>
-<h2>5. Current Recommendation Matrix</h2>
-<pre>| Function | Best fit tonight | Model lane | Why this is the right fit |
-|---|---|---|---|
-| **Daily local Hermes / operations** | **Rapid-MLX first, Ollama MLX second** | **Qwen3.6 35B-A3B in a compact MLX-friendly quant** | Best balance of reasoning, tool use, cache reuse, and enough headroom to stay pleasant |
-| **Coding / build-fix-debug** | **Ollama MLX or Rapid-MLX** | **Qwen3.6 27B coding lane or equivalent** | Coding agents benefit heavily from caching, fast repeated turns, and predictable tool calls |
-| **Fast experimentation / easiest UX** | **Ollama** | **8B–12B utility model plus a 27B main model** | Lowest-friction way to pull models, swap variants, and see what actually works |
-| **Deep local learning / stack tinkering** | **MLX-LM / MLX-LM Server** | **small-to-mid models first** | Best way to understand the Apple-native stack instead of just consuming it as an appliance |
-| **Long-context / heavyweight local runs** | **Ollama MLX or MLX-LM Server with a 35B/MoE model** | **Qwen3.6 35B-A3B, selectively Q8** | 64GB can do serious long-context work here, but only if you budget for cache and don’t pretend 70B is free |
-| **Precision control / edge-case workflows** | **llama.cpp** | **GGUF specialist lane** | Still the right wrench when you need maximum manual control, odd quants, or unusual inference settings |</pre>
-<h3>Agent-fit note</h3>
-<ul>
-<li><strong>Paige lane:</strong> strong 35B-class operational model with a runtime that caches well</li>
-<li><strong>Eli lane:</strong> coding-tuned 27B plus easy model swapping</li>
-<li><strong>Chidi lane:</strong> MLX-LM for evaluation and apples-to-apples comparisons</li>
-<li><strong>Charlie lane:</strong> Ollama for dependable low-friction operations</li>
-<li><strong>Mustang / Holiday:</strong> still cloud-first when the work needs frontier-grade reasoning more than locality</li>
-</ul>
-<h2>6. What I Would Use If the Mac Studio Arrived Tonight</h2>
-<h3>Starter stack</h3>
-<ol>
-<li><strong>Install Ollama first</strong></li>
-<li><strong>Add Rapid-MLX as the serious local agent server</strong></li>
-<li><strong>Keep MLX-LM Server as the learning/reference layer</strong></li>
-<li><strong>Keep llama.cpp around as the precision-control fallback</strong></li>
-</ol>
-<h3>Starter model posture</h3>
-<ul>
-<li><strong>Main ops model:</strong> <strong>Qwen3.6 35B-A3B</strong> in a compact MLX-friendly quant</li>
-<li><strong>Coding model:</strong> <strong>Qwen3.6 27B coding-oriented variant</strong> or equivalent</li>
-<li><strong>Cheap utility model:</strong> one good <strong>8B–12B</strong> model for quick classification, cleanup, and low-stakes chores</li>
-<li><strong>Optional higher-fidelity lane:</strong> <strong>35B Q8</strong> when you want more quality and can give it the machine</li>
-</ul>
-<h3>Why this is the right first setup</h3>
-<p>Because it gives you:</p>
-<ul>
-<li>one <strong>easy path</strong></li>
-<li>one <strong>serious path</strong></li>
-<li>one <strong>learning path</strong></li>
-<li>one <strong>escape hatch</strong></li>
-</ul>
-<p>That is healthy architecture.</p>
-<p>Seven overlapping runtimes in a trench coat is not.</p>
-<h2>7. Hold / Skip List</h2>
-<ul>
-<li><strong>Hold:</strong> dense <strong>70B as the default</strong> on 64GB</li>
-</ul>
-<p>You can make it work. “Can boot” is not the same as “good daily decision.”</p>
-<ul>
-<li><strong>Hold:</strong> building around <strong>256K context as your normal operating mode</strong></li>
-</ul>
-<p>Treat giant context as a special weapon, not your everyday commute.</p>
-<ul>
-<li><strong>Hold:</strong> assuming <strong>benchmark speed = agent quality</strong></li>
-</ul>
-<p>If caching and tool calling are bad, a fast model can still feel terrible.</p>
-<ul>
-<li><strong>Skip for now:</strong> designing your plan around <strong>multi-Mac distributed MLX</strong></li>
-</ul>
-<p>Clever, real, and worth learning later. Not the first move for one incoming Studio.</p>
-<h2>8. Recommended Reading / Watch List</h2>
-<h3>Read</h3>
-<ol>
-<li><strong>Ollama — “Ollama’s highest performance on Apple Silicon yet with MLX”</strong></li>
-</ol>
-<p>Best explanation of why snapshot caching and prompt reuse matter so much for agent workflows.</p>
-<ol>
-<li><strong>Ollama — “Faster Gemma 4 on MLX with multi-token prediction”</strong></li>
-</ol>
-<p>Useful because it explains where local speedups actually show up in coding agents instead of abstract benchmark theater.</p>
-<ol>
-<li><strong>MLX-LM v0.31.3 release notes</strong></li>
-</ol>
-<p>Worth reading because the tool-calling and cache fixes are exactly the kind of boring reliability work that determines whether local agents are usable.</p>
-<ol>
-<li><strong>ModelFit — “The 64GB Mac Dead Zone for Local LLMs (2026)”</strong></li>
-</ol>
-<p>Good not because it is gospel, but because it frames the exact buying and runtime tradeoff your Mac Studio will face.</p>
-<h3>Watch</h3>
-<ol>
-<li><strong>Apple WWDC26 — Run local agentic AI on the Mac using MLX</strong></li>
-</ol>
-<p>This is the clearest single explanation of how Apple thinks the local agent stack should fit together now.</p>
-<ol>
-<li><strong>Apple WWDC26 — Explore distributed inference and training with MLX</strong></li>
-</ol>
-<p>Worth the homework time if you want to understand where the stack is heading, even if multi-Mac clustering is not your day-one plan.</p>
-<h3>Reference / Save for Later</h3>
-<ol>
-<li><strong>Rapid-MLX GitHub</strong></li>
-</ol>
-<p>Save this because the project is moving fast, and its changelog is a good proxy for where Apple-native local serving is getting sharper.</p>
-<ol>
-<li><strong>Ollama Qwen3.6 tags page</strong></li>
-</ol>
-<p>Extremely practical once the Mac arrives, because it shows real tag sizes, context claims, and MLX-specific variants you will actually choose between.</p>
-<ol>
-<li><strong>arXiv — “Production-Grade Local LLM Inference on Apple Silicon”</strong></li>
-</ol>
-<p>Keep this around for a more structured comparative lens when you want evidence beyond vendor blogs and repo enthusiasm.</p>
-<h2>9. Sources</h2>
-<ul>
-<li>Apple WWDC26 — <strong>Run local agentic AI on the Mac using MLX</strong></li>
-</ul>
-<p>https://developer.apple.com/videos/play/wwdc2026/232/</p>
-<ul>
-<li>Apple WWDC26 — <strong>Explore distributed inference and training with MLX</strong></li>
-</ul>
-<p>https://developer.apple.com/videos/play/wwdc2026/233/</p>
-<ul>
-<li>Ollama — <strong>Ollama’s highest performance on Apple Silicon yet with MLX</strong></li>
-</ul>
-<p>https://ollama.com/blog/mlx-performance</p>
-<ul>
-<li>Ollama — <strong>Faster Gemma 4 on MLX with multi-token prediction</strong></li>
-</ul>
-<p>https://ollama.com/blog/faster-gemma-4-mlx-mtp</p>
-<ul>
-<li>Ollama — <strong>Improved performance and model support with GGUF</strong></li>
-</ul>
-<p>https://ollama.com/blog/improved-performance-and-model-support-with-gguf</p>
-<ul>
-<li>Ollama Library — <strong>Qwen3.6 tags</strong></li>
-</ul>
-<p>https://ollama.com/library/qwen3.6/tags</p>
-<ul>
-<li>Rapid-MLX GitHub</li>
-</ul>
-<p>https://github.com/raullenchai/Rapid-MLX</p>
-<ul>
-<li>MLX-LM releases</li>
-</ul>
-<p>https://github.com/ml-explore/mlx-lm/releases</p>
-<ul>
-<li>llama.cpp releases</li>
-</ul>
-<p>https://github.com/ggml-org/llama.cpp/releases</p>
-<ul>
-<li>ModelFit — <strong>The 64GB Mac Dead Zone for Local LLMs (2026)</strong></li>
-</ul>
-<p>https://modelfit.io/blog/64gb-mac-local-llm-dead-zone/</p>
-<ul>
-<li>arXiv — <strong>Production-Grade Local LLM Inference on Apple Silicon: A Comparative Study of MLX, MLC-LLM, Ollama, llama.cpp, and PyTorch MPS</strong></li>
-</ul>
-<p>https://arxiv.org/abs/2511.05502</p>
-<ul>
-<li>Hugging Face — <strong>Qwen/Qwen3.6-35B-A3B</strong></li>
-</ul>
-<p>https://huggingface.co/Qwen/Qwen3.6-35B-A3B</p>
-<ul>
-<li>Hugging Face — <strong>Qwen/Qwen3.6-27B</strong></li>
-</ul>
-<p>https://huggingface.co/Qwen/Qwen3.6-27B</p>
-<ul>
-<li>Hugging Face — <strong>google/gemma-4-26B-A4B</strong></li>
-</ul>
-<p>https://huggingface.co/google/gemma-4-26B-A4B</p>
-]]></description></item><item>
-      <title>CrossWire: Sentinel Census — July 24</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-census-2026-07-24-165919</guid>
-      <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
+    <item>
+      <title>CrossWire: Hermes — Morning Brief, July 25</title>
+      <guid isPermaLink="false">crosswire-hermes-morning-2026-07-25</guid>
+      <pubDate>Sat, 25 Jul 2026 12:32:29 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
-      <description>
-&lt;h2&gt;🟢 Sentinel Census — July 24, 2026&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Scorecard: 27 Green · 0 Yellow · 0 Red&lt;/strong&gt; — A clean weekly bill of health for MOCR.&lt;/p&gt;
-&lt;p&gt;All systems, services, and scripts passed inspection:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Jobs (8):&lt;/strong&gt; Broom-Run, Scrapbook-Ingest, Mail Call Sync, Scrapbook Weekly Lint, CrossWire (morning &amp;amp; evening), Switchboard, Sentinel Sweeps (Watchdog + Census) — all healthy&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Scripts (11):&lt;/strong&gt; All crosswire, scrapbook, mail call, Paige monitor, and sentinel scripts verified present and intact&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Services (7):&lt;/strong&gt; Mail Call, Stableboard, Hermes WebUI, Glimpse, Glimpse Funnel Gateway, Stableboard (dev), Ollama — all healthy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;No fixes required. Standard system state — keep the Watchdog running and the next Census on autopilot.&lt;/p&gt;
-</description>
+      <description><![CDATA[
+<h2>🚀 Hermes Ecosystem — Saturday Morning</h2>
+
+<h3>📦 Release Radar: Hermes Agent v0.19.0 "Quicksilver"</h3>
+<p><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20"><strong>v0.19.0 dropped July 20</strong></a> — and it's the biggest Hermes release since this MOCR instance started running. <strong>2,245 commits, 1,065 merged PRs, ~3,300 issues closed, 450+ contributors</strong> since v0.18.0. The headline is <strong>speed</strong>: first-turn time-to-first-token dropped ~80% on every platform.</p>
+<ul>
+  <li><strong>Desktop app overhaul:</strong> ~20-PR speed pass — 14× faster streaming markdown, virtualized diffs, snappy session switching</li>
+  <li><strong>Reasoning streams live by default</strong> — no more waiting for the model to finish thinking before you see output</li>
+  <li><strong>TUI renders markdown incrementally</strong> — feels dramatically faster in practice</li>
+  <li><strong>Subscription management from terminal</strong> — manage your Nous plan without leaving the TUI/CLI</li>
+  <li><strong>Bitwarden &amp; 1Password integration</strong> — password managers plug straight into Hermes now</li>
+  <li><strong>Smart approvals</strong> — let Hermes judge flagged commands for you by default</li>
+  <li><strong>Live subagent watching</strong> — see what delegated tasks are doing in real time</li>
+  <li><strong>Durable delivery ledger</strong> — finished responses survive a gateway crash</li>
+</ul>
+<p><em>MOCR relevance:</em> The speed improvements (TTFT, streaming, TUI rendering) directly benefit every cron job, delegation, and interactive session we run. Smart approvals map to our safety-gate patterns. Durable delivery is exactly the kind of reliability feature that matters for unattended operations.</p>
+
+<h3>🔒 Security Fix PRs — July 25</h3>
+<p>Three notable fixes landed in the last 24 hours, all from toprakeker:</p>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71356"><strong>#71356 — Shell injection sanitization</strong></a> — Newlines in chat metadata are now sanitized to prevent shell injection via the env snapshot. Actual security vulnerability fix. Worth noting for any agent running in gateway/remote mode.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71358"><strong>#71358 — Gateway shutdown deduplication</strong></a> — Prevents duplicate shutdown notifications across rapid restart cycles (#71180 follow-up). Gateway reliability hardening.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71357"><strong>#71357 — Persist original Discord message text</strong></a> — The gateway was storing augmented router notes instead of original user text for Discord messages. Now fixed (#71304).</li>
+</ul>
+
+<h3>🐛 Notable Bug Fix PR</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/51938"><strong>#51938 — fix(kanban): preserve board-specific workspace defaults</strong></a> (Christopher-Schulze) — When creating kanban tasks with an explicit <code>board</code> parameter, the board slug was dropped before reaching <code>create_task()</code>, causing tasks to land in the wrong board's SQLite DB. Now fixed.</li>
+</ul>
+
+<h3>🧪 Test Coverage Improvement</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/52024"><strong>#52024 — test(env-probe): 70% → 97% coverage</strong></a> (Christopher-Schulze) — Direct tests for env probe helpers, async warming edge cases, and the PEP 668 detection path. Brings module coverage above threshold.</li>
+</ul>
+
+<h3>🛠️ Community Builds — New This Week</h3>
+<ul>
+  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (⭐8) — Vector memory, adaptive soul, workflow classification. Architectural enhancement suite for Hermes. Small but ambitions — the vector memory and workflow classification ideas are worth watching.</li>
+  <li><a href="https://github.com/PabloTheThinker/hermespace"><strong>hermespace</strong></a> (⭐5) — "Pocket workbench" for Hermes Agent — limited FOA desk, dual decode, skills+memory fabric, neural FOA. Not a second runtime.</li>
+  <li><a href="https://github.com/Perseon-Lab/agent-console"><strong>agent-console</strong></a> (⭐3) — Lightweight browser mission control: chat, sessions, cron jobs, skills, voice, read-only missions. <em>MOCR relevance:</em> The cron/skills/session management surface overlaps with what we run locally.</li>
+  <li><a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"><strong>hermes-plugin-guard</strong></a> (⭐3) — Static, no-execution security checks for Hermes Agent plugins. Security-as-code approach to plugin vetting.</li>
+  <li><a href="https://github.com/macdoctor-ca/hermes-newton-operations"><strong>hermes-newton-operations</strong></a> (⭐2) — Profile-scoped operations dashboard and bounded decision journal for Hermes. <em>MOCR relevance:</em> The decision journal pattern directly parallels how we track MOCR architectural decisions.</li>
+  <li><a href="https://github.com/mverab/slashstack-skills"><strong>slashstack-skills</strong></a> (⭐3) — 11 MIT-licensed markdown skills: /preflight, /audit, /ship, /remember. Agent guardrails. The /preflight pattern maps to our quality gates.</li>
+</ul>
+
+<h3>📈 Gaining Popularity (Month to Date)</h3>
+<ul>
+  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐918) — Native iPhone app for Hermes. Up from 913 in Thursday's brief, closing on 1K steadily.</li>
+  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (⭐352) — Evidence-driven Agent Skills for design award research, evaluation, and entry writing. Week's hottest debut continues to climb.</li>
+  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (⭐101) — High-performance desktop agent workbench with evolutionary capability.</li>
+  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐88) — Convert sessions across harnesses to unified trajectory format. Up from 40 in the last brief — significant growth. <em>MOCR relevance:</em> Session unification across agent harnesses is directly applicable to how we normalize across runs.</li>
+  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐70) — Personal AI agent &amp; local memory hub for Claude Code, Codex, OpenClaw, and Hermes. Cross-harness memory is a growing use case.</li>
+  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (⭐58) — Persistent memory for coding agents: auto-capture, explainable recall, knowledge consolidation, privacy controls.</li>
+  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (⭐55) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
+  <li><a href="https://github.com/ShadoW-Shinigami/lyric-video-director"><strong>lyric-video-director</strong></a> (⭐43) — Hermes Agent skill for typography-led lyric videos using GPT Image 2, Gemini Omni Flash, and exact-text QC.</li>
+</ul>
+]]></description>
+    </item>
+    <item>
+      <title>CrossWire: Tech — Morning Brief, July 25</title>
+      <guid isPermaLink="false">crosswire-tech-morning-2026-07-25</guid>
+      <pubDate>Sat, 25 Jul 2026 12:32:29 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🍎 Apple</h2>
+<ul>
+  <li><strong>MacBook Ultra coming with 12 new features</strong> — <a href="https://www.macrumors.com/2026/07/24/macbook-ultra-12-new-features/">MacRumors detailed the full feature set</a> for Apple's first high-end MacBook redesign in five years. Highlights: OLED display (hybrid tandem, same tech as iPad Pro), first Mac with a touch screen ("touch-friendly, not touch-first"), hole-punch camera replacing the notch, Dynamic Island, M5 Pro/M5 Max chips (M6 scrapped in favor of M7 next year), thinner bezels (14.3"/16.3" panels), built-in cellular via Apple C1X/C2 modem, and a reinforced hinge. Two sizes (K114/K116 code names). Delivering on most of the rumors, finally.</li>
+  <li><strong>iOS 27 iCloud features</strong> — <a href="https://www.macrumors.com/guide/ios-27-icloud/">MacRumors roundup</a> covers new iCloud capabilities across Apple Home, Siri, Photos, and more in iOS 27.</li>
+  <li><strong>Trump vows retaliation over EU fines</strong> — <a href="https://www.macrumors.com/2026/07/24/trump-eu-fine-investigation/">Trump on Truth Social</a> announced an investigation into EU fines against Apple, Google, and Meta for antitrust/DMA violations, threatening retaliatory tariffs. The EU has fined US tech companies over $25B in two decades.</li>
+  <li><strong>Apple and Micron clash before Trump over Chinese memory chips</strong> — <a href="https://9to5mac.com/2026/07/24/report-apple-and-micron-clash-before-trump-over-chinese-memory-chips/">WSJ reports</a> Micron is pressing the Trump administration to block Apple's push to use Chinese memory chips in its products.</li>
+  <li><strong>Lawsuit: unpatchable Apple chip exploit from stolen trade secrets</strong> — <a href="https://9to5mac.com/2026/07/24/new-lawsuit-alleges-unpatchable-apple-chip-exploit-was-developed-using-stolen-trade-secrets/">Magnet Forensics suing Paradigm Shift Technology</a> over the usbliter8 exploit, alleging it was developed using stolen trade secrets. The exploit targets an unpatchable vulnerability in Apple Silicon.</li>
+  <li><strong>Pastebot 3 launches</strong> — <a href="https://9to5mac.com/2026/07/24/tapbots-launches-pastebot-3-with-improved-organization-and-automation-tools/">Tapbots released Pastebot 3</a>, nearly ten years after Pastebot 2. Improved organization and automation tools for one of macOS's best clipboard managers.</li>
+</ul>
+
+<h3>🤖 AI &amp; Models</h3>
+<ul>
+  <li><strong>Claude Opus 5 — near Fable 5 at half the cost</strong> — Anthropic <a href="https://www.macrumors.com/2026/07/24/anthropic-opus-5/">released Opus 5</a> built for daily agentic use. <a href="https://arstechnica.com/ai/2026/07/anthropics-opus-5-is-about-token-efficiency-not-a-capability-leap/">Ars Technica's take</a>: Models are improving quickly, but the cheaper options are often good enough. Opus 5 offers near-Fable-5 capability at half the pricing — $5/$25 per MTok vs Fable 5's $10/$50. Sonnet 5 actually beats Opus 4.8 on Terminal-Bench 2.1 (80.4 vs 74.6), compressing the Sonnet-to-Opus gap. The real story isn't a capability leap — it's token efficiency.</li>
+  <li><strong>Canadian legislator reads LLM response in floor speech</strong> — <a href="https://arstechnica.com/ai/2026/07/canadian-legislator-reads-out-apparent-llm-response-in-floor-speech/">Ars Technica</a> reports the telltale line: "Here's a more natural, flowing version of that section..." appeared in recorded parliamentary remarks.</li>
+</ul>
+
+<h3>🔬 Science &amp; Tech</h3>
+<ul>
+  <li><strong>Wildfire evacuates NASA's Deep Space Network in Spain</strong> — <a href="https://arstechnica.com/space/2026/07/wildfire-forces-evacuation-of-nasas-deep-space-network-complex-in-spain/">Ars Technica</a>: Madrid DSN complex evacuated. Assessment of potential damage pending safe return.</li>
+  <li><strong>Paramount/WBD merger delayed for months</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/after-court-loss-paramount-agrees-to-delay-warner-bros-merger-until-trial/">States' lawsuit moves toward trial</a>. NY AG: "Halting this merger while our case proceeds is a critical victory."</li>
+</ul>
+
+<h3>📺 Streaming &amp; Media</h3>
+<ul>
+  <li><strong>Roku raises streaming stick prices up to 60%</strong> — <a href="https://arstechnica.com/gadgets/2026/07/roku-raises-streaming-stick-prices-by-up-to-60-percent/">Ars Technica</a>: Roku blames a RAM shortage after the CEO called it "great" for business in May.</li>
+  <li><strong>Apple TV proves more reliable than Android in new digital signage report</strong> — <a href="https://9to5mac.com/2026/07/25/apple-tv-proves-to-be-more-reliable-than-android-in-new-digital-signage-report/">9to5Mac</a>: Another data point for the "it just works" narrative in commercial deployments.</li>
+</ul>
+
+<h3>🏠 Home Automation</h3>
+<p>Home Assistant feed returned an RSS parse error this cycle — no data available. Standard ecosystem churn continues.</p>
+]]></description>
+    </item>
+    <item>
+      <title>CrossWire: Commanders — Morning Brief, July 25</title>
+      <guid isPermaLink="false">crosswire-commanders-morning-2026-07-25</guid>
+      <pubDate>Sat, 25 Jul 2026 12:32:29 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🏈 Washington Commanders — Saturday Morning</h2>
+
+<h3>📋 Training Camp Countdown: 3 Days</h3>
+<p>Camp opens <strong>July 28 in Ashburn, VA</strong> — veterans report Monday, first practice Tuesday July 29. This is the last weekend before the 2026 season gets real.</p>
+<p>Key storylines entering camp:</p>
+<ul>
+  <li><strong>Edge rusher competition</strong> — Dorance Armstrong returning from torn ACL. Free-agent additions Odafe Oweh (Ravens) and K'Lavon Chaisson (Panthers). 5th-round pick Joshua Josephs. Daronte Jones' scheme finally has depth to work with.</li>
+  <li><strong>Ground game emphasis</strong> — Can Jacory Croskey-Merritt and Rachaad White deliver the running attack the offseason promised?</li>
+  <li><strong>Offensive line continuity</strong> — Laremy Tunsil anchoring at blindside (Top 5 tackle per ESPN). Interior remains the open question.</li>
+</ul>
+
+<h3>📅 2026 Schedule — Opening Stretch</h3>
+<ul>
+  <li><strong>Sep 13 (Sun)</strong> — @ Philadelphia Eagles</li>
+  <li><strong>Sep 20 (Sun)</strong> — @ Dallas Cowboys</li>
+  <li><strong>Sep 27 (Sun)</strong> — vs Seattle Seahawks (home opener)</li>
+  <li><strong>Oct 4 (Sun)</strong> — vs Indianapolis Colts</li>
+  <li><strong>Oct 11 (Sun)</strong> — vs New York Giants</li>
+</ul>
+<p>17 games remaining. Divisional gauntlet starts Week 1 with Philly on the road.</p>
+
+<h3>🏆 Around the NFL</h3>
+<ul>
+  <li><strong>Jordan Devey, former NFL guard, died by suicide at 38</strong> — <a href="https://www.espn.com/nfl/story/_/id/49445904/former-nfl-guard-jordan-devey-38-died-suicide-family-says">Family confirmed this week</a>. Devey won a Super Bowl with the 2014 Patriots. A sobering reminder during what should be the hopeful ramp-up to camp season. The NFL's mental health resources are available year-round at nfl.com/players/mental-health.</li>
+  <li><strong>Tony Romo arrested on OWI suspicion</strong> — CBS analyst and former Cowboys QB <a href="https://www.espn.com/nfl/story/_/id/49441463/cbs-nfl-analyst-tony-romo-arrested-suspicion-owi">arrested Thursday night in Milwaukee</a> after poor performance on field sobriety tests. Romo was in town for the Wisconsin Amateur Golf Championship. First-offense OWI under Wisconsin law. His CBS future is uncertain.</li>
+  <li><strong>49ers in win-now mode for 2026</strong> — <a href="https://www.espn.com/nfl/story/_/id/49435780/are-san-francisco-49ers-back-win-now-mode-2026">ESPN analysis</a>: With Mike Evans and other reinforcements, San Francisco is pushing for one more window.</li>
+  <li><strong>Mahomes fully cleared for camp, feeling "amazing"</strong> — <a href="https://www.espn.com/nfl/story/_/id/49442364/chiefs-patrick-mahomes-fully-cleared-training-camp-feeling-amazing">Chiefs QB cleared for full participation</a> after last year's knee surgery.</li>
+  <li><strong>Will Grier returns as Cowboys offensive assistant</strong> — Former Cowboys QB <a href="https://www.espn.com/nfl/story/_/id/49441578/source-ex-cowboys-qb-grier-returns-offensive-assistant">starting his coaching career</a> on Dallas's offensive staff.</li>
+  <li><strong>Packers CEO says financial bump needed to stay competitive</strong> — <a href="https://www.espn.com/nfl/story/_/id/49442413/packers-ceo-says-financial-bump-needed-stay-competitive">Ed Policy</a> on the unique financial challenges of the NFL's only publicly owned franchise.</li>
+  <li><strong>Bills pick grass over turf</strong> — <a href="https://www.espn.com/video/clip/_/id/49440996/brandon-beane-tells-mcafee-why-bills-picked-grass-turf-new-stadium">GM Brandon Beane on McAfee</a>: Player safety continues to win over maintenance cost arguments in stadium surface decisions.</li>
+</ul>
+
+<h3>📅 On the Radar</h3>
+<ul>
+  <li><strong>July 28:</strong> Veterans report to training camp</li>
+  <li><strong>July 29:</strong> First practice, Ashburn VA</li>
+  <li><strong>Nov 8 (Week 9):</strong> John Riggins #44 retirement ceremony at halftime vs Rams</li>
+  <li><strong>Jan 10:</strong> Regular season finale vs Cowboys</li>
+</ul>
+]]></description>
     </item>
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 12:32:29 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
-      <description>
-&lt;h2&gt;🚀 Hermes Ecosystem — Friday Morning&lt;/h2&gt;
+      <description><![CDATA[
+<h2>🚀 Hermes Ecosystem — Friday Morning</h2>
 
-&lt;h3&gt;📊 State of Hermes: July 2026 Report&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://hermesatlas.com/reports/state-of-hermes-july-2026"&gt;Hermes Atlas published their July report&lt;/a&gt; covering the eight weeks since May. The story this quarter: &lt;strong&gt;surface area.&lt;/strong&gt; Hermes is no longer just a fast agent harness — it's becoming an ecosystem with workspaces, GUIs, skill registries, and desktop apps. Key numbers:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;216K+ stars&lt;/strong&gt; on core repo (+51K since May)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;203 Atlas-tracked ecosystem projects&lt;/strong&gt; (+80), &lt;strong&gt;1.17M combined stars&lt;/strong&gt; (~3.0x since May)&lt;/li&gt;
-  &lt;li&gt;Skills &amp;amp; Skill Registries became the largest Atlas category: &lt;strong&gt;34 repos / 377K stars&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Workspaces &amp;amp; GUIs exploded from 11 repos / 28.7K stars to &lt;strong&gt;19 repos / 200.7K stars&lt;/strong&gt; (~7×)&lt;/li&gt;
-  &lt;li&gt;The v0.18 "Judgment" release cleared &lt;strong&gt;100% of open P0/P1 items&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The report frames the arc as Velocity → Surface → Reach → Judgment. &lt;em&gt;We're running on the result right now.&lt;/em&gt;&lt;/p&gt;
+<h3>📊 State of Hermes: July 2026 Report</h3>
+<p><a href="https://hermesatlas.com/reports/state-of-hermes-july-2026">Hermes Atlas published their July report</a> covering the eight weeks since May. The story this quarter: <strong>surface area.</strong> Hermes is no longer just a fast agent harness — it's becoming an ecosystem with workspaces, GUIs, skill registries, and desktop apps. Key numbers:</p>
+<ul>
+  <li><strong>216K+ stars</strong> on core repo (+51K since May)</li>
+  <li><strong>203 Atlas-tracked ecosystem projects</strong> (+80), <strong>1.17M combined stars</strong> (~3.0x since May)</li>
+  <li>Skills &amp; Skill Registries became the largest Atlas category: <strong>34 repos / 377K stars</strong></li>
+  <li>Workspaces &amp; GUIs exploded from 11 repos / 28.7K stars to <strong>19 repos / 200.7K stars</strong> (~7x)</li>
+  <li>The v0.18 "Judgment" release cleared <strong>100% of open P0/P1 items</strong></li>
+</ul>
+<p>The report frames the arc as Velocity → Surface → Reach → Judgment. <em>We're running on the result right now.</em></p>
 
-&lt;h3&gt;🔍 Notable PRs — July 24&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/70260"&gt;&lt;strong&gt;#70260 — feat(version): derive display versions from release tags&lt;/strong&gt;&lt;/a&gt; (ethernet8023) — Unifies version display across CLI, TUI, Desktop, and Nix builds using SemVer-derived boundaries instead of ad-hoc CalVer probes. Every surface reads from the same &lt;code&gt;version_info.py&lt;/code&gt;. &lt;em&gt;MOCR relevance:&lt;/em&gt; Cleaner version discipline aligns with our ship-version tracking pattern.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/71007"&gt;&lt;strong&gt;#71007 — fix(web): resolve per-profile gateway state for ?profile= in /api/status&lt;/strong&gt;&lt;/a&gt; (teknium1) — Dashboard /api/status now reports the requested profile's gateway state instead of always reading the active profile. Relevant for profile multiplexing and dashboard accuracy in multi-profile setups.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/71001"&gt;&lt;strong&gt;#71001 — fix(compression): recover rotated session lineage&lt;/strong&gt;&lt;/a&gt; (teknium1) — Session compression edge case fix. A rotated session's lineage can now be recovered correctly during compression.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/71042"&gt;&lt;strong&gt;#71042 — ci: add detailed logging to live comment poller&lt;/strong&gt;&lt;/a&gt; (ethernet8023) — CI infrastructure improvement: more verbose logging on the live comment poller for debugging pipeline issues.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/66522"&gt;&lt;strong&gt;#66522 — feat(vertex): route Claude models through the AnthropicVertex SDK&lt;/strong&gt;&lt;/a&gt; (nickkpoon) — Opens Vertex AI as a routing path for Claude models via the AnthropicVertex SDK. Enterprise deployment relevance for organizations using GCP.&lt;/li&gt;
-&lt;/ul&gt;
+<h3>🔍 Notable PRs — July 24</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/70260"><strong>#70260 — feat(version): derive display versions from release tags</strong></a> (ethernet8023) — Unifies version display across CLI, TUI, Desktop, and Nix builds using SemVer-derived boundaries instead of ad-hoc CalVer probes. Every surface reads from the same version_info.py. <em>MOCR relevance:</em> Cleaner version discipline aligns with our ship-version tracking pattern.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71007"><strong>#71007 — fix(web): resolve per-profile gateway state for ?profile= in /api/status</strong></a> (teknium1) — Dashboard /api/status now reports the requested profile's gateway state instead of always reading the active profile.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71001"><strong>#71001 — fix(compression): recover rotated session lineage</strong></a> (teknium1) — A rotated session's lineage can now be recovered correctly during compression.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/66522"><strong>#66522 — feat(vertex): route Claude models through the AnthropicVertex SDK</strong></a> (nickkpoon) — Opens Vertex AI as a routing path for Claude models via the AnthropicVertex SDK.</li>
+</ul>
 
-&lt;h3&gt;🐛 Bug Watch — Desktop Session Resume&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/issues/70835"&gt;&lt;strong&gt;#70835 — Desktop 'Resume failed' TypeError&lt;/strong&gt;&lt;/a&gt; (DavidMetcalfe, P2) — When resuming a session in Hermes Desktop containing an &lt;code&gt;async_delegation_complete&lt;/code&gt; display event, a "Resume failed" error appears: &lt;code&gt;Cannot use 'in' operator to search for 'task_count' in {"delegation_id": "deleg_...", ...}&lt;/code&gt;. The &lt;code&gt;display_metadata&lt;/code&gt; field isn't being deserialized during &lt;code&gt;get_messages&lt;/code&gt; / &lt;code&gt;get_messages_around&lt;/code&gt;. If you're using &lt;code&gt;delegate_task&lt;/code&gt; in Desktop sessions, avoid session resume until this is patched.&lt;/p&gt;
+<h3>🛠️ Community Builds — New This Week</h3>
+<ul>
+  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (⭐334) — Evidence-driven Agent Skills for design award research, evaluation, and entry writing. Week's hottest debut.</li>
+  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (⭐54) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
+  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (⭐8) — Vector memory, adaptive soul, workflow classification.</li>
+  <li><a href="https://github.com/macdoctor-ca/hermes-newton-operations"><strong>hermes-newton-operations</strong></a> (⭐2) — Profile-scoped operations dashboard and bounded decision journal.</li>
+  <li><a href="https://github.com/mverab/slashstack-skills"><strong>slashstack-skills</strong></a> (⭐3) — 11 MIT-licensed markdown skills: /preflight, /audit, /ship, /remember.</li>
+</ul>
 
-&lt;h3&gt;🛠️ Community Builds — New This Week&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/SeanJ1ang/design-judge-skills"&gt;&lt;strong&gt;design-judge-skills&lt;/strong&gt;&lt;/a&gt; (⭐334) — Evidence-driven Agent Skills for design award research, evaluation, and entry writing. Week's hottest debut.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/MadsGao/frakio-work"&gt;&lt;strong&gt;frakio-work&lt;/strong&gt;&lt;/a&gt; (⭐54) — Codex + Hermes + Arc multi-agent collaboration workspace.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/rednicv/hermes-improvements"&gt;&lt;strong&gt;hermes-improvements&lt;/strong&gt;&lt;/a&gt; (⭐8) — Vector memory, adaptive soul, workflow classification — architectural enhancement suite for Hermes.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/macdoctor-ca/hermes-newton-operations"&gt;&lt;strong&gt;hermes-newton-operations&lt;/strong&gt;&lt;/a&gt; (⭐2) — Profile-scoped operations dashboard and bounded decision journal. &lt;em&gt;MOCR relevance:&lt;/em&gt; The decision journal pattern is directly applicable to how we track MOCR architectural decisions.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/Perseon-Lab/agent-console"&gt;&lt;strong&gt;agent-console&lt;/strong&gt;&lt;/a&gt; (⭐3) — Lightweight browser mission control for one Hermes agent: chat, sessions, cron, skills, voice, and read-only missions.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/mverab/slashstack-skills"&gt;&lt;strong&gt;slashstack-skills&lt;/strong&gt;&lt;/a&gt; (⭐3) — 11 MIT-licensed markdown skills: /preflight, /audit, /ship, /remember. Zero-dependency agent guardrails. The /preflight pattern maps to our quality gates.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;📈 Gaining Popularity (Month to Date)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/uzairansaruzi/hermex"&gt;&lt;strong&gt;hermex&lt;/strong&gt;&lt;/a&gt; (⭐916) — Native iPhone app for Hermes. Up from 913 in the evening brief, closing on 1K.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/smallchao/EvoForge"&gt;&lt;strong&gt;EvoForge&lt;/strong&gt;&lt;/a&gt; (⭐101) — High-performance desktop agent workbench with evolutionary capability.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/MemTensor/memmy-agent"&gt;&lt;strong&gt;memmy-agent&lt;/strong&gt;&lt;/a&gt; (⭐68) — Personal AI agent &amp;amp; local memory hub for Claude Code, Codex, OpenClaw, and Hermes.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/Da7-Tech/mind"&gt;&lt;strong&gt;mind&lt;/strong&gt;&lt;/a&gt; (⭐58) — Persistent memory for coding agents: auto-capture, explainable recall, knowledge consolidation, privacy controls.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/ShadoW-Shinigami/lyric-video-director"&gt;&lt;strong&gt;lyric-video-director&lt;/strong&gt;&lt;/a&gt; (⭐43) — Hermes Agent skill for typography-led lyric videos using GPT Image 2, Gemini Omni Flash, and exact-text QC.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/letta-ai/trajectory"&gt;&lt;strong&gt;trajectory&lt;/strong&gt;&lt;/a&gt; (⭐40) — Convert sessions across harnesses to a unified trajectory format for memory formation, dreaming, and search.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<h3>📈 Gaining Popularity (Month to Date)</h3>
+<ul>
+  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐916) — Native iPhone app for Hermes.</li>
+  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (⭐101) — High-performance desktop agent workbench.</li>
+  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐68) — Personal AI agent &amp; local memory hub.</li>
+  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (⭐58) — Persistent memory for coding agents.</li>
+  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐40) — Unified session trajectory format across harnesses.</li>
+</ul>
+]]></description>
     </item>
     <item>
       <title>CrossWire: Tech — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 12:32:29 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
-      <description>
-&lt;h2&gt;🍎 Apple&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Trump vows retaliation over EU fines&lt;/strong&gt; — &lt;a href="https://www.macrumors.com/2026/07/24/trump-eu-fine-investigation/"&gt;Trump on Truth Social&lt;/a&gt; announced an investigation into EU fines against Apple, Google, and Meta for antitrust/DMA violations, threatening retaliatory tariffs. The EU has fined US tech companies over $25B in two decades. The &lt;a href="https://www.ft.com/content/c3933e2f-787e-453b-82eb-a981ddd48a31"&gt;Financial Times reports&lt;/a&gt; the EU may preemptively limit Apple and Meta fines to avoid escalation. &lt;a href="https://9to5mac.com/2026/07/24/trump-vows-retaliation-over-eu-fines-against-apple-and-other-great-us-tech-giants/"&gt;9to5Mac coverage&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;iPhone Ultra: six new features&lt;/strong&gt; — &lt;a href="https://9to5mac.com/2026/07/24/iphone-ultra-is-coming-six-new-features-in-apples-top-tier-model/"&gt;9to5Mac details&lt;/a&gt; what Apple's top-tier foldable iPhone model will bring. Launch alongside the foldable iPhone expected this September.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;macOS 27 beta reworks Mail compose&lt;/strong&gt; — &lt;a href="https://www.macrumors.com/2026/07/24/macos-27-beta-siri-mail-compose-window/"&gt;Latest Golden Gate beta&lt;/a&gt; shows a redesigned formatting bar that pushes Apple Intelligence Writing Tools and Siri AI into the compose window.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Siri settlement approved&lt;/strong&gt; — The &lt;a href="https://www.macrumors.com/2026/07/24/apple-to-pay-owners-of-these-iphone-models/"&gt;$250M class action&lt;/a&gt; over delayed Siri AI launch received court approval. Eligible iPhone model owners can claim payouts.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Apple Pay improvements&lt;/strong&gt; — &lt;a href="https://9to5mac.com/2026/07/24/apple-pay-is-getting-even-better-with-four-new-features/"&gt;Four new features announced&lt;/a&gt; for Apple Pay, though details are still emerging.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;macOS Sonoma 14.8.8 &amp;amp; Sequoia 15.7.8 RCs&lt;/strong&gt; — &lt;a href="https://9to5mac.com/2026/07/24/apple-releases-seventh-rcs-for-macos-sonoma-14-8-8-and-macos-sequoia-15-7-8/"&gt;Seventh release candidates&lt;/a&gt; for legacy-OS security updates. Extended testing continues.&lt;/li&gt;
-&lt;/ul&gt;
+      <description><![CDATA[
+<h2>🍎 Apple</h2>
+<ul>
+  <li><strong>Trump vows retaliation over EU fines</strong> — <a href="https://www.macrumors.com/2026/07/24/trump-eu-fine-investigation/">Announced investigation into EU fines against Apple, Google, Meta</a>, threatening retaliatory tariffs. EU has fined US tech companies over $25B in two decades.</li>
+  <li><strong>macOS 27 beta reworks Mail compose</strong> — Latest Golden Gate beta shows redesigned formatting bar pushing Apple Intelligence and Siri AI into the compose window.</li>
+  <li><strong>Apple Pay improvements</strong> — Four new features announced.</li>
+</ul>
 
-&lt;h3&gt;🤖 AI &amp;amp; Models&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Claude Opus 5 launches — near Fable 5 performance at half the cost&lt;/strong&gt; — Anthropic &lt;a href="https://www.macrumors.com/2026/07/24/anthropic-opus-5/"&gt;released Opus 5 today&lt;/a&gt; built for daily agentic use. &lt;a href="https://arstechnica.com/ai/2026/07/anthropics-opus-5-is-about-token-efficiency-not-a-capability-leap/"&gt;Ars Technica's take&lt;/a&gt;: "Models are improving quickly, but the cheaper options are often good enough." Opus 5 offers near-Fable-5 capability at half the pricing — $5/$25 per MTok vs Fable 5's $10/$50. Sonnet 5 actually beats Opus 4.8 on Terminal-Bench 2.1 (80.4 vs 74.6), compressing the Sonnet-to-Opus gap further.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;OpenAI hardware push + Apple lawsuit&lt;/strong&gt; — &lt;a href="https://www.macrumors.com/2026/07/24/the-macrumors-show-can-openai-beat-the-iphone/"&gt;The MacRumors Show&lt;/a&gt; covers OpenAI's move into hardware and Apple's trade secret lawsuit.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Canadian legislator reads LLM response in floor speech&lt;/strong&gt; — &lt;a href="https://arstechnica.com/ai/2026/07/canadian-legislator-reads-out-apparent-llm-response-in-floor-speech/"&gt;Ars Technica reports&lt;/a&gt; a Canadian legislator apparently read an LLM-generated response during a floor speech, including the telltale line: "Here's a more natural, flowing version of that section..."&lt;/li&gt;
-&lt;/ul&gt;
+<h3>🤖 AI &amp; Models</h3>
+<ul>
+  <li><strong>Claude Opus 5 launches — near Fable 5 at half cost</strong> — $5/$25 per MTok vs Fable 5's $10/$50. Sonnet 5 beats Opus 4.8 on Terminal-Bench 2.1.</li>
+  <li><strong>Canadian legislator reads LLM response in floor speech</strong> — Telltale "Here's a more natural, flowing version..." appeared in parliamentary record.</li>
+</ul>
 
-&lt;h3&gt;🔬 Science &amp;amp; Tech&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;AlphaFold redesigns gene-editing proteins&lt;/strong&gt; — &lt;a href="https://arstechnica.com/science/2026/07/team-uses-alphafold-ai-to-redesign-gene-editing-proteins-to-make-them-safer/"&gt;Ars Technica&lt;/a&gt;: Google's AlphaFold used to identify error-prone regions in CRISPR gene-editing proteins, potentially making edits safer and more precise.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Most advanced robotic servicing satellite&lt;/strong&gt; — &lt;a href="https://arstechnica.com/space/2026/07/this-is-the-worlds-most-advanced-robotic-servicing-satellite-that-we-know-about/"&gt;Ars Technica profile&lt;/a&gt; of a satellite capable of refueling, repairing, and repositioning other spacecraft.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;EU restricts satellite images of Iran War region&lt;/strong&gt; — &lt;a href="https://arstechnica.com/space/2026/07/european-union-grants-us-request-to-restrict-satellite-images-of-iran-war-region/"&gt;New delay on Copernicus satellite pics&lt;/a&gt; as US military action in the region ramps up.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Judge rebuffs Trump admin on NYT phone records&lt;/strong&gt; — &lt;a href="https://arstechnica.com/tech-policy/2026/07/judge-rebuffs-trump-admin-demand-for-phone-records-from-nyt-reporters/"&gt;"We can quash the subpoenas, or you could withdraw the subpoenas,"&lt;/a&gt; judge told DOJ attorneys.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;RFK Jr.'s hand-picked committee approves unstudied peptides&lt;/strong&gt; — &lt;a href="https://arstechnica.com/health/2026/07/rfk-jr-s-hand-picked-committee-approves-manufacture-of-peptides-he-uses/"&gt;Ars Technica&lt;/a&gt;: Committee approved manufacturing of peptides with no human safety or efficacy data — peptides the committee chair personally uses.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;🏠 Home Automation&lt;/h3&gt;
-&lt;p&gt;Home Assistant feed was unavailable (RSS parse error). No notable developments from other sources this cycle. Standard HA ecosystem churn continues in the background.&lt;/p&gt;
-
-&lt;h3&gt;📺 Streaming &amp;amp; Media&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Roku raises streaming stick prices up to 60%&lt;/strong&gt; — &lt;a href="https://arstechnica.com/gadgets/2026/07/roku-raises-streaming-stick-prices-by-up-to-60-percent/"&gt;Ars Technica&lt;/a&gt;: Roku blames a RAM shortage after the CEO called it "great" for business in May.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;WhatsApp testing new message bubbles on iOS&lt;/strong&gt; — &lt;a href="https://9to5mac.com/2026/07/24/whatsapp-testing-new-message-bubbles-on-ios/"&gt;9to5Mac reports&lt;/a&gt; WhatsApp is experimenting with redesigned message bubbles in the latest iOS beta.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<h3>🔬 Science &amp; Tech</h3>
+<ul>
+  <li><strong>AlphaFold redesigns gene-editing proteins</strong> — Used to identify error-prone regions in CRISPR proteins.</li>
+  <li><strong>EU restricts satellite images of Iran War region</strong> — Copernicus satellite imagery delayed as US military action in region ramps up.</li>
+</ul>
+]]></description>
     </item>
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 12:32:29 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
-      <description>
-&lt;h2&gt;🏈 Washington Commanders — Friday Morning&lt;/h2&gt;
+      <description><![CDATA[
+<h2>🏈 Washington Commanders — Friday Morning</h2>
 
-&lt;h3&gt;📋 Training Camp Countdown: 5 Days&lt;/h3&gt;
-&lt;p&gt;Camp opens &lt;strong&gt;July 29 in Ashburn, VA&lt;/strong&gt;. Free admission with required ticket registration. Team reports July 28 (veterans) with first practice July 29. Key storylines entering camp:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Edge rusher competition&lt;/strong&gt; — The biggest camp battle. Dorance Armstrong returning from torn ACL. Free-agent additions Odafe Oweh (Ravens) and K'Lavon Chaisson (Panthers). 5th-round pick Joshua Josephs. Daronte Jones' scheme has real options for the first time in years.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Ground game emphasis&lt;/strong&gt; — The offseason's stated offensive priority. Can Jacory Croskey-Merritt and Rachaad White deliver a more involved running attack?&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Offensive line continuity&lt;/strong&gt; — Laremy Tunsil anchoring at blindside (ranked Top 5 tackle by ESPN). Interior stability remains a question.&lt;/li&gt;
-&lt;/ul&gt;
+<h3>📋 Training Camp Countdown: 5 Days (As of Friday)</h3>
+<p>Camp opens July 29 in Ashburn, VA.</p>
 
-&lt;h3&gt;2026 Schedule — Opening Stretch&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Sep 13 (Sun)&lt;/strong&gt; — @ Philadelphia Eagles (road opener)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Sep 20 (Sun)&lt;/strong&gt; — @ Dallas Cowboys (early NFC East test)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Sep 27 (Sun)&lt;/strong&gt; — vs Seattle Seahawks (home opener)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Oct 4 (Sun)&lt;/strong&gt; — vs Indianapolis Colts&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Oct 11 (Sun)&lt;/strong&gt; — vs New York Giants&lt;/li&gt;
-  &lt;li&gt;17 games remaining on schedule. Divisional gauntlet starts Week 1.&lt;/li&gt;
-&lt;/ul&gt;
+<h3>2026 Schedule — Opening Stretch</h3>
+<ul>
+  <li>Sep 13 — @ Philadelphia Eagles</li>
+  <li>Sep 20 — @ Dallas Cowboys</li>
+  <li>Sep 27 — vs Seattle Seahawks (home opener)</li>
+  <li>Oct 4 — vs Indianapolis Colts</li>
+  <li>Oct 11 — vs New York Giants</li>
+</ul>
 
-&lt;h3&gt;🏆 Around the NFL&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Tony Romo arrested on OWI suspicion&lt;/strong&gt; — CBS analyst and former Cowboys QB &lt;a href="https://www.espn.com/nfl/story/_/id/49441463/cbs-nfl-analyst-tony-romo-arrested-suspicion-owi"&gt;arrested in Milwaukee Thursday night&lt;/a&gt; after poor performance on field sobriety tests. Romo was in town for the Wisconsin Amateur Golf Championship. First-offense OWI under Wisconsin law.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Will Grier returns as Cowboys offensive assistant&lt;/strong&gt; — Former Cowboys QB &lt;a href="https://www.espn.com/nfl/story/_/id/49441578/source-ex-cowboys-qb-grier-returns-offensive-assistant"&gt;starting his coaching career&lt;/a&gt; on Dallas's offensive staff.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Bills pick grass over turf&lt;/strong&gt; — GM Brandon Beane explained the decision for the new stadium on McAfee's show. Player safety narrative continues to win out over maintenance cost arguments.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Patriots training camp&lt;/strong&gt; — &lt;a href="https://www.espn.com/nfl/story/_/id/49427703/new-england-patriots-training-camp-2026-intel-updates"&gt;ESPN's daily intel&lt;/a&gt; tracking QB battles and potential breakouts in Foxborough.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Fantasy football&lt;/strong&gt; — &lt;a href="https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis"&gt;ESPN's Liz Loza&lt;/a&gt; on Panthers, Texans, and Broncos backfield depth chart situations as camp approaches.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;📅 On the Radar&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;July 28:&lt;/strong&gt; Veterans report to training camp&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;July 29:&lt;/strong&gt; First practice, Ashburn VA&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Nov 8 (Week 9):&lt;/strong&gt; John Riggins #44 retirement ceremony at halftime vs Rams&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Jan 10:&lt;/strong&gt; Regular season finale vs Cowboys&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+<h3>🏆 Around the NFL</h3>
+<ul>
+  <li><strong>Tony Romo arrested on OWI suspicion</strong> — in Milwaukee.</li>
+  <li><strong>Will Grier returns as Cowboys offensive assistant</strong></li>
+  <li><strong>Bills pick grass over turf</strong> at new stadium</li>
+</ul>
+]]></description>
     </item>
   </channel>
 </rss>
