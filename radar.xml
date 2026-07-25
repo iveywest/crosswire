@@ -4,327 +4,327 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://iveywest.github.io/crosswire/</link>
-    <lastBuildDate>Sat, 25 Jul 2026 01:17:18 GMT</lastBuildDate>
-    <pubDate>Sat, 25 Jul 2026 01:17:18 GMT</pubDate>
+    <lastBuildDate>Sat, 25 Jul 2026 01:17:56 GMT</lastBuildDate>
+    <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
     <language>en-us</language>
-    <item><title>CrossWire: Hermes Local Edition — July 24</title><guid isPermaLink="false">crosswire-report-hermes-local-edition-2026-07-24-211141</guid><pubDate>Sat, 25 Jul 2026 01:17:18 GMT</pubDate><link>https://iveywest.github.io/crosswire/</link><description><![CDATA[
-&lt;h2&gt;🧠 CrossWire: Hermes Local Edition — The 64GB Sweet Spot Is Real, But It Isn’t 70B&lt;/h2&gt;
-&lt;h2&gt;1. Tonight’s Bottom Line&lt;/h2&gt;
-&lt;p&gt;The local Apple Silicon stack just got meaningfully more serious.&lt;/p&gt;
-&lt;p&gt;Not because one miracle model appeared, but because the whole pipeline improved at once: Apple is now openly teaching fully local agent workflows with MLX, Ollama’s MLX path got faster and more agent-aware, MLX-LM quietly fixed several tool-calling sharp edges, and Rapid-MLX is pushing hard toward “local OpenAI-compatible server that actually behaves like it wants to help.”&lt;/p&gt;
-&lt;p&gt;For your incoming &lt;strong&gt;M4 Max 64GB Mac Studio&lt;/strong&gt;, the practical answer is now clearer than it was even a few months ago:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Build around strong 27B–35B-class models and MoE models&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Prefer runtimes that do caching and tool use well&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Do not make dense 70B your default personality&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;That last part matters because your real workload is not benchmark tourism. It is agents, tools, retries, cron jobs, reports, code edits, file reads, and long prompts that get resent over and over like a cursed group text.&lt;/p&gt;
-&lt;h2&gt;2. What Changed in the Local Stack&lt;/h2&gt;
-&lt;h3&gt;Apple is now treating local agents on Mac as a first-class pattern&lt;/h3&gt;
-&lt;p&gt;At &lt;strong&gt;WWDC26&lt;/strong&gt;, Apple published &lt;strong&gt;Run local agentic AI on the Mac using MLX&lt;/strong&gt;, and the important part was not just “look, AI.” It was the stack definition:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;MLX → MLX-LM → MLX-LM Server → agent&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Apple explicitly framed local agents around:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;privacy&lt;/li&gt;
-&lt;li&gt;low latency&lt;/li&gt;
-&lt;li&gt;offline access&lt;/li&gt;
-&lt;li&gt;concurrency&lt;/li&gt;
-&lt;li&gt;distributed inference across multiple Macs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;That is a pretty big shift in tone. This is no longer “some people on GitHub did a clever thing.” Apple is now teaching local agent loops as a real Mac workflow.&lt;/p&gt;
-&lt;h3&gt;Ollama’s MLX path improved in the ways that matter for actual work&lt;/h3&gt;
-&lt;p&gt;Ollama’s June MLX update was not just about raw speed charts. The meaningful improvements were:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;NVFP4 support&lt;/strong&gt; for better quality at small quant sizes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;up to 20% faster output&lt;/strong&gt; on its updated MLX engine&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;snapshot caching&lt;/strong&gt; for branching, retries, thinking models, and multi-agent work&lt;/li&gt;
-&lt;li&gt;a clearer story for &lt;strong&gt;coding agents and tool-heavy sessions&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;later in June, &lt;strong&gt;multi-token prediction (MTP)&lt;/strong&gt; brought large speedups for Gemma 4 coding-agent workloads&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Plain English: Ollama got better at the exact part local stacks usually fumble — repeated agent turns with lots of shared context.&lt;/p&gt;
-&lt;h3&gt;MLX-LM got less fragile around tool use&lt;/h3&gt;
-&lt;p&gt;This one is quieter, but important. In &lt;strong&gt;MLX-LM v0.31.3&lt;/strong&gt;, the release notes include fixes for:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;parallel tool call handling in the server&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;MiniMax M2 parallel tool calling&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gemma 4 tool parser edge cases&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mistral tool-call boundary issues&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;cache extension fixes in multiple KV cache paths&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;That is not glamorous. It is also exactly the kind of boring engineering that separates “demo works” from “agent survives Tuesday.”&lt;/p&gt;
-&lt;h3&gt;Rapid-MLX has momentum, but still belongs in the “strong contender, verify on your box” bucket&lt;/h3&gt;
-&lt;p&gt;Rapid-MLX is increasingly interesting because it is optimizing for the right things:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Apple-Silicon-native MLX kernels&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;continuous batching&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;prompt cache and snapshots&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OpenAI / Anthropic wire compatibility&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;tool calling as a core use case&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;active maintenance, including a same-day July 24 fix for intermittent empty responses on a Qwen MTP sidecar path&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The project makes aggressive performance claims. Some may hold up; some may be best-case marketing until proven on your hardware. But the direction is right, and the maintainer is clearly optimizing for real agent use instead of just “chat in a terminal.”&lt;/p&gt;
-&lt;h3&gt;The 64GB Mac story got sharper&lt;/h3&gt;
-&lt;p&gt;The useful recent framing is this:&lt;/p&gt;
-&lt;p&gt;A &lt;strong&gt;64GB Mac is awkward for dense 70B as a daily driver&lt;/strong&gt;, but &lt;strong&gt;excellent for 27B–35B class models and MoE models with real context headroom&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;That matters because the local ecosystem now has much better candidates in that range. Ollama’s Qwen 3.6 tags, for example, show realistic Apple-friendly options like:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Qwen3.6 27B Q8&lt;/strong&gt; at about &lt;strong&gt;30GB&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Qwen3.6 35B-A3B Q8&lt;/strong&gt; at about &lt;strong&gt;39GB&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Qwen3.6 35B-A3B NVFP4 / MLX variants&lt;/strong&gt; in the low-20GB range&lt;/li&gt;
-&lt;li&gt;many of them advertising &lt;strong&gt;256K context windows&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The key word there is &lt;strong&gt;advertising&lt;/strong&gt;. Which brings us to the important adult supervision part.&lt;/p&gt;
-&lt;h2&gt;3. What This Means for the Work We’ve Actually Been Doing&lt;/h2&gt;
-&lt;p&gt;The last two weeks of MOCR work were not abstract. They were very specific:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;building and tuning &lt;strong&gt;Sentinel Sweep&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;hardening &lt;strong&gt;cron reliability&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;expanding &lt;strong&gt;CrossWire&lt;/strong&gt; into a report surface&lt;/li&gt;
-&lt;li&gt;moving &lt;strong&gt;Mail Call&lt;/strong&gt; from Zapier MCP to the &lt;strong&gt;Gmail API&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;shipping &lt;strong&gt;Switchboard&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;validating &lt;strong&gt;local model lanes&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;fixing a real &lt;strong&gt;context-length gate&lt;/strong&gt; that blocked local runs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;That workload says your local stack needs to be good at:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;tool use&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;structured output&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;repeated prompt reuse&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;long-running operational reliability&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;moderate-to-long context without falling apart&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;running as a service, not as a science fair&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;In other words: your local stack should behave less like “a neat model” and more like “infrastructure.”&lt;/p&gt;
-&lt;p&gt;That pushes the recommendation away from:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the biggest model that technically boots&lt;/li&gt;
-&lt;li&gt;the most viral benchmark winner&lt;/li&gt;
-&lt;li&gt;anything that looks fast until you ask it to call tools six times in a row&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And toward:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;strong caching&lt;/li&gt;
-&lt;li&gt;stable server behavior&lt;/li&gt;
-&lt;li&gt;parser reliability&lt;/li&gt;
-&lt;li&gt;good enough context without eating the whole machine&lt;/li&gt;
-&lt;li&gt;one heavyweight lane plus one cheap utility lane&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;4. Discussion&lt;/h2&gt;
-&lt;h3&gt;Quantization: this is where the machine either feels smart or feels wheezy&lt;/h3&gt;
-&lt;p&gt;For a &lt;strong&gt;64GB M4 Max&lt;/strong&gt;, the sweet spot is not “always highest precision.” It is:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Q4 / NVFP4 / similar compact quants&lt;/strong&gt; for daily agent work where headroom matters&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Q8&lt;/strong&gt; when quality matters more than concurrency and you are running one serious session&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;BF16&lt;/strong&gt; mostly when you are being academically curious or slightly reckless&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Why: weights are only part of the memory bill. You also need room for:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;KV cache&lt;/li&gt;
-&lt;li&gt;runtime overhead&lt;/li&gt;
-&lt;li&gt;macOS&lt;/li&gt;
-&lt;li&gt;your other apps&lt;/li&gt;
-&lt;li&gt;the fact that agents love resending half their life story every turn&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Context: vendor context windows are real, but your usable context is a budgeting problem&lt;/h3&gt;
-&lt;p&gt;A model tag that says &lt;strong&gt;256K context&lt;/strong&gt; does not mean “you should casually live there.”&lt;/p&gt;
-&lt;p&gt;What matters in practice:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;how much KV cache the model needs&lt;/li&gt;
-&lt;li&gt;whether the architecture is efficient for long context&lt;/li&gt;
-&lt;li&gt;whether your runtime reuses prompt state well&lt;/li&gt;
-&lt;li&gt;how many concurrent sessions or subagents you want&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For your work, I would think in tiers:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;32K–64K&lt;/strong&gt;: normal, healthy daily ops zone&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;64K–128K&lt;/strong&gt;: special-purpose research or big synthesis runs&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;128K+&lt;/strong&gt;: possible on some models, but use intentionally, not by default&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Caching matters more than a lot of people realize&lt;/h3&gt;
-&lt;p&gt;This is the biggest “why local agents feel bad” issue that benchmark charts often hide.&lt;/p&gt;
-&lt;p&gt;Every tool call means the model may see, again:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the system prompt&lt;/li&gt;
-&lt;li&gt;tool schemas&lt;/li&gt;
-&lt;li&gt;prior messages&lt;/li&gt;
-&lt;li&gt;file contents already read&lt;/li&gt;
-&lt;li&gt;previous tool outputs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If the runtime can reuse that work well, the whole system feels responsive. If it cannot, you pay the same toll booth over and over.&lt;/p&gt;
-&lt;p&gt;That is why Ollama’s snapshot work, Apple’s focus on prompt processing, and Rapid-MLX’s prompt-cache obsession all matter more than one sexy tokens/sec number.&lt;/p&gt;
-&lt;h3&gt;Concurrency: one Mac Studio is strong, not magical&lt;/h3&gt;
-&lt;p&gt;Apple’s WWDC story on concurrency and even multi-Mac scaling is genuinely interesting. But for &lt;strong&gt;one 64GB Mac Studio&lt;/strong&gt;, the practical expectation should be:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;one serious 27B–35B lane&lt;/li&gt;
-&lt;li&gt;maybe a small utility model alongside it&lt;/li&gt;
-&lt;li&gt;moderate concurrency if the runtime batches well&lt;/li&gt;
-&lt;li&gt;not five heavyweight subagents all doing interpretive dance at once&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This is fine. It is still a very capable local box. It just is not a datacenter in a silver rectangle.&lt;/p&gt;
-&lt;h3&gt;Tool-calling reliability is not a side feature&lt;/h3&gt;
-&lt;p&gt;For your workflows, tool-calling reliability is almost the product.&lt;/p&gt;
-&lt;p&gt;If the model can reason beautifully but emits malformed tool calls, or the server loses state, or the parser chokes on edge-case JSON, then congratulations: you have built a very expensive chaos generator.&lt;/p&gt;
-&lt;p&gt;That is why MLX-LM’s recent server/parser fixes are meaningful, and why I care more about boring reliability notes than hype screenshots.&lt;/p&gt;
-&lt;h2&gt;5. Current Recommendation Matrix&lt;/h2&gt;
-&lt;pre&gt;| Function | Best fit tonight | Model lane | Why this is the right fit |
+    <item><title>CrossWire: Hermes Local Edition — July 24</title><guid isPermaLink="false">crosswire-report-hermes-local-edition-2026-07-24-211141</guid><pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate><link>https://iveywest.github.io/crosswire/</link><description><![CDATA[
+<h2>🧠 CrossWire: Hermes Local Edition — The 64GB Sweet Spot Is Real, But It Isn’t 70B</h2>
+<h2>1. Tonight’s Bottom Line</h2>
+<p>The local Apple Silicon stack just got meaningfully more serious.</p>
+<p>Not because one miracle model appeared, but because the whole pipeline improved at once: Apple is now openly teaching fully local agent workflows with MLX, Ollama’s MLX path got faster and more agent-aware, MLX-LM quietly fixed several tool-calling sharp edges, and Rapid-MLX is pushing hard toward “local OpenAI-compatible server that actually behaves like it wants to help.”</p>
+<p>For your incoming <strong>M4 Max 64GB Mac Studio</strong>, the practical answer is now clearer than it was even a few months ago:</p>
+<ul>
+<li><strong>Build around strong 27B–35B-class models and MoE models</strong></li>
+<li><strong>Prefer runtimes that do caching and tool use well</strong></li>
+<li><strong>Do not make dense 70B your default personality</strong></li>
+</ul>
+<p>That last part matters because your real workload is not benchmark tourism. It is agents, tools, retries, cron jobs, reports, code edits, file reads, and long prompts that get resent over and over like a cursed group text.</p>
+<h2>2. What Changed in the Local Stack</h2>
+<h3>Apple is now treating local agents on Mac as a first-class pattern</h3>
+<p>At <strong>WWDC26</strong>, Apple published <strong>Run local agentic AI on the Mac using MLX</strong>, and the important part was not just “look, AI.” It was the stack definition:</p>
+<p><strong>MLX → MLX-LM → MLX-LM Server → agent</strong></p>
+<p>Apple explicitly framed local agents around:</p>
+<ul>
+<li>privacy</li>
+<li>low latency</li>
+<li>offline access</li>
+<li>concurrency</li>
+<li>distributed inference across multiple Macs</li>
+</ul>
+<p>That is a pretty big shift in tone. This is no longer “some people on GitHub did a clever thing.” Apple is now teaching local agent loops as a real Mac workflow.</p>
+<h3>Ollama’s MLX path improved in the ways that matter for actual work</h3>
+<p>Ollama’s June MLX update was not just about raw speed charts. The meaningful improvements were:</p>
+<ul>
+<li><strong>NVFP4 support</strong> for better quality at small quant sizes</li>
+<li><strong>up to 20% faster output</strong> on its updated MLX engine</li>
+<li><strong>snapshot caching</strong> for branching, retries, thinking models, and multi-agent work</li>
+<li>a clearer story for <strong>coding agents and tool-heavy sessions</strong></li>
+<li>later in June, <strong>multi-token prediction (MTP)</strong> brought large speedups for Gemma 4 coding-agent workloads</li>
+</ul>
+<p>Plain English: Ollama got better at the exact part local stacks usually fumble — repeated agent turns with lots of shared context.</p>
+<h3>MLX-LM got less fragile around tool use</h3>
+<p>This one is quieter, but important. In <strong>MLX-LM v0.31.3</strong>, the release notes include fixes for:</p>
+<ul>
+<li><strong>parallel tool call handling in the server</strong></li>
+<li><strong>MiniMax M2 parallel tool calling</strong></li>
+<li><strong>Gemma 4 tool parser edge cases</strong></li>
+<li><strong>Mistral tool-call boundary issues</strong></li>
+<li>cache extension fixes in multiple KV cache paths</li>
+</ul>
+<p>That is not glamorous. It is also exactly the kind of boring engineering that separates “demo works” from “agent survives Tuesday.”</p>
+<h3>Rapid-MLX has momentum, but still belongs in the “strong contender, verify on your box” bucket</h3>
+<p>Rapid-MLX is increasingly interesting because it is optimizing for the right things:</p>
+<ul>
+<li><strong>Apple-Silicon-native MLX kernels</strong></li>
+<li><strong>continuous batching</strong></li>
+<li><strong>prompt cache and snapshots</strong></li>
+<li><strong>OpenAI / Anthropic wire compatibility</strong></li>
+<li><strong>tool calling as a core use case</strong></li>
+<li>active maintenance, including a same-day July 24 fix for intermittent empty responses on a Qwen MTP sidecar path</li>
+</ul>
+<p>The project makes aggressive performance claims. Some may hold up; some may be best-case marketing until proven on your hardware. But the direction is right, and the maintainer is clearly optimizing for real agent use instead of just “chat in a terminal.”</p>
+<h3>The 64GB Mac story got sharper</h3>
+<p>The useful recent framing is this:</p>
+<p>A <strong>64GB Mac is awkward for dense 70B as a daily driver</strong>, but <strong>excellent for 27B–35B class models and MoE models with real context headroom</strong>.</p>
+<p>That matters because the local ecosystem now has much better candidates in that range. Ollama’s Qwen 3.6 tags, for example, show realistic Apple-friendly options like:</p>
+<ul>
+<li><strong>Qwen3.6 27B Q8</strong> at about <strong>30GB</strong></li>
+<li><strong>Qwen3.6 35B-A3B Q8</strong> at about <strong>39GB</strong></li>
+<li><strong>Qwen3.6 35B-A3B NVFP4 / MLX variants</strong> in the low-20GB range</li>
+<li>many of them advertising <strong>256K context windows</strong></li>
+</ul>
+<p>The key word there is <strong>advertising</strong>. Which brings us to the important adult supervision part.</p>
+<h2>3. What This Means for the Work We’ve Actually Been Doing</h2>
+<p>The last two weeks of MOCR work were not abstract. They were very specific:</p>
+<ul>
+<li>building and tuning <strong>Sentinel Sweep</strong></li>
+<li>hardening <strong>cron reliability</strong></li>
+<li>expanding <strong>CrossWire</strong> into a report surface</li>
+<li>moving <strong>Mail Call</strong> from Zapier MCP to the <strong>Gmail API</strong></li>
+<li>shipping <strong>Switchboard</strong></li>
+<li>validating <strong>local model lanes</strong></li>
+<li>fixing a real <strong>context-length gate</strong> that blocked local runs</li>
+</ul>
+<p>That workload says your local stack needs to be good at:</p>
+<ol>
+<li><strong>tool use</strong></li>
+<li><strong>structured output</strong></li>
+<li><strong>repeated prompt reuse</strong></li>
+<li><strong>long-running operational reliability</strong></li>
+<li><strong>moderate-to-long context without falling apart</strong></li>
+<li><strong>running as a service, not as a science fair</strong></li>
+</ol>
+<p>In other words: your local stack should behave less like “a neat model” and more like “infrastructure.”</p>
+<p>That pushes the recommendation away from:</p>
+<ul>
+<li>the biggest model that technically boots</li>
+<li>the most viral benchmark winner</li>
+<li>anything that looks fast until you ask it to call tools six times in a row</li>
+</ul>
+<p>And toward:</p>
+<ul>
+<li>strong caching</li>
+<li>stable server behavior</li>
+<li>parser reliability</li>
+<li>good enough context without eating the whole machine</li>
+<li>one heavyweight lane plus one cheap utility lane</li>
+</ul>
+<h2>4. Discussion</h2>
+<h3>Quantization: this is where the machine either feels smart or feels wheezy</h3>
+<p>For a <strong>64GB M4 Max</strong>, the sweet spot is not “always highest precision.” It is:</p>
+<ul>
+<li><strong>Q4 / NVFP4 / similar compact quants</strong> for daily agent work where headroom matters</li>
+<li><strong>Q8</strong> when quality matters more than concurrency and you are running one serious session</li>
+<li><strong>BF16</strong> mostly when you are being academically curious or slightly reckless</li>
+</ul>
+<p>Why: weights are only part of the memory bill. You also need room for:</p>
+<ul>
+<li>KV cache</li>
+<li>runtime overhead</li>
+<li>macOS</li>
+<li>your other apps</li>
+<li>the fact that agents love resending half their life story every turn</li>
+</ul>
+<h3>Context: vendor context windows are real, but your usable context is a budgeting problem</h3>
+<p>A model tag that says <strong>256K context</strong> does not mean “you should casually live there.”</p>
+<p>What matters in practice:</p>
+<ul>
+<li>how much KV cache the model needs</li>
+<li>whether the architecture is efficient for long context</li>
+<li>whether your runtime reuses prompt state well</li>
+<li>how many concurrent sessions or subagents you want</li>
+</ul>
+<p>For your work, I would think in tiers:</p>
+<ul>
+<li><strong>32K–64K</strong>: normal, healthy daily ops zone</li>
+<li><strong>64K–128K</strong>: special-purpose research or big synthesis runs</li>
+<li><strong>128K+</strong>: possible on some models, but use intentionally, not by default</li>
+</ul>
+<h3>Caching matters more than a lot of people realize</h3>
+<p>This is the biggest “why local agents feel bad” issue that benchmark charts often hide.</p>
+<p>Every tool call means the model may see, again:</p>
+<ul>
+<li>the system prompt</li>
+<li>tool schemas</li>
+<li>prior messages</li>
+<li>file contents already read</li>
+<li>previous tool outputs</li>
+</ul>
+<p>If the runtime can reuse that work well, the whole system feels responsive. If it cannot, you pay the same toll booth over and over.</p>
+<p>That is why Ollama’s snapshot work, Apple’s focus on prompt processing, and Rapid-MLX’s prompt-cache obsession all matter more than one sexy tokens/sec number.</p>
+<h3>Concurrency: one Mac Studio is strong, not magical</h3>
+<p>Apple’s WWDC story on concurrency and even multi-Mac scaling is genuinely interesting. But for <strong>one 64GB Mac Studio</strong>, the practical expectation should be:</p>
+<ul>
+<li>one serious 27B–35B lane</li>
+<li>maybe a small utility model alongside it</li>
+<li>moderate concurrency if the runtime batches well</li>
+<li>not five heavyweight subagents all doing interpretive dance at once</li>
+</ul>
+<p>This is fine. It is still a very capable local box. It just is not a datacenter in a silver rectangle.</p>
+<h3>Tool-calling reliability is not a side feature</h3>
+<p>For your workflows, tool-calling reliability is almost the product.</p>
+<p>If the model can reason beautifully but emits malformed tool calls, or the server loses state, or the parser chokes on edge-case JSON, then congratulations: you have built a very expensive chaos generator.</p>
+<p>That is why MLX-LM’s recent server/parser fixes are meaningful, and why I care more about boring reliability notes than hype screenshots.</p>
+<h2>5. Current Recommendation Matrix</h2>
+<pre>| Function | Best fit tonight | Model lane | Why this is the right fit |
 |---|---|---|---|
 | **Daily local Hermes / operations** | **Rapid-MLX first, Ollama MLX second** | **Qwen3.6 35B-A3B in a compact MLX-friendly quant** | Best balance of reasoning, tool use, cache reuse, and enough headroom to stay pleasant |
 | **Coding / build-fix-debug** | **Ollama MLX or Rapid-MLX** | **Qwen3.6 27B coding lane or equivalent** | Coding agents benefit heavily from caching, fast repeated turns, and predictable tool calls |
 | **Fast experimentation / easiest UX** | **Ollama** | **8B–12B utility model plus a 27B main model** | Lowest-friction way to pull models, swap variants, and see what actually works |
 | **Deep local learning / stack tinkering** | **MLX-LM / MLX-LM Server** | **small-to-mid models first** | Best way to understand the Apple-native stack instead of just consuming it as an appliance |
 | **Long-context / heavyweight local runs** | **Ollama MLX or MLX-LM Server with a 35B/MoE model** | **Qwen3.6 35B-A3B, selectively Q8** | 64GB can do serious long-context work here, but only if you budget for cache and don’t pretend 70B is free |
-| **Precision control / edge-case workflows** | **llama.cpp** | **GGUF specialist lane** | Still the right wrench when you need maximum manual control, odd quants, or unusual inference settings |&lt;/pre&gt;
-&lt;h3&gt;Agent-fit note&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Paige lane:&lt;/strong&gt; strong 35B-class operational model with a runtime that caches well&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Eli lane:&lt;/strong&gt; coding-tuned 27B plus easy model swapping&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Chidi lane:&lt;/strong&gt; MLX-LM for evaluation and apples-to-apples comparisons&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Charlie lane:&lt;/strong&gt; Ollama for dependable low-friction operations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mustang / Holiday:&lt;/strong&gt; still cloud-first when the work needs frontier-grade reasoning more than locality&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;6. What I Would Use If the Mac Studio Arrived Tonight&lt;/h2&gt;
-&lt;h3&gt;Starter stack&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Install Ollama first&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Add Rapid-MLX as the serious local agent server&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Keep MLX-LM Server as the learning/reference layer&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Keep llama.cpp around as the precision-control fallback&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Starter model posture&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Main ops model:&lt;/strong&gt; &lt;strong&gt;Qwen3.6 35B-A3B&lt;/strong&gt; in a compact MLX-friendly quant&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Coding model:&lt;/strong&gt; &lt;strong&gt;Qwen3.6 27B coding-oriented variant&lt;/strong&gt; or equivalent&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cheap utility model:&lt;/strong&gt; one good &lt;strong&gt;8B–12B&lt;/strong&gt; model for quick classification, cleanup, and low-stakes chores&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Optional higher-fidelity lane:&lt;/strong&gt; &lt;strong&gt;35B Q8&lt;/strong&gt; when you want more quality and can give it the machine&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Why this is the right first setup&lt;/h3&gt;
-&lt;p&gt;Because it gives you:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;one &lt;strong&gt;easy path&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;one &lt;strong&gt;serious path&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;one &lt;strong&gt;learning path&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;one &lt;strong&gt;escape hatch&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;That is healthy architecture.&lt;/p&gt;
-&lt;p&gt;Seven overlapping runtimes in a trench coat is not.&lt;/p&gt;
-&lt;h2&gt;7. Hold / Skip List&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Hold:&lt;/strong&gt; dense &lt;strong&gt;70B as the default&lt;/strong&gt; on 64GB&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You can make it work. “Can boot” is not the same as “good daily decision.”&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Hold:&lt;/strong&gt; building around &lt;strong&gt;256K context as your normal operating mode&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Treat giant context as a special weapon, not your everyday commute.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Hold:&lt;/strong&gt; assuming &lt;strong&gt;benchmark speed = agent quality&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If caching and tool calling are bad, a fast model can still feel terrible.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Skip for now:&lt;/strong&gt; designing your plan around &lt;strong&gt;multi-Mac distributed MLX&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Clever, real, and worth learning later. Not the first move for one incoming Studio.&lt;/p&gt;
-&lt;h2&gt;8. Recommended Reading / Watch List&lt;/h2&gt;
-&lt;h3&gt;Read&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Ollama — “Ollama’s highest performance on Apple Silicon yet with MLX”&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Best explanation of why snapshot caching and prompt reuse matter so much for agent workflows.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Ollama — “Faster Gemma 4 on MLX with multi-token prediction”&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Useful because it explains where local speedups actually show up in coding agents instead of abstract benchmark theater.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;MLX-LM v0.31.3 release notes&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Worth reading because the tool-calling and cache fixes are exactly the kind of boring reliability work that determines whether local agents are usable.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;ModelFit — “The 64GB Mac Dead Zone for Local LLMs (2026)”&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Good not because it is gospel, but because it frames the exact buying and runtime tradeoff your Mac Studio will face.&lt;/p&gt;
-&lt;h3&gt;Watch&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Apple WWDC26 — Run local agentic AI on the Mac using MLX&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This is the clearest single explanation of how Apple thinks the local agent stack should fit together now.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Apple WWDC26 — Explore distributed inference and training with MLX&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Worth the homework time if you want to understand where the stack is heading, even if multi-Mac clustering is not your day-one plan.&lt;/p&gt;
-&lt;h3&gt;Reference / Save for Later&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Rapid-MLX GitHub&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Save this because the project is moving fast, and its changelog is a good proxy for where Apple-native local serving is getting sharper.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Ollama Qwen3.6 tags page&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Extremely practical once the Mac arrives, because it shows real tag sizes, context claims, and MLX-specific variants you will actually choose between.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;arXiv — “Production-Grade Local LLM Inference on Apple Silicon”&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Keep this around for a more structured comparative lens when you want evidence beyond vendor blogs and repo enthusiasm.&lt;/p&gt;
-&lt;h2&gt;9. Sources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Apple WWDC26 — &lt;strong&gt;Run local agentic AI on the Mac using MLX&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://developer.apple.com/videos/play/wwdc2026/232/&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Apple WWDC26 — &lt;strong&gt;Explore distributed inference and training with MLX&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://developer.apple.com/videos/play/wwdc2026/233/&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ollama — &lt;strong&gt;Ollama’s highest performance on Apple Silicon yet with MLX&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://ollama.com/blog/mlx-performance&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ollama — &lt;strong&gt;Faster Gemma 4 on MLX with multi-token prediction&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://ollama.com/blog/faster-gemma-4-mlx-mtp&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ollama — &lt;strong&gt;Improved performance and model support with GGUF&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://ollama.com/blog/improved-performance-and-model-support-with-gguf&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ollama Library — &lt;strong&gt;Qwen3.6 tags&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://ollama.com/library/qwen3.6/tags&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Rapid-MLX GitHub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://github.com/raullenchai/Rapid-MLX&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MLX-LM releases&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://github.com/ml-explore/mlx-lm/releases&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;llama.cpp releases&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://github.com/ggml-org/llama.cpp/releases&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ModelFit — &lt;strong&gt;The 64GB Mac Dead Zone for Local LLMs (2026)&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://modelfit.io/blog/64gb-mac-local-llm-dead-zone/&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;arXiv — &lt;strong&gt;Production-Grade Local LLM Inference on Apple Silicon: A Comparative Study of MLX, MLC-LLM, Ollama, llama.cpp, and PyTorch MPS&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://arxiv.org/abs/2511.05502&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hugging Face — &lt;strong&gt;Qwen/Qwen3.6-35B-A3B&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://huggingface.co/Qwen/Qwen3.6-35B-A3B&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hugging Face — &lt;strong&gt;Qwen/Qwen3.6-27B&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://huggingface.co/Qwen/Qwen3.6-27B&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hugging Face — &lt;strong&gt;google/gemma-4-26B-A4B&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://huggingface.co/google/gemma-4-26B-A4B&lt;/p&gt;
+| **Precision control / edge-case workflows** | **llama.cpp** | **GGUF specialist lane** | Still the right wrench when you need maximum manual control, odd quants, or unusual inference settings |</pre>
+<h3>Agent-fit note</h3>
+<ul>
+<li><strong>Paige lane:</strong> strong 35B-class operational model with a runtime that caches well</li>
+<li><strong>Eli lane:</strong> coding-tuned 27B plus easy model swapping</li>
+<li><strong>Chidi lane:</strong> MLX-LM for evaluation and apples-to-apples comparisons</li>
+<li><strong>Charlie lane:</strong> Ollama for dependable low-friction operations</li>
+<li><strong>Mustang / Holiday:</strong> still cloud-first when the work needs frontier-grade reasoning more than locality</li>
+</ul>
+<h2>6. What I Would Use If the Mac Studio Arrived Tonight</h2>
+<h3>Starter stack</h3>
+<ol>
+<li><strong>Install Ollama first</strong></li>
+<li><strong>Add Rapid-MLX as the serious local agent server</strong></li>
+<li><strong>Keep MLX-LM Server as the learning/reference layer</strong></li>
+<li><strong>Keep llama.cpp around as the precision-control fallback</strong></li>
+</ol>
+<h3>Starter model posture</h3>
+<ul>
+<li><strong>Main ops model:</strong> <strong>Qwen3.6 35B-A3B</strong> in a compact MLX-friendly quant</li>
+<li><strong>Coding model:</strong> <strong>Qwen3.6 27B coding-oriented variant</strong> or equivalent</li>
+<li><strong>Cheap utility model:</strong> one good <strong>8B–12B</strong> model for quick classification, cleanup, and low-stakes chores</li>
+<li><strong>Optional higher-fidelity lane:</strong> <strong>35B Q8</strong> when you want more quality and can give it the machine</li>
+</ul>
+<h3>Why this is the right first setup</h3>
+<p>Because it gives you:</p>
+<ul>
+<li>one <strong>easy path</strong></li>
+<li>one <strong>serious path</strong></li>
+<li>one <strong>learning path</strong></li>
+<li>one <strong>escape hatch</strong></li>
+</ul>
+<p>That is healthy architecture.</p>
+<p>Seven overlapping runtimes in a trench coat is not.</p>
+<h2>7. Hold / Skip List</h2>
+<ul>
+<li><strong>Hold:</strong> dense <strong>70B as the default</strong> on 64GB</li>
+</ul>
+<p>You can make it work. “Can boot” is not the same as “good daily decision.”</p>
+<ul>
+<li><strong>Hold:</strong> building around <strong>256K context as your normal operating mode</strong></li>
+</ul>
+<p>Treat giant context as a special weapon, not your everyday commute.</p>
+<ul>
+<li><strong>Hold:</strong> assuming <strong>benchmark speed = agent quality</strong></li>
+</ul>
+<p>If caching and tool calling are bad, a fast model can still feel terrible.</p>
+<ul>
+<li><strong>Skip for now:</strong> designing your plan around <strong>multi-Mac distributed MLX</strong></li>
+</ul>
+<p>Clever, real, and worth learning later. Not the first move for one incoming Studio.</p>
+<h2>8. Recommended Reading / Watch List</h2>
+<h3>Read</h3>
+<ol>
+<li><strong>Ollama — “Ollama’s highest performance on Apple Silicon yet with MLX”</strong></li>
+</ol>
+<p>Best explanation of why snapshot caching and prompt reuse matter so much for agent workflows.</p>
+<ol>
+<li><strong>Ollama — “Faster Gemma 4 on MLX with multi-token prediction”</strong></li>
+</ol>
+<p>Useful because it explains where local speedups actually show up in coding agents instead of abstract benchmark theater.</p>
+<ol>
+<li><strong>MLX-LM v0.31.3 release notes</strong></li>
+</ol>
+<p>Worth reading because the tool-calling and cache fixes are exactly the kind of boring reliability work that determines whether local agents are usable.</p>
+<ol>
+<li><strong>ModelFit — “The 64GB Mac Dead Zone for Local LLMs (2026)”</strong></li>
+</ol>
+<p>Good not because it is gospel, but because it frames the exact buying and runtime tradeoff your Mac Studio will face.</p>
+<h3>Watch</h3>
+<ol>
+<li><strong>Apple WWDC26 — Run local agentic AI on the Mac using MLX</strong></li>
+</ol>
+<p>This is the clearest single explanation of how Apple thinks the local agent stack should fit together now.</p>
+<ol>
+<li><strong>Apple WWDC26 — Explore distributed inference and training with MLX</strong></li>
+</ol>
+<p>Worth the homework time if you want to understand where the stack is heading, even if multi-Mac clustering is not your day-one plan.</p>
+<h3>Reference / Save for Later</h3>
+<ol>
+<li><strong>Rapid-MLX GitHub</strong></li>
+</ol>
+<p>Save this because the project is moving fast, and its changelog is a good proxy for where Apple-native local serving is getting sharper.</p>
+<ol>
+<li><strong>Ollama Qwen3.6 tags page</strong></li>
+</ol>
+<p>Extremely practical once the Mac arrives, because it shows real tag sizes, context claims, and MLX-specific variants you will actually choose between.</p>
+<ol>
+<li><strong>arXiv — “Production-Grade Local LLM Inference on Apple Silicon”</strong></li>
+</ol>
+<p>Keep this around for a more structured comparative lens when you want evidence beyond vendor blogs and repo enthusiasm.</p>
+<h2>9. Sources</h2>
+<ul>
+<li>Apple WWDC26 — <strong>Run local agentic AI on the Mac using MLX</strong></li>
+</ul>
+<p>https://developer.apple.com/videos/play/wwdc2026/232/</p>
+<ul>
+<li>Apple WWDC26 — <strong>Explore distributed inference and training with MLX</strong></li>
+</ul>
+<p>https://developer.apple.com/videos/play/wwdc2026/233/</p>
+<ul>
+<li>Ollama — <strong>Ollama’s highest performance on Apple Silicon yet with MLX</strong></li>
+</ul>
+<p>https://ollama.com/blog/mlx-performance</p>
+<ul>
+<li>Ollama — <strong>Faster Gemma 4 on MLX with multi-token prediction</strong></li>
+</ul>
+<p>https://ollama.com/blog/faster-gemma-4-mlx-mtp</p>
+<ul>
+<li>Ollama — <strong>Improved performance and model support with GGUF</strong></li>
+</ul>
+<p>https://ollama.com/blog/improved-performance-and-model-support-with-gguf</p>
+<ul>
+<li>Ollama Library — <strong>Qwen3.6 tags</strong></li>
+</ul>
+<p>https://ollama.com/library/qwen3.6/tags</p>
+<ul>
+<li>Rapid-MLX GitHub</li>
+</ul>
+<p>https://github.com/raullenchai/Rapid-MLX</p>
+<ul>
+<li>MLX-LM releases</li>
+</ul>
+<p>https://github.com/ml-explore/mlx-lm/releases</p>
+<ul>
+<li>llama.cpp releases</li>
+</ul>
+<p>https://github.com/ggml-org/llama.cpp/releases</p>
+<ul>
+<li>ModelFit — <strong>The 64GB Mac Dead Zone for Local LLMs (2026)</strong></li>
+</ul>
+<p>https://modelfit.io/blog/64gb-mac-local-llm-dead-zone/</p>
+<ul>
+<li>arXiv — <strong>Production-Grade Local LLM Inference on Apple Silicon: A Comparative Study of MLX, MLC-LLM, Ollama, llama.cpp, and PyTorch MPS</strong></li>
+</ul>
+<p>https://arxiv.org/abs/2511.05502</p>
+<ul>
+<li>Hugging Face — <strong>Qwen/Qwen3.6-35B-A3B</strong></li>
+</ul>
+<p>https://huggingface.co/Qwen/Qwen3.6-35B-A3B</p>
+<ul>
+<li>Hugging Face — <strong>Qwen/Qwen3.6-27B</strong></li>
+</ul>
+<p>https://huggingface.co/Qwen/Qwen3.6-27B</p>
+<ul>
+<li>Hugging Face — <strong>google/gemma-4-26B-A4B</strong></li>
+</ul>
+<p>https://huggingface.co/google/gemma-4-26B-A4B</p>
 ]]></description></item><item>
       <title>CrossWire: Sentinel Census — July 24</title>
       <guid isPermaLink="false">crosswire-report-sentinel-census-2026-07-24-165919</guid>
-      <pubDate>Sat, 25 Jul 2026 01:17:18 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description>
 &lt;h2&gt;🟢 Sentinel Census — July 24, 2026&lt;/h2&gt;
@@ -341,7 +341,7 @@
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 01:17:18 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description>
 &lt;h2&gt;🚀 Hermes Ecosystem — Friday Morning&lt;/h2&gt;
@@ -393,7 +393,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 01:17:18 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description>
 &lt;h2&gt;🍎 Apple&lt;/h2&gt;
@@ -435,7 +435,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 01:17:18 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 01:17:56 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description>
 &lt;h2&gt;🏈 Washington Commanders — Friday Morning&lt;/h2&gt;
