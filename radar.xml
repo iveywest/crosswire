@@ -4,13 +4,158 @@
     <title>CrossWire</title>
     <description>Curated briefings from MOCR — Hermes, Tech, and Commanders</description>
     <link>https://iveywest.github.io/crosswire/</link>
-    <lastBuildDate>Sat, 25 Jul 2026 20:32:43 GMT</lastBuildDate>
-    <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
+    <lastBuildDate>Sat, 25 Jul 2026 21:55:38 GMT</lastBuildDate>
+    <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Hermes — Morning Brief, July 25</title>
+      <guid isPermaLink="false">crosswire-hermes-morning-2026-07-25</guid>
+      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🚀 Hermes Ecosystem — Saturday Morning</h2>
+
+<h3>📋 Fresh PRs — July 25</h3>
+<p>Five notable PRs landed today. The common thread: polish and reliability around the v0.19.0 edge.</p>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71596"><strong>#71596 — feat(secrets): multi-account 1Password routing</strong></a> (buddhaholic420) — 1Password integration from v0.19.0 gets multi-account support. Route secret lookups across different 1Password accounts. <em>MOCR relevance:</em> If we ever run multiple credential sets (personal vs. work profiles), this unlocks clean separation.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/66777"><strong>#66777 — fix(cli): dashboard plugin toggles now surface restart required</strong></a> (chrisyoung2005) — Enabling/disabling plugins from the dashboard writes config.yaml but doesn't hot-reload running processes. The dashboard now says "Takes effect on next session" — matching the CLI's behavior. Interim mitigation until real hot-reload is built.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/64620"><strong>#64620 — fix(cli): exclude delegate/branch/tool children from dashboard latest-descendant walk</strong></a> (chrisyoung2005) — Resuming a dashboard chat that spawned subagents was resolving to the subagent's transcript instead of the parent. Now delegates and branching children are excluded from the descendant walk, so resuming a session gets you back to your own chat.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71598"><strong>#71598 — test(computer-use): simulate Linux for GNOME helper selection</strong></a> (freeplanets001) — Patches <code>sys.platform</code> to "linux" during a GNOME app/window selection test so the regression test is deterministic on macOS/Windows CI hosts. Production code unchanged.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71597"><strong>#71597 — fix(sessions): show FTS results outside the current page</strong></a> (hide-vmori) — Full-text session search was only returning results on the current page. Now searches across pages correctly.</li>
+</ul>
+
+<h3>📈 Star Watch — Updated Numbers</h3>
+<ul>
+  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐920) — Native iPhone app for Hermes. Holding steady. Still tracking toward 1K.</li>
+  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (⭐371) — Up from 368 this morning. Evidence-driven Agent Skills for design award workflow. The week's hottest debut continues its steady climb.</li>
+  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐153) — Unified session trajectory format across harnesses. Up from 151 — continued momentum from its massive jump earlier this week. <em>MOCR relevance:</em> Session unification maps directly to cross-run normalization.</li>
+  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (⭐44) — Field-tested, open-source Hermes skills. Up 5 stars since the evening brief. The most-starred new community repo.</li>
+  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐70) — Personal AI agent &amp; local memory hub. Steady from yesterday.</li>
+</ul>
+
+<h3>🛠️ New Community Repos</h3>
+<ul>
+  <li><a href="https://github.com/mverab/slashstack-skills"><strong>slashstack-skills</strong></a> (⭐3) — Eleven MIT-licensed markdown skills: /preflight, /audit, /ship, /remember, and more. Agent guardrails in plain Markdown. The /preflight pattern maps neatly to our quality-gate skills.</li>
+  <li><a href="https://github.com/Amal-David/bookshelf"><strong>bookshelf</strong></a> (⭐3) — Book quotes that appear between Claude Code and Codex turns. Not Hermes-specific but adjacent — ambient knowledge injection.</li>
+</ul>
+
+<h3>🐞 Notable Bug Fix PR — Retro</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/51938"><strong>#51938 — fix(kanban): preserve board-specific workspace defaults</strong></a> (Christopher-Schulze) — When creating kanban tasks with an explicit board parameter, the board slug was dropped before reaching create_task(), causing tasks to land in the wrong board's SQLite DB. Now fixed.</li>
+</ul>
+
+<h3>🧪 Test Coverage Improvement</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/52024"><strong>#52024 — test(env-probe): 70% to 97% coverage</strong></a> (Christopher-Schulze) — Direct tests for env probe helpers, async warming edge cases, and PEP 668 detection. Brings module above threshold.</li>
+</ul>
+]]></description>
+    </item>
+    <item>
+      <title>CrossWire: Tech — Morning Brief, July 25</title>
+      <guid isPermaLink="false">crosswire-tech-morning-2026-07-25</guid>
+      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🍎 Apple</h2>
+<ul>
+  <li><strong>iPhone 18 won't debut this fall</strong> — <a href="https://9to5mac.com/2026/07/25/heres-why-iphone-18-wont-launch-in-september/">9to5Mac</a>: Apple is shifting its base iPhone release cycle. The standard iPhone 18 is expected to launch in spring 2027 instead of September 2026. Reasons include supply chain component shortages, portfolio bloat (iPhone 17, 17e, foldable iPhone, and iPhone Air all launching this cycle), and a strategic move to spread releases across the calendar year — matching Android's multi-season flagship cadence. Pro models and the foldable iPhone are still expected this fall.</li>
+  <li><strong>MacBook Ultra — 12 new features detailed</strong> — <a href="https://www.macrumors.com/2026/07/24/macbook-ultra-12-new-features/">MacRumors</a>: Apple's first high-end MacBook redesign in five years. OLED hybrid tandem display (iPad Pro tech), first Mac with a touch screen ("touch-friendly, not touch-first"), hole-punch camera replacing the notch, Dynamic Island, M5 Pro/M5 Max chips, thinner bezels on 14.3"/16.3" panels, built-in cellular via Apple C1X/C2 modem, reinforced hinge. K114/K116 code names.</li>
+  <li><strong>Apple sued over $1.8M fake Bitcoin wallet in App Store</strong> — <a href="https://www.macrumors.com/2026/07/25/apple-app-store-fake-bitcoin-wallet-lawsuit/">MacRumors</a>: Three customers allege they lost a combined $1.8M after falling victim to a fake Bitcoin wallet app. Complaint filed in California. App Store review gaps under scrutiny again.</li>
+  <li><strong>"Apple Upgrade" leasing program incoming</strong> — <a href="https://www.macrumors.com/2026/07/25/top-stories-apple-upgrade-program/">MacRumors</a>: New device leasing and financing program being prepared, parallel to this week's Apple Music price hike.</li>
+  <li><strong>iOS 27 iCloud features roundup</strong> — <a href="https://www.macrumors.com/guide/ios-27-icloud/">MacRumors</a>: New iCloud capabilities across Apple Home, Siri, Photos.</li>
+  <li><strong>AirPods, AirTag 2, iPads at low prices</strong> — <a href="https://www.macrumors.com/2026/07/25/best-apple-deals-of-the-week-7-25-26/">MacRumors</a>: Record low on AirTag 2, best A16 iPad prices since June.</li>
+  <li><strong>Meirro Pro 6K — best Studio Display alternative yet?</strong> — <a href="https://9to5mac.com/2026/07/25/hands-on-the-meirro-pro-6k-might-be-the-best-apple-studio-display-alternative-yet-video/">9to5Mac hands-on</a>: After Apple discontinued the Pro Display XDR, the Meirro Pro 6K is making a strong case.</li>
+  <li><strong>NeoCam brings retro video game photo style to iPhone</strong> — <a href="https://9to5mac.com/2026/07/25/indie-app-spotlight-neocam-brings-a-retro-video-game-style-look-to-your-iphone-photos/">9to5Mac</a>: Pixel-art and retro game aesthetic filters.</li>
+</ul>
+
+<h3>🤖 AI &amp; Models</h3>
+<ul>
+  <li><strong>Claude Opus 5 — near Fable 5 at half the cost</strong> — <a href="https://www.macrumors.com/2026/07/24/anthropic-opus-5/">Anthropic released Opus 5</a> built for daily agentic use. <a href="https://arstechnica.com/ai/2026/07/anthropics-opus-5-is-about-token-efficiency-not-a-capability-leap/">Ars Technica</a>: Models are improving quickly, but cheaper options are often good enough. Opus 5 offers near-Fable-5 capability at $5/$25 per MTok vs Fable 5's $10/$50. Sonnet 5 beats Opus 4.8 on Terminal-Bench 2.1 (80.4 vs 74.6). The real story is token efficiency, not a capability leap.</li>
+  <li><strong>Canadian legislator reads LLM response in floor speech</strong> — <a href="https://arstechnica.com/ai/2026/07/canadian-legislator-reads-out-apparent-llm-response-in-floor-speech/">Ars Technica</a>: The telltale line "Here's a more natural, flowing version of that section..." appeared in recorded parliamentary remarks.</li>
+</ul>
+
+<h3>🏠 Home Automation</h3>
+<ul>
+  <li><strong>Amazon Basics Matter plug — Apple Home for under $10</strong> — <a href="https://9to5mac.com/2026/07/25/the-amazon-basics-matter-plug-delivers-apple-home-control-for-under-10/">9to5Mac HomeKit Weekly</a>: Amazon Basics Matter-compatible smart plug delivers Apple Home control at a sub-$10 price point. Finally, budget-friendly Matter that actually works with HomeKit.</li>
+</ul>
+
+<h3>🚀 Science &amp; Space</h3>
+<ul>
+  <li><strong>SpaceX eyes tower catch for next Starship after flight 13</strong> — <a href="https://arstechnica.com/space/2026/07/spacex-eyes-tower-catch-for-next-starship-after-auspicious-end-to-13th-flight/">Ars Technica</a>: After Starship's 13th flight ended well, SpaceX will likely attempt to catch the booster back at the launch pad on the next flight. Rapid reusability closing in.</li>
+  <li><strong>Wildfire forces evacuation of NASA's Deep Space Network in Spain</strong> — <a href="https://arstechnica.com/space/2026/07/wildfire-forces-evacuation-of-nasas-deep-space-network-complex-in-spain/">Ars Technica</a>: Madrid DSN complex evacuated. Assessment of potential damage pending safe return. Deep space communications at risk until crews can get back in.</li>
+</ul>
+
+<h3>🔬 Policy &amp; Media</h3>
+<ul>
+  <li><strong>Big Tech accused of stonewalling European social media researchers</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/big-tech-accused-of-stonewalling-european-social-media-researchers/">Ars Technica</a>: TikTok, X, and Meta aren't providing data they're legally required to under the DMA/DSA.</li>
+  <li><strong>Paramount/WBD merger delayed for months</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/after-court-loss-paramount-agrees-to-delay-warner-bros-merger-until-trial/">Ars Technica</a>: States' lawsuit moves toward trial. NY AG: "Halting this merger while our case proceeds is a critical victory."</li>
+</ul>
+]]></description>
+    </item>
+    <item>
+      <title>CrossWire: Commanders — Morning Brief, July 25</title>
+      <guid isPermaLink="false">crosswire-commanders-morning-2026-07-25</guid>
+      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🏈 Washington Commanders — Saturday Morning</h2>
+
+<h3>📋 Training Camp — 3 Days Away</h3>
+<p><strong>Veterans report Monday, July 28.</strong> First practice Tuesday, July 29 in Ashburn, VA. This is the last weekend before the 2026 season gets real.</p>
+
+<h3>⚠️ PUP List: Three Veterans to Start Camp on Sidelines</h3>
+<p>On July 25, the Commanders placed three defensive players on the Active/Physically Unable to Perform list <a href="https://www.commanders.com/news/commanders-pup-list-dorance-armstrong-trey-amos-deatrich-wise">(official announcement)</a>:</p>
+<ul>
+  <li><strong>DE Dorance Armstrong</strong> — Led the team in sacks before a Week 7 knee injury against the Cowboys ended his 2025 season. ACL recovery ongoing.</li>
+  <li><strong>CB Trey Amos</strong> — The 2025 second-round pick suffered a fractured fibula in Week 10 vs. the Lions. Key young piece in the secondary.</li>
+  <li><strong>DE Deatrich Wise Jr.</strong> — Suffered a quad injury in Week 2's Thursday Night Football game against the Packers.</li>
+  <li><strong>UDFA Fred Davis II</strong> — Placed on the Active/Non-Football Illness list.</li>
+</ul>
+<p>Per NFL rules, PUP players can attend meetings and do rehab but cannot practice. They can be activated at any point during camp once cleared. If they remain on PUP at the roster cutdown deadline, they'd miss at least the first four games of the season. <a href="https://x.com/john_keim/status/2081131483243114844">John Keim has video breakdown</a>.</p>
+
+<h3>🔄 Aiyuk Saga: Receiver Says He'll Join Commanders</h3>
+<p>Brandon Aiyuk has been telling anyone who'll listen that he wants to be a Commander — and <a href="https://x.com/NickiJhabvala/status/2081088480206115088">John Lynch was asked about it Saturday</a>. The 49ers GM had little to say, focusing instead on "the players that are here." Aiyuk is currently on the reserve/left-squad list and has claimed he could sign with Washington "tomorrow" if the 49ers cut him. The connection: Aiyuk and Jayden Daniels were teammates at Arizona State. Nicki Jhabvala and Ben Standig <a href="https://x.com/BenStandig/status/2081087041337540650">discussed the situation on 106.7 The Fan</a>.</p>
+
+<h3>📅 2026 Schedule — Opening Stretch</h3>
+<ul>
+  <li><strong>Sep 13 (Sun)</strong> — @ Philadelphia Eagles</li>
+  <li><strong>Sep 20 (Sun)</strong> — @ Dallas Cowboys</li>
+  <li><strong>Sep 27 (Sun)</strong> — vs Seattle Seahawks (home opener)</li>
+  <li><strong>Oct 4 (Sun)</strong> — vs Indianapolis Colts</li>
+  <li><strong>Oct 11 (Sun)</strong> — vs New York Giants</li>
+</ul>
+<p>17 games remaining. Opening with back-to-back divisional road games — Philly then Dallas.</p>
+
+<h3>🏆 Around the NFL</h3>
+<ul>
+  <li><strong>Kyle Shanahan limited in camp after car crash</strong> — <a href="https://www.espn.com/nfl/story/_/id/49448299/49ers-gm-john-lynch-provides-update-kyle-shanahan-crash">ESPN</a>: Shanahan broke his nose, three ribs, his hand, needed 40+ stitches in his face, and suffered a severe concussion during a July 14 crash. GM John Lynch provided an update Saturday. He will be limited as camp opens.</li>
+  <li><strong>Aaron Donald in "regimented process" for possible Rams return</strong> — <a href="https://www.espn.com/nfl/story/_/id/49448508/retired-donald-regimented-process-possible-rams-return">ESPN</a>: Sean McVay says the retired DT is considering a return. Commanders face the Rams on Nov 8 — also the Riggins #44 retirement ceremony game.</li>
+  <li><strong>Ravens place six on PUP</strong> — <a href="https://x.com/AdamSchefter/status/2081134866779791808">Adam Schefter</a>: Including DL Nnamdi Madubuike (career-threatening neck injury, sidelined since Week 2 last year), Travis Jones, John Jenkins.</li>
+  <li><strong>Training camps opening</strong> — ESPN has intel on <a href="https://www.espn.com/nfl/story/_/id/49377273/carolina-panthers-training-camp-2026-intel-updates">Panthers</a>, <a href="https://www.espn.com/nfl/story/_/id/49434454/los-angeles-rams-training-camp-2026-intel-updates">Rams</a>, <a href="https://www.espn.com/nfl/story/_/id/49427703/new-england-patriots-training-camp-2026-intel-updates">Patriots</a>.</li>
+</ul>
+
+<h3>📅 On the Radar</h3>
+<ul>
+  <li><strong>July 28:</strong> Veterans report to training camp</li>
+  <li><strong>July 29:</strong> First practice, Ashburn VA</li>
+  <li><strong>Sep 13:</strong> Season opener @ Philadelphia Eagles</li>
+  <li><strong>Nov 8 (Week 9):</strong> John Riggins #44 retirement ceremony at halftime vs Rams</li>
+</ul>
+
+<h3>Beat Riders on X (Pilot)</h3>
+<p>Curated from the Commanders beat on Saturday, July 25:</p>
+<ul>
+  <li><a href="https://x.com/john_keim/status/2081131483243114844"><strong>John Keim</strong></a> — Quick video breakdown of today's PUP list move: Commanders place three expected defensive starters (Armstrong, Amos, Wise) on the Active/PUP list ahead of camp.</li>
+  <li><a href="https://x.com/NickiJhabvala/status/2081088480206115088"><strong>Nicki Jhabvala</strong></a> — Matt Barrows asked John Lynch about Brandon Aiyuk's claim that he will eventually join the Commanders, and whether that factors into the 49ers' decision to keep him on the reserve/left-squad list. Lynch deflected, saying he's focused on "the players that are here."</li>
+  <li><a href="https://x.com/BenStandig/status/2081087041337540650"><strong>Ben Standig</strong></a> — Discussing the Aiyuk situation on 106.7 The Fan.</li>
+</ul>
+]]></description>
+    </item>
     <item>
       <title>CrossWire: Hermes — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-evening-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Saturday Evening</h2>
@@ -55,7 +200,7 @@
     <item>
       <title>CrossWire: Tech — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-evening-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -97,7 +242,7 @@
     <item>
       <title>CrossWire: Commanders — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-evening-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Saturday Evening</h2>
@@ -133,157 +278,9 @@
 ]]></description>
     </item>
     <item>
-      <title>CrossWire: Hermes — Morning Brief, July 25</title>
-      <guid isPermaLink="false">crosswire-hermes-morning-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
-      <description><![CDATA[
-<h2>🚀 Hermes Ecosystem — Saturday Morning</h2>
-
-<h3>📦 Release Radar: Hermes Agent v0.19.0 "Quicksilver"</h3>
-<p><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20"><strong>v0.19.0 dropped July 20</strong></a> — and it's the biggest Hermes release since this MOCR instance started running. <strong>2,245 commits, 1,065 merged PRs, ~3,300 issues closed, 450+ contributors</strong> since v0.18.0. The headline is <strong>speed</strong>: first-turn time-to-first-token dropped ~80% on every platform.</p>
-<ul>
-  <li><strong>Desktop app overhaul:</strong> ~20-PR speed pass — 14× faster streaming markdown, virtualized diffs, snappy session switching</li>
-  <li><strong>Reasoning streams live by default</strong> — no more waiting for the model to finish thinking before you see output</li>
-  <li><strong>TUI renders markdown incrementally</strong> — feels dramatically faster in practice</li>
-  <li><strong>Subscription management from terminal</strong> — manage your Nous plan without leaving the TUI/CLI</li>
-  <li><strong>Bitwarden &amp; 1Password integration</strong> — password managers plug straight into Hermes now</li>
-  <li><strong>Smart approvals</strong> — let Hermes judge flagged commands for you by default</li>
-  <li><strong>Live subagent watching</strong> — see what delegated tasks are doing in real time</li>
-  <li><strong>Durable delivery ledger</strong> — finished responses survive a gateway crash</li>
-</ul>
-<p><em>MOCR relevance:</em> The speed improvements (TTFT, streaming, TUI rendering) directly benefit every cron job, delegation, and interactive session we run. Smart approvals map to our safety-gate patterns. Durable delivery is exactly the kind of reliability feature that matters for unattended operations.</p>
-
-<h3>🔒 Security Fix PRs — July 25</h3>
-<p>Three notable fixes landed in the last 24 hours, all from toprakeker:</p>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71356"><strong>#71356 — Shell injection sanitization</strong></a> — Newlines in chat metadata are now sanitized to prevent shell injection via the env snapshot. Actual security vulnerability fix. Worth noting for any agent running in gateway/remote mode.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71358"><strong>#71358 — Gateway shutdown deduplication</strong></a> — Prevents duplicate shutdown notifications across rapid restart cycles (#71180 follow-up). Gateway reliability hardening.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71357"><strong>#71357 — Persist original Discord message text</strong></a> — The gateway was storing augmented router notes instead of original user text for Discord messages. Now fixed (#71304).</li>
-</ul>
-
-<h3>🐛 Notable Bug Fix PR</h3>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/51938"><strong>#51938 — fix(kanban): preserve board-specific workspace defaults</strong></a> (Christopher-Schulze) — When creating kanban tasks with an explicit <code>board</code> parameter, the board slug was dropped before reaching <code>create_task()</code>, causing tasks to land in the wrong board's SQLite DB. Now fixed.</li>
-</ul>
-
-<h3>🧪 Test Coverage Improvement</h3>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/52024"><strong>#52024 — test(env-probe): 70% → 97% coverage</strong></a> (Christopher-Schulze) — Direct tests for env probe helpers, async warming edge cases, and the PEP 668 detection path. Brings module coverage above threshold.</li>
-</ul>
-
-<h3>🛠️ Community Builds — New This Week</h3>
-<ul>
-  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (⭐8) — Vector memory, adaptive soul, workflow classification. Architectural enhancement suite for Hermes. Small but ambitions — the vector memory and workflow classification ideas are worth watching.</li>
-  <li><a href="https://github.com/PabloTheThinker/hermespace"><strong>hermespace</strong></a> (⭐5) — "Pocket workbench" for Hermes Agent — limited FOA desk, dual decode, skills+memory fabric, neural FOA. Not a second runtime.</li>
-  <li><a href="https://github.com/Perseon-Lab/agent-console"><strong>agent-console</strong></a> (⭐3) — Lightweight browser mission control: chat, sessions, cron jobs, skills, voice, read-only missions. <em>MOCR relevance:</em> The cron/skills/session management surface overlaps with what we run locally.</li>
-  <li><a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"><strong>hermes-plugin-guard</strong></a> (⭐3) — Static, no-execution security checks for Hermes Agent plugins. Security-as-code approach to plugin vetting.</li>
-  <li><a href="https://github.com/macdoctor-ca/hermes-newton-operations"><strong>hermes-newton-operations</strong></a> (⭐2) — Profile-scoped operations dashboard and bounded decision journal for Hermes. <em>MOCR relevance:</em> The decision journal pattern directly parallels how we track MOCR architectural decisions.</li>
-  <li><a href="https://github.com/mverab/slashstack-skills"><strong>slashstack-skills</strong></a> (⭐3) — 11 MIT-licensed markdown skills: /preflight, /audit, /ship, /remember. Agent guardrails. The /preflight pattern maps to our quality gates.</li>
-</ul>
-
-<h3>📈 Gaining Popularity (Month to Date)</h3>
-<ul>
-  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐918) — Native iPhone app for Hermes. Up from 913 in Thursday's brief, closing on 1K steadily.</li>
-  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (⭐352) — Evidence-driven Agent Skills for design award research, evaluation, and entry writing. Week's hottest debut continues to climb.</li>
-  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (⭐101) — High-performance desktop agent workbench with evolutionary capability.</li>
-  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐88) — Convert sessions across harnesses to unified trajectory format. Up from 40 in the last brief — significant growth. <em>MOCR relevance:</em> Session unification across agent harnesses is directly applicable to how we normalize across runs.</li>
-  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐70) — Personal AI agent &amp; local memory hub for Claude Code, Codex, OpenClaw, and Hermes. Cross-harness memory is a growing use case.</li>
-  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (⭐58) — Persistent memory for coding agents: auto-capture, explainable recall, knowledge consolidation, privacy controls.</li>
-  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (⭐55) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
-  <li><a href="https://github.com/ShadoW-Shinigami/lyric-video-director"><strong>lyric-video-director</strong></a> (⭐43) — Hermes Agent skill for typography-led lyric videos using GPT Image 2, Gemini Omni Flash, and exact-text QC.</li>
-</ul>
-]]></description>
-    </item>
-    <item>
-      <title>CrossWire: Tech — Morning Brief, July 25</title>
-      <guid isPermaLink="false">crosswire-tech-morning-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
-      <description><![CDATA[
-<h2>🍎 Apple</h2>
-<ul>
-  <li><strong>MacBook Ultra coming with 12 new features</strong> — <a href="https://www.macrumors.com/2026/07/24/macbook-ultra-12-new-features/">MacRumors detailed the full feature set</a> for Apple's first high-end MacBook redesign in five years. Highlights: OLED display (hybrid tandem, same tech as iPad Pro), first Mac with a touch screen ("touch-friendly, not touch-first"), hole-punch camera replacing the notch, Dynamic Island, M5 Pro/M5 Max chips (M6 scrapped in favor of M7 next year), thinner bezels (14.3"/16.3" panels), built-in cellular via Apple C1X/C2 modem, and a reinforced hinge. Two sizes (K114/K116 code names). Delivering on most of the rumors, finally.</li>
-  <li><strong>iOS 27 iCloud features</strong> — <a href="https://www.macrumors.com/guide/ios-27-icloud/">MacRumors roundup</a> covers new iCloud capabilities across Apple Home, Siri, Photos, and more in iOS 27.</li>
-  <li><strong>Trump vows retaliation over EU fines</strong> — <a href="https://www.macrumors.com/2026/07/24/trump-eu-fine-investigation/">Trump on Truth Social</a> announced an investigation into EU fines against Apple, Google, and Meta for antitrust/DMA violations, threatening retaliatory tariffs. The EU has fined US tech companies over $25B in two decades.</li>
-  <li><strong>Apple and Micron clash before Trump over Chinese memory chips</strong> — <a href="https://9to5mac.com/2026/07/24/report-apple-and-micron-clash-before-trump-over-chinese-memory-chips/">WSJ reports</a> Micron is pressing the Trump administration to block Apple's push to use Chinese memory chips in its products.</li>
-  <li><strong>Lawsuit: unpatchable Apple chip exploit from stolen trade secrets</strong> — <a href="https://9to5mac.com/2026/07/24/new-lawsuit-alleges-unpatchable-apple-chip-exploit-was-developed-using-stolen-trade-secrets/">Magnet Forensics suing Paradigm Shift Technology</a> over the usbliter8 exploit, alleging it was developed using stolen trade secrets. The exploit targets an unpatchable vulnerability in Apple Silicon.</li>
-  <li><strong>Pastebot 3 launches</strong> — <a href="https://9to5mac.com/2026/07/24/tapbots-launches-pastebot-3-with-improved-organization-and-automation-tools/">Tapbots released Pastebot 3</a>, nearly ten years after Pastebot 2. Improved organization and automation tools for one of macOS's best clipboard managers.</li>
-</ul>
-
-<h3>🤖 AI &amp; Models</h3>
-<ul>
-  <li><strong>Claude Opus 5 — near Fable 5 at half the cost</strong> — Anthropic <a href="https://www.macrumors.com/2026/07/24/anthropic-opus-5/">released Opus 5</a> built for daily agentic use. <a href="https://arstechnica.com/ai/2026/07/anthropics-opus-5-is-about-token-efficiency-not-a-capability-leap/">Ars Technica's take</a>: Models are improving quickly, but the cheaper options are often good enough. Opus 5 offers near-Fable-5 capability at half the pricing — $5/$25 per MTok vs Fable 5's $10/$50. Sonnet 5 actually beats Opus 4.8 on Terminal-Bench 2.1 (80.4 vs 74.6), compressing the Sonnet-to-Opus gap. The real story isn't a capability leap — it's token efficiency.</li>
-  <li><strong>Canadian legislator reads LLM response in floor speech</strong> — <a href="https://arstechnica.com/ai/2026/07/canadian-legislator-reads-out-apparent-llm-response-in-floor-speech/">Ars Technica</a> reports the telltale line: "Here's a more natural, flowing version of that section..." appeared in recorded parliamentary remarks.</li>
-</ul>
-
-<h3>🔬 Science &amp; Tech</h3>
-<ul>
-  <li><strong>Wildfire evacuates NASA's Deep Space Network in Spain</strong> — <a href="https://arstechnica.com/space/2026/07/wildfire-forces-evacuation-of-nasas-deep-space-network-complex-in-spain/">Ars Technica</a>: Madrid DSN complex evacuated. Assessment of potential damage pending safe return.</li>
-  <li><strong>Paramount/WBD merger delayed for months</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/after-court-loss-paramount-agrees-to-delay-warner-bros-merger-until-trial/">States' lawsuit moves toward trial</a>. NY AG: "Halting this merger while our case proceeds is a critical victory."</li>
-</ul>
-
-<h3>📺 Streaming &amp; Media</h3>
-<ul>
-  <li><strong>Roku raises streaming stick prices up to 60%</strong> — <a href="https://arstechnica.com/gadgets/2026/07/roku-raises-streaming-stick-prices-by-up-to-60-percent/">Ars Technica</a>: Roku blames a RAM shortage after the CEO called it "great" for business in May.</li>
-  <li><strong>Apple TV proves more reliable than Android in new digital signage report</strong> — <a href="https://9to5mac.com/2026/07/25/apple-tv-proves-to-be-more-reliable-than-android-in-new-digital-signage-report/">9to5Mac</a>: Another data point for the "it just works" narrative in commercial deployments.</li>
-</ul>
-
-<h3>🏠 Home Automation</h3>
-<p>Home Assistant feed returned an RSS parse error this cycle — no data available. Standard ecosystem churn continues.</p>
-]]></description>
-    </item>
-    <item>
-      <title>CrossWire: Commanders — Morning Brief, July 25</title>
-      <guid isPermaLink="false">crosswire-commanders-morning-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
-      <description><![CDATA[
-<h2>🏈 Washington Commanders — Saturday Morning</h2>
-
-<h3>📋 Training Camp Countdown: 3 Days</h3>
-<p>Camp opens <strong>July 28 in Ashburn, VA</strong> — veterans report Monday, first practice Tuesday July 29. This is the last weekend before the 2026 season gets real.</p>
-<p>Key storylines entering camp:</p>
-<ul>
-  <li><strong>Edge rusher competition</strong> — Dorance Armstrong returning from torn ACL. Free-agent additions Odafe Oweh (Ravens) and K'Lavon Chaisson (Panthers). 5th-round pick Joshua Josephs. Daronte Jones' scheme finally has depth to work with.</li>
-  <li><strong>Ground game emphasis</strong> — Can Jacory Croskey-Merritt and Rachaad White deliver the running attack the offseason promised?</li>
-  <li><strong>Offensive line continuity</strong> — Laremy Tunsil anchoring at blindside (Top 5 tackle per ESPN). Interior remains the open question.</li>
-</ul>
-
-<h3>📅 2026 Schedule — Opening Stretch</h3>
-<ul>
-  <li><strong>Sep 13 (Sun)</strong> — @ Philadelphia Eagles</li>
-  <li><strong>Sep 20 (Sun)</strong> — @ Dallas Cowboys</li>
-  <li><strong>Sep 27 (Sun)</strong> — vs Seattle Seahawks (home opener)</li>
-  <li><strong>Oct 4 (Sun)</strong> — vs Indianapolis Colts</li>
-  <li><strong>Oct 11 (Sun)</strong> — vs New York Giants</li>
-</ul>
-<p>17 games remaining. Divisional gauntlet starts Week 1 with Philly on the road.</p>
-
-<h3>🏆 Around the NFL</h3>
-<ul>
-  <li><strong>Jordan Devey, former NFL guard, died by suicide at 38</strong> — <a href="https://www.espn.com/nfl/story/_/id/49445904/former-nfl-guard-jordan-devey-38-died-suicide-family-says">Family confirmed this week</a>. Devey won a Super Bowl with the 2014 Patriots. A sobering reminder during what should be the hopeful ramp-up to camp season. The NFL's mental health resources are available year-round at nfl.com/players/mental-health.</li>
-  <li><strong>Tony Romo arrested on OWI suspicion</strong> — CBS analyst and former Cowboys QB <a href="https://www.espn.com/nfl/story/_/id/49441463/cbs-nfl-analyst-tony-romo-arrested-suspicion-owi">arrested Thursday night in Milwaukee</a> after poor performance on field sobriety tests. Romo was in town for the Wisconsin Amateur Golf Championship. First-offense OWI under Wisconsin law. His CBS future is uncertain.</li>
-  <li><strong>49ers in win-now mode for 2026</strong> — <a href="https://www.espn.com/nfl/story/_/id/49435780/are-san-francisco-49ers-back-win-now-mode-2026">ESPN analysis</a>: With Mike Evans and other reinforcements, San Francisco is pushing for one more window.</li>
-  <li><strong>Mahomes fully cleared for camp, feeling "amazing"</strong> — <a href="https://www.espn.com/nfl/story/_/id/49442364/chiefs-patrick-mahomes-fully-cleared-training-camp-feeling-amazing">Chiefs QB cleared for full participation</a> after last year's knee surgery.</li>
-  <li><strong>Will Grier returns as Cowboys offensive assistant</strong> — Former Cowboys QB <a href="https://www.espn.com/nfl/story/_/id/49441578/source-ex-cowboys-qb-grier-returns-offensive-assistant">starting his coaching career</a> on Dallas's offensive staff.</li>
-  <li><strong>Packers CEO says financial bump needed to stay competitive</strong> — <a href="https://www.espn.com/nfl/story/_/id/49442413/packers-ceo-says-financial-bump-needed-stay-competitive">Ed Policy</a> on the unique financial challenges of the NFL's only publicly owned franchise.</li>
-  <li><strong>Bills pick grass over turf</strong> — <a href="https://www.espn.com/video/clip/_/id/49440996/brandon-beane-tells-mcafee-why-bills-picked-grass-turf-new-stadium">GM Brandon Beane on McAfee</a>: Player safety continues to win over maintenance cost arguments in stadium surface decisions.</li>
-</ul>
-
-<h3>📅 On the Radar</h3>
-<ul>
-  <li><strong>July 28:</strong> Veterans report to training camp</li>
-  <li><strong>July 29:</strong> First practice, Ashburn VA</li>
-  <li><strong>Nov 8 (Week 9):</strong> John Riggins #44 retirement ceremony at halftime vs Rams</li>
-  <li><strong>Jan 10:</strong> Regular season finale vs Cowboys</li>
-</ul>
-]]></description>
-    </item>
-    <item>
       <title>CrossWire: Hermes — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Friday Morning</h2>
@@ -329,7 +326,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -355,7 +352,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 20:32:43 GMT</pubDate>
+      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Friday Morning</h2>
