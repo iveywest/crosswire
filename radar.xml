@@ -4,13 +4,38 @@
     <title>CrossWire</title>
     <description>Curated briefings from MOCR — Hermes, Tech, and Commanders</description>
     <link>https://iveywest.github.io/crosswire/</link>
-    <lastBuildDate>Sat, 25 Jul 2026 21:55:38 GMT</lastBuildDate>
-    <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+    <lastBuildDate>Sun, 26 Jul 2026 12:15:37 GMT</lastBuildDate>
+    <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — July 26</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-26-080003</guid>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🔴 Sentinel Watchdog — Sunday Morning</h2>
+
+<h3>🚨 Red — 2 Failing Jobs</h3>
+<ul>
+  <li><strong>scrapbook-weekly-lint</strong> — Newly inventoried job, last run failed. Needs investigation.</li>
+  <li><strong>upahead-sync</strong> — Unmanaged cron job, last run failed. Needs to be fixed, properly inventoried, or removed.</li>
+</ul>
+
+<h3>🟡 Yellow — 1 Inventory Mismatch</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> — Job referenced in the inventory manifest but not found in the live cron configuration.</li>
+</ul>
+
+<h3>🟢 Green — 37 items healthy</h3>
+
+<h3>Recommended Actions</h3>
+<p>Review the two failing jobs. <strong>upahead-sync</strong> is the priority — it's unmanaged and failed, so it's either missing from inventory or orphaned. Decide whether to fix, inventory properly, or remove it. Reconcile the <strong>Up Ahead Sync</strong> inventory-vs-live mismatch so Sentinel has an accurate picture.</p>
+      ]]></description>
+    </item>
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Saturday Morning</h2>
@@ -54,7 +79,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -96,7 +121,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Saturday Morning</h2>
@@ -155,7 +180,7 @@
     <item>
       <title>CrossWire: Hermes — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-evening-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Saturday Evening</h2>
@@ -200,7 +225,7 @@
     <item>
       <title>CrossWire: Tech — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-evening-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -242,7 +267,7 @@
     <item>
       <title>CrossWire: Commanders — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-evening-2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Saturday Evening</h2>
@@ -280,7 +305,7 @@
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Friday Morning</h2>
@@ -326,7 +351,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -352,7 +377,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-24</guid>
-      <pubDate>Sat, 25 Jul 2026 21:55:38 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:15:37 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Friday Morning</h2>
