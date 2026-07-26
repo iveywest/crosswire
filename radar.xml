@@ -4,13 +4,13 @@
     <title>CrossWire</title>
     <description>Curated briefings from MOCR — Hermes, Tech, and Commanders</description>
     <link>https://iveywest.github.io/crosswire/</link>
-    <lastBuildDate>Sun, 26 Jul 2026 12:34:03 GMT</lastBuildDate>
-    <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+    <lastBuildDate>Sun, 26 Jul 2026 12:37:21 GMT</lastBuildDate>
+    <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
     <language>en-us</language>
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-26</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Sunday Morning</h2>
@@ -56,7 +56,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-26</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -88,7 +88,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-26</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Sunday Morning</h2>
@@ -138,9 +138,34 @@
       ]]></description>
     </item>
     <item>
+      <title>CrossWire: Sentinel Watchdog — July 26</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-26-080003</guid>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🔴 Sentinel Watchdog — Sunday Morning</h2>
+
+<h3>🚨 Red — 2 Failing Jobs</h3>
+<ul>
+  <li><strong>scrapbook-weekly-lint</strong> — Newly inventoried job, last run failed. Needs investigation.</li>
+  <li><strong>upahead-sync</strong> — Unmanaged cron job, last run failed. Needs to be fixed, properly inventoried, or removed.</li>
+</ul>
+
+<h3>🟡 Yellow — 1 Inventory Mismatch</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> — Job referenced in the inventory manifest but not found in the live cron configuration.</li>
+</ul>
+
+<h3>🟢 Green — 37 items healthy</h3>
+
+<h3>Recommended Actions</h3>
+<p>Review the two failing jobs. <strong>upahead-sync</strong> is the priority — it's unmanaged and failed, so it's either missing from inventory or orphaned. Decide whether to fix, inventory properly, or remove it. Reconcile the <strong>Up Ahead Sync</strong> inventory-vs-live mismatch so Sentinel has an accurate picture.</p>
+      ]]></description>
+    </item>
+    <item>
       <title>CrossWire: Hermes — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-evening-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Saturday Evening</h2>
@@ -185,7 +210,7 @@
     <item>
       <title>CrossWire: Tech — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-evening-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -227,7 +252,7 @@
     <item>
       <title>CrossWire: Commanders — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-evening-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Saturday Evening</h2>
@@ -265,7 +290,7 @@
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Saturday Morning</h2>
@@ -309,7 +334,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -351,7 +376,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Saturday Morning</h2>
@@ -408,9 +433,35 @@
       ]]></description>
     </item>
     <item>
+      <title>CrossWire: Tech — Morning Brief, July 24</title>
+      <guid isPermaLink="false">crosswire-tech-morning-2026-07-24</guid>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>🍎 Apple</h2>
+<ul>
+  <li><strong>Trump vows retaliation over EU fines</strong> — <a href="https://www.macrumors.com/2026/07/24/trump-eu-fine-investigation/">Announced investigation into EU fines against Apple, Google, Meta</a>, threatening retaliatory tariffs. EU has fined US tech companies over $25B in two decades.</li>
+  <li><strong>macOS 27 beta reworks Mail compose</strong> — Latest Golden Gate beta shows redesigned formatting bar pushing Apple Intelligence and Siri AI into the compose window.</li>
+  <li><strong>Apple Pay improvements</strong> — Four new features announced.</li>
+</ul>
+
+<h3>🤖 AI &amp; Models</h3>
+<ul>
+  <li><strong>Claude Opus 5 launches — near Fable 5 at half cost</strong> — $5/$25 per MTok vs Fable 5's $10/$50. Sonnet 5 beats Opus 4.8 on Terminal-Bench 2.1.</li>
+  <li><strong>Canadian legislator reads LLM response in floor speech</strong> — Telltale "Here's a more natural, flowing version..." appeared in parliamentary record.</li>
+</ul>
+
+<h3>🔬 Science &amp; Tech</h3>
+<ul>
+  <li><strong>AlphaFold redesigns gene-editing proteins</strong> — Used to identify error-prone regions in CRISPR proteins.</li>
+  <li><strong>EU restricts satellite images of Iran War region</strong> — Copernicus satellite imagery delayed as US military action in region ramps up.</li>
+</ul>
+      ]]></description>
+    </item>
+    <item>
       <title>CrossWire: Hermes — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-24</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Friday Morning</h2>
@@ -450,32 +501,6 @@
   <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐68) — Personal AI agent &amp; local memory hub.</li>
   <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (⭐58) — Persistent memory for coding agents.</li>
   <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐40) — Unified session trajectory format across harnesses.</li>
-</ul>
-      ]]></description>
-    </item>
-    <item>
-      <title>CrossWire: Tech — Morning Brief, July 24</title>
-      <guid isPermaLink="false">crosswire-tech-morning-2026-07-24</guid>
-      <pubDate>Sun, 26 Jul 2026 12:34:03 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
-      <description><![CDATA[
-<h2>🍎 Apple</h2>
-<ul>
-  <li><strong>Trump vows retaliation over EU fines</strong> — <a href="https://www.macrumors.com/2026/07/24/trump-eu-fine-investigation/">Announced investigation into EU fines against Apple, Google, Meta</a>, threatening retaliatory tariffs. EU has fined US tech companies over $25B in two decades.</li>
-  <li><strong>macOS 27 beta reworks Mail compose</strong> — Latest Golden Gate beta shows redesigned formatting bar pushing Apple Intelligence and Siri AI into the compose window.</li>
-  <li><strong>Apple Pay improvements</strong> — Four new features announced.</li>
-</ul>
-
-<h3>🤖 AI &amp; Models</h3>
-<ul>
-  <li><strong>Claude Opus 5 launches — near Fable 5 at half cost</strong> — $5/$25 per MTok vs Fable 5's $10/$50. Sonnet 5 beats Opus 4.8 on Terminal-Bench 2.1.</li>
-  <li><strong>Canadian legislator reads LLM response in floor speech</strong> — Telltale "Here's a more natural, flowing version..." appeared in parliamentary record.</li>
-</ul>
-
-<h3>🔬 Science &amp; Tech</h3>
-<ul>
-  <li><strong>AlphaFold redesigns gene-editing proteins</strong> — Used to identify error-prone regions in CRISPR proteins.</li>
-  <li><strong>EU restricts satellite images of Iran War region</strong> — Copernicus satellite imagery delayed as US military action in region ramps up.</li>
 </ul>
       ]]></description>
     </item>
