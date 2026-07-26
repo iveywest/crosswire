@@ -4,13 +4,36 @@
     <title>CrossWire</title>
     <description>Curated briefings from MOCR — Hermes, Tech, and Commanders</description>
     <link>https://iveywest.github.io/crosswire/</link>
-    <lastBuildDate>Sun, 26 Jul 2026 12:37:21 GMT</lastBuildDate>
-    <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+    <lastBuildDate>Sun, 26 Jul 2026 13:37:28 GMT</lastBuildDate>
+    <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Census — July 26</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-census-2026-07-26-091518</guid>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
+      <link>https://iveywest.github.io/crosswire/</link>
+      <description><![CDATA[
+<h2>📊 Sentinel Census — Sunday Morning</h2>
+
+<p><strong>39 green, 2 yellow, 0 red.</strong> MOCR systems are broadly healthy. The weekly census sweep found no failing jobs and no service outages.</p>
+
+<h3>🟡 Yellow — Inventory Mismatches</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> — Job referenced in the Sentinel inventory manifest but not found in the live cron configuration. Needs reconciliation to keep inventory accurate.</li>
+  <li><strong>Scrapbook Weekly Lint QA (temp)</strong> — Temporary inventory entry not matched to a live cron job. Likely a leftover that needs cleanup.</li>
+</ul>
+
+<h3>🟢 Green — 39 Items Healthy</h3>
+<p>All key services operational: Mail Call, Stableboard, Hermes WebUI, Glimpse, Ollama, and all Sentinel components. All managed cron jobs report healthy. Unmanaged cron jobs (Curb-Check-Wed, Idle-Consolidation, CrossWire Evening QA, upahead-sync) all healthy.</p>
+
+<h3>Recommendation</h3>
+<p>No immediate fixes required. The two yellow items are inventory bookkeeping — reconcile Up Ahead Sync and clean up the temp Scrapbook entry in the inventory manifest when convenient. Keep Watchdog running and use Census for weekly cleanup.</p>
+      ]]></description>
+    </item>
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-26</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Sunday Morning</h2>
@@ -56,7 +79,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-26</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -88,7 +111,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-26</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Sunday Morning</h2>
@@ -140,7 +163,7 @@
     <item>
       <title>CrossWire: Sentinel Watchdog — July 26</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-26-080003</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🔴 Sentinel Watchdog — Sunday Morning</h2>
@@ -165,7 +188,7 @@
     <item>
       <title>CrossWire: Hermes — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-evening-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Saturday Evening</h2>
@@ -210,14 +233,14 @@
     <item>
       <title>CrossWire: Tech — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-evening-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
 <ul>
   <li><strong>Apple sued over $1.8M fake Bitcoin wallet in App Store</strong> — <a href="https://www.macrumors.com/2026/07/25/apple-app-store-fake-bitcoin-wallet-lawsuit/">MacRumors</a>: Three customers allege they lost a combined $1.8M after falling victim to a fake Bitcoin wallet app on the App Store. The complaint was filed in California. App Store review gaps under scrutiny again.</li>
   <li><strong>'Apple Upgrade' leasing program incoming</strong> — <a href="https://www.macrumors.com/2026/07/25/top-stories-apple-upgrade-program/">MacRumors</a>: Apple is preparing a new device leasing and financing program, parallel to the Apple Music price hike this week.</li>
-  <li><strong>MacBook Ultra — 12 new features detailed</strong> — <a href="https://www.macrumors.com/2026/07/24/macbook-ultra-12-new-features/">MacRumors</a>: Apple's first high-end MacBook redesign in five years. Highlights: OLED hybrid tandem display (iPad Pro tech), first Mac with a touch screen ("touch-friendly, not touch-first"), hole-punch camera replacing the notch, Dynamic Island, M5 Pro/M5 Max chips, thinner bezels on 14.3"/16.3" panels, built-in cellular via Apple C1X/C2 modem, reinforced hinge. K114/K116 code names. Delivering on the rumors.</li>
+  <li><strong>MacBook Ultra — 12 new features detailed</strong> — <a href="https://www.macrumors.com/2026/07/24/macbook-ultra-12-new-features/">MacRumors</a>: Apple's first high-end MacBook redesign in five years. OLED hybrid tandem display (iPad Pro tech), first Mac with a touch screen ("touch-friendly, not touch-first"), hole-punch camera replacing the notch, Dynamic Island, M5 Pro/M5 Max chips, thinner bezels on 14.3"/16.3" panels, built-in cellular via Apple C1X/C2 modem, reinforced hinge. K114/K116 code names. Delivering on the rumors.</li>
   <li><strong>iPhone 18 won't debut this fall</strong> — <a href="https://9to5mac.com/2026/07/25/heres-why-iphone-18-wont-launch-in-september/">9to5Mac</a>: Apple is shifting its base iPhone release cycle. The standard iPhone 18 is expected to launch in spring 2027 instead of September 2026. Reasons include supply chain component shortages, portfolio bloat (iPhone 17, iPhone 17e, foldable iPhone, iPhone Air all launching this cycle), and a strategic move to spread releases across the calendar year — matching Android's multi-season flagship cadence. The Pro models and foldable iPhone are still expected this fall.</li>
   <li><strong>iOS 27 iCloud features roundup</strong> — <a href="https://www.macrumors.com/guide/ios-27-icloud/">MacRumors</a>: New iCloud capabilities across Apple Home, Siri, Photos, and more.</li>
   <li><strong>AirPods, AirTag 2, iPads hit low prices this week</strong> — <a href="https://www.macrumors.com/2026/07/25/best-apple-deals-of-the-week-7-25-26/">MacRumors</a>: Record low on AirTag 2, best A16 iPad prices since June, savings across the AirPods lineup.</li>
@@ -252,7 +275,7 @@
     <item>
       <title>CrossWire: Commanders — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-evening-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Saturday Evening</h2>
@@ -290,7 +313,7 @@
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Saturday Morning</h2>
@@ -334,7 +357,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -376,7 +399,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-25</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🏈 Washington Commanders — Saturday Morning</h2>
@@ -435,7 +458,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-24</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🍎 Apple</h2>
@@ -461,7 +484,7 @@
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 24</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-24</guid>
-      <pubDate>Sun, 26 Jul 2026 12:37:21 GMT</pubDate>
+      <pubDate>Sun, 26 Jul 2026 13:37:28 GMT</pubDate>
       <link>https://iveywest.github.io/crosswire/</link>
       <description><![CDATA[
 <h2>🚀 Hermes Ecosystem — Friday Morning</h2>
