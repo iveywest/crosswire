@@ -2,15 +2,43 @@
 <rss version="2.0">
   <channel>
     <title>CrossWire</title>
-    <description>Curated briefings from MOCR — Hermes, Tech, and Commanders</description>
+    <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Mon, 27 Jul 2026 14:35:06 GMT</lastBuildDate>
-    <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+    <lastBuildDate>Mon, 27 Jul 2026 16:24:10 GMT</lastBuildDate>
+    <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — July 27</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-27-120037</guid>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[
+<h2>&#x1F534; Sentinel Watchdog — Monday Midday</h2>
+
+<p><strong>38 green, 2 yellow, 1 red.</strong> Modest improvement over yesterday — red count dropped from 2 to 1, green climbed from 37 to 38.</p>
+
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>Curb-Check-Mon</strong> — Newly detected unmanaged cron job. Last run failed. Needs investigation to determine whether to fix, inventory, or remove.</li>
+</ul>
+
+<h3>&#x1F7E1; Yellow — 2 Inventory Mismatches (Persistent)</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> — Job referenced in the Sentinel inventory manifest but not found in the live cron configuration. Still unresolved.</li>
+  <li><strong>Scrapbook Weekly Lint QA (temp)</strong> — Temporary inventory entry with no matching live cron job. Needs cleanup.</li>
+</ul>
+
+<h3>&#x1F7E2; Green — 38 Items Healthy</h3>
+<p>All core services operational. The two previously failing jobs (scrapbook-weekly-lint and upahead-sync) have dropped off the red list, suggesting recovery since yesterday's sweep.</p>
+
+<h3>Recommended Actions</h3>
+<p>Curb-Check-Mon is the priority — it's an unmanaged job that failed. Check whether it's a legitimate job that needs inventorying, or an orphan that should be cleaned up. The two yellow inventory mismatches persist from yesterday and should be reconciled when convenient.</p>
+      ]]></description>
+    </item>
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 27</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-27</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F680; Hermes Ecosystem — Afternoon Brief, July 27</h2>
@@ -56,7 +84,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 27</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-27</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F34E; Apple</h2>
@@ -89,7 +117,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 27</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-27</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F3C8; Washington Commanders — Monday Afternoon</h2>
@@ -137,21 +165,20 @@
   <li><strong>Nov 8 (Week 9):</strong> John Riggins #44 retirement ceremony at halftime vs Rams</li>
 </ul>
 
-<h3>Beat Riders on X (Pilot)</h3>
-<p>Curated from the Commanders beat this afternoon — the Ben Steele story dominated the morning:</p>
+<h3>Beat Writers on X (Pilot)</h3>
+<p>Commanders beat writers converged on one main development: Washington dismissed tight ends coach Ben Steele just before camp after a team-policy issue tied to his June arrest, with Wes Welker already having filled in during minicamp and Dan Quinn expected to name the replacement Tuesday.</p>
 <ul>
-  <li><strong>John Keim</strong> — "The Commanders are 'parting ways' with TE coach Ben Steele... an unusual move two days before camp begins." <a href="https://x.com/john_keim/status/2081734239569977617">Link</a></li>
-  <li><strong>Ben Standig</strong> — Published court records showing Steele was charged with DWI and obstruction/resist without force on June 7 in Loudoun County. Refused blood/breath test at the scene. <a href="https://x.com/BenStandig/status/2081740267112026606">Link</a></li>
-  <li><strong>Nicki Jhabvala</strong> — Source: Commanders let Steele go due to violation of team policy. He was placed on leave after informing the team of his arrest, and the team reported it to the league. Quinn to announce replacement Tuesday. <a href="https://x.com/NickiJhabvala/status/2081739002764271824">Link</a></li>
-  <li><strong>JP Finlay</strong> — Adds context: Steele didn't take part in minicamp. Wes Welker coached tight ends for that portion. Commanders had already placed him on leave. Expects Quinn to announce changes Tuesday. <a href="https://x.com/JPFinlayNBCS/status/2081740274921775406">Link</a></li>
-  <li><strong>Nicki Jhabvala</strong> — Wes Welker coached the Commanders' tight ends during minicamp while Steele was on leave. <a href="https://x.com/NickiJhabvala/status/2081740028447699090">Link</a></li>
+  <li><strong>Team move:</strong> John Keim first flagged that the Commanders were parting ways with TE coach Ben Steele two days before camp. <a href="https://x.com/john_keim/status/2081734239569977617">Link</a></li>
+  <li><strong>Why it happened:</strong> Nicki Jhabvala reported Steele was let go for violating team policy after informing the team of his arrest, which the club then reported to the league. <a href="https://x.com/NickiJhabvala/status/2081739002764271824">Link</a></li>
+  <li><strong>Legal context:</strong> Ben Standig surfaced court records showing DWI and obstruction/resisting charges in Loudoun County and refusal of blood/breath testing. <a href="https://x.com/BenStandig/status/2081740267112026606">Link</a></li>
+  <li><strong>Coaching fallout:</strong> JP Finlay and Nicki Jhabvala added that Steele had already missed minicamp while on leave, with Wes Welker handling tight ends, which points to continuity in the short term until Quinn names a replacement. <a href="https://x.com/JPFinlayNBCS/status/2081740274921775406">Finlay</a> · <a href="https://x.com/NickiJhabvala/status/2081740028447699090">Jhabvala</a></li>
 </ul>
       ]]></description>
     </item>
     <item>
       <title>CrossWire: Sentinel Census — July 26</title>
       <guid isPermaLink="false">crosswire-report-sentinel-census-2026-07-26-091518</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F4CA; Sentinel Census — Sunday Morning</h2>
@@ -174,7 +201,7 @@
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-26</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F680; Hermes Ecosystem — Sunday Morning</h2>
@@ -220,7 +247,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-26</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F34E; Apple</h2>
@@ -252,7 +279,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-26</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F3C8; Washington Commanders — Sunday Morning</h2>
@@ -304,7 +331,7 @@
     <item>
       <title>CrossWire: Sentinel Watchdog — July 26</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-26-080003</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F534; Sentinel Watchdog — Sunday Morning</h2>
@@ -329,7 +356,7 @@
     <item>
       <title>CrossWire: Hermes — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-evening-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F680; Hermes Ecosystem — Saturday Evening</h2>
@@ -374,7 +401,7 @@
     <item>
       <title>CrossWire: Tech — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-evening-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F34E; Apple</h2>
@@ -416,7 +443,7 @@
     <item>
       <title>CrossWire: Commanders — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-evening-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <pubDate>Mon, 27 Jul 2026 16:24:10 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F3C8; Washington Commanders — Saturday Evening</h2>
