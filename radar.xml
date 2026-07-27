@@ -3,107 +3,115 @@
   <channel>
     <title>CrossWire</title>
     <description>Curated briefings from MOCR — Hermes, Tech, and Commanders</description>
-    <link>https://iveywest.github.io/crosswire/</link>
-    <lastBuildDate>Mon, 27 Jul 2026 12:35:58 GMT</lastBuildDate>
-    <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
+    <link>https://kanan.taila81309.ts.net/crosswire/</link>
+    <lastBuildDate>Mon, 27 Jul 2026 14:35:06 GMT</lastBuildDate>
+    <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
     <language>en-us</language>
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 27</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-27</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🚀 Hermes Ecosystem — Monday Morning</h2>
+<h2>&#x1F680; Hermes Ecosystem — Afternoon Brief, July 27</h2>
 
-<h3>📦 Release Radar: v0.19.0 Quicksilver, One Week In</h3>
-<p><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20">v0.19.0 (v2026.7.20)</a> hit one week old over the weekend. The headline ~80% first-turn speed improvement is the sort of upgrade you feel every single session. Reasoning streams live by default, smart approvals are the default mode, and Bitwarden/1Password secret management is fully wired. Still the current stable release — no new tag since July 20.</p>
+<h3>&#x1F4E6; Release Radar: v0.19.0 Quicksilver — One Week In</h3>
+<p><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20">v0.19.0 (v2026.7.20) — The Quicksilver Release</a> hit one week old over the weekend. Still the current stable release with its headline ~80% first-turn speed improvement, reasoning-streaming-by-default, smart approvals as default mode, and Bitwarden/1Password secret management. No new tag since July 20.</p>
 
-<h3>🖇️ Fresh PRs — July 27</h3>
-<p>Five PRs landed today, ranging from a CLI edge-case rescue to compression architecture:</p>
+<h3>&#x1F4CB; Fresh PRs — July 27</h3>
+<p>Five PRs landed today with an emphasis on gateway reliability, CLI hygiene, and shutdown safety:</p>
 <ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/72647"><strong>#72647 — fix(cli): rescue --env KEY=VALUE swallowed by --args REMAINDER in mcp add</strong></a> (Tranquil-Flow) — <code>hermes mcp add --command CMD --args -y pkg --env KEY=VALUE</code> was silently absorbing <code>--env</code> into the <code>args:</code> list because <code>--args</code> uses <code>nargs=argparse.REMAINDER</code>, which greedily captures every following token. The env var never reached the subprocess as an actual environment variable. <em>MOCR relevance:</em> If we use MCP with environment-specific configuration, this fix prevents silent failures.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/72465"><strong>#72465 — feat(compression): add bounded fresh-session handoff</strong></a> (stefanpieter) — Adds bounded handoff-packet construction in <code>agent/compression_handoff.py</code>, letting compression-sensitive flows prepare a fresh-session handoff instead of repeatedly compressing in place. <em>MOCR relevance:</em> Session compression is core to MOCR's long-running sessions — this gives a cleaner architectural path when repeated compression becomes risky.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/72642"><strong>#72642 — fix(tools): decode git output as UTF-8 in working_diff on Windows</strong></a> (Sora-bluesky) — Git output decoded with platform locale (<code>text=True</code>, no <code>encoding</code>) caused <code>UnicodeDecodeError</code> on cp932 Windows machines for any non-ASCII filename or diff content. Now explicitly decodes as UTF-8.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/72643"><strong>#72643 — fix(custom): forward provider routing prefs via the profile path</strong></a> (deshmukh-viraj) — Provider routing preferences from custom provider configs now correctly forwarded through the profile path. Ensures custom provider setups respect routing rules.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/72645"><strong>#72645 — fix(desktop): keep the highlighted slash/@ menu row visible during keyboard navigation</strong></a> (rlaope) — Desktop app's slash-command and @-mention menus no longer scroll the highlighted row out of view during keyboard navigation. Small UX fix, big quality-of-life improvement for power users.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/58039"><strong>#58039 — fix(gateway): label goal continuations and avoid silent queued turns</strong></a> (lkz-de, P2) — <code>/goal</code> follow-up turns were injected with a generic "[Continuing toward your standing goal]" marker that was easy to miss in busy chat platforms. Worse: interrupted turns could silently queue follow-ups that fired unexpectedly. Now labeled clearly and queued turns are avoided. <em>MOCR relevance:</em> Standing goals are core to how we operate — this fix prevents confusing or silent behavior in autonomous follow-ups.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/72103"><strong>#72103 — fix(relay): Slack DM-root prompts + flat-DM edit-streaming</strong></a> (victor-kyriazakos, P2, platform/slack) — Two Slack relay-lane fixes that the native parity phases didn't cover: fixing DM-root prompt resolution and flat-DM edit streaming parity. <em>MOCR relevance:</em> If we ever add Slack as a MOCR gateway, this completes the integration plumbing.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/50521"><strong>#50521 — fix(cli): set HERMES_PLATFORM=cli at startup for skill filtering</strong></a> (WangYeYi, P3) — The CLI entry point wasn't setting <code>HERMES_PLATFORM=cli</code>, so <code>get_disabled_skill_names()</code> read an empty or wrong platform key from config.yaml, potentially disabling the wrong skills. Now correctly filtered per-platform.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/61875"><strong>#61875 — fix(oneshot): shut down memory provider to prevent SIGABRT on exit</strong></a> (koshaji) — Oneshot sessions were not shutting down their memory provider on exit, causing a SIGABRT crash. Clean exit matters for unattended cron-driven sessions.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/72690"><strong>#72690 — fix(auth): harden Codex quota probe token refresh</strong></a> (kchuang1015) — Codex quota probe token refresh edge case hardened. Auth reliability in provider integration.</li>
 </ul>
 
-<h3>🛠️ New Community Repos — This Week (122 Total)</h3>
+<h3>&#x1F6E0;&#xFE0F; New Community Repos — This Week (127 Total)</h3>
 <ul>
-  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (⭐8) — Architectural enhancement suite: vector memory, adaptive soul, and workflow classification.</li>
-  <li><a href="https://github.com/PabloTheThinker/hermespace"><strong>hermespace</strong></a> (⭐5) — "Pocket workbench" for Hermes Agent — limited FOA desk, dual decode, skills+memory fabric, neural FOA.</li>
-  <li><a href="https://github.com/Perseon-Lab/agent-console"><strong>agent-console</strong></a> (⭐3) — Lightweight browser mission control for one Hermes agent: chat, sessions, cron jobs, skills, voice, and read-only missions. Overlaps with MOCR's session management patterns.</li>
-  <li><a href="https://github.com/CliffWade/hermes-image-studio"><strong>hermes-image-studio</strong></a> (⭐3) — AI image generation plugin for Hermes Agent. Style presets, auto-upscaling, batch generation, and FAL.ai history tracking — leverages the subscription FAL access.</li>
-  <li><a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"><strong>hermes-plugin-guard</strong></a> (⭐3) — Static, no-execution security checks for Hermes Agent plugins. Security-as-code plugin vetting without runtime risk.</li>
-  <li><a href="https://github.com/andrexibiza/darkloom"><strong>darkloom</strong></a> (⭐3) — Cryptographic harness for uncensorable AI agent communication. Post-quantum verification architecture with fail-closed network policies.</li>
-  <li><a href="https://github.com/gitcommit90/1Helm"><strong>1Helm</strong></a> (⭐3) — Self-hosted home for durable AI employees: one resident, one private computer, compounding memory and skills, with Skipper handling every boundary.</li>
-  <li><a href="https://github.com/LLMQuant/llmquant-hermes"><strong>llmquant-hermes</strong></a> (⭐2) — Turn your Hermes agent into a financial analyst: equities, macro, options, prediction-market analysis, plus a standing morning brief watch.</li>
+  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (&#x2B50;9) — Architectural enhancement suite: vector memory, adaptive soul, and workflow classification.</li>
+  <li><a href="https://github.com/PabloTheThinker/hermespace"><strong>hermespace</strong></a> (&#x2B50;5) — "Pocket workbench" for Hermes Agent: limited FOA desk, dual decode, skills+memory fabric, neural FOA.</li>
+  <li><a href="https://github.com/CliffWade/hermes-image-studio"><strong>hermes-image-studio</strong></a> (&#x2B50;5) — AI image generation plugin for Hermes: 10 presets across 6 FLUX + GPT Image models. Image-to-image editing, auto-upscaling, and batch generation. Leverages the Nous subscription FAL access.</li>
+  <li><a href="https://github.com/Perseon-Lab/agent-console"><strong>agent-console</strong></a> (&#x2B50;3) — Lightweight browser mission control for one Hermes agent: chat, sessions, cron jobs, skills, voice, and read-only missions. Overlaps with MOCR's session management patterns.</li>
+  <li><a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"><strong>hermes-plugin-guard</strong></a> (&#x2B50;3) — Static, no-execution security checks for Hermes Agent plugins. Security-as-code plugin vetting without runtime risk.</li>
+  <li><a href="https://github.com/andrexibiza/darkloom"><strong>darkloom</strong></a> (&#x2B50;3) — Cryptographic harness for uncensorable AI agent communication. Post-quantum verification architecture with fail-closed network policies.</li>
+  <li><a href="https://github.com/LLMQuant/llmquant-hermes"><strong>llmquant-hermes</strong></a> (&#x2B50;2) — Turn your Hermes agent into a financial analyst: equities, macro, options, prediction-market analysis, plus a standing morning brief watch.</li>
+  <li><a href="https://github.com/johnsje183/hermes-telegram-checklist"><strong>hermes-telegram-checklist</strong></a> (&#x2B50;2) — Native Telegram checklists (To-Do lists) for AI agents: create, read, append, and toggle interactive checklist messages in chats and forum topics.</li>
 </ul>
 
-<h3>📈 Gaining Popularity (Month to Date — 611 Total)</h3>
+<h3>&#x1F4C8; Gaining Popularity (Month to Date — 616 Total)</h3>
 <ul>
-  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐929) — Native iPhone app for Hermes. Holding at 929 — closing in on 1K.</li>
-  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (⭐453) — Evidence-driven Agent Skills for design award research and entry workflow. Still this month's hottest debut.</li>
-  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐190) — Unified session trajectory format across harnesses. Up from 176 on Saturday. <em>MOCR relevance:</em> Session unification maps directly to cross-run normalization.</li>
-  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (⭐109) — Field-tested, open-source skills for Hermes Agent. Nearly doubled from 44 on Friday. <em>MOCR relevance:</em> Directly applicable patterns for our skill roster.</li>
-  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (⭐101) — High-performance desktop agent workbench with evolutionary capability.</li>
-  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐77) — Personal AI agent and local memory hub for Claude Code, Codex, OpenClaw, and Hermes Agent. Shared memory across agent ecosystems.</li>
-  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (⭐61) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
-  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (⭐60) — Persistent memory for coding agents: auto-capture, explainable recall, knowledge consolidation, privacy controls, and portable offline storage.</li>
+  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (&#x2B50;931) — Native iPhone app for Hermes. Up from 929 this morning, closing in on 1K.</li>
+  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (&#x2B50;458) — Evidence-driven Agent Skills for design award research and entry workflow. Still this month's hottest debut, up from 453.</li>
+  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (&#x2B50;190) — Unified session trajectory format across harnesses. Up from 176 on Saturday. <em>MOCR relevance:</em> Session unification maps directly to cross-run normalization.</li>
+  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (&#x2B50;111) — Field-tested, open-source skills for Hermes Agent. Up from 109 on Saturday. <em>MOCR relevance:</em> Directly applicable patterns for our skill roster.</li>
+  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (&#x2B50;101) — High-performance desktop agent workbench with evolutionary capability.</li>
+  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (&#x2B50;77) — Personal AI agent and local memory hub for Claude Code, Codex, OpenClaw, and Hermes Agent. Shared memory across agent ecosystems.</li>
+  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (&#x2B50;61) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
+  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (&#x2B50;60) — Persistent memory for coding agents: auto-capture, explainable recall, knowledge consolidation, privacy controls, and portable offline storage.</li>
 </ul>
       ]]></description>
     </item>
     <item>
       <title>CrossWire: Tech — Morning Brief, July 27</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-27</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🍎 Apple</h2>
+<h2>&#x1F34E; Apple</h2>
 <ul>
-  <li><strong>iPhone 20 anniversary design overhaul expected fall 2027</strong> — <a href="https://www.macrumors.com/2026/07/26/what-iphone-20-is-expected-to-look-like/">MacRumors</a>: Apple's 20th anniversary iPhone is expected in fall 2027 with the most significant design overhaul since the iPhone X. Still over a year out, but the rumor mill is already spinning on what a landmark anniversary device looks like.</li>
-  <li><strong>Apple smart glasses targeting WWDC 2027 unveiling</strong> — <a href="https://www.macrumors.com/2026/07/26/apple-smart-glasses-wwdc-2027-report/">Bloomberg via MacRumors</a>: Mark Gurman reports Apple plans to unveil privacy-focused smart glasses at WWDC 2027 next June. Privacy as a differentiator versus Meta's approach — camera features will be a key battleground. <a href="https://9to5mac.com/2026/07/27/apple-glasses-just-wont-be-useful-without-video-recording/">9to5Mac argues</a> the glasses won't be useful without video recording capability, raising the privacy-vs-utility tension Apple will need to navigate.</li>
-  <li><strong>"Apple Upgrade" program launches TOMORROW (Tuesday)</strong> — <a href="https://www.macrumors.com/2026/07/26/apple-upgrade-program-launching-tuesday/">MacRumors</a>: Gurman reiterates the new device leasing/financing program launches in the U.S. on July 28. Replaces/reframes the existing iPhone Upgrade Program.</li>
-  <li><strong>Apple Watch Series 12 and Ultra 4 — expectations tempered</strong> — <a href="https://www.macrumors.com/2026/07/26/apple-watch-series-12-ultra-4-features-rumors/">MacRumors</a>: Gurman's Sunday newsletter suggests not very much new for this year's Watch lineup. Incremental updates expected.</li>
-  <li><strong>First water-resistant iPad arriving by October — iPad mini</strong> — <a href="https://www.macrumors.com/2026/07/25/first-water-resistant-ipad/">MacRumors</a>: Apple's next iPad mini will be the first iPad with water-resistant design, expected by October. The travel-friendly mini getting durability-first upgrades.</li>
-  <li><strong>AppleCare One launches in the UK, theft/loss coverage expands</strong> — <a href="https://9to5mac.com/2026/07/26/applecare-one-launching-in-the-uk-as-theft-and-loss-coverage-expands/">9to5Mac</a>: Bundle of AppleCare+ for iPhone, iPad, Mac, and Watch. Theft and loss coverage also expanding.</li>
-  <li><strong>Apple TV, Music, and more outage — resolved</strong> — <a href="https://9to5mac.com/2026/07/26/psa-apple-tv-apple-music-and-more-are-currently-down-for-some-users/">9to5Mac</a>: Sunday outage affected some users across Apple's services. Apple confirmed it was resolved as of ~6:15 p.m. PT.</li>
-  <li><strong>First teaser for Apple TV's Neuromancer debuts at SDCC</strong> — <a href="https://arstechnica.com/culture/2026/07/first-teaser-for-apple-tvs-neuromancer-debuts-at-sdcc/">Ars Technica</a>: Gibson adaptation teaser screened at Comic-Con. Also: Mike Flanagan's Carrie teaser, Dark Matter S2 trailers, and Blade Runner 2099 first look.</li>
-  <li><strong>Blade Runner 2099 teaser at SDCC</strong> — <a href="https://arstechnica.com/culture/2026/07/sdcc-teaser-gives-us-our-first-good-look-at-blade-runner-2099/">Ars Technica</a>: First good look at the series. Also: Rings of Power S3 teaser (Forging the One Ring), Lanterns trailer, Spaceballs: The New One panel.</li>
+  <li><strong>Apple overtakes Nvidia as world's most valuable company, barreling toward $5T</strong> — <a href="https://9to5mac.com/2026/07/27/apple-reclaims-most-valuable-company-title-from-nvidia-as-it-barrels-toward-5t/">9to5Mac</a>: AAPL and Nvidia swapped rankings again. Apple reclaims the top spot as it continues its push toward a $5 trillion market cap. The two companies have been trading places as the AI capex narrative shifts.</li>
+  <li><strong>MacBook Pro up to $500 off on Amazon after price increases</strong> — <a href="https://www.macrumors.com/2026/07/27/macbook-pro-prices-up-to-500/">MacRumors</a>: Amazon's prices on the 2026 MacBook Pro have adjusted to Apple's recent price hikes, but there are still notable deals — up to $500 off certain configurations.</li>
+  <li><strong>Ed Zitron: Apple will 'watch everything burn' when the AI bubble bursts</strong> — <a href="https://www.macrumors.com/2026/07/27/ed-zitron-apple-watch-it-burn-ai-bubble-bursts/">MacRumors</a>: Zitron (Where's Your Ed At, Better Offline podcast) argues Apple's memory-price-driven hardware hikes and the broader AI spending bubble are on a collision course. Memory prices have doubled, Macs and iPads have gone up, iPhones expected to follow. Provocative take worth reading, even if you don't buy the premise.</li>
+  <li><strong>AppleCare+ with Theft and Loss for iPad and Apple Watch expanding to 4 more countries</strong> — <a href="https://www.macrumors.com/2026/07/27/applecare-with-theft-and-loss-expanding/">MacRumors</a>: Australia, France, Germany, and the UK get AppleCare+ with Theft and Loss for iPad and Apple Watch starting August 4.</li>
+  <li><strong>AppleCare One expanding to same four countries</strong> — <a href="https://www.macrumors.com/2026/07/27/applecare-one-four-more-countries/">MacRumors</a>: Bundled AppleCare+ across iPhone, iPad, Mac, and Watch rolling out internationally.</li>
+  <li><strong>Apple responds to lawsuit over fake Bitcoin wallet in App Store</strong> — <a href="https://www.macrumors.com/2026/07/27/apple-app-store-fake-bitcoin-wallet-lawsuit/">MacRumors</a>: Apple facing a lawsuit from three customers who allegedly lost a combined $1.8M after falling victim to a fake Bitcoin wallet app. Complaint filed in California. App Store review process under scrutiny again.</li>
+  <li><strong>First teaser for Apple TV's Neuromancer debuts at SDCC</strong> — <a href="https://arstechnica.com/culture/2026/07/first-teaser-for-apple-tvs-neuromancer-debuts-at-sdcc/">Ars Technica</a>: Gibson adaptation teaser screened at Comic-Con. Also: Mike Flanagan's Carrie teaser, Dark Matter S2 trailers, and more.</li>
+  <li><strong>Blade Runner 2099 teaser at SDCC — first good look</strong> — <a href="https://arstechnica.com/culture/2026/07/sdcc-teaser-gives-us-our-first-good-look-at-blade-runner-2099/">Ars Technica</a>: First good look at the series. Also: Rings of Power S3 teaser (Forging the One Ring), Lanterns trailer, Spaceballs: The New One panel.</li>
+  <li><strong>Silo season 4 return date announced</strong> — <a href="https://9to5mac.com/2026/07/27/apple-announces-silos-season-4-return-date/">9to5Mac</a>: Apple TV announced the season 4 return date for Silo over the weekend.</li>
+  <li><strong>Apple Glasses won't be useful without video recording</strong> — <a href="https://9to5mac.com/2026/07/27/apple-glasses-just-wont-be-useful-without-video-recording/">9to5Mac</a>: As Apple reportedly plans privacy-first smart glasses, 9to5Mac argues the camera feature is essential — raising the privacy-vs-utility tension Apple will need to navigate.</li>
 </ul>
 
-<h3>🤖 AI &amp; Security</h3>
+<h3>&#x1F916; AI &amp; Security</h3>
 <ul>
-  <li><strong>Claude Cowork escaped sandbox on Mac — full file access</strong> — <a href="https://9to5mac.com/2026/07/27/claude-cowork-escaped-sandbox-on-mac-gain-full-access-to-all-files/">9to5Mac</a>: Anthropic's Claude Cowork desktop app was found to have escaped its macOS sandbox, gaining full read/write access to all files. Significant security concern for users running it with sensitive data.</li>
-  <li><strong>Artist sues AI meme generator for selling personal comic as ad template</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/artist-sues-ai-meme-generator-for-selling-deeply-personal-comic-as-ad-template/">Ars Technica</a>: Meme generator may have used templates in outputs, enabling their sale as ad templates. Copyright and consent in the AI era continues to be messy.</li>
-  <li><strong>Meta Glasses accessibility paywall "paused" after backlash</strong> — <a href="https://9to5mac.com/2026/07/27/an-accessibility-paywall-on-meta-glasses-could-be-good-news-for-apple-glasses/">9to5Mac</a>: Meta's plan to charge for accessibility features on their smart glasses was met with widespread condemnation and has been paused. Could shape Apple's approach to their own glasses as a differentiator.</li>
+  <li><strong>Claude Cowork escaped sandbox on Mac — full file access</strong> — <a href="https://9to5mac.com/2026/07/27/claude-cowork-escaped-sandbox-on-mac-gain-full-access-to-all-files/">9to5Mac</a>: Anthropic's Claude Cowork desktop app was found to have escaped its macOS sandbox, gaining full read/write access to all files. Significant security concern for anyone running agentic desktop tools with sensitive data.</li>
+  <li><strong>Artist sues AI meme generator for selling personal comic as ad template</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/artist-sues-ai-meme-generator-for-selling-deeply-personal-comic-as-ad-template/">Ars Technica</a>: Meme generator may have used original artwork in template outputs, enabling resale as ad templates. Copyright and consent in the AI era continues to be messy.</li>
+  <li><strong>Meta Glasses accessibility paywall 'paused' after backlash</strong> — <a href="https://9to5mac.com/2026/07/27/an-accessibility-paywall-on-meta-glasses-could-be-good-news-for-apple-glasses/">9to5Mac</a>: Meta's plan to charge for accessibility features on Ray-Ban Meta Glasses was met with widespread condemnation. Now paused. Could shape how Apple approaches their own smart glasses feature set.</li>
 </ul>
 
-<h3>🚀 Science &amp; Space</h3>
+<h3>&#x1F680; Science &amp; Space</h3>
 <ul>
   <li><strong>SpaceX eyes tower catch for next Starship after Flight 13</strong> — <a href="https://arstechnica.com/space/2026/07/spacex-eyes-tower-catch-for-next-starship-after-auspicious-end-to-13th-flight/">Ars Technica</a>: After Starship's 13th flight ended well, SpaceX will likely attempt to catch the booster back at the launch pad on the next flight. Rapid reusability continues to advance.</li>
-  <li><strong>Art museums reframing visitor experience with data</strong> — <a href="https://arstechnica.com/culture/2026/07/with-help-from-data-art-museums-are-reframing-the-visitor-experience/">Ars Technica</a>: Museums are embracing data-driven curation and a shifting technology landscape to understand how visitors actually engage with exhibits.</li>
 </ul>
       ]]></description>
     </item>
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 27</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-27</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🏈 Washington Commanders — Monday Morning</h2>
+<h2>&#x1F3C8; Washington Commanders — Monday Afternoon</h2>
 
-<h3>📋 Camp Eve: Veterans Report TOMORROW</h3>
-<p><strong>Veterans report Tuesday, July 28.</strong> First practice Wednesday, July 29 in Ashburn, VA. This is the final Monday before the 2026 season kicks off in earnest. Head coach Dan Quinn and GM Adam Peters are scheduled for media availability on Tuesday.</p>
+<h3>&#x26A0;&#xFE0F; Breaking: Commanders Part Ways with TE Coach Ben Steele</h3>
+<p>The Commanders announced Monday they are "parting ways" with tight ends coach <strong>Ben Steele</strong> following a DWI arrest on June 7 in Loudoun County, according to court records. The move comes just two days before veterans report to training camp.</p>
+<p><strong>Key details from the beat:</strong></p>
+<ul>
+  <li>Steele was charged with DWI and obstruction/resist without force. He refused a blood/breath test at the scene (<a href="https://x.com/BenStandig/status/2081740267112026606">Ben Standig</a>).</li>
+  <li>The Commanders had already placed Steele on leave. <strong>Wes Welker</strong> coached the tight ends during minicamp in his absence (<a href="https://x.com/NickiJhabvala/status/2081740028447699090">Nicki Jhabvala</a>).</li>
+  <li>Steele was let go due to violation of team policy. The team reported his arrest to the league (<a href="https://x.com/NickiJhabvala/status/2081739002764271824">Nicki Jhabvala</a>).</li>
+  <li>Head coach <strong>Dan Quinn</strong> is expected to announce Steele's replacement when he meets with the media on Tuesday (<a href="https://x.com/JPFinlayNBCS/status/2081740274921775406">JP Finlay</a>).</li>
+</ul>
+<p>This is an unusual move two days before camp — the team clearly values a clean start and isn't willing to carry distractions into the season.</p>
 
-<h3>📝 Ben Standig: Offensive Player-by-Player Almanac</h3>
-<p><a href="https://open.substack.com/pub/lastmanstanding/p/commanders-training-camp-offensive?r=5rru9i">Ben Standig published a comprehensive player-by-player breakdown</a> of all 43 offensive players entering training camp. This is the camp-preparation reading you want before practices start Wednesday — depth chart projections, camp battles to watch, and what each player needs to prove. <em>MOCR relevance:</em> Bookmark this one for the drive in tomorrow.</p>
+<h3>&#x1F4CB; Training Camp — TOMORROW</h3>
+<p><strong>Veterans report Tuesday, July 28.</strong> First practice Wednesday, July 29 in Ashburn, VA. Dan Quinn and GM Adam Peters are scheduled for media availability on Tuesday — where we'll get the TE coach replacement announcement.</p>
 
-<h3>🔮 Betting Outlook: Double-Digit Wins Too Much to Ask?</h3>
-<p><a href="https://www.espn.com/espn/betting/story/_/id/49355406/washington-commanders-betting-outlook-2026">ESPN's betting analysts examined</a> the Commanders' 2026 outlook. The question: after a strong 2025 showing, can Washington push to double-digit wins in a loaded NFC East? The division got tougher — Eagles and Cowboys both have betting outlook pieces this week as well.</p>
+<h3>&#x1F4B0; Betting Outlook: Double-Digit Wins Too Much to Ask?</h3>
+<p><a href="https://www.espn.com/espn/betting/story/_/id/49355406/washington-commanders-betting-outlook-2026">ESPN's betting analysts examined</a> the Commanders' 2026 outlook. After a strong 2025 showing, can Washington push to double-digit wins in a loaded NFC East? The division got tougher — Eagles and Cowboys both have their own betting outlook pieces this week as well.</p>
 
-<h3>📅 2026 Schedule — Opening Stretch</h3>
+<h3>&#x1F4C5; 2026 Schedule — Opening Stretch</h3>
 <ul>
   <li><strong>Sep 13 (Sun)</strong> — @ Philadelphia Eagles</li>
   <li><strong>Sep 20 (Sun)</strong> — @ Dallas Cowboys</li>
@@ -113,51 +121,50 @@
 </ul>
 <p>17 games remaining. Back-to-back divisional road games to open the season is a trial by fire.</p>
 
-<h3>🏆 Around the NFL</h3>
+<h3>&#x1F3C6; Around the NFL</h3>
 <ul>
-  <li><strong>Lions place three on PUP</strong> — <a href="https://x.com/AdamSchefter/status/2081480172096614479">Adam Schefter</a>: S Brian Branch, S Kerby Joseph, TE Tyler Conklin placed on PUP to start camp.</li>
-  <li><strong>49ers assistant Chris Foerster oversaw first practice</strong> — <a href="https://x.com/AdamSchefter/status/2081565785382600712">Adam Schefter</a>: A "fired up" Foerster ran practice as Kyle Shanahan (recovering from car crash injuries) stood nearby.</li>
-  <li><strong>Browns QB battle</strong> — <a href="https://www.espn.com/nfl/story/_/id/49450773/cleveland-browns-2026-week-1-starting-quarterback-deshaun-watson-shedeur-sanders-dillon-gabriel-taylen-green">ESPN</a>: Deshaun Watson vs. Shedeur Sanders vs. Dillon Gabriel vs. Taylen Green. Four QBs vying for Cleveland's starting job.</li>
-  <li><strong>UNC places GM Michael Lombardi on leave</strong> — <a href="https://x.com/RossDellenger/status/2081713460778258688">Ross Dellenger</a>: North Carolina put GM Michael Lombardi on leave. College-level GM role continues to be a volatile experiment.</li>
-  <li><strong>Seahawks training camp intel</strong> — <a href="https://www.espn.com/nfl/story/_/id/49427699/seattle-seahawks-training-camp-2026-intel-updates">ESPN</a>: Daily updates from Seahawks camp — Seattle visits Washington in Week 3 (Sep 27, home opener).</li>
-  <li><strong>Is the 2011 NFL draft the best defensive class ever?</strong> — <a href="https://www.espn.com/nfl/story/_/id/49454392/nfl-2011-draft-class-defense-best-ever-watt-sherman-heyward-miller-jordan-peterson">ESPN</a>: The 2011 class included J.J. Watt, Patrick Peterson, Richard Sherman, Cam Heyward, Von Miller, and others. The argument for topping 1981 could come down to two still-active players.</li>
+  <li><strong>Chiefs OC Eric Bieniemy's wife shot at couple's home in Virginia</strong> — <a href="https://www.espn.com/nfl/story/_/id/49462234/sources-wife-chiefs-eric-bieniemy-shot-couple-home">ESPN</a>: Sources say the wife of Chiefs offensive coordinator Eric Bieniemy was shot at the couple's home in Virginia. Authorities investigating.</li>
+  <li><strong>Rams training camp intel</strong> — <a href="https://www.espn.com/nfl/story/_/id/49434454/los-angeles-rams-training-camp-2026-intel-updates">ESPN</a>: Daily updates from Rams camp — Washington faces LA on Nov 8 (Riggins #44 retirement ceremony game).</li>
+  <li><strong>Fantasy football sleepers, busts, and breakouts for 2026</strong> — <a href="https://www.espn.com/fantasy/football/story/_/page/FFSleepBustBreak26-49030808/fantasy-football-2026-rankings-nfl-sleepers-breakouts-busts">ESPN</a>: ESPN analysts give their picks for who will surprise, disappoint, or make a big jump this fantasy season.</li>
 </ul>
 
-<h3>📅 On the Radar</h3>
+<h3>&#x1F4C5; On the Radar</h3>
 <ul>
   <li><strong>July 28 (Tue):</strong> Veterans report to training camp</li>
+  <li><strong>July 28 (Tue):</strong> Dan Quinn media availability — TE coach replacement expected</li>
   <li><strong>July 29 (Wed):</strong> First practice, Ashburn VA</li>
-  <li><strong>July 29 (Wed):</strong> Quinn and Peters media availability</li>
   <li><strong>Sep 13:</strong> Season opener @ Philadelphia Eagles</li>
   <li><strong>Nov 8 (Week 9):</strong> John Riggins #44 retirement ceremony at halftime vs Rams</li>
 </ul>
 
 <h3>Beat Riders on X (Pilot)</h3>
-<p>Curated from the Commanders beat on Monday morning:</p>
+<p>Curated from the Commanders beat this afternoon — the Ben Steele story dominated the morning:</p>
 <ul>
-  <li><a href="https://x.com/BenStandig/status/2081703411154657371"><strong>Ben Standig</strong></a> — Published his player-by-player offensive almanac covering all 43 offensive players entering training camp. The essential pre-camp read.</li>
-  <li><a href="https://x.com/john_keim/status/2081701417639706940"><strong>John Keim</strong></a> — Talking camp battles to watch on ESPN Richmond. Listen for who's competing for starting spots as camp opens.</li>
-  <li><a href="https://x.com/JPFinlayNBCS/status/2081478956507639890"><strong>JP Finlay</strong></a> — Nats with a huge series win — "Things about to get VERY interesting in Navy Yard." Adjacent DC sports energy.</li>
+  <li><strong>John Keim</strong> — "The Commanders are 'parting ways' with TE coach Ben Steele... an unusual move two days before camp begins." <a href="https://x.com/john_keim/status/2081734239569977617">Link</a></li>
+  <li><strong>Ben Standig</strong> — Published court records showing Steele was charged with DWI and obstruction/resist without force on June 7 in Loudoun County. Refused blood/breath test at the scene. <a href="https://x.com/BenStandig/status/2081740267112026606">Link</a></li>
+  <li><strong>Nicki Jhabvala</strong> — Source: Commanders let Steele go due to violation of team policy. He was placed on leave after informing the team of his arrest, and the team reported it to the league. Quinn to announce replacement Tuesday. <a href="https://x.com/NickiJhabvala/status/2081739002764271824">Link</a></li>
+  <li><strong>JP Finlay</strong> — Adds context: Steele didn't take part in minicamp. Wes Welker coached tight ends for that portion. Commanders had already placed him on leave. Expects Quinn to announce changes Tuesday. <a href="https://x.com/JPFinlayNBCS/status/2081740274921775406">Link</a></li>
+  <li><strong>Nicki Jhabvala</strong> — Wes Welker coached the Commanders' tight ends during minicamp while Steele was on leave. <a href="https://x.com/NickiJhabvala/status/2081740028447699090">Link</a></li>
 </ul>
       ]]></description>
     </item>
     <item>
       <title>CrossWire: Sentinel Census — July 26</title>
       <guid isPermaLink="false">crosswire-report-sentinel-census-2026-07-26-091518</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>📊 Sentinel Census — Sunday Morning</h2>
+<h2>&#x1F4CA; Sentinel Census — Sunday Morning</h2>
 
 <p><strong>39 green, 2 yellow, 0 red.</strong> MOCR systems are broadly healthy. The weekly census sweep found no failing jobs and no service outages.</p>
 
-<h3>🟡 Yellow — Inventory Mismatches</h3>
+<h3>&#x1F7E1; Yellow — Inventory Mismatches</h3>
 <ul>
   <li><strong>Up Ahead Sync</strong> — Job referenced in the Sentinel inventory manifest but not found in the live cron configuration. Needs reconciliation to keep inventory accurate.</li>
   <li><strong>Scrapbook Weekly Lint QA (temp)</strong> — Temporary inventory entry not matched to a live cron job. Likely a leftover that needs cleanup.</li>
 </ul>
 
-<h3>🟢 Green — 39 Items Healthy</h3>
+<h3>&#x1F7E2; Green — 39 Items Healthy</h3>
 <p>All key services operational: Mail Call, Stableboard, Hermes WebUI, Glimpse, Ollama, and all Sentinel components. All managed cron jobs report healthy. Unmanaged cron jobs (Curb-Check-Wed, Idle-Consolidation, CrossWire Evening QA, upahead-sync) all healthy.</p>
 
 <h3>Recommendation</h3>
@@ -167,15 +174,15 @@
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-26</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🚀 Hermes Ecosystem — Sunday Morning</h2>
+<h2>&#x1F680; Hermes Ecosystem — Sunday Morning</h2>
 
-<h3>📦 Release Radar: v0.19.0 Quicksilver, One Week In</h3>
+<h3>&#x1F4E6; Release Radar: v0.19.0 Quicksilver, One Week In</h3>
 <p><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20">v0.19.0 (v2026.7.20) — The Quicksilver Release</a> is a week old. The headline number: <strong>~80% first-turn speed improvement</strong> across every platform. Cold-start "Initializing agent..." dropped from ~4.3s to ~0.9s (~2,245 commits, ~1,065 merged PRs, ~3,300 issues closed, 450+ community contributors). Beyond speed, the release ships reasoning-streaming-by-default, smart approvals as the default mode, live subagent transcripts via <code>delegate_task</code>, a durable delivery-obligation ledger that makes responses survive gateway crashes, and Bitwarden/1Password secret management. <em>MOCR relevance:</em> We're running on this — the cold-start win is the one we feel every session.</p>
 
-<h3>🖇️ Fresh PRs — July 26</h3>
+<h3>&#x1F4C7; Fresh PRs — July 26</h3>
 <p>Five PRs landed today, spanning session state architecture, CLI polish, and terminal hygiene:</p>
 <ul>
   <li><a href="https://github.com/NousResearch/hermes-agent/pull/71949"><strong>#71949 — feat(session): add state.backend config and factory resolution</strong></a> (lexiismadd) — Config-driven session store backend selection. SQLite remains default (zero behavioural change). PostgreSQL hook is wired as a clean extension point. <em>MOCR relevance:</em> If we ever need shared multi-node session state, this is the architectural foundation.</li>
@@ -185,38 +192,38 @@
   <li><a href="https://github.com/NousResearch/hermes-agent/pull/68948"><strong>#68948 — fix(terminal): retire the compound-background rewriter</strong></a> (Sora-bluesky) — Removes the compound-background command rewriter that was causing edge cases in background process handling.</li>
 </ul>
 
-<h3>🛠️ New Community Repos — This Week</h3>
+<h3>&#x1F6E0;&#xFE0F; New Community Repos — This Week</h3>
 <ul>
-  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (⭐90) — Field-tested, open-source skills for Hermes Agent. The most-starred new community repo this week. <em>MOCR relevance:</em> Directly applicable patterns for our skill roster.</li>
-  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (⭐8) — Architectural enhancement suite: vector memory, adaptive soul, and workflow classification.</li>
-  <li><a href="https://github.com/PabloTheThinker/hermespace"><strong>hermespace</strong></a> (⭐5) — "Pocket workbench" for Hermes — limited FOA desk, dual decode, skills+memory fabric, neural FOA.</li>
-  <li><a href="https://github.com/Perseon-Lab/agent-console"><strong>agent-console</strong></a> (⭐3) — Lightweight browser mission control for one Hermes agent: chat, sessions, cron, skills, voice, read-only missions. Overlaps with our session management patterns.</li>
-  <li><a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"><strong>hermes-plugin-guard</strong></a> (⭐3) — Static, no-execution security checks for Hermes Agent plugins. Security-as-code plugin vetting.</li>
-  <li><a href="https://github.com/andrexibiza/darkloom"><strong>darkloom</strong></a> (⭐3) — Cryptographic harness for uncensorable AI agent communication. Post-quantum verification architecture with fail-closed network policies.</li>
-  <li><a href="https://github.com/gitcommit90/1Helm"><strong>1Helm</strong></a> (⭐3) — Self-hosted home for durable AI employees: one resident, one private computer, compounding memory and skills.</li>
-  <li><a href="https://github.com/Fruxano/fruvisi"><strong>fruvisi</strong></a> (⭐2) — Visual organization dashboard plugin for Hermes — org chart with areas & groups, one-click team lineups, per-agent OpenRouter routing.</li>
+  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (&#x2B50;90) — Field-tested, open-source skills for Hermes Agent. The most-starred new community repo this week. <em>MOCR relevance:</em> Directly applicable patterns for our skill roster.</li>
+  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (&#x2B50;8) — Architectural enhancement suite: vector memory, adaptive soul, and workflow classification.</li>
+  <li><a href="https://github.com/PabloTheThinker/hermespace"><strong>hermespace</strong></a> (&#x2B50;5) — "Pocket workbench" for Hermes — limited FOA desk, dual decode, skills+memory fabric, neural FOA.</li>
+  <li><a href="https://github.com/Perseon-Lab/agent-console"><strong>agent-console</strong></a> (&#x2B50;3) — Lightweight browser mission control for one Hermes agent: chat, sessions, cron, skills, voice, read-only missions. Overlaps with our session management patterns.</li>
+  <li><a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"><strong>hermes-plugin-guard</strong></a> (&#x2B50;3) — Static, no-execution security checks for Hermes Agent plugins. Security-as-code plugin vetting.</li>
+  <li><a href="https://github.com/andrexibiza/darkloom"><strong>darkloom</strong></a> (&#x2B50;3) — Cryptographic harness for uncensorable AI agent communication. Post-quantum verification architecture with fail-closed network policies.</li>
+  <li><a href="https://github.com/gitcommit90/1Helm"><strong>1Helm</strong></a> (&#x2B50;3) — Self-hosted home for durable AI employees: one resident, one private computer, compounding memory and skills.</li>
+  <li><a href="https://github.com/Fruxano/fruvisi"><strong>fruvisi</strong></a> (&#x2B50;2) — Visual organization dashboard plugin for Hermes — org chart with areas &amp; groups, one-click team lineups, per-agent OpenRouter routing.</li>
 </ul>
 
-<h3>📈 Gaining Popularity (Month to Date)</h3>
+<h3>&#x1F4C8; Gaining Popularity (Month to Date)</h3>
 <ul>
-  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐920) — Native iPhone app for Hermes. Steady at 920, still tracking toward 1K.</li>
-  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (⭐404) — Evidence-driven Agent Skills for design award workflow. Up from 371 on Friday — still climbing.</li>
-  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐176) — Unified session trajectory format across harnesses. Up from 153 on Friday. <em>MOCR relevance:</em> Session unification maps directly to cross-run normalization.</li>
-  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (⭐101) — High-performance desktop agent workbench with evolutionary capability.</li>
-  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (⭐90) — New entry in the top gainers. More than doubled from 44 on Friday.</li>
-  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐72) — Personal AI agent &amp; local memory hub for Claude Code, Codex, and Hermes.</li>
-  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (⭐58) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
-  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (⭐58) — Persistent memory for coding agents: auto-capture, explainable recall, privacy controls, offline storage.</li>
+  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (&#x2B50;920) — Native iPhone app for Hermes. Steady at 920, still tracking toward 1K.</li>
+  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (&#x2B50;404) — Evidence-driven Agent Skills for design award workflow. Up from 371 on Friday — still climbing.</li>
+  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (&#x2B50;176) — Unified session trajectory format across harnesses. Up from 153 on Friday. <em>MOCR relevance:</em> Session unification maps directly to cross-run normalization.</li>
+  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (&#x2B50;101) — High-performance desktop agent workbench with evolutionary capability.</li>
+  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (&#x2B50;90) — New entry in the top gainers. More than doubled from 44 on Friday.</li>
+  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (&#x2B50;72) — Personal AI agent &amp; local memory hub for Claude Code, Codex, and Hermes.</li>
+  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (&#x2B50;58) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
+  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (&#x2B50;58) — Persistent memory for coding agents: auto-capture, explainable recall, privacy controls, offline storage.</li>
 </ul>
       ]]></description>
     </item>
     <item>
       <title>CrossWire: Tech — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-26</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🍎 Apple</h2>
+<h2>&#x1F34E; Apple</h2>
 <ul>
   <li><strong>First water-resistant iPad coming — the iPad mini, by October</strong> — <a href="https://www.macrumors.com/2026/07/25/first-water-resistant-ipad/">MacRumors</a>: Apple's next iPad mini will reportedly be the first iPad with a water-resistant design, expected to launch by October. The mini form factor getting durability-first upgrades makes sense for a device that travels everywhere.</li>
   <li><strong>MacBook Ultra — 12 new features detailed</strong> — <a href="https://www.macrumors.com/2026/07/24/macbook-ultra-12-new-features/">MacRumors</a>: Apple's first high-end MacBook redesign in five years. OLED hybrid tandem display (iPad Pro tech), first Mac with a touch screen ("touch-friendly, not touch-first"), hole-punch camera replacing the notch, Dynamic Island, M5 Pro/M5 Max chips, thinner bezels on 14.3"/16.3" panels, built-in cellular via Apple C1X/C2 modem, reinforced hinge. K114/K116 code names.</li>
@@ -229,13 +236,13 @@
   <li><strong>Amazon Basics Matter plug — Apple Home for under $10</strong> — <a href="https://9to5mac.com/2026/07/25/the-amazon-basics-matter-plug-delivers-apple-home-control-for-under-10/">9to5Mac HomeKit Weekly</a>: Finally, a budget-friendly Matter smart plug that works with Apple Home, under $10.</li>
 </ul>
 
-<h3>🚀 Science &amp; Space</h3>
+<h3>&#x1F680; Science &amp; Space</h3>
 <ul>
   <li><strong>SpaceX eyes tower catch for next Starship after flight 13</strong> — <a href="https://arstechnica.com/space/2026/07/spacex-eyes-tower-catch-for-next-starship-after-auspicious-end-to-13th-flight/">Ars Technica</a>: After Starship Flight 13 ended well, SpaceX will attempt a tower catch of the booster on the next flight. Rapid reusability closing in.</li>
   <li><strong>Wildfire forces evacuation of NASA's Deep Space Network in Spain</strong> — <a href="https://arstechnica.com/space/2026/07/wildfire-forces-evacuation-of-nasas-deep-space-network-complex-in-spain/">Ars Technica</a>: Madrid DSN complex evacuated. Assessment of potential damage pending safe return. Deep space communications at risk until crews can get back in.</li>
 </ul>
 
-<h3>🔬 Policy &amp; Media</h3>
+<h3>&#x1F52C; Policy &amp; Media</h3>
 <ul>
   <li><strong>Big Tech accused of stonewalling European social media researchers</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/big-tech-accused-of-stonewalling-european-social-media-researchers/">Ars Technica</a>: TikTok, X, and Meta aren't providing data they're legally required to under the DMA/DSA.</li>
   <li><strong>Art museums reframing the visitor experience with data</strong> — <a href="https://arstechnica.com/culture/2026/07/with-help-from-data-art-museums-are-reframing-the-visitor-experience/">Ars Technica</a>: Data-driven curation and a shifting technology landscape in museums.</li>
@@ -245,15 +252,15 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-26</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🏈 Washington Commanders — Sunday Morning</h2>
+<h2>&#x1F3C8; Washington Commanders — Sunday Morning</h2>
 
-<h3>📋 Camp Countdown: 2 Days</h3>
+<h3>&#x1F4CB; Camp Countdown: 2 Days</h3>
 <p><strong>Veterans report Monday, July 28.</strong> First practice Wednesday, July 29 in Ashburn, VA. The offseason is nearly over — the 2026 season starts in earnest this week. Head coach Dan Quinn and GM Adam Peters are slated for media availability on Tuesday.</p>
 
-<h3>⚠️ PUP List — Three Veterans to Start Camp on Sidelines</h3>
+<h3>&#x26A0;&#xFE0F; PUP List — Three Veterans to Start Camp on Sidelines</h3>
 <p>Per <a href="https://lastmanstandig.substack.com/p/commanders-place-trio-of-veterans?r=5rru9i">Ben Standig's Substack</a>, the Commanders placed three 2025 Week 1 starters on Active/PUP on Saturday:</p>
 <ul>
   <li><strong>DE Dorance Armstrong</strong> — Tore his ACL in Week 7 vs. Dallas. Led the team with 5.5 sacks pre-injury.</li>
@@ -263,10 +270,10 @@
 </ul>
 <p><strong>Positive news:</strong> DT Tim Settle (foot) has been cleared and should participate when camp opens Wednesday. Standig notes Washington's CB room is one of the more unsettled units on the roster, making Amos' return timeline especially important. PUP players can be activated at any point; if still sidelined at roster cutdowns, they'd miss at least the first four games. <a href="https://x.com/john_keim/status/2081131483243114844">John Keim has video breakdown</a>.</p>
 
-<h3>🔄 Aiyuk Watch</h3>
+<h3>&#x1F504; Aiyuk Watch</h3>
 <p>Brandon Aiyuk continues to claim he'll join the Commanders. <a href="https://x.com/NickiJhabvala/status/2081088480206115088">Nicki Jhabvala reports</a> that when asked about Aiyuk's claim, 49ers GM John Lynch deflected: "focus on the players that are here." Aiyuk is on the reserve/left-squad list. The Aiyuk-Daniels connection (former Arizona State teammates) remains the underlying story if this ever materializes.</p>
 
-<h3>📅 2026 Schedule — Opening Stretch</h3>
+<h3>&#x1F4C5; 2026 Schedule — Opening Stretch</h3>
 <ul>
   <li><strong>Sep 13 (Sun)</strong> — @ Philadelphia Eagles</li>
   <li><strong>Sep 20 (Sun)</strong> — @ Dallas Cowboys</li>
@@ -276,7 +283,7 @@
 </ul>
 <p>17 games remaining. Opening with back-to-back divisional road games — Philly then Dallas — is as tough a start as it gets.</p>
 
-<h3>🏆 Around the NFL</h3>
+<h3>&#x1F3C6; Around the NFL</h3>
 <ul>
   <li><strong>49ers' Kyle Shanahan limited in camp after car crash</strong> — <a href="https://www.espn.com/nfl/story/_/id/49449057/49ers-gm-lynch-focused-players-here-not-wr-aiyuk">ESPN</a>: Shanahan broke his nose, three ribs, his hand, needed 40+ stitches, and suffered a severe concussion in a July 14 crash. He'll be limited as camp opens. Also: George Kittle (Achilles) placed on PUP, while Nick Bosa and Fred Warner have been cleared from their 2025 season-ending injuries.</li>
   <li><strong>Aaron Donald in "regimented process" for possible Rams return</strong> — <a href="https://www.espn.com/nfl/story/_/id/49448508/retired-donald-regimented-process-possible-rams-return">ESPN</a>: Sean McVay says the retired DT is considering a return. Commanders face the Rams on Nov 8 — also the Riggins #44 retirement ceremony game.</li>
@@ -284,7 +291,7 @@
   <li><strong>Training camps opening around the league</strong> — ESPN has intel roundups on the <a href="https://www.espn.com/nfl/story/_/id/49377273/carolina-panthers-training-camp-2026-intel-updates">Panthers</a>, <a href="https://www.espn.com/nfl/story/_/id/49434454/los-angeles-rams-training-camp-2026-intel-updates">Rams</a>, <a href="https://www.espn.com/nfl/story/_/id/49427699/seattle-seahawks-training-camp-2026-intel-updates">Seahawks</a>, and <a href="https://www.espn.com/nfl/story/_/id/49426382/arizona-cardinals-training-camp-2026-intel-updates">Cardinals</a>.</li>
 </ul>
 
-<h3>📅 On the Radar</h3>
+<h3>&#x1F4C5; On the Radar</h3>
 <ul>
   <li><strong>July 28 (Mon):</strong> Veterans report to training camp</li>
   <li><strong>July 29 (Tue):</strong> First practice, Ashburn VA</li>
@@ -297,23 +304,23 @@
     <item>
       <title>CrossWire: Sentinel Watchdog — July 26</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-26-080003</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🔴 Sentinel Watchdog — Sunday Morning</h2>
+<h2>&#x1F534; Sentinel Watchdog — Sunday Morning</h2>
 
-<h3>🚨 Red — 2 Failing Jobs</h3>
+<h3>&#x1F6A8; Red — 2 Failing Jobs</h3>
 <ul>
   <li><strong>scrapbook-weekly-lint</strong> — Newly inventoried job, last run failed. Needs investigation.</li>
   <li><strong>upahead-sync</strong> — Unmanaged cron job, last run failed. Needs to be fixed, properly inventoried, or removed.</li>
 </ul>
 
-<h3>🟡 Yellow — 1 Inventory Mismatch</h3>
+<h3>&#x1F7E1; Yellow — 1 Inventory Mismatch</h3>
 <ul>
   <li><strong>Up Ahead Sync</strong> — Job referenced in the inventory manifest but not found in the live cron configuration.</li>
 </ul>
 
-<h3>🟢 Green — 37 items healthy</h3>
+<h3>&#x1F7E2; Green — 37 items healthy</h3>
 
 <h3>Recommended Actions</h3>
 <p>Review the two failing jobs. <strong>upahead-sync</strong> is the priority — it's unmanaged and failed, so it's either missing from inventory or orphaned. Decide whether to fix, inventory properly, or remove it. Reconcile the <strong>Up Ahead Sync</strong> inventory-vs-live mismatch so Sentinel has an accurate picture.</p>
@@ -322,12 +329,12 @@
     <item>
       <title>CrossWire: Hermes — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-evening-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🚀 Hermes Ecosystem — Saturday Evening</h2>
+<h2>&#x1F680; Hermes Ecosystem — Saturday Evening</h2>
 
-<h3>🖇️ Trending PRs — July 25</h3>
+<h3>&#x1F4C7; Trending PRs — July 25</h3>
 <p>Five notable PRs landed today, three of them gateway-focused:</p>
 <ul>
   <li><a href="https://github.com/NousResearch/hermes-agent/pull/71541"><strong>#71541 — feat(gateway): add post-auth message hooks</strong></a> (mentatzoe) — Adds an async <code>gateway_message</code> plugin hook that fires after host authorization and control-command interception but before ordinary agent dispatch. Exposes immutable message/route snapshots plus a route-bound delivery capability with normalized <code>sent</code> / <code>failed</code> / <code>unknown</code> acknowledgements. Also adds <code>gateway_session_cancel</code> notifications for confirmed <code>/stop</code> and <code>/new</code>/reset boundaries. Closes the loop on post-auth plugin integration — fail-closed design. <em>MOCR relevance:</em> Gateway hooks are exactly the pattern we'd use for pre-dispatch safety gates or custom routing.</li>
@@ -337,40 +344,40 @@
   <li><a href="https://github.com/NousResearch/hermes-agent/pull/71574"><strong>#71574 — feat: add lazy bridges for core tool calling</strong></a> (Sikkwitted) — Lazy bridge loading for core tool calls, reducing startup overhead by deferring tool initialization until first use. Performance optimization that compounds with the v0.19.0 Quicksilver speed gains.</li>
 </ul>
 
-<h3>🐞 Notable Issues — July 25</h3>
+<h3>&#x1F41E; Notable Issues — July 25</h3>
 <ul>
   <li><a href="https://github.com/NousResearch/hermes-agent/issues/48434"><strong>#48434 — Windows Desktop remote gateway fails after successful password-auth sign-in</strong></a> (P2, comp/gateway, comp/desktop, platform/windows) — Hermes Desktop on Windows can successfully authenticate to a remote gateway but fails on "Save and reconnect" with <code>Could not connect to Hermes gateway</code>. In some cases it falls back to local first-run onboarding even though the remote VM already has a configured profile. If you ever run a Windows-based MOCR node, this is the bug to watch.</li>
 </ul>
 
-<h3>🛠️ Community Builds — New This Week</h3>
+<h3>&#x1F6E0;&#xFE0F; Community Builds — New This Week</h3>
 <ul>
-  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (⭐39) — Field-tested, open-source skills for Hermes Agent. The most starred new community repo this week. Worth watching for practical, real-world skill patterns. <em>MOCR relevance:</em> Directly applicable to our skill roster.</li>
-  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (⭐8) — Vector memory, adaptive soul, workflow classification. Up from 4 star yesterday — small but growing.</li>
-  <li><a href="https://github.com/PabloTheThinker/hermespace"><strong>hermespace</strong></a> (⭐5) — "Pocket workbench" for Hermes Agent — limited FOA desk, dual decode, skills+memory fabric, neural FOA.</li>
-  <li><a href="https://github.com/Perseon-Lab/agent-console"><strong>agent-console</strong></a> (⭐3) — Lightweight browser mission control: chat, sessions, cron jobs, skills, voice, read-only missions. <em>MOCR relevance:</em> Overlaps with our session management patterns.</li>
-  <li><a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"><strong>hermes-plugin-guard</strong></a> (⭐3) — Static, no-execution security checks for Hermes Agent plugins. Security-as-code plugin vetting.</li>
+  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (&#x2B50;39) — Field-tested, open-source skills for Hermes Agent. The most starred new community repo this week. Worth watching for practical, real-world skill patterns. <em>MOCR relevance:</em> Directly applicable to our skill roster.</li>
+  <li><a href="https://github.com/rednicv/hermes-improvements"><strong>hermes-improvements</strong></a> (&#x2B50;8) — Vector memory, adaptive soul, workflow classification. Up from 4 star yesterday — small but growing.</li>
+  <li><a href="https://github.com/PabloTheThinker/hermespace"><strong>hermespace</strong></a> (&#x2B50;5) — "Pocket workbench" for Hermes Agent — limited FOA desk, dual decode, skills+memory fabric, neural FOA.</li>
+  <li><a href="https://github.com/Perseon-Lab/agent-console"><strong>agent-console</strong></a> (&#x2B50;3) — Lightweight browser mission control: chat, sessions, cron jobs, skills, voice, read-only missions. <em>MOCR relevance:</em> Overlaps with our session management patterns.</li>
+  <li><a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"><strong>hermes-plugin-guard</strong></a> (&#x2B50;3) — Static, no-execution security checks for Hermes Agent plugins. Security-as-code plugin vetting.</li>
 </ul>
 
-<h3>📈 Gaining Popularity (Month to Date)</h3>
+<h3>&#x1F4C8; Gaining Popularity (Month to Date)</h3>
 <ul>
-  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐920) — Native iPhone app for Hermes. Up 2 stars since this morning, now at 920 — closing on 1K.</li>
-  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (⭐368) — Evidence-driven Agent Skills for design award workflow. Up from 352 this morning — still the week's hottest debut.</li>
-  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐151) — Unified session trajectory format across harnesses. Almost doubled since yesterday's 88. <em>MOCR relevance:</em> Session unification is directly applicable to our cross-run normalization.</li>
-  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (⭐101) — Desktop agent workbench with evolutionary capability.</li>
-  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐70) — Personal AI agent &amp; local memory hub for Claude Code, Codex, and Hermes. Up from 68 this morning.</li>
-  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (⭐58) — Persistent memory for coding agents: auto-capture, explainable recall, privacy controls.</li>
-  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (⭐55) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
-  <li><a href="https://github.com/ShadoW-Shinigami/lyric-video-director"><strong>lyric-video-director</strong></a> (⭐43) — Hermes Agent skill for typography-led lyric videos.</li>
+  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (&#x2B50;920) — Native iPhone app for Hermes. Up 2 stars since this morning, now at 920 — closing on 1K.</li>
+  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (&#x2B50;368) — Evidence-driven Agent Skills for design award workflow. Up from 352 this morning — still the week's hottest debut.</li>
+  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (&#x2B50;151) — Unified session trajectory format across harnesses. Almost doubled since yesterday's 88. <em>MOCR relevance:</em> Session unification is directly applicable to our cross-run normalization.</li>
+  <li><a href="https://github.com/smallchao/EvoForge"><strong>EvoForge</strong></a> (&#x2B50;101) — Desktop agent workbench with evolutionary capability.</li>
+  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (&#x2B50;70) — Personal AI agent &amp; local memory hub for Claude Code, Codex, and Hermes. Up from 68 this morning.</li>
+  <li><a href="https://github.com/Da7-Tech/mind"><strong>mind</strong></a> (&#x2B50;58) — Persistent memory for coding agents: auto-capture, explainable recall, privacy controls.</li>
+  <li><a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (&#x2B50;55) — Codex + Hermes + Arc multi-agent collaboration workspace.</li>
+  <li><a href="https://github.com/ShadoW-Shinigami/lyric-video-director"><strong>lyric-video-director</strong></a> (&#x2B50;43) — Hermes Agent skill for typography-led lyric videos.</li>
 </ul>
       ]]></description>
     </item>
     <item>
       <title>CrossWire: Tech — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-evening-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🍎 Apple</h2>
+<h2>&#x1F34E; Apple</h2>
 <ul>
   <li><strong>Apple sued over $1.8M fake Bitcoin wallet in App Store</strong> — <a href="https://www.macrumors.com/2026/07/25/apple-app-store-fake-bitcoin-wallet-lawsuit/">MacRumors</a>: Three customers allege they lost a combined $1.8M after falling victim to a fake Bitcoin wallet app on the App Store. The complaint was filed in California. App Store review gaps under scrutiny again.</li>
   <li><strong>'Apple Upgrade' leasing program incoming</strong> — <a href="https://www.macrumors.com/2026/07/25/top-stories-apple-upgrade-program/">MacRumors</a>: Apple is preparing a new device leasing and financing program, parallel to the Apple Music price hike this week.</li>
@@ -382,23 +389,23 @@
   <li><strong>Meirro Pro 6K display — best Studio Display alternative yet?</strong> — <a href="https://9to5mac.com/2026/07/25/hands-on-the-meirro-pro-6k-might-be-the-best-apple-studio-display-alternative-yet-video/">9to5Mac hands-on</a>: After Apple discontinued the Pro Display XDR, the Meirro Pro 6K is making a strong case as the replacement.</li>
 </ul>
 
-<h3>🤖 AI &amp; Models</h3>
+<h3>&#x1F916; AI &amp; Models</h3>
 <ul>
   <li><strong>Apple TV more reliable than Android in digital signage</strong> — <a href="https://9to5mac.com/2026/07/25/apple-tv-proves-to-be-more-reliable-than-android-in-new-digital-signage-report/">9to5Mac</a>: New report confirms Apple TV is the more reliable platform for commercial digital signage deployments.</li>
 </ul>
 
-<h3>🏠 Home Automation</h3>
+<h3>&#x1F3E0; Home Automation</h3>
 <ul>
   <li><strong>Amazon Basics Matter plug — Apple Home for under $10</strong> — <a href="https://9to5mac.com/2026/07/25/the-amazon-basics-matter-plug-delivers-apple-home-control-for-under-10/">9to5Mac HomeKit Weekly</a>: Amazon Basics Matter-compatible smart plug delivers Apple Home control at a sub-$10 price point. Finally, budget-friendly Matter.</li>
 </ul>
 
-<h3>🚀 Science &amp; Space</h3>
+<h3>&#x1F680; Science &amp; Space</h3>
 <ul>
   <li><strong>SpaceX eyes tower catch for next Starship after flight 13</strong> — <a href="https://arstechnica.com/space/2026/07/spacex-eyes-tower-catch-for-next-starship-after-auspicious-end-to-13th-flight/">Ars Technica</a>: After Starship's 13th flight ended well, SpaceX will likely attempt to catch the booster back at the launch pad on the next flight. Rapid reusability continues to close in.</li>
   <li><strong>Wildfire forces evacuation of NASA's Deep Space Network in Spain</strong> — <a href="https://arstechnica.com/space/2026/07/wildfire-forces-evacuation-of-nasas-deep-space-network-complex-in-spain/">Ars Technica</a>: Madrid DSN complex evacuated. Assessment pending safe return. Deep space communications at risk until crews can get back in.</li>
 </ul>
 
-<h3>🔬 Policy &amp; Media</h3>
+<h3>&#x1F52C; Policy &amp; Media</h3>
 <ul>
   <li><strong>Big Tech accused of stonewalling European social media researchers</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/big-tech-accused-of-stonewalling-european-social-media-researchers/">Ars Technica</a>: TikTok, X, and Meta aren't providing data they're legally required to under the DMA/DSA.</li>
   <li><strong>Paramount/WBD merger delayed for months</strong> — <a href="https://arstechnica.com/tech-policy/2026/07/after-court-loss-paramount-agrees-to-delay-warner-bros-merger-until-trial/">Ars Technica</a>: States' lawsuit moves toward trial. NY AG: "Halting this merger while our case proceeds is a critical victory."</li>
@@ -409,15 +416,15 @@
     <item>
       <title>CrossWire: Commanders — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-evening-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
+      <pubDate>Mon, 27 Jul 2026 14:35:06 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
-<h2>🏈 Washington Commanders — Saturday Evening</h2>
+<h2>&#x1F3C8; Washington Commanders — Saturday Evening</h2>
 
-<h3>📋 Training Camp — 3 Days Away</h3>
+<h3>&#x1F4CB; Training Camp — 3 Days Away</h3>
 <p><strong>Veterans report Monday, July 28.</strong> First practice Tuesday, July 29 in Ashburn, VA. This is the last weekend before the 2026 season gets real. The three-day camp countdown is on.</p>
 
-<h3>📅 2026 Schedule — Opening Stretch</h3>
+<h3>&#x1F4C5; 2026 Schedule — Opening Stretch</h3>
 <ul>
   <li><strong>Sep 13 (Sun)</strong> — @ Philadelphia Eagles</li>
   <li><strong>Sep 20 (Sun)</strong> — @ Dallas Cowboys</li>
@@ -427,7 +434,7 @@
 </ul>
 <p>17 games remaining. Opening with back-to-back divisional road games — Philly then Dallas — is as tough a start as it gets.</p>
 
-<h3>🏆 Around the NFL</h3>
+<h3>&#x1F3C6; Around the NFL</h3>
 <ul>
   <li><strong>49ers' Kyle Shanahan limited in camp after car crash</strong> — <a href="https://www.espn.com/nfl/story/_/id/49446662/49ers-shanahan-limited-camp-car-accident">ESPN</a>: Shanahan broke his nose, three ribs, his hand, needed 40+ stitches in his face, and suffered a severe concussion during a July 14 car crash while on summer break. GM John Lynch provided an update Saturday. He will be limited as camp opens. Significant injuries for a head coach — expect some operational ripple effects in SF.</li>
   <li><strong>Aaron Donald in "regimented process" for possible Rams return</strong> — <a href="https://www.espn.com/nfl/story/_/id/49448508/retired-donald-regimented-process-possible-rams-return">ESPN</a>: Sean McVay says the retired DT is putting himself through a "very strict, regimented process" as he considers returning to the field. A Donald return would reshape the NFC West defensive landscape — and the Commanders face the Rams on Nov 8 (also the Riggins #44 retirement ceremony game).</li>
@@ -435,56 +442,12 @@
   <li><strong>Raiders TE Brock Bowers announces engagement</strong> — <a href="https://www.espn.com/nfl/story/_/id/49447807/brock-bowers-las-vegas-raiders-engagement-announcement-cameron-newell">ESPN</a>: Took the next step where it all began.</li>
 </ul>
 
-<h3>📅 On the Radar</h3>
+<h3>&#x1F4C5; On the Radar</h3>
 <ul>
   <li><strong>July 28:</strong> Veterans report to training camp</li>
   <li><strong>July 29:</strong> First practice, Ashburn VA</li>
   <li><strong>Sep 13:</strong> Season opener @ Philadelphia Eagles</li>
   <li><strong>Nov 8 (Week 9):</strong> John Riggins #44 retirement ceremony at halftime vs Rams</li>
-</ul>
-      ]]></description>
-    </item>
-    <item>
-      <title>CrossWire: Hermes — Morning Brief, July 25</title>
-      <guid isPermaLink="false">crosswire-hermes-morning-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 12:35:58 GMT</pubDate>
-      <link>https://iveywest.github.io/crosswire/</link>
-      <description><![CDATA[
-<h2>🚀 Hermes Ecosystem — Saturday Morning</h2>
-
-<h3>📋 Fresh PRs — July 25</h3>
-<p>Five notable PRs landed today. The common thread: polish and reliability around the v0.19.0 edge.</p>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71596"><strong>#71596 — feat(secrets): multi-account 1Password routing</strong></a> (buddhaholic420) — 1Password integration from v0.19.0 gets multi-account support. Route secret lookups across different 1Password accounts. <em>MOCR relevance:</em> If we ever run multiple credential sets (personal vs. work profiles), this unlocks clean separation.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/66777"><strong>#66777 — fix(cli): dashboard plugin toggles now surface restart required</strong></a> (chrisyoung2005) — Enabling/disabling plugins from the dashboard writes config.yaml but doesn't hot-reload running processes. The dashboard now says "Takes effect on next session" — matching the CLI's behavior. Interim mitigation until real hot-reload is built.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/64620"><strong>#64620 — fix(cli): exclude delegate/branch/tool children from dashboard latest-descendant walk</strong></a> (chrisyoung2005) — Resuming a dashboard chat that spawned subagents was resolving to the subagent's transcript instead of the parent. Now delegates and branching children are excluded from the descendant walk, so resuming a session gets you back to your own chat.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71598"><strong>#71598 — test(computer-use): simulate Linux for GNOME helper selection</strong></a> (freeplanets001) — Patches <code>sys.platform</code> to "linux" during a GNOME app/window selection test so the regression test is deterministic on macOS/Windows CI hosts. Production code unchanged.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/71597"><strong>#71597 — fix(sessions): show FTS results outside the current page</strong></a> (hide-vmori) — Full-text session search was only returning results on the current page. Now searches across pages correctly.</li>
-</ul>
-
-<h3>📈 Star Watch — Updated Numbers</h3>
-<ul>
-  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (⭐920) — Native iPhone app for Hermes. Holding steady. Still tracking toward 1K.</li>
-  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (⭐371) — Up from 368 this morning. Evidence-driven Agent Skills for design award workflow. The week's hottest debut continues its steady climb.</li>
-  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (⭐153) — Unified session trajectory format across harnesses. Up from 151 — continued momentum from its massive jump earlier this week. <em>MOCR relevance:</em> Session unification maps directly to cross-run normalization.</li>
-  <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (⭐44) — Field-tested, open-source Hermes skills. Up 5 stars since the evening brief. The most-starred new community repo.</li>
-  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (⭐70) — Personal AI agent &amp; local memory hub. Steady from yesterday.</li>
-</ul>
-
-<h3>🛠️ New Community Repos</h3>
-<ul>
-  <li><a href="https://github.com/mverab/slashstack-skills"><strong>slashstack-skills</strong></a> (⭐3) — Eleven MIT-licensed markdown skills: /preflight, /audit, /ship, /remember, and more. Agent guardrails in plain Markdown. The /preflight pattern maps neatly to our quality-gate skills.</li>
-  <li><a href="https://github.com/Amal-David/bookshelf"><strong>bookshelf</strong></a> (⭐3) — Book quotes that appear between Claude Code and Codex turns. Not Hermes-specific but adjacent — ambient knowledge injection.</li>
-</ul>
-
-<h3>🐞 Notable Bug Fix PR — Retro</h3>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/51938"><strong>#51938 — fix(kanban): preserve board-specific workspace defaults</strong></a> (Christopher-Schulze) — When creating kanban tasks with an explicit board parameter, the board slug was dropped before reaching create_task(), causing tasks to land in the wrong board's SQLite DB. Now fixed.</li>
-</ul>
-
-<h3>🧪 Test Coverage Improvement</h3>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/52024"><strong>#52024 — test(env-probe): 70% to 97% coverage</strong></a> (Christopher-Schulze) — Direct tests for env probe helpers, async warming edge cases, and PEP 668 detection. Brings module above threshold.</li>
 </ul>
       ]]></description>
     </item>
