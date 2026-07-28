@@ -4,13 +4,73 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Mon, 27 Jul 2026 20:18:27 GMT</lastBuildDate>
-    <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+    <lastBuildDate>Tue, 28 Jul 2026 00:47:46 GMT</lastBuildDate>
+    <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
     <language>en-us</language>
     <item>
       <title>CrossWire: Sentinel Watchdog — July 27</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-27-204257</guid>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[
+<h2>&#x1F534; Sentinel Watchdog — Monday Evening</h2>
+
+<p><strong>38 green, 2 yellow, 1 red.</strong> Slight regression from the afternoon sweep — green dropped from 39 to 38, yellow climbed from 1 to 2. The <code>purge-flight-recorder.js</code> Node availability issue is newly flagged.</p>
+
+<h3>&#x1F534; Red — 1 Failing Job (Unchanged)</h3>
+<ul>
+  <li><strong>Curb-Check-Mon</strong> — Unmanaged cron job. Last run still failing. Root cause identified in the Census sweep: inference config drift — the global provider shifted from <code>deepseek</code> to <code>openai-codex</code> and model from <code>deepseek-v4-flash</code> to <code>gpt-5.4</code> since the job was created. The job is unpinned, so inference was skipped to prevent unintended spend. Needs explicit pinning or removal.</li>
+</ul>
+
+<h3>&#x1F7E1; Yellow — 2 Items (Up from 1)</h3>
+<ul>
+  <li><strong>Scrapbook Weekly Lint QA (temp)</strong> — Inventory job not found in live cron. Still needs cleanup.</li>
+  <li><strong>purge-flight-recorder.js</strong> — Node runtime unavailable on this system. Existence-only check passes; script found but can't execute without Node. Informational.</li>
+</ul>
+
+<h3>&#x1F7E2; Green — 38 Items Healthy</h3>
+<p>All core services operational. The 38 healthy items include all managed cron jobs, services (Mail Call, Stableboard, Hermes WebUI, Glimpse, Ollama), and unmanaged items passing checks.</p>
+
+<h3>Recommended Actions</h3>
+<p>Curb-Check-Mon is the priority. Pin the job to the current provider/model config or remove it. The <code>purge-flight-recorder.js</code> Node warning is informational — no action needed unless you plan to use that script.</p>
+      ]]></description>
+    </item>
+    <item>
+      <title>CrossWire: Sentinel Census — July 27</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-census-2026-07-27-204255</guid>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[
+<h2>&#x1F4CA; Sentinel Census — Weekly Summary, July 27</h2>
+
+<p><strong>38 green, 2 yellow, 1 red.</strong> The weekly full-inventory census provides a comprehensive health picture. One failing job persists, but the root cause is now clearly identified.</p>
+
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>Curb-Check-Mon</strong> — Unmanaged cron job (Mon 8:30 AM schedule). Last run failed with <code>RuntimeError: Skipped to prevent unintended spend</code>. <strong>Root cause:</strong> global inference config drifted since the job was created — provider changed from <code>deepseek</code> to <code>openai-codex</code>, model from <code>deepseek-v4-flash</code> to <code>gpt-5.4</code>. The job is unpinned so inference was aborted. Fix: run <code>cronjob action=update job_id=0ebe07c030e8 provider=&lt;provider&gt; model=&lt;model&gt;</code> to pin explicitly.</li>
+</ul>
+
+<h3>&#x1F7E1; Yellow — 2 Items</h3>
+<ul>
+  <li><strong>Scrapbook Weekly Lint QA (temp)</strong> — Temporary inventory entry with no matching live cron job. Needs cleanup.</li>
+  <li><strong>purge-flight-recorder.js</strong> — Script exists but Node runtime unavailable. Existence-only check passes.</li>
+</ul>
+
+<h3>&#x1F7E2; Green — 38 Items Healthy</h3>
+<p>All managed cron jobs operational: Broom-Run, Flight-Recorder-Purge, scrapbook-ingest, Up Ahead Sync, Mail Call Sync, scrapbook-weekly-lint, CrossWire (morning, evening, Local Edition, reports), Switchboard, and both Sentinel sweeps. All services healthy: Mail Call, Stableboard, Hermes WebUI, Glimpse Funnel Gateway, Ollama, Home Assistant, Mnemosyne, MOCR Operations Wiki, Scrapbook, Switchboard, Flight Recorder v2, Ship-It Lane, and SkillOps.</p>
+
+<h3>Recommended Actions</h3>
+<ol>
+  <li>Fix Curb-Check-Mon by pinning its provider/model config to either the original (<code>deepseek</code>/<code>deepseek-v4-flash</code>) or current (<code>openai-codex</code>/<code>gpt-5.4</code>) values.</li>
+  <li>Remove or reconcile the Scrapbook Weekly Lint QA (temp) inventory entry.</li>
+  <li>No action needed for <code>purge-flight-recorder.js</code> — informational warning only.</li>
+</ol>
+      ]]></description>
+    </item>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — July 27</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-27-160019</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F534; Sentinel Watchdog — Monday Afternoon</h2>
@@ -39,7 +99,7 @@
     <item>
       <title>CrossWire: Sentinel Watchdog — July 27</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-27-120037</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F534; Sentinel Watchdog — Monday Midday</h2>
@@ -67,7 +127,7 @@
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 27</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-27</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F680; Hermes Ecosystem — Afternoon Brief, July 27</h2>
@@ -113,7 +173,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 27</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-27</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F34E; Apple</h2>
@@ -146,7 +206,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 27</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-27</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F3C8; Washington Commanders — Monday Afternoon</h2>
@@ -207,7 +267,7 @@
     <item>
       <title>CrossWire: Sentinel Census — July 26</title>
       <guid isPermaLink="false">crosswire-report-sentinel-census-2026-07-26-091518</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F4CA; Sentinel Census — Sunday Morning</h2>
@@ -230,7 +290,7 @@
     <item>
       <title>CrossWire: Hermes — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-hermes-morning-2026-07-26</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F680; Hermes Ecosystem — Sunday Morning</h2>
@@ -276,7 +336,7 @@
     <item>
       <title>CrossWire: Tech — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-tech-morning-2026-07-26</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F34E; Apple</h2>
@@ -308,7 +368,7 @@
     <item>
       <title>CrossWire: Commanders — Morning Brief, July 26</title>
       <guid isPermaLink="false">crosswire-commanders-morning-2026-07-26</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F3C8; Washington Commanders — Sunday Morning</h2>
@@ -360,7 +420,7 @@
     <item>
       <title>CrossWire: Sentinel Watchdog — July 26</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-26-080003</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F534; Sentinel Watchdog — Sunday Morning</h2>
@@ -385,7 +445,7 @@
     <item>
       <title>CrossWire: Hermes — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-hermes-evening-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F680; Hermes Ecosystem — Saturday Evening</h2>
@@ -430,7 +490,7 @@
     <item>
       <title>CrossWire: Tech — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-tech-evening-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F34E; Apple</h2>
@@ -472,7 +532,7 @@
     <item>
       <title>CrossWire: Commanders — Evening Brief, July 25</title>
       <guid isPermaLink="false">crosswire-commanders-evening-2026-07-25</guid>
-      <pubDate>Mon, 27 Jul 2026 20:18:27 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 00:47:46 GMT</pubDate>
       <link>https://kanan.taila81309.ts.net/crosswire/</link>
       <description><![CDATA[
 <h2>&#x1F3C8; Washington Commanders — Saturday Evening</h2>
