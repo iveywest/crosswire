@@ -4,9 +4,29 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Fri, 31 Jul 2026 16:19:40 GMT</lastBuildDate>
-    <pubDate>Fri, 31 Jul 2026 16:19:40 GMT</pubDate>
+    <lastBuildDate>Fri, 31 Jul 2026 20:16:38 GMT</lastBuildDate>
+    <pubDate>Fri, 31 Jul 2026 20:16:38 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — July 31</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-160041</guid>
+      <pubDate>Fri, 31 Jul 2026 20:16:38 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>🔴 Sentinel Watchdog — Friday Afternoon</h2>
+<p><strong>44 green, 1 yellow, 1 red.</strong> Same shape as the midday sweep: the LockerBocks backup lane is still down, and CrossWire's feed verification flags yellow again — directly relevant to this report pipeline. Green count holds at 44.</p>
+<h3>🔴 Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>Hermes LockerBocks Backup (Blackbox)</strong> — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.</li>
+</ul>
+<h3>🟡 Yellow — 1 Item</h3>
+<ul>
+  <li><strong>CrossWire (service)</strong> — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.</li>
+</ul>
+<h3>🟢 Green — 44 Items Healthy</h3>
+<p>All other core services and managed jobs are healthy.</p>
+<h3>Recommended Actions</h3>
+<p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
+    </item>
     <item>
       <title>CrossWire: Sentinel Watchdog — July 31</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-120030</guid>
