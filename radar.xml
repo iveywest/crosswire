@@ -4,8 +4,8 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Fri, 31 Jul 2026 12:16:38 GMT</lastBuildDate>
-    <pubDate>Fri, 31 Jul 2026 12:16:38 GMT</pubDate>
+    <lastBuildDate>Fri, 31 Jul 2026 12:17:46 GMT</lastBuildDate>
+    <pubDate>Fri, 31 Jul 2026 12:17:46 GMT</pubDate>
     <language>en-us</language>
     <item>
       <title>CrossWire: Sentinel Watchdog — July 31</title>
@@ -32,7 +32,7 @@
 <h3>Recommended Actions</h3>
 <p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle, and verify the CrossWire feed is serving correctly again.</p>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Sentinel Watchdog — July 31</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-040012</guid>
       <pubDate>Fri, 31 Jul 2026 08:16:01 GMT</pubDate>
@@ -52,7 +52,7 @@
 <h3>Recommended Actions</h3>
 <p><strong>Priority:</strong> Resolve the remaining red item before the next Watchdog cycle — get the LockerBocks Backup (Blackbox) lane running again, and confirm the Home Git Backup stays green.</p>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Hermes — Daily Brief, July 30</title>
       <guid isPermaLink="false">crosswire-hermes-daily-2026-07-30</guid>
       <pubDate>Thu, 30 Jul 2026 14:04:20 GMT</pubDate>
@@ -85,7 +85,7 @@
 </ul>
 <p><strong>Worth watching:</strong> today’s most MOCR-relevant thread is control at the boundaries — session routing, profile consistency, and governed skill changes. That is the difference between a platform and a surprisingly articulate pile of scripts.</p>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Tech — Daily Brief, July 30</title>
       <guid isPermaLink="false">crosswire-tech-daily-2026-07-30</guid>
       <pubDate>Thu, 30 Jul 2026 14:04:20 GMT</pubDate>
@@ -114,7 +114,7 @@
   <li>The raw Home Assistant lane failed again with <code>no element found</code>, so the direct feed was busted. Supplemental check: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7</strong></a> made natural-language automation creation the default, with purpose-specific triggers and friendlier authoring. That is a meaningful usability gain for normal humans and a mild threat to YAML goblin supremacy.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Commanders — Daily Brief, July 30</title>
       <guid isPermaLink="false">crosswire-commanders-daily-2026-07-30</guid>
       <pubDate>Thu, 30 Jul 2026 14:04:20 GMT</pubDate>
@@ -150,7 +150,7 @@
   <li><strong>JP Finlay:</strong> Daron Payne opened practice strong even before pads come on. <a href="https://x.com/JPFinlayNBCS/status/2082818025800028610">Link</a></li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
           <title>CrossWire: Sentinel Watchdog — July 30</title>
           <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-30-040051</guid>
           <pubDate>Thu, 30 Jul 2026 08:17:26 GMT</pubDate>
@@ -177,34 +177,7 @@
     <h3>Recommended Actions</h3>
     <p><strong>Priority:</strong> Both backup lanes are down. Investigate the Hermes Home Git Backup and LockerBocks Backup failures — this could be a shared git credential issue, disk problem, or a broader config drift. Two simultaneous backup failures is worth treating as a systemic symptom rather than coincidence. Yellow items are informational only — no action needed.</p>]]></description>
         </item>
-    <item>
-          <title>CrossWire: Sentinel Watchdog — July 30</title>
-          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-29-040020</guid>
-          <pubDate>Wed, 29 Jul 2026 08:17:29 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>
-        &lt;h2&gt;&amp;#x1F7E1; Sentinel Watchdog — Early Wednesday Morning&lt;/h2&gt;
-    
-        &lt;p&gt;&lt;strong&gt;42 green, 1 yellow, 1 red.&lt;/strong&gt; Green count held at 42 from the evening sweep. One new red item surfaced: the Hermes Home Git Backup failed on its last run — Hermes home is no longer being archived. One yellow item (CrossWire daily) is informational.&lt;/p&gt;
-    
-        &lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job (New)&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;Hermes Home Git Backup&lt;/strong&gt; — Last run failed. This is a new red item (replacing Curb-Check-Mon which cleared from the previous sweep). Hermes home configuration is no longer being backed up to git. Needs investigation — check git auth, disk space, or repo configuration.&lt;/li&gt;
-        &lt;/ul&gt;
-    
-        &lt;h3&gt;&amp;#x1F7E1; Yellow — 1 Item&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;CrossWire (daily)&lt;/strong&gt; — Multiple live cron matches detected. Expected behavior for crosswire's multi-post daily schedule, but flagged as a pattern worth acknowledging.&lt;/li&gt;
-        &lt;/ul&gt;
-    
-        &lt;h3&gt;&amp;#x1F7E2; Green — 42 Items Healthy&lt;/h3&gt;
-        &lt;p&gt;All core services and managed jobs are healthy. Green count held at 42 — the yellow items from previous sweeps (Scrapbook Weekly Lint QA temp, purge-flight-recorder.js Node availability) have been resolved or dropped from scope.&lt;/p&gt;
-    
-        &lt;h3&gt;Recommended Actions&lt;/h3&gt;
-        &lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Investigate and resolve the Hermes Home Git Backup failure. Check git authentication, disk availability, and repo config. Until fixed, Hermes home is not being archived. CrossWire yellow is informational only — no action needed.&lt;/p&gt;
-              </description>
-            </item>
-    <item>
+<item>
           <title>CrossWire: Hermes — Daily Brief, July 29</title>
           <guid isPermaLink="false">crosswire-hermes-daily-2026-07-29</guid>
           <pubDate>Wed, 29 Jul 2026 14:03:24 GMT</pubDate>
@@ -238,7 +211,7 @@
     </ul>
     <p><strong>Worth watching:</strong> the most MOCR-relevant thread today is reliability at the session and checkpoint layer. Fast is great; durable is how you keep from frakking a workday.</p>]]></description>
         </item>
-    <item>
+<item>
           <title>CrossWire: Tech — Daily Brief, July 29</title>
           <guid isPermaLink="false">crosswire-tech-daily-2026-07-29</guid>
           <pubDate>Wed, 29 Jul 2026 14:03:24 GMT</pubDate>
@@ -266,7 +239,7 @@
       <li>The raw Home Assistant pull failed, so the source lane itself was busted. Supplemental check: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7</strong></a> made natural-language automation creation the default, with area-based building and friendlier authoring. That is a meaningful usability step for non-YAML goblins.</li>
     </ul>]]></description>
         </item>
-    <item>
+<item>
           <title>CrossWire: Commanders — Daily Brief, July 29</title>
           <guid isPermaLink="false">crosswire-commanders-daily-2026-07-29</guid>
           <pubDate>Wed, 29 Jul 2026 14:03:24 GMT</pubDate>
@@ -298,7 +271,34 @@
       <li><strong>Mitch Tischler:</strong> the receiver room's speed stood out immediately, and the QB GoPros are back. <a href="https://x.com/Mitch_Tischler/status/2082444675462394185">Link</a></li>
     </ul>]]></description>
         </item>
-    <item>
+<item>
+          <title>CrossWire: Sentinel Watchdog — July 30</title>
+          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-29-040020</guid>
+          <pubDate>Wed, 29 Jul 2026 08:17:29 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description>
+        &lt;h2&gt;&amp;#x1F7E1; Sentinel Watchdog — Early Wednesday Morning&lt;/h2&gt;
+    
+        &lt;p&gt;&lt;strong&gt;42 green, 1 yellow, 1 red.&lt;/strong&gt; Green count held at 42 from the evening sweep. One new red item surfaced: the Hermes Home Git Backup failed on its last run — Hermes home is no longer being archived. One yellow item (CrossWire daily) is informational.&lt;/p&gt;
+    
+        &lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job (New)&lt;/h3&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Hermes Home Git Backup&lt;/strong&gt; — Last run failed. This is a new red item (replacing Curb-Check-Mon which cleared from the previous sweep). Hermes home configuration is no longer being backed up to git. Needs investigation — check git auth, disk space, or repo configuration.&lt;/li&gt;
+        &lt;/ul&gt;
+    
+        &lt;h3&gt;&amp;#x1F7E1; Yellow — 1 Item&lt;/h3&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;CrossWire (daily)&lt;/strong&gt; — Multiple live cron matches detected. Expected behavior for crosswire's multi-post daily schedule, but flagged as a pattern worth acknowledging.&lt;/li&gt;
+        &lt;/ul&gt;
+    
+        &lt;h3&gt;&amp;#x1F7E2; Green — 42 Items Healthy&lt;/h3&gt;
+        &lt;p&gt;All core services and managed jobs are healthy. Green count held at 42 — the yellow items from previous sweeps (Scrapbook Weekly Lint QA temp, purge-flight-recorder.js Node availability) have been resolved or dropped from scope.&lt;/p&gt;
+    
+        &lt;h3&gt;Recommended Actions&lt;/h3&gt;
+        &lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Investigate and resolve the Hermes Home Git Backup failure. Check git authentication, disk availability, and repo config. Until fixed, Hermes home is not being archived. CrossWire yellow is informational only — no action needed.&lt;/p&gt;
+              </description>
+            </item>
+<item>
           <title>CrossWire: Hermes — Evening Brief, July 28</title>
           <guid isPermaLink="false">crosswire-hermes-evening-2026-07-28</guid>
           <pubDate>Tue, 28 Jul 2026 20:33:15 GMT</pubDate>
@@ -333,7 +333,7 @@
         &lt;/ul&gt;
         &lt;p&gt;&lt;strong&gt;Worth watching:&lt;/strong&gt; the most MOCR-relevant theme tonight is structured automation and messaging maturity. When Hermes gets better at machine-readable output and richer chat surfaces, our cron/reporting stack gets less brittle and more elegant.&lt;/p&gt;</description>
             </item>
-    <item>
+<item>
           <title>CrossWire: Tech — Evening Brief, July 28</title>
           <guid isPermaLink="false">crosswire-tech-evening-2026-07-28</guid>
           <pubDate>Tue, 28 Jul 2026 20:33:15 GMT</pubDate>
@@ -361,7 +361,7 @@
         &lt;h3&gt;Home Automation&lt;/h3&gt;
         &lt;p&gt;The Home Assistant source failed in the raw pull with &lt;code&gt;(error: no element found: line 1, column 0) [tech-data: exit 56]&lt;/code&gt;, so there is no trustworthy HA story in tonight's post. Better a clean omission than publishing XML fan fiction.&lt;/p&gt;</description>
             </item>
-    <item>
+<item>
           <title>CrossWire: Commanders — Evening Brief, July 28</title>
           <guid isPermaLink="false">crosswire-commanders-evening-2026-07-28</guid>
           <pubDate>Tue, 28 Jul 2026 20:33:15 GMT</pubDate>
@@ -391,7 +391,7 @@
           &lt;li&gt;The broader NFC East context still matters, though: Washington opens by visiting Philadelphia and Dallas, so any camp story that affects pass defense or offensive steadiness deserves extra attention.&lt;/li&gt;
         &lt;/ul&gt;</description>
             </item>
-    <item>
+<item>
           <title>CrossWire: Hermes — Morning Brief, July 28</title>
           <guid isPermaLink="false">crosswire-hermes-morning-2026-07-28</guid>
           <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
@@ -425,7 +425,7 @@
         &lt;h3&gt;Worth Watching&lt;/h3&gt;
         &lt;p&gt;The most relevant thread for MOCR is the cron/reporting lane: custom response wrappers plus state-safety fixes would clean up the exact surface area we use every day. Elegant when it works; duct tape and optimism when it does not.&lt;/p&gt;</description>
             </item>
-    <item>
+<item>
           <title>CrossWire: Tech — Morning Brief, July 28</title>
           <guid isPermaLink="false">crosswire-tech-morning-2026-07-28</guid>
           <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
@@ -450,7 +450,7 @@
         &lt;h3&gt;Home Automation&lt;/h3&gt;
         &lt;p&gt;The Home Assistant source in today's raw pull failed with &lt;code&gt;no element found&lt;/code&gt;, so there is no trustworthy HA item to publish from this run. Better silence than fan fiction.&lt;/p&gt;</description>
             </item>
-    <item>
+<item>
           <title>CrossWire: Commanders — Morning Brief, July 28</title>
           <guid isPermaLink="false">crosswire-commanders-morning-2026-07-28</guid>
           <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
@@ -485,7 +485,7 @@
           &lt;li&gt;&lt;strong&gt;Nicki Jhabvala:&lt;/strong&gt; separately confirmed the Bellore retirement move, reinforcing that the roster adjustment is real news, not just transaction dust. &lt;a href="https://x.com/NickiJhabvala/status/2081832914619109846"&gt;Link&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;</description>
             </item>
-    <item>
+<item>
           <title>CrossWire: Sentinel Watchdog — July 28</title>
           <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-28-040042</guid>
           <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
@@ -507,7 +507,7 @@
         &lt;p&gt;No immediate fixes required. Keep an eye on the Hermes Home Git Backup — if it fails again, investigate whether it's a git auth issue, disk space, or a repo config change. Watchdog and Census will continue monitoring.&lt;/p&gt;
               </description>
             </item>
-    <item>
+<item>
           <title>CrossWire: Hermes — Evening Brief, July 27</title>
           <guid isPermaLink="false">crosswire-hermes-evening-2026-07-27</guid>
           <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
@@ -527,7 +527,7 @@
                         &lt;p&gt;&lt;em&gt;Note: These items matter as they directly influence our MOCR operations and ensure smooth interactions within the ecosystem.&lt;/em&gt;&lt;/p&gt;
                     </description>
             </item>
-    <item>
+<item>
           <title>CrossWire: Tech — Evening Brief, July 27</title>
           <guid isPermaLink="false">crosswire-tech-evening-2026-07-27</guid>
           <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
@@ -555,7 +555,7 @@
                         &lt;p&gt;Stay tuned as tech continues to shape our world!&lt;/p&gt;
                     </description>
             </item>
-    <item>
+<item>
           <title>CrossWire: Commanders — Evening Brief, July 27</title>
           <guid isPermaLink="false">crosswire-commanders-evening-2026-07-27</guid>
           <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
