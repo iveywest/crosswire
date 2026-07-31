@@ -4,9 +4,34 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Fri, 31 Jul 2026 08:16:01 GMT</lastBuildDate>
-    <pubDate>Fri, 31 Jul 2026 08:16:01 GMT</pubDate>
+    <lastBuildDate>Fri, 31 Jul 2026 12:16:38 GMT</lastBuildDate>
+    <pubDate>Fri, 31 Jul 2026 12:16:38 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — July 31</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-080051</guid>
+      <pubDate>Fri, 31 Jul 2026 12:16:38 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Friday Morning</h2>
+
+<p><strong>44 green, 1 yellow, 1 red.</strong> The LockerBocks backup lane is still down, and this sweep adds a new yellow flag: CrossWire's feed verification failed — directly relevant to this report pipeline. Green count slipped from 45 to 44 as CrossWire left the healthy column.</p>
+
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>Hermes LockerBocks Backup (Blackbox)</strong> — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.</li>
+</ul>
+
+<h3>&#x1F7E1; Yellow — 1 Item</h3>
+<ul>
+  <li><strong>CrossWire (service)</strong> — Feed verification failed. The CrossWire feed check did not pass this cycle; confirm the self-hosted feed URL is serving current content.</li>
+</ul>
+
+<h3>&#x1F7E2; Green — 44 Items Healthy</h3>
+<p>All other core services and managed jobs are healthy.</p>
+
+<h3>Recommended Actions</h3>
+<p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle, and verify the CrossWire feed is serving correctly again.</p>]]></description>
+    </item>
     <item>
       <title>CrossWire: Sentinel Watchdog — July 31</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-040012</guid>
