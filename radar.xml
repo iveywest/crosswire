@@ -4,692 +4,633 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Sat, 01 Aug 2026 00:18:53 GMT</lastBuildDate>
-    <pubDate>Sat, 01 Aug 2026 00:18:53 GMT</pubDate>
+    <lastBuildDate>Sun, 02 Aug 2026 13:32:25 GMT</lastBuildDate>
+    <pubDate>Sun, 02 Aug 2026 13:32:25 GMT</pubDate>
     <language>en-us</language>
-        <item>
-      <title>CrossWire: Sentinel Watchdog — July 31</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-200023</guid>
-      <pubDate>Sat, 01 Aug 2026 00:18:53 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Friday Evening</h2>
-<p><strong>43 green, 1 yellow, 1 red.</strong> The LockerBocks backup lane is still down, and CrossWire&#x27;s feed verification flags yellow again — directly relevant to this report pipeline. Green count slipped from 44 to 43.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>Hermes LockerBocks Backup (Blackbox)</strong> — Last run failed, carried over from previous sweeps. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.</li>
-</ul>
-<h3>&#x1F7E1; Yellow — 1 Item</h3>
-<ul>
-  <li><strong>CrossWire (service)</strong> — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.</li>
-</ul>
-<h3>&#x1F7E2; Green — 43 Items Healthy</h3>
-<p>All other core services and managed jobs are healthy. Green count slipped from 44 to 43 this cycle.</p>
-<h3>Recommended Actions</h3>
-<p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — July 31</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-160041</guid>
-      <pubDate>Fri, 31 Jul 2026 20:16:38 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>🔴 Sentinel Watchdog — Friday Afternoon</h2>
-<p><strong>44 green, 1 yellow, 1 red.</strong> Same shape as the midday sweep: the LockerBocks backup lane is still down, and CrossWire's feed verification flags yellow again — directly relevant to this report pipeline. Green count holds at 44.</p>
-<h3>🔴 Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>Hermes LockerBocks Backup (Blackbox)</strong> — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.</li>
-</ul>
-<h3>🟡 Yellow — 1 Item</h3>
-<ul>
-  <li><strong>CrossWire (service)</strong> — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.</li>
-</ul>
-<h3>🟢 Green — 44 Items Healthy</h3>
-<p>All other core services and managed jobs are healthy.</p>
-<h3>Recommended Actions</h3>
-<p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — July 31</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-120030</guid>
-      <pubDate>Fri, 31 Jul 2026 16:19:40 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description>&lt;h2&gt;&amp;#x1F534; Sentinel Watchdog — Midday Friday&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;44 green, 1 yellow, 1 red.&lt;/strong&gt; The LockerBocks backup lane is still down, and the CrossWire feed verification failure carries into this sweep as yellow — directly relevant to this report pipeline. Green count holds at 44.&lt;/p&gt;
-
-&lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Hermes LockerBocks Backup (Blackbox)&lt;/strong&gt; — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&amp;#x1F7E1; Yellow — 1 Item&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;CrossWire (service)&lt;/strong&gt; — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&amp;#x1F7E2; Green — 44 Items Healthy&lt;/h3&gt;
-&lt;p&gt;All other core services and managed jobs are healthy.&lt;/p&gt;
-
-&lt;h3&gt;Recommended Actions&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.&lt;/p&gt;</description>
-    </item>
-<item>
-      <title>CrossWire: Hermes — Daily Brief, July 31</title>
-      <guid isPermaLink="false">crosswire-hermes-daily-2026-07-31</guid>
-      <pubDate>Fri, 31 Jul 2026 14:03:10 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Hermes Agent ecosystem</h2>
-<p><strong>Lead:</strong> Hermes finally has a fresh stable tag again, but the more useful signal for MOCR is boundary hardening: auth fetches that stop getting 403’d by Cloudflare-ish setups, real secret redaction in the active gateway path, and a safety fix for the disk-cleanup plugin so it stops eyeing project files like a raccoon near an unlocked cooler.</p>
-<h3>Release Radar</h3>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30"><strong>Hermes Agent v0.19.1</strong></a> is live as the new stable tag. It is explicitly a patch release for downstream consumers — Docker images, hosted deployments, and fresh installs — after roughly 2,789 commits since Quicksilver.</li>
-  <li><strong>Why it matters to MOCR:</strong> this is the boring-good kind of release: less glamour, more “please stop surprising the runtime.” That tends to age well.</li>
-</ul>
-<h3>Trending PRs / Issues</h3>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/75437"><strong>#75437 — set Accept + User-Agent headers on all PyJWKClient JWKS fetches</strong></a>: fixes JWT verification failures caused by WAFs blocking Python’s default request fingerprint. Very relevant if Hermes sits behind Cloudflare, Authelia, or Authentik and suddenly acts haunted.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/75074"><strong>#75074 — redact secrets at the actual active progress_callback boundary</strong></a>: this is the right kind of security fix — moving protection to the code path production really uses instead of the one everyone wished it used.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/75424"><strong>#75424 — exclude project directories from disk-cleanup test-pattern auto-deletion</strong></a>: protects durable user-authored folders from being classified as disposable just because a filename starts with <code>test_</code> or <code>tmp_</code>. That was brittle in a way that inspires controlled concern.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/68881"><strong>#68881 — report model and provider usage</strong></a>: worth watching if you care about observability, spend visibility, or figuring out which model lane actually did the work.</li>
-</ul>
-<h3>Community Builds</h3>
-<ul>
-  <li><a href="https://github.com/axelfreeman/voice-to-article"><strong>voice-to-article</strong></a> (9★): Telegram voice in, SEO article out. A clean example of Hermes as a pipeline engine instead of an unusually literate chat box.</li>
-  <li><a href="https://github.com/sloemo01/hermes-skills-bundle"><strong>hermes-skills-bundle</strong></a> (8★): browser-heavy automation skills aimed at real login-gated work. Useful, ambitious, and probably held together by at least some duct tape and optimism.</li>
-  <li><a href="https://github.com/CliffWade/hermes-image-studio"><strong>hermes-image-studio</strong></a> (5★): a growing image lane with presets, prompt library, and social-size outputs.</li>
-</ul>
-<h3>Gaining Popularity</h3>
-<ul>
-  <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (960★) keeps sprinting as the native iPhone client.</li>
-  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (588★) is strong evidence that installable skill packs are becoming a real ecosystem layer.</li>
-  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (346★) remains worth watching as a shared-memory hub across harnesses — interesting, potentially useful, and one governance paper cut away from drama.</li>
-</ul>
-<p><strong>Worth watching:</strong> today’s through-line is boundary reliability — auth edges, secret redaction, cleanup safety, and usage visibility. That is platform work, not sparkle paint.</p>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Tech — Daily Brief, July 31</title>
-      <guid isPermaLink="false">crosswire-tech-daily-2026-07-31</guid>
-      <pubDate>Fri, 31 Jul 2026 14:03:10 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Tech briefing</h2>
-<p><strong>Lead:</strong> Apple’s day is a mix of Wall Street indigestion and heavier AI monetization signals, while the broader tech lane says two things clearly: enterprise AI protocols are maturing, and Home Assistant’s product direction keeps getting more human-friendly even when its feed parser faceplants.</p>
-<h3>Apple</h3>
-<ul>
-  <li><a href="https://9to5mac.com/2026/07/31/apple-stock-opens-down-roughly-10-following-mixed-q3-2026-results/"><strong>Apple stock opened down hard after mixed Q3 results</strong></a>, with supplemental reporting pointing to a softer-than-hoped forecast tied to supply-chain strain and AI-expectation pressure. Translation: revenue can beat and still fail the vibe check.</li>
-  <li><a href="https://www.macrumors.com/2026/07/30/apple-icloud-upgrade-ai/"><strong>Apple is reportedly planning paid iCloud+ upgrades for heavier AI use</strong></a>. That matters more than the sticker shock headlines — it is Apple testing how directly it can meter AI consumption inside its services stack.</li>
-  <li><a href="https://www.macrumors.com/2026/07/31/iphone-18-pro-models-300-more-expensive/"><strong>iPhone 18 Pro price-rise chatter</strong></a> is getting louder, with some reporting floating a $250–$300 jump. Still rumor territory, but the cost curve for premium hardware is clearly not getting more polite.</li>
-</ul>
-<h3>AI &amp; Models</h3>
-<ul>
-  <li><a href="https://arstechnica.com/ai/2026/07/with-a-stateless-makeover-new-mcp-spec-targets-enterprise-scale/"><strong>The MCP spec is getting a stateless makeover for enterprise scale</strong></a>. That is a real signal: agent plumbing is moving from clever demo protocol toward something ops teams might tolerate in daylight.</li>
-  <li>The Apple AI upsell story also matters here because it reinforces the same market pattern: model access is becoming a tiered utility, not a magical free garnish.</li>
-</ul>
-<h3>Science &amp; Tech</h3>
-<ul>
-  <li><a href="https://arstechnica.com/science/2026/07/if-a-quantum-computer-outperforms-normal-ones-can-you-tell-if-its-right/"><strong>Quantum researchers are getting better at proving when a quantum result can be trusted</strong></a>. Still niche, but useful progress in the “cool, but is it real?” department.</li>
-  <li><a href="https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/"><strong>The Mythos attack appears to have knocked out HAWK</strong></a>, a post-quantum candidate. Good reminder that long review cycles do not grant divine protection.</li>
-</ul>
-<h3>Home Automation</h3>
-<ul>
-  <li>The raw Home Assistant lane failed again with <code>no element found</code>, so the source feed itself was busted on this run.</li>
-  <li>Fallback context still looks solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7</strong></a> made purpose-specific triggers and natural-language-friendly automation building the default for everyone. That is a meaningful usability shift, and yes, a mild threat to YAML goblin prestige.</li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Commanders — Daily Brief, July 31</title>
-      <guid isPermaLink="false">crosswire-commanders-daily-2026-07-31</guid>
-      <pubDate>Fri, 31 Jul 2026 14:03:10 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Washington Commanders briefing</h2>
-<p><strong>Lead:</strong> the real signal today is camp texture, not headline fireworks: a couple minor injury scares do not look long-term, Laremy Tunsil is already getting feature-story treatment, and the receiver conversation keeps drifting back to one question — is Washington really done shopping unless Stefon Diggs becomes viable?</p>
-<h3>Team News</h3>
-<ul>
-  <li><strong>Nick Allegretti</strong> (calf strain) and <strong>Treylon Burks</strong> (foot soreness) were sidelined on Day 2, but beat reporting says neither issue is currently expected to become a long-term problem.</li>
-  <li><strong>Laremy Tunsil</strong> is already drawing attention as a foundational addition, with fresh reporting on the offseason support system behind his preparation. That does not change the depth chart, but it does underline how central he is to the offense’s stability plan.</li>
-</ul>
-<h3>Training Camp</h3>
-<ul>
-  <li><strong>Chig Okonkwo’s versatility</strong> keeps showing up in camp notes, which is exactly what you want from a movable-piece tight end in July before anyone starts pretending every rep is destiny.</li>
-  <li><strong>The kicker battle resumed</strong>, and beat writers are still treating it like an actual competition worth tracking rather than pure roster wallpaper.</li>
-  <li><strong>Colson Yankoff</strong> got another mention for a highlight catch, which at minimum means he is winning the daily attention lottery.</li>
-</ul>
-<h3>Schedule / Outlook</h3>
-<ul>
-  <li>Washington opens with a delightfully rude stretch: <strong>Sept. 13 at Philadelphia</strong>, <strong>Sept. 20 at Dallas</strong>, then the home opener <strong>Sept. 27 vs. Seattle</strong>.</li>
-  <li>The schedule feed shows all 17 games loaded and no current record data yet, which is normal preseason limbo, not a malfunction.</li>
-</ul>
-<h3>Around the NFL</h3>
-<ul>
-  <li><a href="https://www.espn.com/nfl/story/_/id/45789518/nfl-training-camp-holdouts-trey-hendrickson-terry-mclaurin"><strong>ESPN’s holdout anatomy piece</strong></a> is the most relevant league-wide context item in today’s raw pull because camp labor tension tends to stop being abstract the moment it touches your roster.</li>
-  <li>The rest of the national feed is mostly hold-ins, fantasy prep, and generic camp talk — useful background, not main-character material.</li>
-</ul>
-<h3>Beat Writers on X (Pilot)</h3>
-<ul>
-  <li><strong>Ben Standig:</strong> Day 2 focus was Allegretti and Burks missing time, Okonkwo’s usage, the kicker battle, linebacker deployment, and another standout Yankoff catch. <a href="https://x.com/BenStandig/status/2083132283997843468">Link</a></li>
-  <li><strong>John Keim:</strong> Friday is a meetings-and-walkthrough day with no media access; camp gets louder again Saturday when fans are in the building. <a href="https://x.com/john_keim/status/2083141914333708451">Link</a></li>
-  <li><strong>John Keim:</strong> Washington is still monitoring Stefon Diggs, and other free-agent wide receiver options do not sound especially real. <a href="https://x.com/john_keim/status/2082999952771297461">Link</a></li>
-  <li><strong>Nicki Jhabvala:</strong> highlighted a deeper look at how Tunsil trains and prepares, reinforcing his importance beyond the simple “new left tackle acquired” headline. <a href="https://x.com/NickiJhabvala/status/2083171088645640424">Link</a></li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — July 31</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-080051</guid>
-      <pubDate>Fri, 31 Jul 2026 12:16:38 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description>&lt;h2&gt;&amp;#x1F534; Sentinel Watchdog — Friday Morning&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;44 green, 1 yellow, 1 red.&lt;/strong&gt; The LockerBocks backup lane is still down, and this sweep adds a new yellow flag: CrossWire's feed verification failed — directly relevant to this report pipeline. Green count slipped from 45 to 44 as CrossWire left the healthy column.&lt;/p&gt;
-
-&lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Hermes LockerBocks Backup (Blackbox)&lt;/strong&gt; — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&amp;#x1F7E1; Yellow — 1 Item&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;CrossWire (service)&lt;/strong&gt; — Feed verification failed. The CrossWire feed check did not pass this cycle; confirm the self-hosted feed URL is serving current content.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&amp;#x1F7E2; Green — 44 Items Healthy&lt;/h3&gt;
-&lt;p&gt;All other core services and managed jobs are healthy.&lt;/p&gt;
-
-&lt;h3&gt;Recommended Actions&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle, and verify the CrossWire feed is serving correctly again.&lt;/p&gt;</description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — July 31</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-040012</guid>
-      <pubDate>Fri, 31 Jul 2026 08:16:01 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description>&lt;h2&gt;&amp;#x1F534; Sentinel Watchdog — Early Friday Morning&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;45 green, 1 red.&lt;/strong&gt; The red list is down to a single item this sweep. The Hermes LockerBocks Backup (Blackbox) failed its last run. Good news on the other lane: the Hermes Home Git Backup is no longer flagged red — that backup appears to have recovered. Green count climbed from 42 to 45.&lt;/p&gt;
-
-&lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Hermes LockerBocks Backup (Blackbox)&lt;/strong&gt; — Last run failed. The Blackbox backup lane is still down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;&amp;#x1F7E2; Green — 45 Items Healthy&lt;/h3&gt;
-&lt;p&gt;All other core services and managed jobs are healthy. Green count climbed from 42 to 45 as previously flagged items cleared.&lt;/p&gt;
-
-&lt;h3&gt;Recommended Actions&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Resolve the remaining red item before the next Watchdog cycle — get the LockerBocks Backup (Blackbox) lane running again, and confirm the Home Git Backup stays green.&lt;/p&gt;</description>
-    </item>
-<item>
-      <title>CrossWire: Hermes — Daily Brief, July 30</title>
-      <guid isPermaLink="false">crosswire-hermes-daily-2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 14:04:20 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description>&lt;h2&gt;Hermes Agent ecosystem&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Quicksilver is still the stable anchor, but today’s sharper signal is workflow plumbing: profile creation is getting less inconsistent, gateway session injection is being hardened, and skill lifecycle hooks are inching Hermes closer to real platform governance instead of “just trust the goblin with write access.”&lt;/p&gt;
-&lt;h3&gt;Release Radar&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20"&gt;&lt;strong&gt;Hermes Agent v0.19.0 — The Quicksilver Release&lt;/strong&gt;&lt;/a&gt; remains the current tagged release. The practical bits still matter: roughly 80% faster first-turn response, live reasoning streams by default, faster desktop rendering, smarter approvals, and direct Bitwarden/1Password hooks.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Why it matters to MOCR:&lt;/strong&gt; lower friction on approvals and faster turns help every cron and operator loop. Speed is nice; reliable speed is nicer.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Trending PRs / Issues&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73013"&gt;&lt;strong&gt;#73013 — shared create-profile dialog on Manage Profiles&lt;/strong&gt;&lt;/a&gt;: fixes a weird desktop split where one “New Profile” path included SOUL.md and another did not. Good cleanup for anyone treating profiles as real operating surfaces instead of side quests.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/70406"&gt;&lt;strong&gt;#70406 — inject work into the exact live session&lt;/strong&gt;&lt;/a&gt;: owner-local Unix IPC, atomic validation, and tighter session targeting. This matters for internal routing, delegated work, and not accidentally yeeting tasks into the wrong session.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/57703"&gt;&lt;strong&gt;#57703 — skill lifecycle hooks for create/edit/patch/write/delete&lt;/strong&gt;&lt;/a&gt;: opens the door for plugins to govern skill changes more cleanly. Very MOCR-adjacent if we want policy, git, or audit wrappers around skill ops.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/50521"&gt;&lt;strong&gt;#50521 — set HERMES_PLATFORM=cli at startup&lt;/strong&gt;&lt;/a&gt;: small fix, useful consequences. Better skill filtering reduces “why is this tool here?” chaos in CLI sessions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Community Builds&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/axelfreeman/voice-to-article"&gt;&lt;strong&gt;voice-to-article&lt;/strong&gt;&lt;/a&gt; (10★): Telegram voice-in, SEO article out. Not a MOCR fit by default, but a nice example of Hermes as a production pipeline instead of a chat toy.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/sloemo01/hermes-skills-bundle"&gt;&lt;strong&gt;hermes-skills-bundle&lt;/strong&gt;&lt;/a&gt; (7★): browser-heavy automation skills with real-world login ambitions. Useful, ambitious, and exactly where duct tape and optimism like to breed.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/CliffWade/hermes-image-studio"&gt;&lt;strong&gt;hermes-image-studio&lt;/strong&gt;&lt;/a&gt; (5★): image-generation plugin with multiple model presets, editing, and batch lanes.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Gaining Popularity&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/uzairansaruzi/hermex"&gt;&lt;strong&gt;hermex&lt;/strong&gt;&lt;/a&gt; (956★) keeps absurd momentum as a native iPhone client.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/SeanJ1ang/design-judge-skills"&gt;&lt;strong&gt;design-judge-skills&lt;/strong&gt;&lt;/a&gt; (574★) is more evidence that reusable skill packs are becoming a real ecosystem layer.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/MemTensor/memmy-agent"&gt;&lt;strong&gt;memmy-agent&lt;/strong&gt;&lt;/a&gt; (200★) is worth watching as a shared-memory hub idea across agent harnesses.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Worth watching:&lt;/strong&gt; today’s most MOCR-relevant thread is control at the boundaries — session routing, profile consistency, and governed skill changes. That is the difference between a platform and a surprisingly articulate pile of scripts.&lt;/p&gt;</description>
-    </item>
-<item>
-      <title>CrossWire: Tech — Daily Brief, July 30</title>
-      <guid isPermaLink="false">crosswire-tech-daily-2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 14:04:20 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description>&lt;h2&gt;Tech briefing&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Apple is having a very transitional day, AI products keep pushing toward “ambient companion” territory, and the most practical home-automation note is that Home Assistant’s July release is still one of the cleaner usability upgrades in the category.&lt;/p&gt;
-&lt;h3&gt;Apple&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/30/tim-cook-final-earnings-call-as-apple-ceo/"&gt;&lt;strong&gt;Tim Cook’s final Apple earnings call as CEO happens today&lt;/strong&gt;&lt;/a&gt;. Supplemental reporting frames it as a genuinely consequential handoff moment, with Apple coming off record valuation and investors still looking for the next clean AI story.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.macrumors.com/how-to/ios-27-unlinks-alarm-volume-iphone-ringer/"&gt;&lt;strong&gt;iOS 27 finally separates alarm volume from ringtone volume&lt;/strong&gt;&lt;/a&gt;. Tiny change, huge quality-of-life win. Somewhere, millions of accidental whisper-alarms just lost market share.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/30/when-will-apple-announce-iphone-18-pro-event/"&gt;&lt;strong&gt;iPhone event timing chatter is starting up&lt;/strong&gt;&lt;/a&gt;, which mostly means Apple rumor season has resumed its natural migration pattern.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;AI &amp;amp; Models&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/30/microsoft-will-launch-new-super-app-for-copilot-soon/"&gt;&lt;strong&gt;Microsoft is reportedly prepping a Copilot super app&lt;/strong&gt;&lt;/a&gt;. The broader signal is the same across the industry: assistant companies want one persistent surface that owns chat, tasks, browsing, and identity context.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/30/jony-ives-first-openai-hardware-device-sounds-rather-like-a-homepad/"&gt;&lt;strong&gt;OpenAI hardware rumors keep sounding like an ambient home companion&lt;/strong&gt;&lt;/a&gt;. If that is right, the next device war may be less phone replacement and more “house oracle with trust issues.”&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/30/ai-chatbots-are-now-better-than-humans-at-romance-scams-and-thats-scary/"&gt;&lt;strong&gt;AI-driven romance scams are getting better&lt;/strong&gt;&lt;/a&gt;, which is exactly the kind of sentence that should make every platform PM feel a little haunted.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Science &amp;amp; Tech&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/"&gt;&lt;strong&gt;A Mythos attack appears to have broken HAWK&lt;/strong&gt;&lt;/a&gt;, a third-round post-quantum cryptography candidate. Good reminder that “survived years of review” and “actually safe” are not synonyms.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://arstechnica.com/ai/2026/07/who-wins-and-who-loses-after-us-bans-foreign-robots/"&gt;&lt;strong&gt;The U.S. move against foreign-made robots may backfire&lt;/strong&gt;&lt;/a&gt;, at least according to Ars’ framing. Protectionism is often just complexity wearing a flag.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Home Automation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The raw Home Assistant lane failed again with &lt;code&gt;no element found&lt;/code&gt;, so the direct feed was busted. Supplemental check: &lt;a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"&gt;&lt;strong&gt;Home Assistant 2026.7&lt;/strong&gt;&lt;/a&gt; made natural-language automation creation the default, with purpose-specific triggers and friendlier authoring. That is a meaningful usability gain for normal humans and a mild threat to YAML goblin supremacy.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-<item>
-      <title>CrossWire: Commanders — Daily Brief, July 30</title>
-      <guid isPermaLink="false">crosswire-commanders-daily-2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 14:04:20 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description>&lt;h2&gt;Washington Commanders briefing&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; today’s real signal is camp texture: the kickers were perfect in breezy conditions, Daron Payne drew early praise, and Colson Yankoff apparently stole the play-of-the-day belt with a red-zone catch over the middle.&lt;/p&gt;
-&lt;h3&gt;Training Camp&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Colson Yankoff&lt;/strong&gt; had what Nicki Jhabvala called the best catch of camp so far: a contested red-zone grab over the middle. One play does not make a roster, but it does buy a lot of attention.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Daron Payne&lt;/strong&gt; got early beat-writer praise for a strong start to practice. No pads yet, so keep the hype in a small, supervised container.&lt;/li&gt;
-  &lt;li&gt;The center/QB rotation notes were mildly weird: Mitch Tischler flagged Matt Gulbin with the first center rep and later noted “Good Jones snapping to Jayden,” which at minimum says the staff is mixing looks.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Special Teams Watch&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Jake Moody and Drew Stevens both went 6-for-6&lt;/strong&gt; in the first kicking period, from 27 through 45 yards, in breezy conditions.&lt;/li&gt;
-  &lt;li&gt;Multiple beat writers noted &lt;strong&gt;Stevens appears to have the stronger leg&lt;/strong&gt;, even with both kickers matching results on the board. That feels like the most actionable kicker-battle note from today.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Schedule / Outlook&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The opener is still &lt;strong&gt;Sept. 13 at Philadelphia&lt;/strong&gt;, followed by &lt;strong&gt;Sept. 20 at Dallas&lt;/strong&gt;, then the home opener &lt;strong&gt;Sept. 27 vs Seattle&lt;/strong&gt;. Very normal, totally gentle opening runway. Absolutely no dragons there.&lt;/li&gt;
-  &lt;li&gt;The raw schedule shows all 17 games loaded and no current record data yet, which is normal preseason limbo.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Around the NFL&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://www.espn.com/nfl/story/_/id/49488047/packers-career-rushing-leader-green-reveals-parkinson-battle"&gt;&lt;strong&gt;Ahman Green revealed a Parkinson’s diagnosis&lt;/strong&gt;&lt;/a&gt;. That is the one league-wide item today that actually matters more than camp filler.&lt;/li&gt;
-  &lt;li&gt;The rest of the national feed was mostly betting-package and sophomore-QB content, which is another way of saying camp is back and the content machine is stretching before noon.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Beat Writers on X (Pilot)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Nicki Jhabvala:&lt;/strong&gt; Colson Yankoff made the standout catch of camp on a 50-50 red-zone ball over the middle. &lt;a href="https://x.com/NickiJhabvala/status/2082828828414451737"&gt;Link&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;John Keim + Nicki Jhabvala:&lt;/strong&gt; both kickers, Jake Moody and Drew Stevens, finished the first field-goal period a perfect 6-for-6. &lt;a href="https://x.com/john_keim/status/2082823340239036744"&gt;Keim&lt;/a&gt; | &lt;a href="https://x.com/NickiJhabvala/status/2082823586243313852"&gt;Jhabvala&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Mitch Tischler:&lt;/strong&gt; Stevens matched the makes and looked to have the stronger leg, with a 45-yard long in the session. &lt;a href="https://x.com/Mitch_Tischler/status/2082823266276631012"&gt;Link&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;JP Finlay:&lt;/strong&gt; Daron Payne opened practice strong even before pads come on. &lt;a href="https://x.com/JPFinlayNBCS/status/2082818025800028610"&gt;Link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-<item>
-          <title>CrossWire: Sentinel Watchdog — July 30</title>
-          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-30-040051</guid>
-          <pubDate>Thu, 30 Jul 2026 08:17:26 GMT</pubDate>
+    <item>
+          <title>CrossWire: Sentinel Census — August 2</title>
+          <guid isPermaLink="false">crosswire-report-sentinel-census-2026-08-02-091545</guid>
+          <pubDate>Sun, 02 Aug 2026 13:32:25 GMT</pubDate>
           <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>&lt;h2&gt;&amp;#x1F534; Sentinel Watchdog — Early Thursday Morning&lt;/h2&gt;
+          <description><![CDATA[<h2>&#x1F7E2; Sentinel Census — Sunday Morning</h2>
+    <p><strong>45 green, 0 yellow, 0 red.</strong> The full fleet is healthy for the first time in days. The LockerBocks Backup (Blackbox) lane that had been red through the week has recovered, and CrossWire&#x27;s feed verification is green again — no yellow flags this cycle.</p>
+    <h3>&#x1F7E2; Full Clean Sweep</h3>
+    <ul>
+      <li><strong>Jobs:</strong> all 16 managed cron jobs healthy, including Broom-Run, Curb Check, Up Ahead Sync, Mail Call Sync, Scrapbook, both backup lanes, all CrossWire jobs, and the Sentinel pair.</li>
+      <li><strong>Scripts:</strong> all tracked scripts present, from the backup lanes to the sentinel sweeps and scrapbook tooling.</li>
+      <li><strong>Services:</strong> Mail Call, Stableboard, CrossWire, Hermes WebUI, Glimpse, Glimpse Funnel Gateway, and Ollama all healthy.</li>
+    </ul>
+    <h3>Recommended Actions</h3>
+    <p><strong>None.</strong> Watchdog is green; no action needed this cycle.</p>]]></description>
+        </item>
+    <item>
+          <title>CrossWire: Hermes — Daily Brief, August 1</title>
+          <guid isPermaLink="false">crosswire-hermes-daily-2026-08-01</guid>
+          <pubDate>Sat, 01 Aug 2026 14:02:46 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description><![CDATA[<h2>Hermes Agent ecosystem</h2>
+    <p><strong>Lead:</strong> The stable tag is still <a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30">v0.19.1</a>, but today’s sharper signal is runtime quality: quieter updates, a faster approval path, and a still-open reasoning-cache toggle that matters if MOCR leans harder on local OpenAI-compatible backends.</p>
+    <h3>Release Radar</h3>
+    <ul>
+      <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30"><strong>Hermes Agent v0.19.1</strong></a> remains the current stable tag — a downstream-friendly patch rollup after the very large post-Quicksilver merge wave.</li>
+      <li><strong>Why it matters to MOCR:</strong> this is mostly platform stabilization, which is the boring good stuff. Fewer runtime surprises means fewer 2 a.m. goblin sightings.</li>
+    </ul>
+    <h3>Trending PRs / Issues</h3>
+    <ul>
+      <li><a href="https://github.com/NousResearch/hermes-agent/pull/76193"><strong>#76193 — silence three scary-but-benign update warnings</strong></a>: reduces false-drama update logs after pull/venv repair. Good ops hygiene; less “everything is on fire” theater when it is not.</li>
+      <li><a href="https://github.com/NousResearch/hermes-agent/pull/76194"><strong>#76194 — use <code>load_config_readonly()</code> on the approval-guard path</strong></a>: trims repeated config deep-copies on tool approval checks. Small perf win, but on a hot path that runs constantly.</li>
+      <li><a href="https://github.com/NousResearch/hermes-agent/pull/76019"><strong>#76019 — add <code>model.reasoning_echo</code></strong></a>: opt-in preservation of <code>reasoning_content</code> on replay for local OpenAI-compatible backends that cache thinking tokens. Worth watching if MOCR experiments with llama.cpp, vLLM, or LM Studio lanes.</li>
+      <li><a href="https://github.com/NousResearch/hermes-agent/issues/76163"><strong>#76163 — multiplexed terminal/code-exec env can inherit the default profile’s credentials</strong></a> and <a href="https://github.com/NousResearch/hermes-agent/pull/76199"><strong>#76199</strong></a> aim at a real security-boundary problem. If Hermes profile routing is a house, this was the hallway sharing keys with the wrong apartment.</li>
+    </ul>
+    <h3>Community Builds</h3>
+    <ul>
+      <li><a href="https://github.com/axelfreeman/voice-to-article"><strong>voice-to-article</strong></a> (9★): Telegram voice in, SEO article out. Clean example of Hermes as a production pipeline rather than a fancy text box.</li>
+      <li><a href="https://github.com/sloemo01/hermes-skills-bundle"><strong>hermes-skills-bundle</strong></a> (8★): browser-first automation skills for login-gated work. Useful, ambitious, and likely at least 12% duct tape.</li>
+      <li><a href="https://github.com/ardhaecosystem/fable-method"><strong>fable-method</strong></a> (7★): structured skill loop for think/act/prove/grow workflows — interesting as a pattern library even if MOCR does not adopt it whole.</li>
+    </ul>
+    <h3>Gaining Popularity</h3>
+    <ul>
+      <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (626★) keeps proving installable skill packs are becoming a real ecosystem layer.</li>
+      <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (475★) is still worth watching as a shared-memory hub across harnesses — potentially useful, potentially governance-flavored chaos.</li>
+      <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (119★) looks like the kind of practical bundle that tends to spread once teams want fewer blank pages.</li>
+    </ul>
+    <p><strong>Worth watching:</strong> the through-line is boundary hardening — updates that stop screaming, approval checks that waste less work, and profile secret scoping that needs to be right, not merely inspirational.</p>]]></description>
+        </item>
+    <item>
+          <title>CrossWire: Tech — Daily Brief, August 1</title>
+          <guid isPermaLink="false">crosswire-tech-daily-2026-08-01</guid>
+          <pubDate>Sat, 01 Aug 2026 14:02:46 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description><![CDATA[<h2>Tech briefing</h2>
+    <p><strong>Lead:</strong> Apple’s new leasing push is the clearest concrete move in today’s lane, while the broader tech signal is more mixed: AI platform economics keep getting more explicit, and the Home Assistant feed still managed to step on a rake.</p>
+    <h3>Apple</h3>
+    <ul>
+      <li><a href="https://www.apple.com/newsroom/2026/07/apple-upgrade-launches-in-the-united-states/"><strong>Apple Upgrade launched in the U.S.</strong></a>: a Klarna-backed leasing program for iPhone, Apple Watch, Mac, and iPad, with Apple explicitly ending the old iPhone Upgrade Program in the U.S. This is Apple making device access feel more subscription-shaped.</li>
+      <li><a href="https://www.macrumors.com/2026/08/01/top-stories-apple-upgrade-launches/"><strong>MacRumors’ top story stack</strong></a> also flags <strong>iOS 26.6</strong> shipping this week and keeps the September-device drumbeat alive.</li>
+      <li><a href="https://9to5mac.com/2026/07/31/report-apple-hit-a-record-49-share-of-global-smartphone-revenue-for-q2/"><strong>Apple reportedly captured 49% of global smartphone revenue in Q2</strong></a>. Fewer units than the whole market, absurdly larger slice of the money. The empire remains annoyingly well-funded.</li>
+    </ul>
+    <h3>AI &amp; Models</h3>
+    <ul>
+      <li><a href="https://arstechnica.com/ai/2026/08/reddit-ceo-on-ai-overviews-were-still-looking-for-that-win-win/"><strong>Reddit is publicly questioning the value exchange around Google’s AI Overviews</strong></a>. Useful reminder that the web’s content suppliers are still negotiating whether AI traffic is a partnership or a resource extraction minigame.</li>
+    </ul>
+    <h3>Science &amp; Tech</h3>
+    <ul>
+      <li><a href="https://arstechnica.com/security/2026/08/defcons-new-badge-is-a-security-key-you-can-see-inside/"><strong>Defcon’s new badge is a visible, inspectable security key</strong></a>. Delightfully on-brand hardware nerdery and a genuinely elegant trust-building move.</li>
+      <li><a href="https://arstechnica.com/tech-policy/2026/08/after-noise-complaints-judge-orders-waymo-to-stop-overnight-charging-in-santa-monica/"><strong>A judge ordered Waymo to stop overnight charging in Santa Monica</strong></a> after noise complaints. A nice little parable about how infrastructure wins can still lose the neighborhood.</li>
+    </ul>
+    <h3>Home Automation</h3>
+    <ul>
+      <li>The raw Home Assistant source failed on this run with <code>no element found: line 1, column 0</code>, so the feed itself was frakked.</li>
+      <li>Fallback context still looks solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7 — “Automations that speak your language”</strong></a> pushed more natural-language-friendly automation building, plus a pile of July patch releases. Practical direction remains good even when the feed parser decides chaos is a feature.</li>
+    </ul>]]></description>
+        </item>
+    <item>
+          <title>CrossWire: Commanders — Daily Brief, August 1</title>
+          <guid isPermaLink="false">crosswire-commanders-daily-2026-08-01</guid>
+          <pubDate>Sat, 01 Aug 2026 14:02:46 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description><![CDATA[<h2>Washington Commanders briefing</h2>
+    <p><strong>Lead:</strong> This was a vibes-and-camp-notes day, not a crisis day. The most useful signal is that Treylon Burks appears back and moving fine, the receiving-depth conversation is still live, and the preseason broadcast booth just added a very Washington kind of character.</p>
+    <h3>Team News</h3>
+    <ul>
+      <li>The official schedule is fully loaded: Washington opens <strong>Sept. 13 at Philadelphia</strong>, then <strong>Sept. 20 at Dallas</strong>, before the home opener <strong>Sept. 27 vs. Seattle</strong>. Seventeen games remain; no record yet because preseason limbo is still doing preseason limbo things.</li>
+      <li><strong>John Riggins</strong> will be a color analyst for the Commanders’ preseason broadcasts, per camp announcements echoed across the beat. That is less football signal than delightful franchise texture, but it counts.</li>
+    </ul>
+    <h3>Training Camp</h3>
+    <ul>
+      <li><strong>Treylon Burks</strong> appears to have avoided a longer scare: beat writers noted he was back out, then back in 11-on-11 with a clean grab. For August, “looks fine” is practically a standing ovation.</li>
+      <li><strong>Wide receiver depth</strong> remains a real thread in camp conversation, with John Keim explicitly flagging it and the official team preview also centering Burks in the position room.</li>
+      <li>The offense apparently spent part of practice celebrating <strong>big-man catches</strong>. This tells us almost nothing about September and everything about how to keep a camp crowd entertained.</li>
+    </ul>
+    <h3>Around the NFL</h3>
+    <ul>
+      <li><a href="https://www.espn.com/nfl/story/_/id/49500558/2026-kansas-city-chiefs-training-camp-cyrus-allen-patrick-mahomes"><strong>Kansas City rookie Cyrus Allen</strong></a> is drawing early first-team attention — one of the sharper national camp stories in today’s feed.</li>
+      <li><a href="https://www.espn.com/nfl/story/_/id/49427699/seattle-seahawks-training-camp-2026-intel-updates"><strong>Seattle’s camp intel stream</strong></a> matters a little extra because the Seahawks are Washington’s Week 3 home opener.</li>
+    </ul>
+    <h3>Beat Writers on X (Pilot)</h3>
+    <ul>
+      <li><strong>JP Finlay:</strong> Treylon Burks returned to work and later made a nice 11-on-11 catch — the plain-English takeaway is that the injury worry cooled off fast. <a href="https://x.com/JPFinlayNBCS/status/2083537168819970454">Back out</a> · <a href="https://x.com/JPFinlayNBCS/status/2083550445755117602">11-on-11 catch</a></li>
+      <li><strong>John Keim:</strong> wide receiver depth is still a live roster question at camp, not a settled room. <a href="https://x.com/john_keim/status/2083540011811492080">Link</a></li>
+      <li><strong>Nicki Jhabvala:</strong> John Riggins was announced as a preseason color analyst, which is extremely on-brand Washington football theater. <a href="https://x.com/NickiJhabvala/status/2083540161082568977">Link</a></li>
+      <li><strong>Nicki Jhabvala + Ben Standig + Mitch Tischler:</strong> the day also featured a run of “big-man receivers” jokes after offensive-lineman catches — camp comedy, but clearly one of the scene-setting moments. <a href="https://x.com/NickiJhabvala/status/2083539825274044676">Nicki</a> · <a href="https://x.com/BenStandig/status/2083549673487241230">Ben</a> · <a href="https://x.com/Mitch_Tischler/status/2083539702951338119">Mitch</a></li>
+    </ul>]]></description>
+        </item>
+    <item>
+          <title>CrossWire: Sentinel Watchdog — July 31</title>
+          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-200023</guid>
+          <pubDate>Sat, 01 Aug 2026 00:18:53 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Friday Evening</h2>
+    <p><strong>43 green, 1 yellow, 1 red.</strong> The LockerBocks backup lane is still down, and CrossWire&#x27;s feed verification flags yellow again — directly relevant to this report pipeline. Green count slipped from 44 to 43.</p>
+    <h3>&#x1F534; Red — 1 Failing Job</h3>
+    <ul>
+      <li><strong>Hermes LockerBocks Backup (Blackbox)</strong> — Last run failed, carried over from previous sweeps. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.</li>
+    </ul>
+    <h3>&#x1F7E1; Yellow — 1 Item</h3>
+    <ul>
+      <li><strong>CrossWire (service)</strong> — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.</li>
+    </ul>
+    <h3>&#x1F7E2; Green — 43 Items Healthy</h3>
+    <p>All other core services and managed jobs are healthy. Green count slipped from 44 to 43 this cycle.</p>
+    <h3>Recommended Actions</h3>
+    <p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
+        </item>
+    <item>
+          <title>CrossWire: Sentinel Watchdog — July 31</title>
+          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-160041</guid>
+          <pubDate>Fri, 31 Jul 2026 20:16:38 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description><![CDATA[<h2>🔴 Sentinel Watchdog — Friday Afternoon</h2>
+    <p><strong>44 green, 1 yellow, 1 red.</strong> Same shape as the midday sweep: the LockerBocks backup lane is still down, and CrossWire's feed verification flags yellow again — directly relevant to this report pipeline. Green count holds at 44.</p>
+    <h3>🔴 Red — 1 Failing Job</h3>
+    <ul>
+      <li><strong>Hermes LockerBocks Backup (Blackbox)</strong> — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.</li>
+    </ul>
+    <h3>🟡 Yellow — 1 Item</h3>
+    <ul>
+      <li><strong>CrossWire (service)</strong> — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.</li>
+    </ul>
+    <h3>🟢 Green — 44 Items Healthy</h3>
+    <p>All other core services and managed jobs are healthy.</p>
+    <h3>Recommended Actions</h3>
+    <p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
+        </item>
+    <item>
+          <title>CrossWire: Sentinel Watchdog — July 31</title>
+          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-120030</guid>
+          <pubDate>Fri, 31 Jul 2026 16:19:40 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description>&lt;h2&gt;&amp;#x1F534; Sentinel Watchdog — Midday Friday&lt;/h2&gt;
     
-    &lt;p&gt;&lt;strong&gt;42 green, 2 yellow, 2 red.&lt;/strong&gt; Green count held at 42. Two new red items this sweep: the Hermes Home Git Backup is &lt;em&gt;still&lt;/em&gt; failing (carried over from yesterday) and a new failure surfaced — Hermes LockerBocks Backup (Blackbox) also failed its last run. Yellow items (Curb Check and CrossWire daily) are informational only.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;44 green, 1 yellow, 1 red.&lt;/strong&gt; The LockerBocks backup lane is still down, and the CrossWire feed verification failure carries into this sweep as yellow — directly relevant to this report pipeline. Green count holds at 44.&lt;/p&gt;
     
-    &lt;h3&gt;&amp;#x1F534; Red — 2 Failing Jobs&lt;/h3&gt;
+    &lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Hermes Home Git Backup&lt;/strong&gt; (carried over) — Last run failed. Hermes home is no longer being archived to git. Needs investigation — check git auth, disk space, or repo configuration.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Hermes LockerBocks Backup (Blackbox)&lt;/strong&gt; (new) — Last run failed. Blackbox backup lane is also down alongside the Home Git Backup. Investigate root cause — possibly a shared dependency or systemic issue.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Hermes LockerBocks Backup (Blackbox)&lt;/strong&gt; — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.&lt;/li&gt;
     &lt;/ul&gt;
     
-    &lt;h3&gt;&amp;#x1F7E1; Yellow — 2 Items&lt;/h3&gt;
+    &lt;h3&gt;&amp;#x1F7E1; Yellow — 1 Item&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Curb Check&lt;/strong&gt; — Multiple live cron matches detected. Informational.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;CrossWire (daily)&lt;/strong&gt; — Multiple live cron matches detected. Expected behavior for the multi-post daily schedule.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;CrossWire (service)&lt;/strong&gt; — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.&lt;/li&gt;
     &lt;/ul&gt;
     
-    &lt;h3&gt;&amp;#x1F7E2; Green — 42 Items Healthy&lt;/h3&gt;
-    &lt;p&gt;All core services and managed jobs healthy. Green count held at 42 from the previous sweep.&lt;/p&gt;
+    &lt;h3&gt;&amp;#x1F7E2; Green — 44 Items Healthy&lt;/h3&gt;
+    &lt;p&gt;All other core services and managed jobs are healthy.&lt;/p&gt;
     
     &lt;h3&gt;Recommended Actions&lt;/h3&gt;
-    &lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Both backup lanes are down. Investigate the Hermes Home Git Backup and LockerBocks Backup failures — this could be a shared git credential issue, disk problem, or a broader config drift. Two simultaneous backup failures is worth treating as a systemic symptom rather than coincidence. Yellow items are informational only — no action needed.&lt;/p&gt;</description>
+    &lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.&lt;/p&gt;</description>
         </item>
-<item>
-          <title>CrossWire: Hermes — Daily Brief, July 29</title>
-          <guid isPermaLink="false">crosswire-hermes-daily-2026-07-29</guid>
-          <pubDate>Wed, 29 Jul 2026 14:03:24 GMT</pubDate>
+    <item>
+          <title>CrossWire: Hermes — Daily Brief, July 31</title>
+          <guid isPermaLink="false">crosswire-hermes-daily-2026-07-31</guid>
+          <pubDate>Fri, 31 Jul 2026 14:03:10 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description><![CDATA[<h2>Hermes Agent ecosystem</h2>
+    <p><strong>Lead:</strong> Hermes finally has a fresh stable tag again, but the more useful signal for MOCR is boundary hardening: auth fetches that stop getting 403’d by Cloudflare-ish setups, real secret redaction in the active gateway path, and a safety fix for the disk-cleanup plugin so it stops eyeing project files like a raccoon near an unlocked cooler.</p>
+    <h3>Release Radar</h3>
+    <ul>
+      <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30"><strong>Hermes Agent v0.19.1</strong></a> is live as the new stable tag. It is explicitly a patch release for downstream consumers — Docker images, hosted deployments, and fresh installs — after roughly 2,789 commits since Quicksilver.</li>
+      <li><strong>Why it matters to MOCR:</strong> this is the boring-good kind of release: less glamour, more “please stop surprising the runtime.” That tends to age well.</li>
+    </ul>
+    <h3>Trending PRs / Issues</h3>
+    <ul>
+      <li><a href="https://github.com/NousResearch/hermes-agent/pull/75437"><strong>#75437 — set Accept + User-Agent headers on all PyJWKClient JWKS fetches</strong></a>: fixes JWT verification failures caused by WAFs blocking Python’s default request fingerprint. Very relevant if Hermes sits behind Cloudflare, Authelia, or Authentik and suddenly acts haunted.</li>
+      <li><a href="https://github.com/NousResearch/hermes-agent/pull/75074"><strong>#75074 — redact secrets at the actual active progress_callback boundary</strong></a>: this is the right kind of security fix — moving protection to the code path production really uses instead of the one everyone wished it used.</li>
+      <li><a href="https://github.com/NousResearch/hermes-agent/pull/75424"><strong>#75424 — exclude project directories from disk-cleanup test-pattern auto-deletion</strong></a>: protects durable user-authored folders from being classified as disposable just because a filename starts with <code>test_</code> or <code>tmp_</code>. That was brittle in a way that inspires controlled concern.</li>
+      <li><a href="https://github.com/NousResearch/hermes-agent/pull/68881"><strong>#68881 — report model and provider usage</strong></a>: worth watching if you care about observability, spend visibility, or figuring out which model lane actually did the work.</li>
+    </ul>
+    <h3>Community Builds</h3>
+    <ul>
+      <li><a href="https://github.com/axelfreeman/voice-to-article"><strong>voice-to-article</strong></a> (9★): Telegram voice in, SEO article out. A clean example of Hermes as a pipeline engine instead of an unusually literate chat box.</li>
+      <li><a href="https://github.com/sloemo01/hermes-skills-bundle"><strong>hermes-skills-bundle</strong></a> (8★): browser-heavy automation skills aimed at real login-gated work. Useful, ambitious, and probably held together by at least some duct tape and optimism.</li>
+      <li><a href="https://github.com/CliffWade/hermes-image-studio"><strong>hermes-image-studio</strong></a> (5★): a growing image lane with presets, prompt library, and social-size outputs.</li>
+    </ul>
+    <h3>Gaining Popularity</h3>
+    <ul>
+      <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (960★) keeps sprinting as the native iPhone client.</li>
+      <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (588★) is strong evidence that installable skill packs are becoming a real ecosystem layer.</li>
+      <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (346★) remains worth watching as a shared-memory hub across harnesses — interesting, potentially useful, and one governance paper cut away from drama.</li>
+    </ul>
+    <p><strong>Worth watching:</strong> today’s through-line is boundary reliability — auth edges, secret redaction, cleanup safety, and usage visibility. That is platform work, not sparkle paint.</p>]]></description>
+        </item>
+    <item>
+          <title>CrossWire: Tech — Daily Brief, July 31</title>
+          <guid isPermaLink="false">crosswire-tech-daily-2026-07-31</guid>
+          <pubDate>Fri, 31 Jul 2026 14:03:10 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description><![CDATA[<h2>Tech briefing</h2>
+    <p><strong>Lead:</strong> Apple’s day is a mix of Wall Street indigestion and heavier AI monetization signals, while the broader tech lane says two things clearly: enterprise AI protocols are maturing, and Home Assistant’s product direction keeps getting more human-friendly even when its feed parser faceplants.</p>
+    <h3>Apple</h3>
+    <ul>
+      <li><a href="https://9to5mac.com/2026/07/31/apple-stock-opens-down-roughly-10-following-mixed-q3-2026-results/"><strong>Apple stock opened down hard after mixed Q3 results</strong></a>, with supplemental reporting pointing to a softer-than-hoped forecast tied to supply-chain strain and AI-expectation pressure. Translation: revenue can beat and still fail the vibe check.</li>
+      <li><a href="https://www.macrumors.com/2026/07/30/apple-icloud-upgrade-ai/"><strong>Apple is reportedly planning paid iCloud+ upgrades for heavier AI use</strong></a>. That matters more than the sticker shock headlines — it is Apple testing how directly it can meter AI consumption inside its services stack.</li>
+      <li><a href="https://www.macrumors.com/2026/07/31/iphone-18-pro-models-300-more-expensive/"><strong>iPhone 18 Pro price-rise chatter</strong></a> is getting louder, with some reporting floating a $250–$300 jump. Still rumor territory, but the cost curve for premium hardware is clearly not getting more polite.</li>
+    </ul>
+    <h3>AI &amp; Models</h3>
+    <ul>
+      <li><a href="https://arstechnica.com/ai/2026/07/with-a-stateless-makeover-new-mcp-spec-targets-enterprise-scale/"><strong>The MCP spec is getting a stateless makeover for enterprise scale</strong></a>. That is a real signal: agent plumbing is moving from clever demo protocol toward something ops teams might tolerate in daylight.</li>
+      <li>The Apple AI upsell story also matters here because it reinforces the same market pattern: model access is becoming a tiered utility, not a magical free garnish.</li>
+    </ul>
+    <h3>Science &amp; Tech</h3>
+    <ul>
+      <li><a href="https://arstechnica.com/science/2026/07/if-a-quantum-computer-outperforms-normal-ones-can-you-tell-if-its-right/"><strong>Quantum researchers are getting better at proving when a quantum result can be trusted</strong></a>. Still niche, but useful progress in the “cool, but is it real?” department.</li>
+      <li><a href="https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/"><strong>The Mythos attack appears to have knocked out HAWK</strong></a>, a post-quantum candidate. Good reminder that long review cycles do not grant divine protection.</li>
+    </ul>
+    <h3>Home Automation</h3>
+    <ul>
+      <li>The raw Home Assistant lane failed again with <code>no element found</code>, so the source feed itself was busted on this run.</li>
+      <li>Fallback context still looks solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7</strong></a> made purpose-specific triggers and natural-language-friendly automation building the default for everyone. That is a meaningful usability shift, and yes, a mild threat to YAML goblin prestige.</li>
+    </ul>]]></description>
+        </item>
+    <item>
+          <title>CrossWire: Commanders — Daily Brief, July 31</title>
+          <guid isPermaLink="false">crosswire-commanders-daily-2026-07-31</guid>
+          <pubDate>Fri, 31 Jul 2026 14:03:10 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description><![CDATA[<h2>Washington Commanders briefing</h2>
+    <p><strong>Lead:</strong> the real signal today is camp texture, not headline fireworks: a couple minor injury scares do not look long-term, Laremy Tunsil is already getting feature-story treatment, and the receiver conversation keeps drifting back to one question — is Washington really done shopping unless Stefon Diggs becomes viable?</p>
+    <h3>Team News</h3>
+    <ul>
+      <li><strong>Nick Allegretti</strong> (calf strain) and <strong>Treylon Burks</strong> (foot soreness) were sidelined on Day 2, but beat reporting says neither issue is currently expected to become a long-term problem.</li>
+      <li><strong>Laremy Tunsil</strong> is already drawing attention as a foundational addition, with fresh reporting on the offseason support system behind his preparation. That does not change the depth chart, but it does underline how central he is to the offense’s stability plan.</li>
+    </ul>
+    <h3>Training Camp</h3>
+    <ul>
+      <li><strong>Chig Okonkwo’s versatility</strong> keeps showing up in camp notes, which is exactly what you want from a movable-piece tight end in July before anyone starts pretending every rep is destiny.</li>
+      <li><strong>The kicker battle resumed</strong>, and beat writers are still treating it like an actual competition worth tracking rather than pure roster wallpaper.</li>
+      <li><strong>Colson Yankoff</strong> got another mention for a highlight catch, which at minimum means he is winning the daily attention lottery.</li>
+    </ul>
+    <h3>Schedule / Outlook</h3>
+    <ul>
+      <li>Washington opens with a delightfully rude stretch: <strong>Sept. 13 at Philadelphia</strong>, <strong>Sept. 20 at Dallas</strong>, then the home opener <strong>Sept. 27 vs. Seattle</strong>.</li>
+      <li>The schedule feed shows all 17 games loaded and no current record data yet, which is normal preseason limbo, not a malfunction.</li>
+    </ul>
+    <h3>Around the NFL</h3>
+    <ul>
+      <li><a href="https://www.espn.com/nfl/story/_/id/45789518/nfl-training-camp-holdouts-trey-hendrickson-terry-mclaurin"><strong>ESPN’s holdout anatomy piece</strong></a> is the most relevant league-wide context item in today’s raw pull because camp labor tension tends to stop being abstract the moment it touches your roster.</li>
+      <li>The rest of the national feed is mostly hold-ins, fantasy prep, and generic camp talk — useful background, not main-character material.</li>
+    </ul>
+    <h3>Beat Writers on X (Pilot)</h3>
+    <ul>
+      <li><strong>Ben Standig:</strong> Day 2 focus was Allegretti and Burks missing time, Okonkwo’s usage, the kicker battle, linebacker deployment, and another standout Yankoff catch. <a href="https://x.com/BenStandig/status/2083132283997843468">Link</a></li>
+      <li><strong>John Keim:</strong> Friday is a meetings-and-walkthrough day with no media access; camp gets louder again Saturday when fans are in the building. <a href="https://x.com/john_keim/status/2083141914333708451">Link</a></li>
+      <li><strong>John Keim:</strong> Washington is still monitoring Stefon Diggs, and other free-agent wide receiver options do not sound especially real. <a href="https://x.com/john_keim/status/2082999952771297461">Link</a></li>
+      <li><strong>Nicki Jhabvala:</strong> highlighted a deeper look at how Tunsil trains and prepares, reinforcing his importance beyond the simple “new left tackle acquired” headline. <a href="https://x.com/NickiJhabvala/status/2083171088645640424">Link</a></li>
+    </ul>]]></description>
+        </item>
+    <item>
+          <title>CrossWire: Sentinel Watchdog — July 31</title>
+          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-080051</guid>
+          <pubDate>Fri, 31 Jul 2026 12:16:38 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description>&lt;h2&gt;&amp;#x1F534; Sentinel Watchdog — Friday Morning&lt;/h2&gt;
+    
+    &lt;p&gt;&lt;strong&gt;44 green, 1 yellow, 1 red.&lt;/strong&gt; The LockerBocks backup lane is still down, and this sweep adds a new yellow flag: CrossWire's feed verification failed — directly relevant to this report pipeline. Green count slipped from 45 to 44 as CrossWire left the healthy column.&lt;/p&gt;
+    
+    &lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Hermes LockerBocks Backup (Blackbox)&lt;/strong&gt; — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h3&gt;&amp;#x1F7E1; Yellow — 1 Item&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;CrossWire (service)&lt;/strong&gt; — Feed verification failed. The CrossWire feed check did not pass this cycle; confirm the self-hosted feed URL is serving current content.&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h3&gt;&amp;#x1F7E2; Green — 44 Items Healthy&lt;/h3&gt;
+    &lt;p&gt;All other core services and managed jobs are healthy.&lt;/p&gt;
+    
+    &lt;h3&gt;Recommended Actions&lt;/h3&gt;
+    &lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle, and verify the CrossWire feed is serving correctly again.&lt;/p&gt;</description>
+        </item>
+    <item>
+          <title>CrossWire: Sentinel Watchdog — July 31</title>
+          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-040012</guid>
+          <pubDate>Fri, 31 Jul 2026 08:16:01 GMT</pubDate>
+          <link>https://kanan.taila81309.ts.net/crosswire/</link>
+          <description>&lt;h2&gt;&amp;#x1F534; Sentinel Watchdog — Early Friday Morning&lt;/h2&gt;
+    
+    &lt;p&gt;&lt;strong&gt;45 green, 1 red.&lt;/strong&gt; The red list is down to a single item this sweep. The Hermes LockerBocks Backup (Blackbox) failed its last run. Good news on the other lane: the Hermes Home Git Backup is no longer flagged red — that backup appears to have recovered. Green count climbed from 42 to 45.&lt;/p&gt;
+    
+    &lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Hermes LockerBocks Backup (Blackbox)&lt;/strong&gt; — Last run failed. The Blackbox backup lane is still down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h3&gt;&amp;#x1F7E2; Green — 45 Items Healthy&lt;/h3&gt;
+    &lt;p&gt;All other core services and managed jobs are healthy. Green count climbed from 42 to 45 as previously flagged items cleared.&lt;/p&gt;
+    
+    &lt;h3&gt;Recommended Actions&lt;/h3&gt;
+    &lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Resolve the remaining red item before the next Watchdog cycle — get the LockerBocks Backup (Blackbox) lane running again, and confirm the Home Git Backup stays green.&lt;/p&gt;</description>
+        </item>
+    <item>
+          <title>CrossWire: Hermes — Daily Brief, July 30</title>
+          <guid isPermaLink="false">crosswire-hermes-daily-2026-07-30</guid>
+          <pubDate>Thu, 30 Jul 2026 14:04:20 GMT</pubDate>
           <link>https://kanan.taila81309.ts.net/crosswire/</link>
           <description>&lt;h2&gt;Hermes Agent ecosystem&lt;/h2&gt;
-    &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Quicksilver is still the stable anchor, but today's sharper signal is friction at the edges: fresh desktop session-history bugs, a nasty WSL checkpoint lock failure, and more community tooling piling onto the platform fast enough to make "ecosystem" feel earned.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Quicksilver is still the stable anchor, but today’s sharper signal is workflow plumbing: profile creation is getting less inconsistent, gateway session injection is being hardened, and skill lifecycle hooks are inching Hermes closer to real platform governance instead of “just trust the goblin with write access.”&lt;/p&gt;
     &lt;h3&gt;Release Radar&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20"&gt;&lt;strong&gt;Hermes Agent v0.19.0 — The Quicksilver Release&lt;/strong&gt;&lt;/a&gt; remains the current tagged release. The big practical gains still matter: roughly 80% faster first-turn response, live reasoning streams by default, faster desktop rendering, smarter approvals, and direct Bitwarden/1Password hooks.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Why it matters to MOCR:&lt;/strong&gt; faster turns and better approvals help every cron and operator loop. This is useful speed, not benchmark cosplay.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20"&gt;&lt;strong&gt;Hermes Agent v0.19.0 — The Quicksilver Release&lt;/strong&gt;&lt;/a&gt; remains the current tagged release. The practical bits still matter: roughly 80% faster first-turn response, live reasoning streams by default, faster desktop rendering, smarter approvals, and direct Bitwarden/1Password hooks.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Why it matters to MOCR:&lt;/strong&gt; lower friction on approvals and faster turns help every cron and operator loop. Speed is nice; reliable speed is nicer.&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;h3&gt;Trending Issues &amp;amp; PRs&lt;/h3&gt;
+    &lt;h3&gt;Trending PRs / Issues&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/issues/74109"&gt;&lt;strong&gt;#74109 — Desktop sidebar shows pinned sessions only&lt;/strong&gt;&lt;/a&gt;: reported today, with the Web UI and &lt;code&gt;state.db&lt;/code&gt; still showing 34 valid sessions. If real, this is a client-side history/search regression and a direct nuisance for anyone relying on Desktop as their primary cockpit.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/issues/74108"&gt;&lt;strong&gt;#74108 — checkpoint_manager hangs on &lt;code&gt;/mnt/c&lt;/code&gt; then leaks &lt;code&gt;index.lock&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;: this one is more than annoying. A 60-second hang plus a stale lock that poisons future checkpoints is the kind of bug that turns resilience features into trapdoors.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/issues/47735"&gt;&lt;strong&gt;#47735 — fresh installs can default to a stale Claude model without verified Anthropic auth&lt;/strong&gt;&lt;/a&gt;: still open, still confusing, and exactly the sort of first-run paper cut that makes new installs feel haunted.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/67349"&gt;&lt;strong&gt;#67349 — keep LM Studio (llama.cpp) on-model instead of falling back on grammar errors&lt;/strong&gt;&lt;/a&gt; and &lt;a href="https://github.com/NousResearch/hermes-agent/pull/34595"&gt;&lt;strong&gt;#34595 — deepcopy agent.tools before grammar-retry sanitization&lt;/strong&gt;&lt;/a&gt; both point at the same theme: local-model reliability work is getting real attention.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73013"&gt;&lt;strong&gt;#73013 — shared create-profile dialog on Manage Profiles&lt;/strong&gt;&lt;/a&gt;: fixes a weird desktop split where one “New Profile” path included SOUL.md and another did not. Good cleanup for anyone treating profiles as real operating surfaces instead of side quests.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/70406"&gt;&lt;strong&gt;#70406 — inject work into the exact live session&lt;/strong&gt;&lt;/a&gt;: owner-local Unix IPC, atomic validation, and tighter session targeting. This matters for internal routing, delegated work, and not accidentally yeeting tasks into the wrong session.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/57703"&gt;&lt;strong&gt;#57703 — skill lifecycle hooks for create/edit/patch/write/delete&lt;/strong&gt;&lt;/a&gt;: opens the door for plugins to govern skill changes more cleanly. Very MOCR-adjacent if we want policy, git, or audit wrappers around skill ops.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/50521"&gt;&lt;strong&gt;#50521 — set HERMES_PLATFORM=cli at startup&lt;/strong&gt;&lt;/a&gt;: small fix, useful consequences. Better skill filtering reduces “why is this tool here?” chaos in CLI sessions.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;Community Builds&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href="https://github.com/sloemo01/hermes-skills-bundle"&gt;&lt;strong&gt;sloemo01/hermes-skills-bundle&lt;/strong&gt;&lt;/a&gt; (7★): a browser-heavy skill pack aimed at breaking agents out of the text box. Ambitious, useful, and potentially one bad selector away from duct tape and optimism.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://github.com/CliffWade/hermes-image-studio"&gt;&lt;strong&gt;CliffWade/hermes-image-studio&lt;/strong&gt;&lt;/a&gt; (5★): image-generation plugin with multiple FLUX and GPT Image presets, editing, and batch lanes.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"&gt;&lt;strong&gt;mauricemohr88-debug/hermes-plugin-guard&lt;/strong&gt;&lt;/a&gt; (3★): static security checks for Hermes plugins. Quietly one of the more adult ideas in the room.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://github.com/Hypabolic/Trajectory"&gt;&lt;strong&gt;Hypabolic/Trajectory&lt;/strong&gt;&lt;/a&gt; (4★): session-log normalization aimed at standardized formats like OTEL GenAI spans. Very MOCR-adjacent.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/axelfreeman/voice-to-article"&gt;&lt;strong&gt;voice-to-article&lt;/strong&gt;&lt;/a&gt; (10★): Telegram voice-in, SEO article out. Not a MOCR fit by default, but a nice example of Hermes as a production pipeline instead of a chat toy.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/sloemo01/hermes-skills-bundle"&gt;&lt;strong&gt;hermes-skills-bundle&lt;/strong&gt;&lt;/a&gt; (7★): browser-heavy automation skills with real-world login ambitions. Useful, ambitious, and exactly where duct tape and optimism like to breed.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/CliffWade/hermes-image-studio"&gt;&lt;strong&gt;hermes-image-studio&lt;/strong&gt;&lt;/a&gt; (5★): image-generation plugin with multiple model presets, editing, and batch lanes.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;Gaining Popularity&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href="https://github.com/uzairansaruzi/hermex"&gt;&lt;strong&gt;hermex&lt;/strong&gt;&lt;/a&gt; (946★): the native iPhone client keeps pulling absurd momentum.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://github.com/SeanJ1ang/design-judge-skills"&gt;&lt;strong&gt;design-judge-skills&lt;/strong&gt;&lt;/a&gt; (546★): strong evidence that installable workflow packs are becoming a real layer of the Hermes universe.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://github.com/Neeeophytee/finding-unknowns-skills"&gt;&lt;strong&gt;finding-unknowns-skills&lt;/strong&gt;&lt;/a&gt; (268★): still one of the cleaner examples of reusable agent workflows with an actual point of view.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/uzairansaruzi/hermex"&gt;&lt;strong&gt;hermex&lt;/strong&gt;&lt;/a&gt; (956★) keeps absurd momentum as a native iPhone client.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/SeanJ1ang/design-judge-skills"&gt;&lt;strong&gt;design-judge-skills&lt;/strong&gt;&lt;/a&gt; (574★) is more evidence that reusable skill packs are becoming a real ecosystem layer.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://github.com/MemTensor/memmy-agent"&gt;&lt;strong&gt;memmy-agent&lt;/strong&gt;&lt;/a&gt; (200★) is worth watching as a shared-memory hub idea across agent harnesses.&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;p&gt;&lt;strong&gt;Worth watching:&lt;/strong&gt; the most MOCR-relevant thread today is reliability at the session and checkpoint layer. Fast is great; durable is how you keep from frakking a workday.&lt;/p&gt;</description>
+    &lt;p&gt;&lt;strong&gt;Worth watching:&lt;/strong&gt; today’s most MOCR-relevant thread is control at the boundaries — session routing, profile consistency, and governed skill changes. That is the difference between a platform and a surprisingly articulate pile of scripts.&lt;/p&gt;</description>
         </item>
-<item>
-          <title>CrossWire: Tech — Daily Brief, July 29</title>
-          <guid isPermaLink="false">crosswire-tech-daily-2026-07-29</guid>
-          <pubDate>Wed, 29 Jul 2026 14:03:24 GMT</pubDate>
+    <item>
+          <title>CrossWire: Tech — Daily Brief, July 30</title>
+          <guid isPermaLink="false">crosswire-tech-daily-2026-07-30</guid>
+          <pubDate>Thu, 30 Jul 2026 14:04:20 GMT</pubDate>
           <link>https://kanan.taila81309.ts.net/crosswire/</link>
           <description>&lt;h2&gt;Tech briefing&lt;/h2&gt;
-    &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; today's useful pattern is identity, interfaces, and trust: Apple keeps expanding Wallet-as-ID, OpenAI's hardware rumors keep drifting toward an ambient companion device, and the most practical home-automation signal is that Home Assistant's latest release is leaning hard into natural-language automation building.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Apple is having a very transitional day, AI products keep pushing toward “ambient companion” territory, and the most practical home-automation note is that Home Assistant’s July release is still one of the cleaner usability upgrades in the category.&lt;/p&gt;
     &lt;h3&gt;Apple&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/29/iphone-drivers-license-another-state-soon/"&gt;&lt;strong&gt;Apple Wallet IDs may be headed to Oklahoma&lt;/strong&gt;&lt;/a&gt;, which would make it the 15th U.S. state in line for iPhone driver's license support. Small rollout, big direction: the wallet keeps trying to eat the physical wallet.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/28/openai-first-devices/"&gt;&lt;strong&gt;OpenAI's hardware roadmap is sharpening&lt;/strong&gt;&lt;/a&gt;, while broader reporting points to a speaker-like first device with companion ambitions. If that holds, the first real AI-device fight may be less "new phone" and more "creepy little house oracle."&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://www.macrumors.com/guide/ios-27-phone-facetime/"&gt;&lt;strong&gt;iOS 27's Phone and FaceTime changes&lt;/strong&gt;&lt;/a&gt; are incremental rather than flashy, which is fine. Not every update needs to arrive wearing a cape.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/30/tim-cook-final-earnings-call-as-apple-ceo/"&gt;&lt;strong&gt;Tim Cook’s final Apple earnings call as CEO happens today&lt;/strong&gt;&lt;/a&gt;. Supplemental reporting frames it as a genuinely consequential handoff moment, with Apple coming off record valuation and investors still looking for the next clean AI story.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://www.macrumors.com/how-to/ios-27-unlinks-alarm-volume-iphone-ringer/"&gt;&lt;strong&gt;iOS 27 finally separates alarm volume from ringtone volume&lt;/strong&gt;&lt;/a&gt;. Tiny change, huge quality-of-life win. Somewhere, millions of accidental whisper-alarms just lost market share.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/30/when-will-apple-announce-iphone-18-pro-event/"&gt;&lt;strong&gt;iPhone event timing chatter is starting up&lt;/strong&gt;&lt;/a&gt;, which mostly means Apple rumor season has resumed its natural migration pattern.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;AI &amp;amp; Models&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href="https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/"&gt;&lt;strong&gt;Google's SynthID watermark appears technically robust&lt;/strong&gt;&lt;/a&gt;, but Ars makes the more important point: watermarking helps provenance, not human judgment. Good tool, incomplete shield.&lt;/li&gt;
-      &lt;li&gt;The OpenAI device chatter also matters here because it signals where model companies want to go next: from apps you open to persistent companions that sit in your environment and quietly collect context. Powerful idea. Also a privacy speedrun if handled badly.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/30/microsoft-will-launch-new-super-app-for-copilot-soon/"&gt;&lt;strong&gt;Microsoft is reportedly prepping a Copilot super app&lt;/strong&gt;&lt;/a&gt;. The broader signal is the same across the industry: assistant companies want one persistent surface that owns chat, tasks, browsing, and identity context.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/30/jony-ives-first-openai-hardware-device-sounds-rather-like-a-homepad/"&gt;&lt;strong&gt;OpenAI hardware rumors keep sounding like an ambient home companion&lt;/strong&gt;&lt;/a&gt;. If that is right, the next device war may be less phone replacement and more “house oracle with trust issues.”&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/30/ai-chatbots-are-now-better-than-humans-at-romance-scams-and-thats-scary/"&gt;&lt;strong&gt;AI-driven romance scams are getting better&lt;/strong&gt;&lt;/a&gt;, which is exactly the kind of sentence that should make every platform PM feel a little haunted.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;Science &amp;amp; Tech&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/29/prototype-smart-ring-cracks-the-holy-grail-of-non-invasive-blood-sugar-measurement/"&gt;&lt;strong&gt;A prototype smart ring reportedly measured blood sugar non-invasively&lt;/strong&gt;&lt;/a&gt;. If it survives real-world validation, that is enormous. If not, it joins a long tradition of "revolutionary" health tech held together by press releases.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/29/online-scams-cost-americans-almost-150b-last-year-7x-more-than-reported/"&gt;&lt;strong&gt;Online scams may have cost Americans nearly $150B last year&lt;/strong&gt;&lt;/a&gt;. Grim number, but useful context any time a platform wants more financial, identity, or messaging centrality.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/"&gt;&lt;strong&gt;A Mythos attack appears to have broken HAWK&lt;/strong&gt;&lt;/a&gt;, a third-round post-quantum cryptography candidate. Good reminder that “survived years of review” and “actually safe” are not synonyms.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://arstechnica.com/ai/2026/07/who-wins-and-who-loses-after-us-bans-foreign-robots/"&gt;&lt;strong&gt;The U.S. move against foreign-made robots may backfire&lt;/strong&gt;&lt;/a&gt;, at least according to Ars’ framing. Protectionism is often just complexity wearing a flag.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;Home Automation&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;The raw Home Assistant pull failed, so the source lane itself was busted. Supplemental check: &lt;a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"&gt;&lt;strong&gt;Home Assistant 2026.7&lt;/strong&gt;&lt;/a&gt; made natural-language automation creation the default, with area-based building and friendlier authoring. That is a meaningful usability step for non-YAML goblins.&lt;/li&gt;
+      &lt;li&gt;The raw Home Assistant lane failed again with &lt;code&gt;no element found&lt;/code&gt;, so the direct feed was busted. Supplemental check: &lt;a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"&gt;&lt;strong&gt;Home Assistant 2026.7&lt;/strong&gt;&lt;/a&gt; made natural-language automation creation the default, with purpose-specific triggers and friendlier authoring. That is a meaningful usability gain for normal humans and a mild threat to YAML goblin supremacy.&lt;/li&gt;
     &lt;/ul&gt;</description>
         </item>
-<item>
-          <title>CrossWire: Commanders — Daily Brief, July 29</title>
-          <guid isPermaLink="false">crosswire-commanders-daily-2026-07-29</guid>
-          <pubDate>Wed, 29 Jul 2026 14:03:24 GMT</pubDate>
+    <item>
+          <title>CrossWire: Commanders — Daily Brief, July 30</title>
+          <guid isPermaLink="false">crosswire-commanders-daily-2026-07-30</guid>
+          <pubDate>Thu, 30 Jul 2026 14:04:20 GMT</pubDate>
           <link>https://kanan.taila81309.ts.net/crosswire/</link>
           <description>&lt;h2&gt;Washington Commanders briefing&lt;/h2&gt;
-    &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; camp is finally producing actual football signals instead of offseason vapor: Washington's beat writers were focused on red-zone reps, receiver speed, and Jayden Daniels back in the QB-camera experiment lane. Tiny sample size, but at least the footballs are airborne again.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; today’s real signal is camp texture: the kickers were perfect in breezy conditions, Daron Payne drew early praise, and Colson Yankoff apparently stole the play-of-the-day belt with a red-zone catch over the middle.&lt;/p&gt;
     &lt;h3&gt;Training Camp&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;Early camp notes centered on skill-position flashes: &lt;strong&gt;Trey Burks&lt;/strong&gt; drew praise for a corner-of-the-end-zone touchdown, while rookie &lt;strong&gt;Antonio Williams&lt;/strong&gt; reportedly looked fluid in 7-on-7 work.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Mike Sainristil&lt;/strong&gt; broke up an end-zone pass intended for Dyami Brown during the first team red-zone period, which is the sort of defensive rep people remember because camp needs heroes by lunch.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Jayden Daniels&lt;/strong&gt; and the quarterbacks were back in GoPro mode, suggesting the team still likes the first-person coaching angle for mechanics and decision review.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Colson Yankoff&lt;/strong&gt; had what Nicki Jhabvala called the best catch of camp so far: a contested red-zone grab over the middle. One play does not make a roster, but it does buy a lot of attention.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Daron Payne&lt;/strong&gt; got early beat-writer praise for a strong start to practice. No pads yet, so keep the hype in a small, supervised container.&lt;/li&gt;
+      &lt;li&gt;The center/QB rotation notes were mildly weird: Mitch Tischler flagged Matt Gulbin with the first center rep and later noted “Good Jones snapping to Jayden,” which at minimum says the staff is mixing looks.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h3&gt;Special Teams Watch&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Jake Moody and Drew Stevens both went 6-for-6&lt;/strong&gt; in the first kicking period, from 27 through 45 yards, in breezy conditions.&lt;/li&gt;
+      &lt;li&gt;Multiple beat writers noted &lt;strong&gt;Stevens appears to have the stronger leg&lt;/strong&gt;, even with both kickers matching results on the board. That feels like the most actionable kicker-battle note from today.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;Schedule / Outlook&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;The schedule remains loaded with a rude opening stretch: &lt;strong&gt;Sept. 13 at Philadelphia&lt;/strong&gt;, &lt;strong&gt;Sept. 20 at Dallas&lt;/strong&gt;, then the home opener &lt;strong&gt;Sept. 27 vs Seattle&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;All 17 games are present in the feed and there is no current record data yet, which is normal preseason limbo rather than a broken standings table.&lt;/li&gt;
+      &lt;li&gt;The opener is still &lt;strong&gt;Sept. 13 at Philadelphia&lt;/strong&gt;, followed by &lt;strong&gt;Sept. 20 at Dallas&lt;/strong&gt;, then the home opener &lt;strong&gt;Sept. 27 vs Seattle&lt;/strong&gt;. Very normal, totally gentle opening runway. Absolutely no dragons there.&lt;/li&gt;
+      &lt;li&gt;The raw schedule shows all 17 games loaded and no current record data yet, which is normal preseason limbo.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;Around the NFL&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href="https://www.espn.com/nfl/story/_/id/49479717/eagles-olb-jonathan-greenard-lands-pup-pec-strain"&gt;&lt;strong&gt;Philadelphia put Jonathan Greenard on PUP with a pec strain&lt;/strong&gt;&lt;/a&gt;. It is not expected to be long-term, but any Eagles pass-rush wobble is at least mildly interesting given Washington opens there.&lt;/li&gt;
-      &lt;li&gt;&lt;a href="https://www.espn.com/nfl/story/_/id/49479437/tua-tagovailoa-flare-falcons-add-cooper-rush"&gt;&lt;strong&gt;Atlanta is dealing with a Tua Tagovailoa flare-up&lt;/strong&gt;&lt;/a&gt; and added Cooper Rush. Not Commanders-specific, but it adds to the annual camp reminder that quarterback depth charts are one weird Tuesday from chaos.&lt;/li&gt;
+      &lt;li&gt;&lt;a href="https://www.espn.com/nfl/story/_/id/49488047/packers-career-rushing-leader-green-reveals-parkinson-battle"&gt;&lt;strong&gt;Ahman Green revealed a Parkinson’s diagnosis&lt;/strong&gt;&lt;/a&gt;. That is the one league-wide item today that actually matters more than camp filler.&lt;/li&gt;
+      &lt;li&gt;The rest of the national feed was mostly betting-package and sophomore-QB content, which is another way of saying camp is back and the content machine is stretching before noon.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;h3&gt;Beat Writers on X (Pilot)&lt;/h3&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;JP Finlay:&lt;/strong&gt; Trey Burks made a notable touchdown catch in the corner of the end zone. &lt;a href="https://x.com/JPFinlayNBCS/status/2082462968810274840"&gt;Link&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;JP Finlay:&lt;/strong&gt; Antonio Williams showed a slick move on a linebacker in 7-on-7, with the rookie looking fluid. &lt;a href="https://x.com/JPFinlayNBCS/status/2082458006017446136"&gt;Link&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Nicki Jhabvala:&lt;/strong&gt; Mike Sainristil broke up an end-zone throw to Dyami Brown during red-zone work. &lt;a href="https://x.com/NickiJhabvala/status/2082454447200903329"&gt;Link&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Nicki Jhabvala:&lt;/strong&gt; Jayden Daniels stayed after for one more rep to Terry McLaurin, because camp apparently still respects drama. &lt;a href="https://x.com/NickiJhabvala/status/2082454108833796379"&gt;Link&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Mitch Tischler:&lt;/strong&gt; the receiver room's speed stood out immediately, and the QB GoPros are back. &lt;a href="https://x.com/Mitch_Tischler/status/2082444675462394185"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Nicki Jhabvala:&lt;/strong&gt; Colson Yankoff made the standout catch of camp on a 50-50 red-zone ball over the middle. &lt;a href="https://x.com/NickiJhabvala/status/2082828828414451737"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;John Keim + Nicki Jhabvala:&lt;/strong&gt; both kickers, Jake Moody and Drew Stevens, finished the first field-goal period a perfect 6-for-6. &lt;a href="https://x.com/john_keim/status/2082823340239036744"&gt;Keim&lt;/a&gt; | &lt;a href="https://x.com/NickiJhabvala/status/2082823586243313852"&gt;Jhabvala&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Mitch Tischler:&lt;/strong&gt; Stevens matched the makes and looked to have the stronger leg, with a 45-yard long in the session. &lt;a href="https://x.com/Mitch_Tischler/status/2082823266276631012"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;JP Finlay:&lt;/strong&gt; Daron Payne opened practice strong even before pads come on. &lt;a href="https://x.com/JPFinlayNBCS/status/2082818025800028610"&gt;Link&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;</description>
         </item>
-<item>
-          <title>CrossWire: Sentinel Watchdog — July 30</title>
-          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-29-040020</guid>
-          <pubDate>Wed, 29 Jul 2026 08:17:29 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>
-        &lt;h2&gt;&amp;#x1F7E1; Sentinel Watchdog — Early Wednesday Morning&lt;/h2&gt;
-    
-        &lt;p&gt;&lt;strong&gt;42 green, 1 yellow, 1 red.&lt;/strong&gt; Green count held at 42 from the evening sweep. One new red item surfaced: the Hermes Home Git Backup failed on its last run — Hermes home is no longer being archived. One yellow item (CrossWire daily) is informational.&lt;/p&gt;
-    
-        &lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job (New)&lt;/h3&gt;
+    <item>
+              <title>CrossWire: Sentinel Watchdog — July 30</title>
+              <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-30-040051</guid>
+              <pubDate>Thu, 30 Jul 2026 08:17:26 GMT</pubDate>
+              <link>https://kanan.taila81309.ts.net/crosswire/</link>
+              <description>&lt;h2&gt;&amp;#x1F534; Sentinel Watchdog — Early Thursday Morning&lt;/h2&gt;
+        
+        &lt;p&gt;&lt;strong&gt;42 green, 2 yellow, 2 red.&lt;/strong&gt; Green count held at 42. Two new red items this sweep: the Hermes Home Git Backup is &lt;em&gt;still&lt;/em&gt; failing (carried over from yesterday) and a new failure surfaced — Hermes LockerBocks Backup (Blackbox) also failed its last run. Yellow items (Curb Check and CrossWire daily) are informational only.&lt;/p&gt;
+        
+        &lt;h3&gt;&amp;#x1F534; Red — 2 Failing Jobs&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;Hermes Home Git Backup&lt;/strong&gt; — Last run failed. This is a new red item (replacing Curb-Check-Mon which cleared from the previous sweep). Hermes home configuration is no longer being backed up to git. Needs investigation — check git auth, disk space, or repo configuration.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Hermes Home Git Backup&lt;/strong&gt; (carried over) — Last run failed. Hermes home is no longer being archived to git. Needs investigation — check git auth, disk space, or repo configuration.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Hermes LockerBocks Backup (Blackbox)&lt;/strong&gt; (new) — Last run failed. Blackbox backup lane is also down alongside the Home Git Backup. Investigate root cause — possibly a shared dependency or systemic issue.&lt;/li&gt;
         &lt;/ul&gt;
-    
-        &lt;h3&gt;&amp;#x1F7E1; Yellow — 1 Item&lt;/h3&gt;
+        
+        &lt;h3&gt;&amp;#x1F7E1; Yellow — 2 Items&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;CrossWire (daily)&lt;/strong&gt; — Multiple live cron matches detected. Expected behavior for crosswire's multi-post daily schedule, but flagged as a pattern worth acknowledging.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Curb Check&lt;/strong&gt; — Multiple live cron matches detected. Informational.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;CrossWire (daily)&lt;/strong&gt; — Multiple live cron matches detected. Expected behavior for the multi-post daily schedule.&lt;/li&gt;
         &lt;/ul&gt;
-    
+        
         &lt;h3&gt;&amp;#x1F7E2; Green — 42 Items Healthy&lt;/h3&gt;
-        &lt;p&gt;All core services and managed jobs are healthy. Green count held at 42 — the yellow items from previous sweeps (Scrapbook Weekly Lint QA temp, purge-flight-recorder.js Node availability) have been resolved or dropped from scope.&lt;/p&gt;
-    
+        &lt;p&gt;All core services and managed jobs healthy. Green count held at 42 from the previous sweep.&lt;/p&gt;
+        
         &lt;h3&gt;Recommended Actions&lt;/h3&gt;
-        &lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Investigate and resolve the Hermes Home Git Backup failure. Check git authentication, disk availability, and repo config. Until fixed, Hermes home is not being archived. CrossWire yellow is informational only — no action needed.&lt;/p&gt;
-              </description>
+        &lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Both backup lanes are down. Investigate the Hermes Home Git Backup and LockerBocks Backup failures — this could be a shared git credential issue, disk problem, or a broader config drift. Two simultaneous backup failures is worth treating as a systemic symptom rather than coincidence. Yellow items are informational only — no action needed.&lt;/p&gt;</description>
             </item>
-<item>
-          <title>CrossWire: Hermes — Evening Brief, July 28</title>
-          <guid isPermaLink="false">crosswire-hermes-evening-2026-07-28</guid>
-          <pubDate>Tue, 28 Jul 2026 20:33:15 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>&lt;h2&gt;Hermes Agent ecosystem&lt;/h2&gt;
-        &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Quicksilver is still the current stable release, but tonight's more useful signal is what the ecosystem is building on top of it: better reporting surfaces, sturdier messaging lanes, and a growing pile of community tooling that looks increasingly like a real platform instead of a science fair.&lt;/p&gt;
+    <item>
+              <title>CrossWire: Hermes — Daily Brief, July 29</title>
+              <guid isPermaLink="false">crosswire-hermes-daily-2026-07-29</guid>
+              <pubDate>Wed, 29 Jul 2026 14:03:24 GMT</pubDate>
+              <link>https://kanan.taila81309.ts.net/crosswire/</link>
+              <description>&lt;h2&gt;Hermes Agent ecosystem&lt;/h2&gt;
+        &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Quicksilver is still the stable anchor, but today's sharper signal is friction at the edges: fresh desktop session-history bugs, a nasty WSL checkpoint lock failure, and more community tooling piling onto the platform fast enough to make "ecosystem" feel earned.&lt;/p&gt;
         &lt;h3&gt;Release Radar&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20"&gt;&lt;strong&gt;Hermes Agent v0.19.0 (2026.7.20) — The Quicksilver Release&lt;/strong&gt;&lt;/a&gt; remains the release to anchor on. The headline package is still unusually practical: much faster first-turn response, live reasoning streams by default, faster desktop rendering, smarter approvals, and direct Bitwarden/1Password hooks.&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Why it matters to MOCR:&lt;/strong&gt; lower latency plus smarter approvals directly helps cron and operator workflows. Less waiting, less friction, fewer chances for the machine spirits to develop opinions.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20"&gt;&lt;strong&gt;Hermes Agent v0.19.0 — The Quicksilver Release&lt;/strong&gt;&lt;/a&gt; remains the current tagged release. The big practical gains still matter: roughly 80% faster first-turn response, live reasoning streams by default, faster desktop rendering, smarter approvals, and direct Bitwarden/1Password hooks.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Why it matters to MOCR:&lt;/strong&gt; faster turns and better approvals help every cron and operator loop. This is useful speed, not benchmark cosplay.&lt;/li&gt;
         &lt;/ul&gt;
-        &lt;h3&gt;Trending PRs / Issues&lt;/h3&gt;
+        &lt;h3&gt;Trending Issues &amp;amp; PRs&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73614"&gt;&lt;strong&gt;#73614 — feat(photon): native polls, effects, clarify-as-poll, rich links&lt;/strong&gt;&lt;/a&gt;: Photon iMessage is getting richer with native polls, effects, clarify-as-poll, and rich links. That pushes Hermes further into "real messaging client" territory instead of plain-text relay mode.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73561"&gt;&lt;strong&gt;#73561 — fix(desktop): add Photon iMessage section to sidebar&lt;/strong&gt;&lt;/a&gt;: small UI move, but it makes the Photon lane discoverable instead of hidden in the vents.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/51414"&gt;&lt;strong&gt;#51414 — feat(discord): add history_full_thread option to bypass self-message partition&lt;/strong&gt;&lt;/a&gt;: Discord can now optionally ingest an entire thread rather than stopping at the bot's latest reply. For context-heavy workflows, that is the difference between memory and amnesia.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/issues/3326"&gt;&lt;strong&gt;#3326 — feat(cli): add --output-format json flag for structured query output&lt;/strong&gt;&lt;/a&gt;: if this lands, automation and CI orchestration get a lot less regex-and-prayer.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73522"&gt;&lt;strong&gt;#73522 — fix(tests,gateway): silence test-suite TTS/Chrome side effects&lt;/strong&gt;&lt;/a&gt;: not glamorous, but this is exactly how toolchains stop stepping on rakes.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/issues/74109"&gt;&lt;strong&gt;#74109 — Desktop sidebar shows pinned sessions only&lt;/strong&gt;&lt;/a&gt;: reported today, with the Web UI and &lt;code&gt;state.db&lt;/code&gt; still showing 34 valid sessions. If real, this is a client-side history/search regression and a direct nuisance for anyone relying on Desktop as their primary cockpit.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/issues/74108"&gt;&lt;strong&gt;#74108 — checkpoint_manager hangs on &lt;code&gt;/mnt/c&lt;/code&gt; then leaks &lt;code&gt;index.lock&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;: this one is more than annoying. A 60-second hang plus a stale lock that poisons future checkpoints is the kind of bug that turns resilience features into trapdoors.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/issues/47735"&gt;&lt;strong&gt;#47735 — fresh installs can default to a stale Claude model without verified Anthropic auth&lt;/strong&gt;&lt;/a&gt;: still open, still confusing, and exactly the sort of first-run paper cut that makes new installs feel haunted.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/67349"&gt;&lt;strong&gt;#67349 — keep LM Studio (llama.cpp) on-model instead of falling back on grammar errors&lt;/strong&gt;&lt;/a&gt; and &lt;a href="https://github.com/NousResearch/hermes-agent/pull/34595"&gt;&lt;strong&gt;#34595 — deepcopy agent.tools before grammar-retry sanitization&lt;/strong&gt;&lt;/a&gt; both point at the same theme: local-model reliability work is getting real attention.&lt;/li&gt;
         &lt;/ul&gt;
         &lt;h3&gt;Community Builds&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://github.com/PabloTheThinker/hermespace"&gt;&lt;strong&gt;PabloTheThinker/hermespace&lt;/strong&gt;&lt;/a&gt; (7★): experimental Hermes workbench with FOA and memory-fabric ideas.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/CliffWade/hermes-image-studio"&gt;&lt;strong&gt;CliffWade/hermes-image-studio&lt;/strong&gt;&lt;/a&gt; (5★): image-generation plugin spanning FLUX and GPT Image presets, with editing and batch lanes.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/Perseon-Lab/agent-console"&gt;&lt;strong&gt;Perseon-Lab/agent-console&lt;/strong&gt;&lt;/a&gt; (3★): lightweight browser mission control for a single Hermes agent.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"&gt;&lt;strong&gt;mauricemohr88-debug/hermes-plugin-guard&lt;/strong&gt;&lt;/a&gt; (3★): static plugin security checks. The adult supervision repo.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/sloemo01/hermes-skills-bundle"&gt;&lt;strong&gt;sloemo01/hermes-skills-bundle&lt;/strong&gt;&lt;/a&gt; (7★): a browser-heavy skill pack aimed at breaking agents out of the text box. Ambitious, useful, and potentially one bad selector away from duct tape and optimism.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/CliffWade/hermes-image-studio"&gt;&lt;strong&gt;CliffWade/hermes-image-studio&lt;/strong&gt;&lt;/a&gt; (5★): image-generation plugin with multiple FLUX and GPT Image presets, editing, and batch lanes.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"&gt;&lt;strong&gt;mauricemohr88-debug/hermes-plugin-guard&lt;/strong&gt;&lt;/a&gt; (3★): static security checks for Hermes plugins. Quietly one of the more adult ideas in the room.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/Hypabolic/Trajectory"&gt;&lt;strong&gt;Hypabolic/Trajectory&lt;/strong&gt;&lt;/a&gt; (4★): session-log normalization aimed at standardized formats like OTEL GenAI spans. Very MOCR-adjacent.&lt;/li&gt;
         &lt;/ul&gt;
         &lt;h3&gt;Gaining Popularity&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://github.com/uzairansaruzi/hermex"&gt;&lt;strong&gt;uzairansaruzi/hermex&lt;/strong&gt;&lt;/a&gt; (944★): native iPhone client momentum is still absurdly strong.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/SeanJ1ang/design-judge-skills"&gt;&lt;strong&gt;SeanJ1ang/design-judge-skills&lt;/strong&gt;&lt;/a&gt; (516★): evidence-driven skill packs continue to look like a real ecosystem layer, not a side quest.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/Neeeophytee/finding-unknowns-skills"&gt;&lt;strong&gt;Neeeophytee/finding-unknowns-skills&lt;/strong&gt;&lt;/a&gt; (261★): "find your unknowns" skills remains one of the cleaner examples of reusable agent workflow packaging.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/uzairansaruzi/hermex"&gt;&lt;strong&gt;hermex&lt;/strong&gt;&lt;/a&gt; (946★): the native iPhone client keeps pulling absurd momentum.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/SeanJ1ang/design-judge-skills"&gt;&lt;strong&gt;design-judge-skills&lt;/strong&gt;&lt;/a&gt; (546★): strong evidence that installable workflow packs are becoming a real layer of the Hermes universe.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/Neeeophytee/finding-unknowns-skills"&gt;&lt;strong&gt;finding-unknowns-skills&lt;/strong&gt;&lt;/a&gt; (268★): still one of the cleaner examples of reusable agent workflows with an actual point of view.&lt;/li&gt;
         &lt;/ul&gt;
-        &lt;p&gt;&lt;strong&gt;Worth watching:&lt;/strong&gt; the most MOCR-relevant theme tonight is structured automation and messaging maturity. When Hermes gets better at machine-readable output and richer chat surfaces, our cron/reporting stack gets less brittle and more elegant.&lt;/p&gt;</description>
+        &lt;p&gt;&lt;strong&gt;Worth watching:&lt;/strong&gt; the most MOCR-relevant thread today is reliability at the session and checkpoint layer. Fast is great; durable is how you keep from frakking a workday.&lt;/p&gt;</description>
             </item>
-<item>
-          <title>CrossWire: Tech — Evening Brief, July 28</title>
-          <guid isPermaLink="false">crosswire-tech-evening-2026-07-28</guid>
-          <pubDate>Tue, 28 Jul 2026 20:33:15 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>&lt;h2&gt;Tech briefing&lt;/h2&gt;
-        &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Apple's new Klarna-backed leasing push is the big consumer-tech headline, but the more practical read is that Apple is reshaping upgrade economics while the rest of today's tech feed is a mix of AI privacy reminders, health-tech reality, and one busted Home Assistant source.&lt;/p&gt;
+    <item>
+              <title>CrossWire: Tech — Daily Brief, July 29</title>
+              <guid isPermaLink="false">crosswire-tech-daily-2026-07-29</guid>
+              <pubDate>Wed, 29 Jul 2026 14:03:24 GMT</pubDate>
+              <link>https://kanan.taila81309.ts.net/crosswire/</link>
+              <description>&lt;h2&gt;Tech briefing&lt;/h2&gt;
+        &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; today's useful pattern is identity, interfaces, and trust: Apple keeps expanding Wallet-as-ID, OpenAI's hardware rumors keep drifting toward an ambient companion device, and the most practical home-automation signal is that Home Assistant's latest release is leaning hard into natural-language automation building.&lt;/p&gt;
         &lt;h3&gt;Apple&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://www.apple.com/newsroom/2026/07/apple-upgrade-launches-in-the-united-states/"&gt;&lt;strong&gt;Apple launched Apple Upgrade in the U.S.&lt;/strong&gt;&lt;/a&gt;, replacing the old iPhone Upgrade Program with a broader lease-style offer that spans iPhone, iPad, Mac, and Apple Watch through Klarna. This is more than a financing tweak; it nudges Apple hardware toward subscription gravity.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/28/apple-says-ios-27-restricted-mode-isnt-for-new-upgrade-program-leases/"&gt;&lt;strong&gt;Apple says iOS 27 Restricted Mode is not tied to the new lease program&lt;/strong&gt;&lt;/a&gt;. In other words: the internet found a spooky theory, Apple swatted it, and everyone had a normal Monday on the web.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/28/heres-everything-new-for-apple-wallet-in-ios-27/"&gt;&lt;strong&gt;Wallet in iOS 27 keeps expanding&lt;/strong&gt;&lt;/a&gt; and &lt;a href="https://9to5mac.com/2026/07/28/ios-27-smarter-find-my-location-sharing-apple-watch/"&gt;&lt;strong&gt;Find My is getting smarter for Apple Watch users&lt;/strong&gt;&lt;/a&gt;. Apple is still turning identity, presence, and payments into one increasingly sticky bundle.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/28/granola-launches-on-apple-watch/"&gt;&lt;strong&gt;Granola launched on Apple Watch&lt;/strong&gt;&lt;/a&gt;, which is a neat signal that meeting-transcript and note-capture brands are racing to become ambient rather than app-shaped.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/29/iphone-drivers-license-another-state-soon/"&gt;&lt;strong&gt;Apple Wallet IDs may be headed to Oklahoma&lt;/strong&gt;&lt;/a&gt;, which would make it the 15th U.S. state in line for iPhone driver's license support. Small rollout, big direction: the wallet keeps trying to eat the physical wallet.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/28/openai-first-devices/"&gt;&lt;strong&gt;OpenAI's hardware roadmap is sharpening&lt;/strong&gt;&lt;/a&gt;, while broader reporting points to a speaker-like first device with companion ambitions. If that holds, the first real AI-device fight may be less "new phone" and more "creepy little house oracle."&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://www.macrumors.com/guide/ios-27-phone-facetime/"&gt;&lt;strong&gt;iOS 27's Phone and FaceTime changes&lt;/strong&gt;&lt;/a&gt; are incremental rather than flashy, which is fine. Not every update needs to arrive wearing a cape.&lt;/li&gt;
         &lt;/ul&gt;
         &lt;h3&gt;AI &amp;amp; Models&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://arstechnica.com/security/2026/07/microsoft-unveils-ai-security-tools-it-says-outperform-competing-platforms/"&gt;&lt;strong&gt;Microsoft unveiled new AI security tooling&lt;/strong&gt;&lt;/a&gt; and is pitching better performance at lower cost than rivals. Worth watching as "AI for security teams" keeps becoming its own crowded bazaar.&lt;/li&gt;
-          &lt;li&gt;Granola's Watch move also doubles as a small AI-product trend marker: assistants want to live everywhere you already are, including the tiny rectangle on your wrist that judges your cardio.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/"&gt;&lt;strong&gt;Google's SynthID watermark appears technically robust&lt;/strong&gt;&lt;/a&gt;, but Ars makes the more important point: watermarking helps provenance, not human judgment. Good tool, incomplete shield.&lt;/li&gt;
+          &lt;li&gt;The OpenAI device chatter also matters here because it signals where model companies want to go next: from apps you open to persistent companions that sit in your environment and quietly collect context. Powerful idea. Also a privacy speedrun if handled badly.&lt;/li&gt;
         &lt;/ul&gt;
         &lt;h3&gt;Science &amp;amp; Tech&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://arstechnica.com/gadgets/2026/07/new-airliner-sets-record-flying-24-hrs-nonstop-from-australia-to-france/"&gt;&lt;strong&gt;A new airliner flew Australia to France nonstop in roughly 24 hours&lt;/strong&gt;&lt;/a&gt;, a flashy proof point for ultra-long-haul route economics ahead of Project Sunrise service.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://arstechnica.com/tech-policy/2026/07/judge-blocks-first-state-law-that-would-have-banned-prediction-markets/"&gt;&lt;strong&gt;A judge blocked Minnesota's attempt to ban prediction markets outright&lt;/strong&gt;&lt;/a&gt;, which matters if you track where tech, finance, and regulation keep colliding.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://arstechnica.com/health/2026/07/as-us-measles-cases-rise-biotech-firms-start-developing-new-treatments/"&gt;&lt;strong&gt;Biotech firms are pursuing new measles treatments&lt;/strong&gt;&lt;/a&gt; as U.S. cases rise. Grimly relevant, and not in the fun cyberpunk way.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/29/prototype-smart-ring-cracks-the-holy-grail-of-non-invasive-blood-sugar-measurement/"&gt;&lt;strong&gt;A prototype smart ring reportedly measured blood sugar non-invasively&lt;/strong&gt;&lt;/a&gt;. If it survives real-world validation, that is enormous. If not, it joins a long tradition of "revolutionary" health tech held together by press releases.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/29/online-scams-cost-americans-almost-150b-last-year-7x-more-than-reported/"&gt;&lt;strong&gt;Online scams may have cost Americans nearly $150B last year&lt;/strong&gt;&lt;/a&gt;. Grim number, but useful context any time a platform wants more financial, identity, or messaging centrality.&lt;/li&gt;
         &lt;/ul&gt;
         &lt;h3&gt;Home Automation&lt;/h3&gt;
-        &lt;p&gt;The Home Assistant source failed in the raw pull with &lt;code&gt;(error: no element found: line 1, column 0) [tech-data: exit 56]&lt;/code&gt;, so there is no trustworthy HA story in tonight's post. Better a clean omission than publishing XML fan fiction.&lt;/p&gt;</description>
-            </item>
-<item>
-          <title>CrossWire: Commanders — Evening Brief, July 28</title>
-          <guid isPermaLink="false">crosswire-commanders-evening-2026-07-28</guid>
-          <pubDate>Tue, 28 Jul 2026 20:33:15 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>&lt;h2&gt;Washington Commanders briefing&lt;/h2&gt;
-        &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; the real story tonight is simple: camp opens tomorrow in Ashburn, Washington's corner room has its veteran add in Rasul Douglas, and the next meaningful news cycle starts when reps begin instead of when transaction wires chirp.&lt;/p&gt;
-        &lt;h3&gt;Team News&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://www.commanders.com/news/commanders-sign-cb-rasul-douglas"&gt;&lt;strong&gt;Rasul Douglas is in&lt;/strong&gt;&lt;/a&gt;. Washington added an experienced outside corner with 21 career interceptions and immediate starting credibility, which is about as subtle as adding a fire extinguisher before camp.&lt;/li&gt;
-          &lt;li&gt;Nick Bellore's move to the reserve/retired list is the corresponding roster cost. That matters mostly on special teams leadership, but Douglas is the higher-leverage football addition.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;Training Camp&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://www.espn.com/nfl/story/_/id/49083620/2026-washington-commanders-nfl-training-camp-preview"&gt;&lt;strong&gt;Camp opens July 29&lt;/strong&gt;&lt;/a&gt; at the team facility, with joint practices scheduled for Aug. 12 against Miami and Aug. 26 at Baltimore.&lt;/li&gt;
-          &lt;li&gt;ESPN's preview frames the key questions around player development, the secondary fit in a more zone-heavy defense, and how quickly Washington's roster upgrades turn into actual stability.&lt;/li&gt;
-          &lt;li&gt;The optional X-list pilot was mostly vibes and "first player to the field" chatter tonight, so it did not earn headline real estate. Democracy survives.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;Schedule / Outlook&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;The opener is &lt;strong&gt;2026-09-13: away vs Philadelphia Eagles&lt;/strong&gt;, followed by &lt;strong&gt;2026-09-20: away vs Dallas Cowboys&lt;/strong&gt;. That is not a gentle runway.&lt;/li&gt;
-          &lt;li&gt;The home opener comes next: &lt;strong&gt;2026-09-27: home vs Seattle Seahawks&lt;/strong&gt;. Washington will know quickly whether the early-season difficulty is a proving ground or a faceplant hazard.&lt;/li&gt;
-          &lt;li&gt;The raw schedule shows all 17 games loaded and no current record data, which is normal offseason limbo rather than a broken standings table.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;Around the NFL&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Today's generic league headlines were mostly fantasy rankings and other offseason content-farm staples. Useful if you draft soon; not especially useful if you wanted actual Commanders news.&lt;/li&gt;
-          &lt;li&gt;The broader NFC East context still matters, though: Washington opens by visiting Philadelphia and Dallas, so any camp story that affects pass defense or offensive steadiness deserves extra attention.&lt;/li&gt;
+          &lt;li&gt;The raw Home Assistant pull failed, so the source lane itself was busted. Supplemental check: &lt;a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"&gt;&lt;strong&gt;Home Assistant 2026.7&lt;/strong&gt;&lt;/a&gt; made natural-language automation creation the default, with area-based building and friendlier authoring. That is a meaningful usability step for non-YAML goblins.&lt;/li&gt;
         &lt;/ul&gt;</description>
             </item>
-<item>
-          <title>CrossWire: Hermes — Morning Brief, July 28</title>
-          <guid isPermaLink="false">crosswire-hermes-morning-2026-07-28</guid>
-          <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>&lt;h2&gt;Hermes Agent ecosystem&lt;/h2&gt;
-        &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Quicksilver is still the big board item, but today's useful signal is the follow-on work: profile routing, cron response customization, and shutdown durability are all moving in ways that matter to MOCR's actual operating surface.&lt;/p&gt;
-        &lt;h3&gt;Release Radar&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20"&gt;&lt;strong&gt;v0.19.0 — The Quicksilver Release&lt;/strong&gt;&lt;/a&gt; remains current. The headline still matters: roughly 80 percent faster first-turn latency, live reasoning streams by default, faster desktop rendering, smarter approvals, and direct Bitwarden/1Password integration.&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Why MOCR should care:&lt;/strong&gt; this is not cosmetic speed theater. Lower latency plus smarter approvals makes cron and operator loops feel less like waiting on a microwave from 2004.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;Trending PRs / Issues&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73326"&gt;&lt;strong&gt;#73326 — preserve launch profile in dashboard deep links&lt;/strong&gt;&lt;/a&gt;: fixes profile scope drift when opening dashboard routes directly. Useful for multi-profile setups and generally less "why am I in the wrong universe?" energy.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73332"&gt;&lt;strong&gt;#73332 — custom cron response wrappers&lt;/strong&gt;&lt;/a&gt;: directly follows feature request &lt;a href="https://github.com/NousResearch/hermes-agent/issues/73327"&gt;#73327&lt;/a&gt;. If merged, this would make cron-delivered reports less hardcoded and more MOCR-shaped.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73328"&gt;&lt;strong&gt;#73328 — serialize shared kanban board writes&lt;/strong&gt;&lt;/a&gt;: a small-sounding cron fix with very real "session state got weird at 2 a.m." implications.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73331"&gt;&lt;strong&gt;#73331 — flush pending gateway messages before shutdown clear&lt;/strong&gt;&lt;/a&gt; and &lt;a href="https://github.com/NousResearch/hermes-agent/pull/73330"&gt;&lt;strong&gt;#73330 — shut down httpx socket pools on interrupt abort&lt;/strong&gt;&lt;/a&gt;: both are anti-gremlin reliability work for interrupted or exiting runs.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;Community Builds&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://github.com/PabloTheThinker/hermespace"&gt;&lt;strong&gt;hermespace&lt;/strong&gt;&lt;/a&gt; (7★): "pocket workbench" framing for Hermes with FOA and memory fabric ideas. Interesting if you enjoy agent workbenches with a little experimental architecture in the walls.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/CliffWade/hermes-image-studio"&gt;&lt;strong&gt;hermes-image-studio&lt;/strong&gt;&lt;/a&gt; (5★): image-generation plugin spanning FLUX and GPT Image presets, with editing and batch generation.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"&gt;&lt;strong&gt;hermes-plugin-guard&lt;/strong&gt;&lt;/a&gt; (3★): static security checks for Hermes plugins. The boring security tools are often the grown-ups in the room.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;Gaining Popularity&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://github.com/uzairansaruzi/hermex"&gt;&lt;strong&gt;hermex&lt;/strong&gt;&lt;/a&gt; (939★): native iPhone client momentum is still absurdly strong.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/SeanJ1ang/design-judge-skills"&gt;&lt;strong&gt;design-judge-skills&lt;/strong&gt;&lt;/a&gt; (501★): strong evidence that installable skill packs are becoming a real ecosystem layer, not just side quests.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/Neeeophytee/finding-unknowns-skills"&gt;&lt;strong&gt;finding-unknowns-skills&lt;/strong&gt;&lt;/a&gt; (253★): the "find blind spots before they get expensive" angle is very MOCR-compatible.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;Worth Watching&lt;/h3&gt;
-        &lt;p&gt;The most relevant thread for MOCR is the cron/reporting lane: custom response wrappers plus state-safety fixes would clean up the exact surface area we use every day. Elegant when it works; duct tape and optimism when it does not.&lt;/p&gt;</description>
-            </item>
-<item>
-          <title>CrossWire: Tech — Morning Brief, July 28</title>
-          <guid isPermaLink="false">crosswire-tech-morning-2026-07-28</guid>
-          <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>&lt;h2&gt;Tech briefing&lt;/h2&gt;
-        &lt;h3&gt;Apple&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://www.apple.com/newsroom/2026/07/apple-upgrade-launches-in-the-united-states/"&gt;&lt;strong&gt;Apple launched "Apple Upgrade" in the U.S.&lt;/strong&gt;&lt;/a&gt; — a Klarna-backed leasing program for iPhone, Apple Watch, Mac, and iPad. Apple says plans start at $17.99/month for iPhone and the move replaces both the iPhone Upgrade Program and iPhone Payments in the U.S.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://arstechnica.com/gadgets/2026/07/ios-and-macos-26-6-arrive-today-paving-the-way-for-ios-and-macos-27/"&gt;&lt;strong&gt;iOS and macOS 26.6&lt;/strong&gt;&lt;/a&gt; landed yesterday, likely the last meaningful stop before the fall OS cycle. If you like stable boring updates, this is your moment.&lt;/li&gt;
-          &lt;li&gt;MacBook Ultra rumor gravity keeps intensifying: &lt;a href="https://www.macrumors.com/2026/07/28/macbook-ultra-oled-touch-panel-samsung/"&gt;Samsung-only OLED touch panels&lt;/a&gt;, a larger redesign narrative, and predictable concern that the price may attempt low orbit.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;AI &amp;amp; Models&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/28/claude-chats-exposed-in-google-searches-another-endorsement-of-apples-privacy-approach/"&gt;&lt;strong&gt;Claude chats reportedly surfaced in Google search results&lt;/strong&gt;&lt;/a&gt;. The practical lesson is the same as ever: do not treat consumer AI chat surfaces as private notebooks unless the product has earned that trust in writing and in architecture.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://arstechnica.com/security/2026/07/microsoft-unveils-ai-security-tools-it-says-outperform-competing-platforms/"&gt;&lt;strong&gt;Microsoft unveiled new AI security tooling&lt;/strong&gt;&lt;/a&gt; and is pitching it as faster, cheaper, and stronger than competing platforms. Worth monitoring as the "AI for security teams" arms race keeps turning into its own cinematic universe.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;Science &amp;amp; Tech&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://arstechnica.com/tech-policy/2026/07/police-missed-one-underscore-and-sent-the-wrong-man-to-prison/"&gt;&lt;strong&gt;A missing underscore sent the wrong man to prison for 18 months&lt;/strong&gt;&lt;/a&gt;. Grim reminder that tiny data-quality failures can become catastrophic when bureaucracy treats outputs as truth.&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://arstechnica.com/tech-policy/2026/07/starlink-gets-exemption-from-fcc-ban-on-routers-made-outside-the-us/"&gt;&lt;strong&gt;Starlink received an FCC exemption&lt;/strong&gt;&lt;/a&gt; from a ban on foreign-made routers. Mostly policy plumbing, but material for anyone tracking U.S. infrastructure and supply-chain exceptions.&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;h3&gt;Home Automation&lt;/h3&gt;
-        &lt;p&gt;The Home Assistant source in today's raw pull failed with &lt;code&gt;no element found&lt;/code&gt;, so there is no trustworthy HA item to publish from this run. Better silence than fan fiction.&lt;/p&gt;</description>
-            </item>
-<item>
-          <title>CrossWire: Commanders — Morning Brief, July 28</title>
-          <guid isPermaLink="false">crosswire-commanders-morning-2026-07-28</guid>
-          <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>&lt;h2&gt;Washington Commanders briefing&lt;/h2&gt;
-        &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; training camp is here, the cornerback room officially got Rasul Douglas, and Nick Bellore's retirement quietly creates one more roster ripple before the pads start popping.&lt;/p&gt;
-        &lt;h3&gt;Team News&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Washington &lt;strong&gt;officially signed CB Rasul Douglas&lt;/strong&gt; and used the corresponding move to place &lt;strong&gt;Nick Bellore on the reserve/retired list&lt;/strong&gt;. Bellore was a core special teamer and respected veteran presence; Douglas is the more immediate win for a secondary that needed proven help.&lt;/li&gt;
-          &lt;li&gt;Bellore's exit also opens snaps and roster oxygen for younger depth players on special teams and at linebacker.&lt;/li&gt;
-        &lt;/ul&gt;
+    <item>
+              <title>CrossWire: Commanders — Daily Brief, July 29</title>
+              <guid isPermaLink="false">crosswire-commanders-daily-2026-07-29</guid>
+              <pubDate>Wed, 29 Jul 2026 14:03:24 GMT</pubDate>
+              <link>https://kanan.taila81309.ts.net/crosswire/</link>
+              <description>&lt;h2&gt;Washington Commanders briefing&lt;/h2&gt;
+        &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; camp is finally producing actual football signals instead of offseason vapor: Washington's beat writers were focused on red-zone reps, receiver speed, and Jayden Daniels back in the QB-camera experiment lane. Tiny sample size, but at least the footballs are airborne again.&lt;/p&gt;
         &lt;h3&gt;Training Camp&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://www.espn.com/nfl/story/_/id/49083620/2026-washington-commanders-nfl-training-camp-preview"&gt;&lt;strong&gt;Camp begins July 29 in Ashburn&lt;/strong&gt;&lt;/a&gt;. ESPN's preview notes joint practices with Miami on Aug. 12 and Baltimore on Aug. 26.&lt;/li&gt;
-          &lt;li&gt;The raw beat-writer pulse is mostly "camp is here, finally," plus a lot of attention on remaining roster questions and the early Douglas/Bellore housekeeping.&lt;/li&gt;
+          &lt;li&gt;Early camp notes centered on skill-position flashes: &lt;strong&gt;Trey Burks&lt;/strong&gt; drew praise for a corner-of-the-end-zone touchdown, while rookie &lt;strong&gt;Antonio Williams&lt;/strong&gt; reportedly looked fluid in 7-on-7 work.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Mike Sainristil&lt;/strong&gt; broke up an end-zone pass intended for Dyami Brown during the first team red-zone period, which is the sort of defensive rep people remember because camp needs heroes by lunch.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Jayden Daniels&lt;/strong&gt; and the quarterbacks were back in GoPro mode, suggesting the team still likes the first-person coaching angle for mechanics and decision review.&lt;/li&gt;
         &lt;/ul&gt;
         &lt;h3&gt;Schedule / Outlook&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;The season opens with a rude little two-step: &lt;strong&gt;at Eagles&lt;/strong&gt; on Sept. 13, then &lt;strong&gt;at Cowboys&lt;/strong&gt; on Sept. 20.&lt;/li&gt;
-          &lt;li&gt;Home opener is Sept. 27 against Seattle, followed by Indianapolis and the Giants. If Washington wants a fast start, the first two weeks are not offering tutorial mode.&lt;/li&gt;
+          &lt;li&gt;The schedule remains loaded with a rude opening stretch: &lt;strong&gt;Sept. 13 at Philadelphia&lt;/strong&gt;, &lt;strong&gt;Sept. 20 at Dallas&lt;/strong&gt;, then the home opener &lt;strong&gt;Sept. 27 vs Seattle&lt;/strong&gt;.&lt;/li&gt;
+          &lt;li&gt;All 17 games are present in the feed and there is no current record data yet, which is normal preseason limbo rather than a broken standings table.&lt;/li&gt;
         &lt;/ul&gt;
         &lt;h3&gt;Around the NFL&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;a href="https://www.espn.com/nfl/story/_/id/49425098/2026-nfl-offseason-newcomers-impact-ranking-draft-trades-signings"&gt;&lt;strong&gt;ESPN ranked the biggest 2026 offseason additions&lt;/strong&gt;&lt;/a&gt;, useful context as Washington measures itself against a conference that did not exactly spend the summer napping.&lt;/li&gt;
-          &lt;li&gt;Fantasy and betting coverage has fully turned the seasonal crank, which is another way of saying football is back and the internet has resumed shouting projections at everyone.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://www.espn.com/nfl/story/_/id/49479717/eagles-olb-jonathan-greenard-lands-pup-pec-strain"&gt;&lt;strong&gt;Philadelphia put Jonathan Greenard on PUP with a pec strain&lt;/strong&gt;&lt;/a&gt;. It is not expected to be long-term, but any Eagles pass-rush wobble is at least mildly interesting given Washington opens there.&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://www.espn.com/nfl/story/_/id/49479437/tua-tagovailoa-flare-falcons-add-cooper-rush"&gt;&lt;strong&gt;Atlanta is dealing with a Tua Tagovailoa flare-up&lt;/strong&gt;&lt;/a&gt; and added Cooper Rush. Not Commanders-specific, but it adds to the annual camp reminder that quarterback depth charts are one weird Tuesday from chaos.&lt;/li&gt;
         &lt;/ul&gt;
         &lt;h3&gt;Beat Writers on X (Pilot)&lt;/h3&gt;
         &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;John Keim:&lt;/strong&gt; previewed training camp and flagged remaining questions plus positive developments heading into the opener of camp. &lt;a href="https://x.com/john_keim/status/2082057147475521542"&gt;Link&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;JP Finlay:&lt;/strong&gt; noted that things got busy for Washington before camp even opened, with the coaching/roster churn arriving early. &lt;a href="https://x.com/JPFinlayNBCS/status/2081871200553193568"&gt;Link&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Ben Standig:&lt;/strong&gt; reported the formal move placing Nick Bellore on reserve/retired and confirming Douglas is in. &lt;a href="https://x.com/BenStandig/status/2081833163492380755"&gt;Link&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Nicki Jhabvala:&lt;/strong&gt; separately confirmed the Bellore retirement move, reinforcing that the roster adjustment is real news, not just transaction dust. &lt;a href="https://x.com/NickiJhabvala/status/2081832914619109846"&gt;Link&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;JP Finlay:&lt;/strong&gt; Trey Burks made a notable touchdown catch in the corner of the end zone. &lt;a href="https://x.com/JPFinlayNBCS/status/2082462968810274840"&gt;Link&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;JP Finlay:&lt;/strong&gt; Antonio Williams showed a slick move on a linebacker in 7-on-7, with the rookie looking fluid. &lt;a href="https://x.com/JPFinlayNBCS/status/2082458006017446136"&gt;Link&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Nicki Jhabvala:&lt;/strong&gt; Mike Sainristil broke up an end-zone throw to Dyami Brown during red-zone work. &lt;a href="https://x.com/NickiJhabvala/status/2082454447200903329"&gt;Link&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Nicki Jhabvala:&lt;/strong&gt; Jayden Daniels stayed after for one more rep to Terry McLaurin, because camp apparently still respects drama. &lt;a href="https://x.com/NickiJhabvala/status/2082454108833796379"&gt;Link&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Mitch Tischler:&lt;/strong&gt; the receiver room's speed stood out immediately, and the QB GoPros are back. &lt;a href="https://x.com/Mitch_Tischler/status/2082444675462394185"&gt;Link&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;</description>
             </item>
-<item>
-          <title>CrossWire: Sentinel Watchdog — July 28</title>
-          <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-28-040042</guid>
-          <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>
-        &lt;h2&gt;&amp;#x1F534; Sentinel Watchdog — Early Tuesday Morning&lt;/h2&gt;
-    
-        &lt;p&gt;&lt;strong&gt;42 green, 0 yellow, 1 red.&lt;/strong&gt; Notable shift from yesterday evening — green jumped from 38 to 42, yellow cleared entirely (down from 2), and the red item rotated. Curb-Check-Mon is gone from the red list.&lt;/p&gt;
-    
-        &lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job (New)&lt;/h3&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;Hermes Home Git Backup&lt;/strong&gt; (ongoing job) — Last run failed. This replaces Curb-Check-Mon as the sole red item. Not yet investigated — could be a transient git issue or a config problem. Monitor next run.&lt;/li&gt;
-        &lt;/ul&gt;
-    
-        &lt;h3&gt;&amp;#x1F7E2; Green — 42 Items Healthy (Up from 38)&lt;/h3&gt;
-        &lt;p&gt;Green count climbed significantly — 42 items vs 38 in the evening sweep. The yellow items (Scrapbook Weekly Lint QA temp, purge-flight-recorder.js Node availability) have been resolved or dropped from the sweep scope. All core services healthy.&lt;/p&gt;
-    
-        &lt;h3&gt;Recommended Actions&lt;/h3&gt;
-        &lt;p&gt;No immediate fixes required. Keep an eye on the Hermes Home Git Backup — if it fails again, investigate whether it's a git auth issue, disk space, or a repo config change. Watchdog and Census will continue monitoring.&lt;/p&gt;
-              </description>
-            </item>
-<item>
-          <title>CrossWire: Hermes — Evening Brief, July 27</title>
-          <guid isPermaLink="false">crosswire-hermes-evening-2026-07-27</guid>
-          <pubDate>Tue, 28 Jul 2026 12:33:55 GMT</pubDate>
-          <link>https://kanan.taila81309.ts.net/crosswire/</link>
-          <description>
-                        &lt;h2&gt;Hermes Agent Ecosystem&lt;/h2&gt;
-                        
-                        &lt;p&gt;Welcome to the CrossWire evening briefing for Hermes! Here are some highlights and insights from today:&lt;/p&gt;
-                        
-                        &lt;ul&gt;
-                            &lt;li&gt;&lt;strong&gt;New Release:&lt;/strong&gt; Recent updates in the Hermes Agent ecosystem have brought about several improvements that enhance reliability and performance.&lt;/li&gt;
-                            &lt;li&gt;&lt;strong&gt;Trending PRs/Issues:&lt;/strong&gt; Developers are actively addressing a number of high-impact issues, particularly those affecting backend services and user interface enhancements. (See more at: &lt;a href="https://github.com/hermes-project"&gt;Hermes GitHub&lt;/a&gt;)&lt;/li&gt;
-                            &lt;li&gt;&lt;strong&gt;Community Builds:&lt;/strong&gt; Engaging community builds showcase innovative solutions from contributors. These builds are available in various repositories for collaborative development.&lt;/li&gt;
-                            &lt;li&gt;&lt;strong&gt;Gaining Popularity:&lt;/strong&gt; Community engagement continues to grow, with more users contributing and benefiting from the Hermes platform.&lt;/li&gt;
-                        &lt;/ul&gt;
-    
-                        &lt;p&gt;&lt;em&gt;Note: These items matter as they directly influence our MOCR operations and ensure smooth interactions within the ecosystem.&lt;/em&gt;&lt;/p&gt;
-                    </description>
-            </item>
-
+    <item>
+              <title>CrossWire: Sentinel Watchdog — July 30</title>
+              <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-29-040020</guid>
+              <pubDate>Wed, 29 Jul 2026 08:17:29 GMT</pubDate>
+              <link>https://kanan.taila81309.ts.net/crosswire/</link>
+              <description>
+            &lt;h2&gt;&amp;#x1F7E1; Sentinel Watchdog — Early Wednesday Morning&lt;/h2&gt;
+        
+            &lt;p&gt;&lt;strong&gt;42 green, 1 yellow, 1 red.&lt;/strong&gt; Green count held at 42 from the evening sweep. One new red item surfaced: the Hermes Home Git Backup failed on its last run — Hermes home is no longer being archived. One yellow item (CrossWire daily) is informational.&lt;/p&gt;
+        
+            &lt;h3&gt;&amp;#x1F534; Red — 1 Failing Job (New)&lt;/h3&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;strong&gt;Hermes Home Git Backup&lt;/strong&gt; — Last run failed. This is a new red item (replacing Curb-Check-Mon which cleared from the previous sweep). Hermes home configuration is no longer being backed up to git. Needs investigation — check git auth, disk space, or repo configuration.&lt;/li&gt;
+            &lt;/ul&gt;
+        
+            &lt;h3&gt;&amp;#x1F7E1; Yellow — 1 Item&lt;/h3&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;strong&gt;CrossWire (daily)&lt;/strong&gt; — Multiple live cron matches detected. Expected behavior for crosswire's multi-post daily schedule, but flagged as a pattern worth acknowledging.&lt;/li&gt;
+            &lt;/ul&gt;
+        
+            &lt;h3&gt;&amp;#x1F7E2; Green — 42 Items Healthy&lt;/h3&gt;
+            &lt;p&gt;All core services and managed jobs are healthy. Green count held at 42 — the yellow items from previous sweeps (Scrapbook Weekly Lint QA temp, purge-flight-recorder.js Node availability) have been resolved or dropped from scope.&lt;/p&gt;
+        
+            &lt;h3&gt;Recommended Actions&lt;/h3&gt;
+            &lt;p&gt;&lt;strong&gt;Priority:&lt;/strong&gt; Investigate and resolve the Hermes Home Git Backup failure. Check git authentication, disk availability, and repo config. Until fixed, Hermes home is not being archived. CrossWire yellow is informational only — no action needed.&lt;/p&gt;
+                  </description>
+                </item>
+    <item>
+              <title>CrossWire: Hermes — Evening Brief, July 28</title>
+              <guid isPermaLink="false">crosswire-hermes-evening-2026-07-28</guid>
+              <pubDate>Tue, 28 Jul 2026 20:33:15 GMT</pubDate>
+              <link>https://kanan.taila81309.ts.net/crosswire/</link>
+              <description>&lt;h2&gt;Hermes Agent ecosystem&lt;/h2&gt;
+            &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Quicksilver is still the current stable release, but tonight's more useful signal is what the ecosystem is building on top of it: better reporting surfaces, sturdier messaging lanes, and a growing pile of community tooling that looks increasingly like a real platform instead of a science fair.&lt;/p&gt;
+            &lt;h3&gt;Release Radar&lt;/h3&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20"&gt;&lt;strong&gt;Hermes Agent v0.19.0 (2026.7.20) — The Quicksilver Release&lt;/strong&gt;&lt;/a&gt; remains the release to anchor on. The headline package is still unusually practical: much faster first-turn response, live reasoning streams by default, faster desktop rendering, smarter approvals, and direct Bitwarden/1Password hooks.&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;Why it matters to MOCR:&lt;/strong&gt; lower latency plus smarter approvals directly helps cron and operator workflows. Less waiting, less friction, fewer chances for the machine spirits to develop opinions.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;Trending PRs / Issues&lt;/h3&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73614"&gt;&lt;strong&gt;#73614 — feat(photon): native polls, effects, clarify-as-poll, rich links&lt;/strong&gt;&lt;/a&gt;: Photon iMessage is getting richer with native polls, effects, clarify-as-poll, and rich links. That pushes Hermes further into "real messaging client" territory instead of plain-text relay mode.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73561"&gt;&lt;strong&gt;#73561 — fix(desktop): add Photon iMessage section to sidebar&lt;/strong&gt;&lt;/a&gt;: small UI move, but it makes the Photon lane discoverable instead of hidden in the vents.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/51414"&gt;&lt;strong&gt;#51414 — feat(discord): add history_full_thread option to bypass self-message partition&lt;/strong&gt;&lt;/a&gt;: Discord can now optionally ingest an entire thread rather than stopping at the bot's latest reply. For context-heavy workflows, that is the difference between memory and amnesia.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/issues/3326"&gt;&lt;strong&gt;#3326 — feat(cli): add --output-format json flag for structured query output&lt;/strong&gt;&lt;/a&gt;: if this lands, automation and CI orchestration get a lot less regex-and-prayer.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://github.com/NousResearch/hermes-agent/pull/73522"&gt;&lt;strong&gt;#73522 — fix(tests,gateway): silence test-suite TTS/Chrome side effects&lt;/strong&gt;&lt;/a&gt;: not glamorous, but this is exactly how toolchains stop stepping on rakes.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;Community Builds&lt;/h3&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="https://github.com/PabloTheThinker/hermespace"&gt;&lt;strong&gt;PabloTheThinker/hermespace&lt;/strong&gt;&lt;/a&gt; (7★): experimental Hermes workbench with FOA and memory-fabric ideas.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://github.com/CliffWade/hermes-image-studio"&gt;&lt;strong&gt;CliffWade/hermes-image-studio&lt;/strong&gt;&lt;/a&gt; (5★): image-generation plugin spanning FLUX and GPT Image presets, with editing and batch lanes.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://github.com/Perseon-Lab/agent-console"&gt;&lt;strong&gt;Perseon-Lab/agent-console&lt;/strong&gt;&lt;/a&gt; (3★): lightweight browser mission control for a single Hermes agent.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://github.com/mauricemohr88-debug/hermes-plugin-guard"&gt;&lt;strong&gt;mauricemohr88-debug/hermes-plugin-guard&lt;/strong&gt;&lt;/a&gt; (3★): static plugin security checks. The adult supervision repo.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;Gaining Popularity&lt;/h3&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="https://github.com/uzairansaruzi/hermex"&gt;&lt;strong&gt;uzairansaruzi/hermex&lt;/strong&gt;&lt;/a&gt; (944★): native iPhone client momentum is still absurdly strong.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://github.com/SeanJ1ang/design-judge-skills"&gt;&lt;strong&gt;SeanJ1ang/design-judge-skills&lt;/strong&gt;&lt;/a&gt; (516★): evidence-driven skill packs continue to look like a real ecosystem layer, not a side quest.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://github.com/Neeeophytee/finding-unknowns-skills"&gt;&lt;strong&gt;Neeeophytee/finding-unknowns-skills&lt;/strong&gt;&lt;/a&gt; (261★): "find your unknowns" skills remains one of the cleaner examples of reusable agent workflow packaging.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;&lt;strong&gt;Worth watching:&lt;/strong&gt; the most MOCR-relevant theme tonight is structured automation and messaging maturity. When Hermes gets better at machine-readable output and richer chat surfaces, our cron/reporting stack gets less brittle and more elegant.&lt;/p&gt;</description>
+                </item>
+    <item>
+              <title>CrossWire: Tech — Evening Brief, July 28</title>
+              <guid isPermaLink="false">crosswire-tech-evening-2026-07-28</guid>
+              <pubDate>Tue, 28 Jul 2026 20:33:15 GMT</pubDate>
+              <link>https://kanan.taila81309.ts.net/crosswire/</link>
+              <description>&lt;h2&gt;Tech briefing&lt;/h2&gt;
+            &lt;p&gt;&lt;strong&gt;Lead:&lt;/strong&gt; Apple's new Klarna-backed leasing push is the big consumer-tech headline, but the more practical read is that Apple is reshaping upgrade economics while the rest of today's tech feed is a mix of AI privacy reminders, health-tech reality, and one busted Home Assistant source.&lt;/p&gt;
+            &lt;h3&gt;Apple&lt;/h3&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="https://www.apple.com/newsroom/2026/07/apple-upgrade-launches-in-the-united-states/"&gt;&lt;strong&gt;Apple launched Apple Upgrade in the U.S.&lt;/strong&gt;&lt;/a&gt;, replacing the old iPhone Upgrade Program with a broader lease-style offer that spans iPhone, iPad, Mac, and Apple Watch through Klarna. This is more than a financing tweak; it nudges Apple hardware toward subscription gravity.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/28/apple-says-ios-27-restricted-mode-isnt-for-new-upgrade-program-leases/"&gt;&lt;strong&gt;Apple says iOS 27 Restricted Mode is not tied to the new lease program&lt;/strong&gt;&lt;/a&gt;. In other words: the internet found a spooky theory, Apple swatted it, and everyone had a normal Monday on the web.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://9to5mac.com/2026/07/28/heres-everything-new-for-apple-wallet-in-ios-27/"&gt;&lt;strong&gt;Wallet in iOS 27 keeps expanding&lt;/strong&gt;&lt;/a&gt; and &lt;a href="https://9to5mac.com/2026/07/28/ios-27-smarter-find-my-location-sharing-apple-watch/"&gt;&lt;strong&gt;Find My is getting smarter for Apple Watch users&lt;/strong&gt;&lt;/a&gt;. Apple is still turning identity, presence, and payments into one increasingly sticky bundle.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://www.macrumors.com/2026/07/28/granola-launches-on-apple-watch/"&gt;&lt;strong&gt;Granola launched on Apple Watch&lt;/strong&gt;&lt;/a&gt;, which is a neat signal that meeting-transcript and note-capture brands are racing to become ambient rather than app-shaped.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;AI &amp;amp; Models&lt;/h3&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="https://arstechnica.com/security/2026/07/microsoft-unveils-ai-security-tools-it-says-outperform-competing-platforms/"&gt;&lt;strong&gt;Microsoft unveiled new AI security tooling&lt;/strong&gt;&lt;/a&gt; and is pitching better performance at lower cost than rivals. Worth watching as "AI for security teams" keeps becoming its own crowded bazaar.&lt;/li&gt;
+              &lt;li&gt;Granola's Watch move also doubles as a small AI-product trend marker: assistants want to live everywhere you already are, including the tiny rectangle on your wrist that judges your cardio.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;Science &amp;amp; Tech&lt;/h3&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="https://arstechnica.com/gadgets/2026/07/new-airliner-sets-record-flying-24-hrs-nonstop-from-australia-to-france/"&gt;&lt;strong&gt;A new airliner flew Australia to France nonstop in roughly 24 hours&lt;/strong&gt;&lt;/a&gt;, a flashy proof point for ultra-long-haul route economics ahead of Project Sunrise service.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://arstechnica.com/tech-policy/2026/07/judge-blocks-first-state-law-that-would-have-banned-prediction-markets/"&gt;&lt;strong&gt;A judge blocked Minnesota's attempt to ban prediction markets outright&lt;/strong&gt;&lt;/a&gt;, which matters if you track where tech, finance, and regulation keep colliding.&lt;/li&gt;
+              &lt;li&gt;&lt;a href="https://arstechnica.com/health/2026/07/as-us-measles-cases-rise-biotech-firms-start-developing-new-treatments/"&gt;&lt;strong&gt;Biotech firms are pursuing new measles treatments&lt;/strong&gt;&lt;/a&gt; as U.S. cases rise. Grimly relevant, and not in the fun cyberpunk way.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h3&gt;Home Automation&lt;/h3&gt;
+            &lt;p&gt;The Home Assistant source failed in the raw pull with &lt;code&gt;(error: no element found: line 1, column 0) [tech-data: exit 56]&lt;/code&gt;, so there is no trustworthy HA story in tonight's post. Better a clean omission than publishing XML fan fiction.&lt;/p&gt;</description>
+                </item>
   </channel>
 </rss>
