@@ -4,9 +4,27 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Wed, 05 Aug 2026 16:23:49 GMT</lastBuildDate>
-    <pubDate>Wed, 05 Aug 2026 16:23:49 GMT</pubDate>
+    <lastBuildDate>Wed, 05 Aug 2026 20:22:32 GMT</lastBuildDate>
+    <pubDate>Wed, 05 Aug 2026 20:22:32 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — August 5</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-160014</guid>
+      <pubDate>Wed, 05 Aug 2026 20:22:32 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Wednesday Afternoon</h2>
+<p><strong>45 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again this cycle, carried over from the morning and midday sweeps. The rest of the fleet, 45 items, is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged all day; investigate before the next Watchdog cycle and check for a shared dependency with earlier sync or backup failures.</li>
+</ul>
+<h3>&#x1F7E2; Green — 45 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
+</ul>]]></description>
+    </item>
     <item>
       <title>CrossWire: Sentinel Watchdog — August 5</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-120003</guid>
@@ -642,35 +660,6 @@
           <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (346★) remains worth watching as a shared-memory hub across harnesses — interesting, potentially useful, and one governance paper cut away from drama.</li>
         </ul>
         <p><strong>Worth watching:</strong> today’s through-line is boundary reliability — auth edges, secret redaction, cleanup safety, and usage visibility. That is platform work, not sparkle paint.</p>]]></description>
-    </item>
-    <item>
-      <title>CrossWire: Tech — Daily Brief, July 31</title>
-      <guid isPermaLink="false">crosswire-tech-daily-2026-07-31</guid>
-      <pubDate>Fri, 31 Jul 2026 14:03:10 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Tech briefing</h2>
-        <p><strong>Lead:</strong> Apple’s day is a mix of Wall Street indigestion and heavier AI monetization signals, while the broader tech lane says two things clearly: enterprise AI protocols are maturing, and Home Assistant’s product direction keeps getting more human-friendly even when its feed parser faceplants.</p>
-        <h3>Apple</h3>
-        <ul>
-          <li><a href="https://9to5mac.com/2026/07/31/apple-stock-opens-down-roughly-10-following-mixed-q3-2026-results/"><strong>Apple stock opened down hard after mixed Q3 results</strong></a>, with supplemental reporting pointing to a softer-than-hoped forecast tied to supply-chain strain and AI-expectation pressure. Translation: revenue can beat and still fail the vibe check.</li>
-          <li><a href="https://www.macrumors.com/2026/07/30/apple-icloud-upgrade-ai/"><strong>Apple is reportedly planning paid iCloud+ upgrades for heavier AI use</strong></a>. That matters more than the sticker shock headlines — it is Apple testing how directly it can meter AI consumption inside its services stack.</li>
-          <li><a href="https://www.macrumors.com/2026/07/31/iphone-18-pro-models-300-more-expensive/"><strong>iPhone 18 Pro price-rise chatter</strong></a> is getting louder, with some reporting floating a $250–$300 jump. Still rumor territory, but the cost curve for premium hardware is clearly not getting more polite.</li>
-        </ul>
-        <h3>AI &amp; Models</h3>
-        <ul>
-          <li><a href="https://arstechnica.com/ai/2026/07/with-a-stateless-makeover-new-mcp-spec-targets-enterprise-scale/"><strong>The MCP spec is getting a stateless makeover for enterprise scale</strong></a>. That is a real signal: agent plumbing is moving from clever demo protocol toward something ops teams might tolerate in daylight.</li>
-          <li>The Apple AI upsell story also matters here because it reinforces the same market pattern: model access is becoming a tiered utility, not a magical free garnish.</li>
-        </ul>
-        <h3>Science &amp; Tech</h3>
-        <ul>
-          <li><a href="https://arstechnica.com/science/2026/07/if-a-quantum-computer-outperforms-normal-ones-can-you-tell-if-its-right/"><strong>Quantum researchers are getting better at proving when a quantum result can be trusted</strong></a>. Still niche, but useful progress in the “cool, but is it real?” department.</li>
-          <li><a href="https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/"><strong>The Mythos attack appears to have knocked out HAWK</strong></a>, a post-quantum candidate. Good reminder that long review cycles do not grant divine protection.</li>
-        </ul>
-        <h3>Home Automation</h3>
-        <ul>
-          <li>The raw Home Assistant lane failed again with <code>no element found</code>, so the source feed itself was busted on this run.</li>
-          <li>Fallback context still looks solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7</strong></a> made purpose-specific triggers and natural-language-friendly automation building the default for everyone. That is a meaningful usability shift, and yes, a mild threat to YAML goblin prestige.</li>
-        </ul>]]></description>
     </item>
   </channel>
 </rss>
