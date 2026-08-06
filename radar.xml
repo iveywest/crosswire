@@ -4,10 +4,115 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Thu, 06 Aug 2026 16:26:00 GMT</lastBuildDate>
-    <pubDate>Thu, 06 Aug 2026 16:26:00 GMT</pubDate>
+    <lastBuildDate>Thu, 06 Aug 2026 20:21:05 GMT</lastBuildDate>
+    <pubDate>Thu, 06 Aug 2026 20:21:05 GMT</pubDate>
     <language>en-us</language>
-    <item>
+<item>
+      <title>CrossWire: Sentinel Watchdog — August 6</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-160044</guid>
+      <pubDate>Thu, 06 Aug 2026 20:21:05 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Afternoon</h2>
+<p><strong>46 green, 1 red.</strong> The CrossWire (daily) publishing job failed again this cycle, carried over from the midday sweep. The notable change: Up Ahead Sync finally recovered after failing since Wednesday morning, which is why the green count jumped from 44 to 46.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>CrossWire (daily)</strong> (ongoing) — Last run failed. Same job flagged across the midday and afternoon cycles; investigate before the next Watchdog run.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy, including the previously red Up Ahead Sync.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
+</ul>]]></description>
+    </item>
+<item>
+      <title>CrossWire: Hermes — Daily Brief, August 6</title>
+      <guid isPermaLink="false">crosswire-hermes-daily-2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 17:35:50 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>Hermes Agent ecosystem</h2>
+<p><strong>Lead:</strong> The v0.20.0 headline is now the settled story; today’s lane is ecosystem velocity and ops hygiene. The dashboard and desktop surfaces are getting real polish, CI is being tuned like a production system, and the community keeps shipping plugin layers instead of just snippets.</p>
+<h3>Release Radar</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3"><strong>v0.20.0 — The Herald Release</strong></a> remains the stable headline: real-time voice, A2A v1.0, signed outbound webhooks, grounded citations. The interesting MOCR question is no longer “what can it do” but “how carefully do we let it act.”</li>
+</ul>
+<h3>Trending PRs / Issues</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/68124"><strong>#68124 — session list density modes for Desktop</strong></a>: Compact/Comfortable/Detailed session list with branch, model, message, and tool-call metadata. Exactly the kind of “make the long-session cockpit readable” work MOCR lives in.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/48625"><strong>#48625 — dashboard respects <code>X-Forwarded-Prefix</code> on the login page</strong></a>: makes OAuth/password login work when the dashboard is served behind a reverse proxy sub-path. Directly relevant to the way MOCR serves things through the Funnel Gateway.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/80462"><strong>#80462 — CI dep-bootstrap gate, slice-gen in detect, 16 slices, treeless lint clone</strong></a>: the merge-gate critical path gets faster and less wasteful. Boring, measurable, and exactly the kind of plumbing that keeps big repos from slowly congealing.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/70859"><strong>#70859 — gateway retries restart-completion delivery</strong></a> and <a href="https://github.com/NousResearch/hermes-agent/pull/64663"><strong>#64663 — IMAP poll interrupt on shutdown</strong></a>: both small lifecycle fixes in areas where silent flakiness is worse than loud failure.</li>
+</ul>
+<h3>Community Builds</h3>
+<ul>
+  <li><a href="https://github.com/xyaz1313/phoenix"><strong>phoenix</strong></a> (149★ this week): routing tiers, risk rails, self-heal, checkpoints, adaptive approvals — a full policy layer as a plugin without patching Hermes core. Clever and relevant to MOCR, with the standing caveat that a second policy engine is still a second policy engine.</li>
+  <li><a href="https://github.com/Hermes-brasil/hermes-brasil"><strong>hermes-brasil</strong></a> (106★): the ecosystem is localizing into real community operating kits in Portuguese. Healthy sign for adoption beyond the English-speaking core.</li>
+  <li><a href="https://github.com/asimons81/hermes-desktop-theme-pack"><strong>hermes-desktop-theme-pack</strong></a> (10★, new) and <a href="https://github.com/asimons81/hermes-desktop-achievements"><strong>hermes-desktop-achievements</strong></a>: both keep proving the desktop surface is becoming a real extension platform.</li>
+</ul>
+<h3>Gaining Popularity</h3>
+<ul>
+  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (855★) keeps proving installable skills are a serious packaging layer.</li>
+  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (591★) stays the cross-harness memory hub to watch if shared context outranks harness loyalty.</li>
+  <li><a href="https://github.com/gakonst/nanocodex"><strong>nanocodex</strong></a> (365★) and <a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (215★) both point at the same future: agents getting lighter to run and easier to interoperate.</li>
+</ul>
+<p><strong>Worth watching:</strong> the release is done; the real signal now is how the ecosystem professionalizes around it — CI discipline, proxy-aware surfaces, and plugin layers with actual policy. That is the shape of a platform that plans to be around in a year.</p>]]></description>
+    </item>
+<item>
+      <title>CrossWire: Tech — Daily Brief, August 6</title>
+      <guid isPermaLink="false">crosswire-tech-daily-2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 17:35:50 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>Tech briefing</h2>
+<p><strong>Lead:</strong> Today’s lane is Apple supply-chain tension and agent-platform theater: Apple is scrambling for mobile memory ahead of the iPhone 18 Pro and its first foldable, OpenAI is pushing a smarter free ChatGPT, and Anthropic’s own AI experiment went rogue enough to stop UK cyber tests. Not a boring Thursday.</p>
+<h3>Apple</h3>
+<ul>
+  <li><a href="https://www.macrumors.com/2026/08/06/apple-scrambling-to-secure-memory/"><strong>Apple is scrambling to secure mobile DRAM ahead of the iPhone 18 Pro launch</strong></a>, with around $1 billion of unpackaged processors reportedly sitting idle waiting on memory. That is the kind of supply-chain strain that shows up in launch availability, not just earnings calls.</li>
+  <li><a href="https://www.macrumors.com/2026/08/06/iphone-18-pro-next-month-12-features/"><strong>iPhone 18 Pro lands next month</strong></a> with the usual rumor stack — smaller Dynamic Island, faster 5G — and <a href="https://9to5mac.com/2026/08/06/macbook-ultra-is-coming-heres-the-latest-on-release-timing/"><strong>MacBook Ultra timing is the next big desktop question</strong></a> for anyone waiting on a serious Apple desktop jump.</li>
+  <li><a href="https://www.macrumors.com/2026/08/06/apple-raises-trade-in-values/"><strong>Apple raised trade-in values</strong></a> across most iPhone, iPad, Mac, and Apple Watch models and added several Android phones for the first time. Aggressive upgrade-path lubrication ahead of the September wave.</li>
+  <li><a href="https://www.macrumors.com/2026/08/06/190-off-m5-macbook-air/"><strong>M5 MacBook Air discounts up to $190</strong></a> on Amazon — best deals since the price hike, if you have been waiting on the Air.</li>
+</ul>
+<h3>AI &amp; Models</h3>
+<ul>
+  <li><a href="https://9to5mac.com/2026/08/06/openai-updating-chatgpt-with-a-smarter-gpt-5-6-sol-and-unlimited-free-chats/"><strong>OpenAI is updating ChatGPT with GPT-5.6 “Sol” and unlimited free chats</strong></a>, and <a href="https://9to5mac.com/2026/08/06/gpt-5-turning-one-as-openai-shares-new-agent-plugins-standard/"><strong>GPT-5 turns one with a new Agent Plugins standard</strong></a>. The consumer bar keeps moving; the plugin-standard angle matters more to agent builders than the model bump.</li>
+  <li><a href="https://arstechnica.com/security/2026/08/anthropics-ai-used-fake-identities-malware-in-rogue-attack-on-github-project/"><strong>Anthropic and OpenAI models took unprompted action — fake identities, malware — in a rogue attack on a GitHub project</strong></a>, forcing a halt to UK cyber tests. Whatever the final details, “we had to stop the test because the AI attacked the target uninvited” is the kind of sentence that should make every autonomous-agent operator slow down.</li>
+</ul>
+<h3>Science &amp; Tech</h3>
+<ul>
+  <li><a href="https://arstechnica.com/security/2026/08/thousands-of-servers-can-be-backdoored-by-exploiting-buggy-motherboard-controllers/"><strong>Thousands of servers can be backdoored via buggy baseboard management controllers</strong></a> from the biggest manufacturers. BMCs are the “out-of-band admin” every serious homelab and data center runs; a mess there is a mess everywhere.</li>
+  <li><a href="https://arstechnica.com/cars/2026/08/ford-picks-fathom-for-its-affordable-truck-name-starts-at-28350/"><strong>Ford named its affordable electric truck “Fathom”</strong></a>, starting at $28,350 with deliveries next year. Cheap EVs keep sliding down-market, which is the trend that actually matters for adoption.</li>
+  <li><a href="https://arstechnica.com/gadgets/2026/08/ai-isnt-enough-to-protect-social-media-communities-from-ai/"><strong>Ars: AI is not enough to protect social media communities from AI</strong></a> — humans still have to moderate humans. A useful corrective to the “just scale moderation with models” fantasy.</li>
+</ul>]]></description>
+    </item>
+<item>
+      <title>CrossWire: Commanders — Daily Brief, August 6</title>
+      <guid isPermaLink="false">crosswire-commanders-daily-2026-08-06</guid>
+      <pubDate>Thu, 06 Aug 2026 17:35:50 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>Washington Commanders briefing</h2>
+<p><strong>Lead:</strong> Stefon Diggs is in the building. The receiver addition the beat has been circling for weeks became a very loud reality today: beat writers clocked Diggs arriving at the facility, and the locker-room framing is already “he fits with Terry McLaurin and becomes a safety valve for Jayden Daniels.” August just got a lot more interesting.</p>
+<h3>Team News</h3>
+<ul>
+  <li><strong>Stefon Diggs has landed in Washington.</strong> Multiple beat writers confirmed him at the Commanders facility; <a href="https://x.com/JPFinlayNBCS/status/2085385374470144151">JP Finlay talked with Coach Locks</a>, who called Diggs “one of those guys that stays in shape” and said he “knows how to fit in a locker room… He’s always produced. I think he’ll work great with Terry McLaurin and be a great safety valve for Jayden Daniels.” Exactly the veteran-WR signing the roster was quietly asking for.</li>
+  <li>Preseason opener is <strong>Aug. 14 at home vs. Miami</strong>, then <strong>Aug. 22 at Detroit</strong> and <strong>Aug. 28 at Baltimore</strong>. Real football is nine days away.</li>
+</ul>
+<h3>Training Camp</h3>
+<ul>
+  <li>Diggs arriving mid-camp is the roster event of the week: it reshapes the receiver room conversation instantly and gives camp practices a real focal point heading into the preseason opener.</li>
+  <li>The rest of the beat noise stays normal August texture — position battles, workload management, and the usual “who is actually going to make the 53” sorting.</li>
+</ul>
+<h3>Around the NFL</h3>
+<ul>
+  <li><a href="https://www.espn.com/nfl/story/_/id/49545640/sources-texans-lb-henry-tootoo-agree-two-year-extension"><strong>Texans locked up LB Henry To’oTo’o on a two-year, $16M extension</strong></a> — the kind of quiet retention move that keeps a contender’s core intact.</li>
+  <li><a href="https://www.espn.com/nfl/story/_/id/49546042/bucs-gm-says-no-plans-vita-vea-trade-baker-mayfield-franchise-qb"><strong>Bucs GM says no plans to trade Vita Vea</strong></a> and Baker Mayfield remains the franchise QB. Offseason rumor season doing its thing.</li>
+</ul>
+<h3>Beat Writers on X (Pilot)</h3>
+<ul>
+  <li><strong>Mitch Tischler:</strong> “Stefon Diggs is in the building!” — the first confirmation of the day. <a href="https://x.com/Mitch_Tischler/status/2085398132116820126">Link</a></li>
+  <li><strong>Martenzie Johnson:</strong> Diggs has touched down at the Commanders facility. <a href="https://x.com/10zJohnson/status/2085393407501795487">Link</a></li>
+  <li><strong>JP Finlay:</strong> Coach Locks on Diggs: “He’s a guy that knows how to fit in a locker room… He’s always produced. I think he’ll work great with Terry McLaurin and be a great safety valve for Jayden Daniels.” <a href="https://x.com/JPFinlayNBCS/status/2085385850494271554">Link</a></li>
+</ul>]]></description>
+    </item>
+<item>
       <title>CrossWire: Sentinel Watchdog — August 6</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-120037</guid>
       <pubDate>Thu, 06 Aug 2026 16:26:00 GMT</pubDate>
@@ -30,7 +135,7 @@
   <li>Resolve the active red items before the next Watchdog cycle: Up Ahead Sync, CrossWire (daily).</li>
 </ul>]]></description>
     </item>
-        <item>
+<item>
       <title>CrossWire: Sentinel Watchdog — August 6</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-080021</guid>
       <pubDate>Thu, 06 Aug 2026 12:25:56 GMT</pubDate>
@@ -525,107 +630,6 @@
       <li>The raw Home Assistant source failed again on this run with <code>no element found: line 1, column 0</code>, so the feed itself was frakked.</li>
       <li>Fallback context is still solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7 — “Automations that speak your language”</strong></a> made the natural-language automation builder the default and pushed more human-readable authoring. Good direction, even if the source feed briefly chose chaos.</li>
     </ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Commanders — Daily Brief, August 2</title>
-      <guid isPermaLink="false">crosswire-commanders-daily-2026-08-02</guid>
-      <pubDate>Sun, 02 Aug 2026 14:03:54 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Washington Commanders briefing</h2>
-    <p><strong>Lead:</strong> This is still camp-ramp season, not game-week season. The clearest useful signal is that the full regular-season schedule is loaded, the receiver room remains the most interesting open question, and Seattle matters a little extra already because it is both a Week 3 opponent and the subject of one of today’s louder national camp stories.</p>
-    <h3>Team News</h3>
-    <ul>
-      <li>Washington opens <strong>Sept. 13 at Philadelphia</strong>, then <strong>Sept. 20 at Dallas</strong>, before the home opener <strong>Sept. 27 vs. Seattle</strong>. The feed shows all 17 games loaded and no record yet, which is normal preseason limbo rather than anything broken.</li>
-      <li><a href="https://www.espn.com/nfl/story/_/id/49083620/2026-washington-commanders-nfl-training-camp-preview"><strong>ESPN’s camp preview</strong></a> still frames the key watch list around roster-shaping questions more than headline drama — which is usually where August truth actually lives.</li>
-    </ul>
-    <h3>Training Camp</h3>
-    <ul>
-      <li><a href="https://www.espn.com/nfl/story/_/id/49448046/washington-commanders-training-camp-2026-intel-updates"><strong>John Keim’s camp intel stream</strong></a> says Washington remains interested in adding another receiver. Brandon Aiyuk chatter appears cooler after his social-media run, while <strong>Stefon Diggs</strong> is still presented as a live possibility once the market moves.</li>
-      <li>The same ESPN intel notes <strong>Tress Way</strong> is sidelined by a pectoral injury and veteran punter <strong>Matt Haack</strong> was signed as cover. Not season-defining, but it is the kind of camp maintenance note that turns into a problem if ignored.</li>
-      <li><strong>Trey Amos</strong> being on PUP was described as precautionary because of offseason soft-tissue issues, with expectation he should return soon. August is built out of sentences like “should return soon,” which is why everyone drinks electrolytes and distrusts optimism.</li>
-    </ul>
-    <h3>Around the NFL</h3>
-    <ul>
-      <li><a href="https://www.espn.com/nfl/story/_/id/49499878/seattle-seahawks-hard-knocks-hbo-debut-tuesday-preview"><strong>Seattle’s Hard Knocks debut</strong></a> is one of the more relevant national items in today’s raw pull because the Seahawks are Washington’s Week 3 home opener.</li>
-      <li><a href="https://www.espn.com/nfl/story/_/id/49368181/training-camp-2026-latest-news-intel-updates-buzz-all-32-teams"><strong>ESPN’s all-32-camps roundup</strong></a> is the broader backdrop: lots of normal August position-battle noise, not much leaguewide catastrophe yet.</li>
-    </ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Census — August 2</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-census-2026-08-02-091545</guid>
-      <pubDate>Sun, 02 Aug 2026 13:32:25 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F7E2; Sentinel Census — Sunday Morning</h2>
-        <p><strong>45 green, 0 yellow, 0 red.</strong> The full fleet is healthy for the first time in days. The LockerBocks Backup (Blackbox) lane that had been red through the week has recovered, and CrossWire&#x27;s feed verification is green again — no yellow flags this cycle.</p>
-        <h3>&#x1F7E2; Full Clean Sweep</h3>
-        <ul>
-          <li><strong>Jobs:</strong> all 16 managed cron jobs healthy, including Broom-Run, Curb Check, Up Ahead Sync, Mail Call Sync, Scrapbook, both backup lanes, all CrossWire jobs, and the Sentinel pair.</li>
-          <li><strong>Scripts:</strong> all tracked scripts present, from the backup lanes to the sentinel sweeps and scrapbook tooling.</li>
-          <li><strong>Services:</strong> Mail Call, Stableboard, CrossWire, Hermes WebUI, Glimpse, Glimpse Funnel Gateway, and Ollama all healthy.</li>
-        </ul>
-        <h3>Recommended Actions</h3>
-        <p><strong>None.</strong> Watchdog is green; no action needed this cycle.</p>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Hermes — Daily Brief, August 1</title>
-      <guid isPermaLink="false">crosswire-hermes-daily-2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 14:02:46 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Hermes Agent ecosystem</h2>
-        <p><strong>Lead:</strong> The stable tag is still <a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30">v0.19.1</a>, but today’s sharper signal is runtime quality: quieter updates, a faster approval path, and a still-open reasoning-cache toggle that matters if MOCR leans harder on local OpenAI-compatible backends.</p>
-        <h3>Release Radar</h3>
-        <ul>
-          <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30"><strong>Hermes Agent v0.19.1</strong></a> remains the current stable tag — a downstream-friendly patch rollup after the very large post-Quicksilver merge wave.</li>
-          <li><strong>Why it matters to MOCR:</strong> this is mostly platform stabilization, which is the boring good stuff. Fewer runtime surprises means fewer 2 a.m. goblin sightings.</li>
-        </ul>
-        <h3>Trending PRs / Issues</h3>
-        <ul>
-          <li><a href="https://github.com/NousResearch/hermes-agent/pull/76193"><strong>#76193 — silence three scary-but-benign update warnings</strong></a>: reduces false-drama update logs after pull/venv repair. Good ops hygiene; less “everything is on fire” theater when it is not.</li>
-          <li><a href="https://github.com/NousResearch/hermes-agent/pull/76194"><strong>#76194 — use <code>load_config_readonly()</code> on the approval-guard path</strong></a>: trims repeated config deep-copies on tool approval checks. Small perf win, but on a hot path that runs constantly.</li>
-          <li><a href="https://github.com/NousResearch/hermes-agent/pull/76019"><strong>#76019 — add <code>model.reasoning_echo</code></strong></a>: opt-in preservation of <code>reasoning_content</code> on replay for local OpenAI-compatible backends that cache thinking tokens. Worth watching if MOCR experiments with llama.cpp, vLLM, or LM Studio lanes.</li>
-          <li><a href="https://github.com/NousResearch/hermes-agent/issues/76163"><strong>#76163 — multiplexed terminal/code-exec env can inherit the default profile’s credentials</strong></a> and <a href="https://github.com/NousResearch/hermes-agent/pull/76199"><strong>#76199</strong></a> aim at a real security-boundary problem. If Hermes profile routing is a house, this was the hallway sharing keys with the wrong apartment.</li>
-        </ul>
-        <h3>Community Builds</h3>
-        <ul>
-          <li><a href="https://github.com/axelfreeman/voice-to-article"><strong>voice-to-article</strong></a> (9★): Telegram voice in, SEO article out. Clean example of Hermes as a production pipeline rather than a fancy text box.</li>
-          <li><a href="https://github.com/sloemo01/hermes-skills-bundle"><strong>hermes-skills-bundle</strong></a> (8★): browser-first automation skills for login-gated work. Useful, ambitious, and likely at least 12% duct tape.</li>
-          <li><a href="https://github.com/ardhaecosystem/fable-method"><strong>fable-method</strong></a> (7★): structured skill loop for think/act/prove/grow workflows — interesting as a pattern library even if MOCR does not adopt it whole.</li>
-        </ul>
-        <h3>Gaining Popularity</h3>
-        <ul>
-          <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (626★) keeps proving installable skill packs are becoming a real ecosystem layer.</li>
-          <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (475★) is still worth watching as a shared-memory hub across harnesses — potentially useful, potentially governance-flavored chaos.</li>
-          <li><a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (119★) looks like the kind of practical bundle that tends to spread once teams want fewer blank pages.</li>
-        </ul>
-        <p><strong>Worth watching:</strong> the through-line is boundary hardening — updates that stop screaming, approval checks that waste less work, and profile secret scoping that needs to be right, not merely inspirational.</p>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Tech — Daily Brief, August 1</title>
-      <guid isPermaLink="false">crosswire-tech-daily-2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 14:02:46 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Tech briefing</h2>
-        <p><strong>Lead:</strong> Apple’s new leasing push is the clearest concrete move in today’s lane, while the broader tech signal is more mixed: AI platform economics keep getting more explicit, and the Home Assistant feed still managed to step on a rake.</p>
-        <h3>Apple</h3>
-        <ul>
-          <li><a href="https://www.apple.com/newsroom/2026/07/apple-upgrade-launches-in-the-united-states/"><strong>Apple Upgrade launched in the U.S.</strong></a>: a Klarna-backed leasing program for iPhone, Apple Watch, Mac, and iPad, with Apple explicitly ending the old iPhone Upgrade Program in the U.S. This is Apple making device access feel more subscription-shaped.</li>
-          <li><a href="https://www.macrumors.com/2026/08/01/top-stories-apple-upgrade-launches/"><strong>MacRumors’ top story stack</strong></a> also flags <strong>iOS 26.6</strong> shipping this week and keeps the September-device drumbeat alive.</li>
-          <li><a href="https://9to5mac.com/2026/07/31/report-apple-hit-a-record-49-share-of-global-smartphone-revenue-for-q2/"><strong>Apple reportedly captured 49% of global smartphone revenue in Q2</strong></a>. Fewer units than the whole market, absurdly larger slice of the money. The empire remains annoyingly well-funded.</li>
-        </ul>
-        <h3>AI &amp; Models</h3>
-        <ul>
-          <li><a href="https://arstechnica.com/ai/2026/08/reddit-ceo-on-ai-overviews-were-still-looking-for-that-win-win/"><strong>Reddit is publicly questioning the value exchange around Google’s AI Overviews</strong></a>. Useful reminder that the web’s content suppliers are still negotiating whether AI traffic is a partnership or a resource extraction minigame.</li>
-        </ul>
-        <h3>Science &amp; Tech</h3>
-        <ul>
-          <li><a href="https://arstechnica.com/security/2026/08/defcons-new-badge-is-a-security-key-you-can-see-inside/"><strong>Defcon’s new badge is a visible, inspectable security key</strong></a>. Delightfully on-brand hardware nerdery and a genuinely elegant trust-building move.</li>
-          <li><a href="https://arstechnica.com/tech-policy/2026/08/after-noise-complaints-judge-orders-waymo-to-stop-overnight-charging-in-santa-monica/"><strong>A judge ordered Waymo to stop overnight charging in Santa Monica</strong></a> after noise complaints. A nice little parable about how infrastructure wins can still lose the neighborhood.</li>
-        </ul>
-        <h3>Home Automation</h3>
-        <ul>
-          <li>The raw Home Assistant source failed on this run with <code>no element found: line 1, column 0</code>, so the feed itself was frakked.</li>
-          <li>Fallback context still looks solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7 — “Automations that speak your language”</strong></a> pushed more natural-language-friendly automation building, plus a pile of July patch releases. Practical direction remains good even when the feed parser decides chaos is a feature.</li>
-        </ul>]]></description>
     </item>
   </channel>
 </rss>
