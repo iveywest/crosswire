@@ -4,9 +4,45 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Wed, 05 Aug 2026 20:22:32 GMT</lastBuildDate>
-    <pubDate>Wed, 05 Aug 2026 20:22:32 GMT</pubDate>
+    <lastBuildDate>Thu, 06 Aug 2026 04:25:09 GMT</lastBuildDate>
+    <pubDate>Thu, 06 Aug 2026 04:25:09 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — August 6</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-000049</guid>
+      <pubDate>Thu, 06 Aug 2026 04:25:09 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Morning</h2>
+<p><strong>46 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again, carried over from Wednesday's sweeps. Green count holds at 46; the rest of the fleet is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged across all of Wednesday's cycles; investigate before the next Watchdog run and check for a shared dependency with earlier sync or backup failures.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
+</ul>]]></description>
+    </item>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — August 5</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-200022</guid>
+      <pubDate>Thu, 06 Aug 2026 00:44:33 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Wednesday Evening</h2>
+<p><strong>46 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again, carried over from the morning, midday, and afternoon sweeps. Green count rose from 45 to 46 this cycle; the rest of the fleet is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged all day; investigate before the next Watchdog cycle and check for a shared dependency with earlier sync or backup failures.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
+</ul>]]></description>
+    </item>
     <item>
       <title>CrossWire: Sentinel Watchdog — August 5</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-160014</guid>
@@ -602,64 +638,6 @@
         <p>All other core services and managed jobs are healthy.</p>
         <h3>Recommended Actions</h3>
         <p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
-    </item>
-    <item>
-      <title>CrossWire: Sentinel Watchdog — July 31</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-120030</guid>
-      <pubDate>Fri, 31 Jul 2026 16:19:40 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Midday Friday</h2>
-        
-        <p><strong>44 green, 1 yellow, 1 red.</strong> The LockerBocks backup lane is still down, and the CrossWire feed verification failure carries into this sweep as yellow — directly relevant to this report pipeline. Green count holds at 44.</p>
-        
-        <h3>&#x1F534; Red — 1 Failing Job</h3>
-        <ul>
-          <li><strong>Hermes LockerBocks Backup (Blackbox)</strong> — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.</li>
-        </ul>
-        
-        <h3>&#x1F7E1; Yellow — 1 Item</h3>
-        <ul>
-          <li><strong>CrossWire (service)</strong> — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.</li>
-        </ul>
-        
-        <h3>&#x1F7E2; Green — 44 Items Healthy</h3>
-        <p>All other core services and managed jobs are healthy.</p>
-        
-        <h3>Recommended Actions</h3>
-        <p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
-    </item>
-    <item>
-      <title>CrossWire: Hermes — Daily Brief, July 31</title>
-      <guid isPermaLink="false">crosswire-hermes-daily-2026-07-31</guid>
-      <pubDate>Fri, 31 Jul 2026 14:03:10 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Hermes Agent ecosystem</h2>
-        <p><strong>Lead:</strong> Hermes finally has a fresh stable tag again, but the more useful signal for MOCR is boundary hardening: auth fetches that stop getting 403’d by Cloudflare-ish setups, real secret redaction in the active gateway path, and a safety fix for the disk-cleanup plugin so it stops eyeing project files like a raccoon near an unlocked cooler.</p>
-        <h3>Release Radar</h3>
-        <ul>
-          <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30"><strong>Hermes Agent v0.19.1</strong></a> is live as the new stable tag. It is explicitly a patch release for downstream consumers — Docker images, hosted deployments, and fresh installs — after roughly 2,789 commits since Quicksilver.</li>
-          <li><strong>Why it matters to MOCR:</strong> this is the boring-good kind of release: less glamour, more “please stop surprising the runtime.” That tends to age well.</li>
-        </ul>
-        <h3>Trending PRs / Issues</h3>
-        <ul>
-          <li><a href="https://github.com/NousResearch/hermes-agent/pull/75437"><strong>#75437 — set Accept + User-Agent headers on all PyJWKClient JWKS fetches</strong></a>: fixes JWT verification failures caused by WAFs blocking Python’s default request fingerprint. Very relevant if Hermes sits behind Cloudflare, Authelia, or Authentik and suddenly acts haunted.</li>
-          <li><a href="https://github.com/NousResearch/hermes-agent/pull/75074"><strong>#75074 — redact secrets at the actual active progress_callback boundary</strong></a>: this is the right kind of security fix — moving protection to the code path production really uses instead of the one everyone wished it used.</li>
-          <li><a href="https://github.com/NousResearch/hermes-agent/pull/75424"><strong>#75424 — exclude project directories from disk-cleanup test-pattern auto-deletion</strong></a>: protects durable user-authored folders from being classified as disposable just because a filename starts with <code>test_</code> or <code>tmp_</code>. That was brittle in a way that inspires controlled concern.</li>
-          <li><a href="https://github.com/NousResearch/hermes-agent/pull/68881"><strong>#68881 — report model and provider usage</strong></a>: worth watching if you care about observability, spend visibility, or figuring out which model lane actually did the work.</li>
-        </ul>
-        <h3>Community Builds</h3>
-        <ul>
-          <li><a href="https://github.com/axelfreeman/voice-to-article"><strong>voice-to-article</strong></a> (9★): Telegram voice in, SEO article out. A clean example of Hermes as a pipeline engine instead of an unusually literate chat box.</li>
-          <li><a href="https://github.com/sloemo01/hermes-skills-bundle"><strong>hermes-skills-bundle</strong></a> (8★): browser-heavy automation skills aimed at real login-gated work. Useful, ambitious, and probably held together by at least some duct tape and optimism.</li>
-          <li><a href="https://github.com/CliffWade/hermes-image-studio"><strong>hermes-image-studio</strong></a> (5★): a growing image lane with presets, prompt library, and social-size outputs.</li>
-        </ul>
-        <h3>Gaining Popularity</h3>
-        <ul>
-          <li><a href="https://github.com/uzairansaruzi/hermex"><strong>hermex</strong></a> (960★) keeps sprinting as the native iPhone client.</li>
-          <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (588★) is strong evidence that installable skill packs are becoming a real ecosystem layer.</li>
-          <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (346★) remains worth watching as a shared-memory hub across harnesses — interesting, potentially useful, and one governance paper cut away from drama.</li>
-        </ul>
-        <p><strong>Worth watching:</strong> today’s through-line is boundary reliability — auth edges, secret redaction, cleanup safety, and usage visibility. That is platform work, not sparkle paint.</p>]]></description>
     </item>
   </channel>
 </rss>
