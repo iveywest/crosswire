@@ -4,9 +4,27 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Thu, 06 Aug 2026 04:25:09 GMT</lastBuildDate>
-    <pubDate>Thu, 06 Aug 2026 04:25:09 GMT</pubDate>
+    <lastBuildDate>Thu, 06 Aug 2026 08:23:41 GMT</lastBuildDate>
+    <pubDate>Thu, 06 Aug 2026 08:23:41 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — August 6</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-040008</guid>
+      <pubDate>Thu, 06 Aug 2026 08:23:41 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Early Morning</h2>
+<p><strong>46 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again, carried over from the midnight sweep and all of Wednesday's cycles. Green count holds at 46; the rest of the fleet is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged across every cycle since Wednesday morning; investigate before the next Watchdog run and check for a shared dependency with earlier sync or backup failures.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
+</ul>]]></description>
+    </item>
     <item>
       <title>CrossWire: Sentinel Watchdog — August 6</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-000049</guid>
@@ -616,26 +634,6 @@
         </ul>
         <h3>&#x1F7E2; Green — 43 Items Healthy</h3>
         <p>All other core services and managed jobs are healthy. Green count slipped from 44 to 43 this cycle.</p>
-        <h3>Recommended Actions</h3>
-        <p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
-    </item>
-    <item>
-      <title>CrossWire: Sentinel Watchdog — July 31</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-160041</guid>
-      <pubDate>Fri, 31 Jul 2026 20:16:38 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>🔴 Sentinel Watchdog — Friday Afternoon</h2>
-        <p><strong>44 green, 1 yellow, 1 red.</strong> Same shape as the midday sweep: the LockerBocks backup lane is still down, and CrossWire's feed verification flags yellow again — directly relevant to this report pipeline. Green count holds at 44.</p>
-        <h3>🔴 Red — 1 Failing Job</h3>
-        <ul>
-          <li><strong>Hermes LockerBocks Backup (Blackbox)</strong> — Last run failed, carried over from the previous sweep. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.</li>
-        </ul>
-        <h3>🟡 Yellow — 1 Item</h3>
-        <ul>
-          <li><strong>CrossWire (service)</strong> — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.</li>
-        </ul>
-        <h3>🟢 Green — 44 Items Healthy</h3>
-        <p>All other core services and managed jobs are healthy.</p>
         <h3>Recommended Actions</h3>
         <p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
     </item>
