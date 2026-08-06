@@ -4,10 +4,28 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Thu, 06 Aug 2026 08:23:41 GMT</lastBuildDate>
-    <pubDate>Thu, 06 Aug 2026 08:23:41 GMT</pubDate>
+    <lastBuildDate>Thu, 06 Aug 2026 12:25:56 GMT</lastBuildDate>
+    <pubDate>Thu, 06 Aug 2026 12:25:56 GMT</pubDate>
     <language>en-us</language>
-    <item>
+        <item>
+      <title>CrossWire: Sentinel Watchdog — August 6</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-080021</guid>
+      <pubDate>Thu, 06 Aug 2026 12:25:56 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Morning</h2>
+<p><strong>46 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again, carried over from the midnight and early-morning sweeps. Green count holds at 46; the rest of the fleet is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged across every cycle since Wednesday morning; investigate before the next Watchdog run and check for a shared dependency with earlier sync or backup failures.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
+</ul>]]></description>
+    </item>
+<item>
       <title>CrossWire: Sentinel Watchdog — August 6</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-040008</guid>
       <pubDate>Thu, 06 Aug 2026 08:23:41 GMT</pubDate>
@@ -25,7 +43,7 @@
   <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Sentinel Watchdog — August 6</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-000049</guid>
       <pubDate>Thu, 06 Aug 2026 04:25:09 GMT</pubDate>
@@ -43,7 +61,7 @@
   <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Sentinel Watchdog — August 5</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-200022</guid>
       <pubDate>Thu, 06 Aug 2026 00:44:33 GMT</pubDate>
@@ -61,7 +79,7 @@
   <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Sentinel Watchdog — August 5</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-160014</guid>
       <pubDate>Wed, 05 Aug 2026 20:22:32 GMT</pubDate>
@@ -79,7 +97,7 @@
   <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Sentinel Watchdog — August 5</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-120003</guid>
       <pubDate>Wed, 05 Aug 2026 16:23:49 GMT</pubDate>
@@ -97,7 +115,7 @@
   <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Hermes — Daily Brief, August 5</title>
       <guid isPermaLink="false">crosswire-hermes-daily-2026-08-05</guid>
       <pubDate>Wed, 05 Aug 2026 14:04:30 GMT</pubDate>
@@ -130,7 +148,7 @@
 </ul>
 <p><strong>Worth watching:</strong> the big release is the story, but the sharper MOCR lesson is boundary hygiene. More voice, more agents, more webhooks, and more tooling means session integrity and extension discipline matter even more now.</p>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Tech — Daily Brief, August 5</title>
       <guid isPermaLink="false">crosswire-tech-daily-2026-08-05</guid>
       <pubDate>Wed, 05 Aug 2026 14:04:30 GMT</pubDate>
@@ -160,7 +178,7 @@
   <li><strong>Supplemental search status:</strong> attempted web search was unavailable because the configured web-search backend is not set in this runtime, so this lane stayed grounded in collected source data instead of hallucinating a patch note out of thin air.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Commanders — Daily Brief, August 5</title>
       <guid isPermaLink="false">crosswire-commanders-daily-2026-08-05</guid>
       <pubDate>Wed, 05 Aug 2026 14:04:30 GMT</pubDate>
@@ -193,7 +211,7 @@
   <li><strong>JP Finlay:</strong> WR/DB one-on-ones were lively, with plenty of good work on both sides. <a href="https://x.com/JPFinlayNBCS/status/2085002482292314178">Link</a></li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Sentinel Watchdog — August 5</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-080041</guid>
       <pubDate>Wed, 05 Aug 2026 12:21:17 GMT</pubDate>
@@ -211,7 +229,7 @@
   <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Hermes — Daily Brief, August 4</title>
       <guid isPermaLink="false">crosswire-hermes-daily-2026-08-04</guid>
       <pubDate>Tue, 04 Aug 2026 14:03:29 GMT</pubDate>
@@ -244,7 +262,7 @@
 </ul>
 <p><strong>Worth watching:</strong> v0.20.0 is the headline, but the sharper MOCR lesson is boundary hygiene: session state, skill trust, and task-creation truthfulness matter more now because Hermes just got a lot more surface area.</p>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Tech — Daily Brief, August 4</title>
       <guid isPermaLink="false">crosswire-tech-daily-2026-08-04</guid>
       <pubDate>Tue, 04 Aug 2026 14:03:29 GMT</pubDate>
@@ -273,7 +291,7 @@
   <li><strong>Operator note:</strong> supplemental web search was unavailable in this runtime because the configured web-search backend is not set, so this lane stayed grounded in the collected feed data instead of inventing a fallback. Boring honesty beats fake certainty.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Commanders — Daily Brief, August 4</title>
       <guid isPermaLink="false">crosswire-commanders-daily-2026-08-04</guid>
       <pubDate>Tue, 04 Aug 2026 14:03:29 GMT</pubDate>
@@ -305,7 +323,7 @@
   <li><strong>JP Finlay:</strong> he said the first real vertical passing of camp showed up today and Van Jefferson looked fast. <a href="https://x.com/JPFinlayNBCS/status/2084627898254692648">Link</a></li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Sentinel Watchdog — August 4</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-04-000053</guid>
       <pubDate>Tue, 04 Aug 2026 04:23:14 GMT</pubDate>
@@ -325,7 +343,7 @@
   <li>Consolidate Mail Call to one canonical cron definition and remove the duplicate job drift.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Hermes — Daily Brief, August 3</title>
       <guid isPermaLink="false">crosswire-hermes-daily-2026-08-03</guid>
       <pubDate>Mon, 03 Aug 2026 14:03:28 GMT</pubDate>
@@ -358,7 +376,7 @@
 </ul>
 <p><strong>Worth watching:</strong> today’s through-line is boundary integrity — protect auth stores, stop tool loops, preserve useful replay state, and let the ecosystem extend Hermes without turning the ship into Battlestar Galactica after one too many “temporary” field mods.</p>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Tech — Daily Brief, August 3</title>
       <guid isPermaLink="false">crosswire-tech-daily-2026-08-03</guid>
       <pubDate>Mon, 03 Aug 2026 14:03:28 GMT</pubDate>
@@ -388,7 +406,7 @@
   <li>No replacement live pull was available from the configured web tool path on this machine, so the honest read is simple: no fresh Home Assistant lane beyond the feed failure itself.</li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Commanders — Daily Brief, August 3</title>
       <guid isPermaLink="false">crosswire-commanders-daily-2026-08-03</guid>
       <pubDate>Mon, 03 Aug 2026 14:03:28 GMT</pubDate>
@@ -422,7 +440,7 @@
   <li><strong>Nicki Jhabvala:</strong> she likes the running backs room “a lot,” which is not proof, but it is an interesting early-camp vibe check. <a href="https://x.com/NickiJhabvala/status/2084270746621059188">Link</a></li>
 </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Hermes — Daily Brief, August 2</title>
       <guid isPermaLink="false">crosswire-hermes-daily-2026-08-02</guid>
       <pubDate>Sun, 02 Aug 2026 14:03:54 GMT</pubDate>
@@ -456,7 +474,7 @@
     </ul>
     <p><strong>Worth watching:</strong> today’s through-line is state integrity. Tool availability surviving model switches, cron behaving like cron, and replies reaching the right surface are not glamorous — they are just the difference between a platform and a haunted house.</p>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Tech — Daily Brief, August 2</title>
       <guid isPermaLink="false">crosswire-tech-daily-2026-08-02</guid>
       <pubDate>Sun, 02 Aug 2026 14:03:54 GMT</pubDate>
@@ -485,7 +503,7 @@
       <li>Fallback context is still solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7 — “Automations that speak your language”</strong></a> made the natural-language automation builder the default and pushed more human-readable authoring. Good direction, even if the source feed briefly chose chaos.</li>
     </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Commanders — Daily Brief, August 2</title>
       <guid isPermaLink="false">crosswire-commanders-daily-2026-08-02</guid>
       <pubDate>Sun, 02 Aug 2026 14:03:54 GMT</pubDate>
@@ -509,7 +527,7 @@
       <li><a href="https://www.espn.com/nfl/story/_/id/49368181/training-camp-2026-latest-news-intel-updates-buzz-all-32-teams"><strong>ESPN’s all-32-camps roundup</strong></a> is the broader backdrop: lots of normal August position-battle noise, not much leaguewide catastrophe yet.</li>
     </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Sentinel Census — August 2</title>
       <guid isPermaLink="false">crosswire-report-sentinel-census-2026-08-02-091545</guid>
       <pubDate>Sun, 02 Aug 2026 13:32:25 GMT</pubDate>
@@ -525,7 +543,7 @@
         <h3>Recommended Actions</h3>
         <p><strong>None.</strong> Watchdog is green; no action needed this cycle.</p>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Hermes — Daily Brief, August 1</title>
       <guid isPermaLink="false">crosswire-hermes-daily-2026-08-01</guid>
       <pubDate>Sat, 01 Aug 2026 14:02:46 GMT</pubDate>
@@ -558,7 +576,7 @@
         </ul>
         <p><strong>Worth watching:</strong> the through-line is boundary hardening — updates that stop screaming, approval checks that waste less work, and profile secret scoping that needs to be right, not merely inspirational.</p>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Tech — Daily Brief, August 1</title>
       <guid isPermaLink="false">crosswire-tech-daily-2026-08-01</guid>
       <pubDate>Sat, 01 Aug 2026 14:02:46 GMT</pubDate>
@@ -586,7 +604,7 @@
           <li>Fallback context still looks solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7 — “Automations that speak your language”</strong></a> pushed more natural-language-friendly automation building, plus a pile of July patch releases. Practical direction remains good even when the feed parser decides chaos is a feature.</li>
         </ul>]]></description>
     </item>
-    <item>
+<item>
       <title>CrossWire: Commanders — Daily Brief, August 1</title>
       <guid isPermaLink="false">crosswire-commanders-daily-2026-08-01</guid>
       <pubDate>Sat, 01 Aug 2026 14:02:46 GMT</pubDate>
@@ -617,25 +635,6 @@
           <li><strong>Nicki Jhabvala + Ben Standig + Mitch Tischler:</strong> the day also featured a run of “big-man receivers” jokes after offensive-lineman catches — camp comedy, but clearly one of the scene-setting moments. <a href="https://x.com/NickiJhabvala/status/2083539825274044676">Nicki</a> · <a href="https://x.com/BenStandig/status/2083549673487241230">Ben</a> · <a href="https://x.com/Mitch_Tischler/status/2083539702951338119">Mitch</a></li>
         </ul>]]></description>
     </item>
-    <item>
-      <title>CrossWire: Sentinel Watchdog — July 31</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-07-31-200023</guid>
-      <pubDate>Sat, 01 Aug 2026 00:18:53 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Friday Evening</h2>
-        <p><strong>43 green, 1 yellow, 1 red.</strong> The LockerBocks backup lane is still down, and CrossWire&#x27;s feed verification flags yellow again — directly relevant to this report pipeline. Green count slipped from 44 to 43.</p>
-        <h3>&#x1F534; Red — 1 Failing Job</h3>
-        <ul>
-          <li><strong>Hermes LockerBocks Backup (Blackbox)</strong> — Last run failed, carried over from previous sweeps. The Blackbox backup lane remains down. Investigate root cause — check for a shared dependency with the earlier backup failures, git credentials, disk space, or config drift.</li>
-        </ul>
-        <h3>&#x1F7E1; Yellow — 1 Item</h3>
-        <ul>
-          <li><strong>CrossWire (service)</strong> — Feed verification failed again this cycle; confirm the self-hosted feed URL is serving current content.</li>
-        </ul>
-        <h3>&#x1F7E2; Green — 43 Items Healthy</h3>
-        <p>All other core services and managed jobs are healthy. Green count slipped from 44 to 43 this cycle.</p>
-        <h3>Recommended Actions</h3>
-        <p><strong>Priority:</strong> Resolve the LockerBocks Backup (Blackbox) failure before the next Watchdog cycle and verify the CrossWire feed is serving correctly again.</p>]]></description>
-    </item>
+
   </channel>
 </rss>
