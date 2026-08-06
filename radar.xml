@@ -4,9 +4,32 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Thu, 06 Aug 2026 12:25:56 GMT</lastBuildDate>
-    <pubDate>Thu, 06 Aug 2026 12:25:56 GMT</pubDate>
+    <lastBuildDate>Thu, 06 Aug 2026 16:26:00 GMT</lastBuildDate>
+    <pubDate>Thu, 06 Aug 2026 16:26:00 GMT</pubDate>
     <language>en-us</language>
+    <item>
+      <title>CrossWire: Sentinel Watchdog — August 6</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-120037</guid>
+      <pubDate>Thu, 06 Aug 2026 16:26:00 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Midday</h2>
+<p><strong>44 green, 2 red, 1 yellow.</strong> Up Ahead Sync remains red — last run failed again, carried over from the morning sweeps. New this cycle: the CrossWire (daily) job failed, and CrossWire's feed verification is flagged yellow.</p>
+<h3>&#x1F534; Red — 2 Failing Jobs</h3>
+<ul>
+  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged across every cycle since Wednesday morning; investigate before the next Watchdog run.</li>
+  <li><strong>CrossWire (daily)</strong> (new) — Last run failed. The daily brief publishing job failed this cycle.</li>
+</ul>
+<h3>&#x1F7E1; Yellow — 1 Service Flag</h3>
+<ul>
+  <li><strong>CrossWire</strong> (new) — Feed verification failed. Likely tied to the CrossWire (daily) job failure; confirm the feed renders before the next cycle.</li>
+</ul>
+<h3>&#x1F7E2; Green — 44 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the active red items before the next Watchdog cycle: Up Ahead Sync, CrossWire (daily).</li>
+</ul>]]></description>
+    </item>
         <item>
       <title>CrossWire: Sentinel Watchdog — August 6</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-080021</guid>
@@ -604,37 +627,5 @@
           <li>Fallback context still looks solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7 — “Automations that speak your language”</strong></a> pushed more natural-language-friendly automation building, plus a pile of July patch releases. Practical direction remains good even when the feed parser decides chaos is a feature.</li>
         </ul>]]></description>
     </item>
-<item>
-      <title>CrossWire: Commanders — Daily Brief, August 1</title>
-      <guid isPermaLink="false">crosswire-commanders-daily-2026-08-01</guid>
-      <pubDate>Sat, 01 Aug 2026 14:02:46 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Washington Commanders briefing</h2>
-        <p><strong>Lead:</strong> This was a vibes-and-camp-notes day, not a crisis day. The most useful signal is that Treylon Burks appears back and moving fine, the receiving-depth conversation is still live, and the preseason broadcast booth just added a very Washington kind of character.</p>
-        <h3>Team News</h3>
-        <ul>
-          <li>The official schedule is fully loaded: Washington opens <strong>Sept. 13 at Philadelphia</strong>, then <strong>Sept. 20 at Dallas</strong>, before the home opener <strong>Sept. 27 vs. Seattle</strong>. Seventeen games remain; no record yet because preseason limbo is still doing preseason limbo things.</li>
-          <li><strong>John Riggins</strong> will be a color analyst for the Commanders’ preseason broadcasts, per camp announcements echoed across the beat. That is less football signal than delightful franchise texture, but it counts.</li>
-        </ul>
-        <h3>Training Camp</h3>
-        <ul>
-          <li><strong>Treylon Burks</strong> appears to have avoided a longer scare: beat writers noted he was back out, then back in 11-on-11 with a clean grab. For August, “looks fine” is practically a standing ovation.</li>
-          <li><strong>Wide receiver depth</strong> remains a real thread in camp conversation, with John Keim explicitly flagging it and the official team preview also centering Burks in the position room.</li>
-          <li>The offense apparently spent part of practice celebrating <strong>big-man catches</strong>. This tells us almost nothing about September and everything about how to keep a camp crowd entertained.</li>
-        </ul>
-        <h3>Around the NFL</h3>
-        <ul>
-          <li><a href="https://www.espn.com/nfl/story/_/id/49500558/2026-kansas-city-chiefs-training-camp-cyrus-allen-patrick-mahomes"><strong>Kansas City rookie Cyrus Allen</strong></a> is drawing early first-team attention — one of the sharper national camp stories in today’s feed.</li>
-          <li><a href="https://www.espn.com/nfl/story/_/id/49427699/seattle-seahawks-training-camp-2026-intel-updates"><strong>Seattle’s camp intel stream</strong></a> matters a little extra because the Seahawks are Washington’s Week 3 home opener.</li>
-        </ul>
-        <h3>Beat Writers on X (Pilot)</h3>
-        <ul>
-          <li><strong>JP Finlay:</strong> Treylon Burks returned to work and later made a nice 11-on-11 catch — the plain-English takeaway is that the injury worry cooled off fast. <a href="https://x.com/JPFinlayNBCS/status/2083537168819970454">Back out</a> · <a href="https://x.com/JPFinlayNBCS/status/2083550445755117602">11-on-11 catch</a></li>
-          <li><strong>John Keim:</strong> wide receiver depth is still a live roster question at camp, not a settled room. <a href="https://x.com/john_keim/status/2083540011811492080">Link</a></li>
-          <li><strong>Nicki Jhabvala:</strong> John Riggins was announced as a preseason color analyst, which is extremely on-brand Washington football theater. <a href="https://x.com/NickiJhabvala/status/2083540161082568977">Link</a></li>
-          <li><strong>Nicki Jhabvala + Ben Standig + Mitch Tischler:</strong> the day also featured a run of “big-man receivers” jokes after offensive-lineman catches — camp comedy, but clearly one of the scene-setting moments. <a href="https://x.com/NickiJhabvala/status/2083539825274044676">Nicki</a> · <a href="https://x.com/BenStandig/status/2083549673487241230">Ben</a> · <a href="https://x.com/Mitch_Tischler/status/2083539702951338119">Mitch</a></li>
-        </ul>]]></description>
-    </item>
-
   </channel>
 </rss>
