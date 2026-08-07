@@ -4,9 +4,31 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Fri, 07 Aug 2026 12:23:41 GMT</lastBuildDate>
-    <pubDate>Fri, 07 Aug 2026 12:23:41 GMT</pubDate>
+    <lastBuildDate>Fri, 07 Aug 2026 16:32:58 GMT</lastBuildDate>
+    <pubDate>Fri, 07 Aug 2026 16:32:58 GMT</pubDate>
     <language>en-us</language>
+<item>
+  <title>CrossWire: Sentinel Watchdog — August 7</title>
+  <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-07-120033</guid>
+  <pubDate>Fri, 07 Aug 2026 16:32:58 GMT</pubDate>
+  <link>https://kanan.taila81309.ts.net/crosswire/</link>
+  <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Friday Midday</h2>
+<p><strong>45 green, 1 red, 1 yellow.</strong> The CrossWire (daily) publishing job is still red, carried over from the morning cycles, and the CrossWire service itself is now flagged yellow after feed verification failed. Green count dropped from 46 to 45.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>CrossWire (daily)</strong> (ongoing) — Last run failed. Same job flagged across every cycle since Thursday; investigate before the next Watchdog run.</li>
+</ul>
+<h3>&#x1F7E1; Yellow — 1 Service Flag</h3>
+<ul>
+  <li><strong>CrossWire</strong> — Feed verification failed. Likely tied to the CrossWire (daily) job failure; confirm the feed renders before the next cycle.</li>
+</ul>
+<h3>&#x1F7E2; Green — 45 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
+</ul>]]></description>
+</item>
 <item>
   <title>CrossWire: Sentinel Watchdog — August 7</title>
   <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-07-080016</guid>
@@ -542,39 +564,6 @@
   <li>Investigate the Paige invite monitor failure before calendar forwarding quietly piles up.</li>
   <li>Consolidate Mail Call to one canonical cron definition and remove the duplicate job drift.</li>
 </ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Hermes — Daily Brief, August 3</title>
-      <guid isPermaLink="false">crosswire-hermes-daily-2026-08-03</guid>
-      <pubDate>Mon, 03 Aug 2026 14:03:28 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Hermes Agent ecosystem</h2>
-<p><strong>Lead:</strong> The stable release is still <a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30">v0.19.1</a>, but the sharper signal today is platform hardening: credential-boundary fixes, better protection against repeated tool-call faceplants, and a growing plugin/skills ecosystem that is getting less toy, more operating system.</p>
-<h3>Release Radar</h3>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30"><strong>Hermes Agent v0.19.1</strong></a> remains the current stable tag — a patch rollup after the very large post-Quicksilver merge wave.</li>
-  <li><strong>Why it matters to MOCR:</strong> stability releases are the boring good stuff. Less runtime chaos means fewer “why is the airlock open?” mornings.</li>
-</ul>
-<h3>Trending PRs / Issues</h3>
-<ul>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/70967"><strong>#70967 — add <code>auth.json</code> to write-denied paths</strong></a>: this closes a real credential-store hole. If merged, Hermes file tools can no longer casually stomp the provider token vault. Very relevant to any agent stack with long-lived auth.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/57303"><strong>#57303 — soft-block exact repeated tool-call failures by default</strong></a>: turns the repeated-failure guardrail from decorative lore into actual behavior. Good for stopping dumb loops without killing the whole turn.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/76019"><strong>#76019 — add <code>model.reasoning_echo</code></strong></a>: opt-in preservation of <code>reasoning_content</code> on replay for local OpenAI-compatible backends that cache thinking tokens. Worth watching if MOCR leans harder into local llama.cpp, vLLM, or LM Studio lanes.</li>
-  <li><a href="https://github.com/NousResearch/hermes-agent/pull/77239"><strong>#77239 — fleet safety and desktop task/sidebar hardening</strong></a> and <a href="https://github.com/NousResearch/hermes-agent/pull/77752"><strong>#77752</strong></a> both fit the same theme: safer ops edges and cleaner gateway internals, not flashy but useful.</li>
-</ul>
-<h3>Community Builds</h3>
-<ul>
-  <li><a href="https://github.com/xyaz1313/phoenix"><strong>phoenix</strong></a> (71★ in a day): plugin-based routing tiers, risk rails, self-heal, checkpoint reminders, and adaptive approval strategy without patching Hermes core. That is ambitious in exactly the “clever, useful, slightly dangerous” way this ecosystem likes.</li>
-  <li><a href="https://github.com/Fryingpannn/ai-memory-workspace-starter"><strong>ai-memory-workspace-starter</strong></a> (11★): a files-first memory workspace starter for Hermes. Relevant to MOCR because cross-chat continuity is the whole game.</li>
-  <li><a href="https://github.com/asimons81/hermes-desktop-achievements"><strong>hermes-desktop-achievements</strong></a> (7★): a fun desktop add-on, but also a reminder that Hermes desktop customization is turning into a real extension surface.</li>
-</ul>
-<h3>Gaining Popularity</h3>
-<ul>
-  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (721★) keeps proving installable skills are becoming a serious packaging layer.</li>
-  <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (541★) is still the cross-harness memory project to watch — potentially powerful, potentially a governance hydra.</li>
-  <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (207★) matters if agent teams start wanting interoperable session/history formats instead of bespoke little kingdoms.</li>
-</ul>
-<p><strong>Worth watching:</strong> today’s through-line is boundary integrity — protect auth stores, stop tool loops, preserve useful replay state, and let the ecosystem extend Hermes without turning the ship into Battlestar Galactica after one too many “temporary” field mods.</p>]]></description>
     </item>
   </channel>
 </rss>
