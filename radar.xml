@@ -4,9 +4,27 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Fri, 07 Aug 2026 04:21:29 GMT</lastBuildDate>
-    <pubDate>Fri, 07 Aug 2026 04:21:29 GMT</pubDate>
+    <lastBuildDate>Fri, 07 Aug 2026 08:23:54 GMT</lastBuildDate>
+    <pubDate>Fri, 07 Aug 2026 08:23:54 GMT</pubDate>
     <language>en-us</language>
+<item>
+  <title>CrossWire: Sentinel Watchdog — August 7</title>
+  <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-07-040059</guid>
+  <pubDate>Fri, 07 Aug 2026 08:23:54 GMT</pubDate>
+  <link>https://kanan.taila81309.ts.net/crosswire/</link>
+  <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Friday Early Morning</h2>
+<p><strong>46 green, 1 red.</strong> The CrossWire (daily) publishing job failed again this cycle, carried over from Thursday's sweeps. The rest of the fleet, 46 items, is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>CrossWire (daily)</strong> (ongoing) — Last run failed. Same job flagged across every cycle since Thursday; investigate before the next Watchdog run.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
+</ul>]]></description>
+</item>
 <item>
       <title>CrossWire: Sentinel Watchdog — August 7</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-07-000040</guid>
@@ -25,7 +43,6 @@
   <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
 </ul>]]></description>
     </item>
-
 <item>
       <title>CrossWire: Sentinel Watchdog — August 6</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-200048</guid>
@@ -571,40 +588,5 @@
   <li>No replacement live pull was available from the configured web tool path on this machine, so the honest read is simple: no fresh Home Assistant lane beyond the feed failure itself.</li>
 </ul>]]></description>
     </item>
-<item>
-      <title>CrossWire: Commanders — Daily Brief, August 3</title>
-      <guid isPermaLink="false">crosswire-commanders-daily-2026-08-03</guid>
-      <pubDate>Mon, 03 Aug 2026 14:03:28 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Washington Commanders briefing</h2>
-<p><strong>Lead:</strong> Today’s useful signal is camp texture, not standings: Jayden Daniels and Terry McLaurin connected in the red zone, Chig Okonkwo had a bounce-back practice after a brief scare, and the offensive line appears to have had a strong pads day. Translation: functional football, no obvious fire.</p>
-<h3>Team News</h3>
-<ul>
-  <li>The full regular-season schedule is loaded, with Washington opening <strong>Sept. 13 at Philadelphia</strong>, then <strong>Sept. 20 at Dallas</strong>, before the home opener <strong>Sept. 27 vs. Seattle</strong>. Still pure preseason limbo: 17 games remaining, no record yet.</li>
-  <li>The broader roster-construction chatter around Washington still leans toward receiver curiosity. Today’s national headline pile included <a href="https://www.espn.com/nfl/story/_/id/49516913/san-francisco-49ers-brandon-aiyuk-commanders-deebo-samuel-ricky-pearsall-fantasy">Aiyuk/Washington speculation</a> and <a href="https://www.espn.com/nfl/story/_/id/48162895/2026-nfl-free-agency-ranking-best-remaining-available-unsigned-players">Stefon Diggs market talk</a>, which keeps that lane alive even if nothing is imminent.</li>
-</ul>
-<h3>Training Camp</h3>
-<ul>
-  <li><strong>Daniels to McLaurin</strong> for a toe-tap corner-end-zone touchdown was one of the day’s clearest highlights. If camp needs a recurring comfort-food play, that one will do nicely.</li>
-  <li><strong>Chig Okonkwo</strong> briefly looked shaken up after an awkward tackle, then returned two plays later for a diving end-zone catch. That counts as a very acceptable August emotional arc.</li>
-  <li><strong>OL vs. DL one-on-ones</strong> drew strong reviews for the offensive line, with <strong>Sam Cosmi</strong>, <strong>Julian Good-Jones</strong>, and rookie <strong>Josh Joseph</strong> all drawing positive mentions from the beat.</li>
-  <li><strong>Antonio Williams</strong> also popped up in red-zone work, including a quick-out touchdown noted by John Keim. Useful camp signal, even if August touchdowns are often made of vapor and optimism.</li>
-  <li><strong>Running back room:</strong> Nicki Jhabvala’s “I like this room. A lot.” comment is not a scouting report, but it is the kind of beat-writer tone read worth clocking early.</li>
-</ul>
-<h3>Around the NFL</h3>
-<ul>
-  <li><a href="https://www.espn.com/nfl/story/_/id/49513914/2026-nfl-training-camp-position-battles-afc-nfc"><strong>ESPN’s training-camp position-battles roundup</strong></a> is the bigger backdrop: leaguewide, this is still roster-sort season more than injury-panic season.</li>
-  <li><a href="https://www.espn.com/nfl/story/_/id/48162895/2026-nfl-free-agency-ranking-best-remaining-available-unsigned-players"><strong>Free agents still available</strong></a> matters to Washington mostly because receiver-market movement could reshape the team’s options fast.</li>
-</ul>
-<h3>Beat Writers on X (Pilot)</h3>
-<ul>
-  <li><strong>John Keim:</strong> Daniels hit Terry McLaurin for a toe-tap touchdown in the corner of the end zone. Clean summary: QB1 and WR1 still look like grown-ups. <a href="https://x.com/john_keim/status/2084266827203436895">Link</a></li>
-  <li><strong>JP Finlay:</strong> Chig Okonkwo had a strong day, including a touchdown catch from Daniels, and fans were very into it. <a href="https://x.com/JPFinlayNBCS/status/2084269926668283977">Link</a></li>
-  <li><strong>Nicki Jhabvala:</strong> Sam Cosmi was not messing around during OL-DL one-on-ones, with Adam Peters and Dan Quinn watching closely. <a href="https://x.com/NickiJhabvala/status/2084272455338660060">Link</a></li>
-  <li><strong>Mitch Tischler:</strong> the offensive line appeared to win the one-on-one day overall, and Julian Good-Jones got singled out for a good pads practice. <a href="https://x.com/Mitch_Tischler/status/2084273673586823401">Link</a></li>
-  <li><strong>Nicki Jhabvala:</strong> she likes the running backs room “a lot,” which is not proof, but it is an interesting early-camp vibe check. <a href="https://x.com/NickiJhabvala/status/2084270746621059188">Link</a></li>
-</ul>]]></description>
-    </item>
-
   </channel>
 </rss>
