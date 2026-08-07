@@ -4,9 +4,46 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Thu, 06 Aug 2026 20:21:05 GMT</lastBuildDate>
-    <pubDate>Thu, 06 Aug 2026 20:21:05 GMT</pubDate>
+    <lastBuildDate>Fri, 07 Aug 2026 04:21:29 GMT</lastBuildDate>
+    <pubDate>Fri, 07 Aug 2026 04:21:29 GMT</pubDate>
     <language>en-us</language>
+<item>
+      <title>CrossWire: Sentinel Watchdog — August 7</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-07-000040</guid>
+      <pubDate>Fri, 07 Aug 2026 04:21:29 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Friday Morning</h2>
+<p><strong>46 green, 1 red.</strong> The CrossWire (daily) publishing job failed again this cycle, carried over from Thursday's sweeps. The rest of the fleet, 46 items, is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>CrossWire (daily)</strong> (ongoing) — Last run failed. Same job flagged across every cycle on Thursday; investigate before the next Watchdog run.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
+</ul>]]></description>
+    </item>
+
+<item>
+      <title>CrossWire: Sentinel Watchdog — August 6</title>
+      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-200048</guid>
+      <pubDate>Fri, 07 Aug 2026 00:24:26 GMT</pubDate>
+      <link>https://kanan.taila81309.ts.net/crosswire/</link>
+      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Evening</h2>
+<p><strong>46 green, 1 red.</strong> The CrossWire (daily) publishing job failed again this cycle, carried over from the midday and afternoon sweeps. The rest of the fleet, 46 items, is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>CrossWire (daily)</strong> (ongoing) — Last run failed. Same job flagged across every cycle today; investigate before the next Watchdog run.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
+</ul>]]></description>
+    </item>
 <item>
       <title>CrossWire: Sentinel Watchdog — August 6</title>
       <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-160044</guid>
@@ -568,68 +605,6 @@
   <li><strong>Nicki Jhabvala:</strong> she likes the running backs room “a lot,” which is not proof, but it is an interesting early-camp vibe check. <a href="https://x.com/NickiJhabvala/status/2084270746621059188">Link</a></li>
 </ul>]]></description>
     </item>
-<item>
-      <title>CrossWire: Hermes — Daily Brief, August 2</title>
-      <guid isPermaLink="false">crosswire-hermes-daily-2026-08-02</guid>
-      <pubDate>Sun, 02 Aug 2026 14:03:54 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Hermes Agent ecosystem</h2>
-    <p><strong>Lead:</strong> Hermes has a fresh stable tag in <a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30">v0.19.1</a>, but the more useful signal today is reliability work landing where MOCR actually lives: session state, cron behavior, Telegram/Desktop delivery, and quieter desktop update hygiene.</p>
-    <h3>Release Radar</h3>
-    <ul>
-      <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.30"><strong>Hermes Agent v0.19.1</strong></a> is still the current stable tag — a patch rollup after the very large post-Quicksilver merge wave.</li>
-      <li><strong>Why it matters to MOCR:</strong> this is the boring good stuff. Stable downstream installs and fewer runtime paper cuts are exactly how you avoid surprise boss fights before coffee.</li>
-    </ul>
-    <h3>Trending PRs / Issues</h3>
-    <ul>
-      <li><a href="https://github.com/NousResearch/hermes-agent/pull/76798"><strong>#76798 — codex app-server resumes threads and stops double-sending final replies</strong></a>: fixes two ugly session-memory / duplicate-reply bugs found in a real Telegram deployment. Very relevant if any MOCR lane ever depends on Codex-side continuity.</li>
-      <li><a href="https://github.com/NousResearch/hermes-agent/pull/76797"><strong>#76797 — cron lifecycle guard scoped to real shell scripts</strong></a>: narrows a cron failure mode and adds per-job cron context. That is a direct ops signal for automation-heavy setups like this one.</li>
-      <li><a href="https://github.com/NousResearch/hermes-agent/pull/76796"><strong>#76796 — Telegram replies now deliver even when the session is being viewed on desktop</strong></a>: closes a nasty cross-surface delivery gap.</li>
-      <li><a href="https://github.com/NousResearch/hermes-agent/pull/75722"><strong>#75722 — preserve enabled/disabled toolsets across model switches</strong></a>: useful session-state hardening if MOCR leans harder on profile routing or dynamic model changes.</li>
-      <li><a href="https://github.com/NousResearch/hermes-agent/pull/76809"><strong>#76809 — ignore updater-generated <code>app.asar</code> artifacts</strong></a>: tiny fix, but it removes phantom desktop changes after <code>hermes update</code>. Less false drama in review panels is always welcome.</li>
-    </ul>
-    <h3>Community Builds</h3>
-    <ul>
-      <li><a href="https://github.com/Fryingpannn/ai-memory-workspace-starter"><strong>ai-memory-workspace-starter</strong></a> (9★): a files-first memory workspace starter for Hermes. Relevant to MOCR because shared context that survives fresh chats is the whole religion here.</li>
-      <li><a href="https://github.com/axelfreeman/voice-to-article"><strong>voice-to-article</strong></a> (9★): Telegram voice in, SEO article out. Nice example of Hermes as a production pipeline instead of an unusually articulate textbox.</li>
-      <li><a href="https://github.com/sloemo01/hermes-skills-bundle"><strong>hermes-skills-bundle</strong></a> (8★): browser-first automation skills for login-gated work. Useful, ambitious, and probably held together with at least some duct tape and optimism.</li>
-    </ul>
-    <h3>Gaining Popularity</h3>
-    <ul>
-      <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (673★) keeps reinforcing that installable skill packs are becoming a real ecosystem layer.</li>
-      <li><a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (512★) is still worth watching as a shared memory hub across harnesses — potentially useful, potentially governance-shaped mischief.</li>
-      <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (203★) is notable as a format bridge across agent harnesses, which matters if MOCR ever wants cleaner replay or memory interchange.</li>
-    </ul>
-    <p><strong>Worth watching:</strong> today’s through-line is state integrity. Tool availability surviving model switches, cron behaving like cron, and replies reaching the right surface are not glamorous — they are just the difference between a platform and a haunted house.</p>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Tech — Daily Brief, August 2</title>
-      <guid isPermaLink="false">crosswire-tech-daily-2026-08-02</guid>
-      <pubDate>Sun, 02 Aug 2026 14:03:54 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Tech briefing</h2>
-    <p><strong>Lead:</strong> Apple made the clearest concrete move in this lane with its new U.S. leasing program, while the broader tech signal is a split screen of AI-economics friction, neat security-hardware nerdery, and a Home Assistant feed that faceplanted again.</p>
-    <h3>Apple</h3>
-    <ul>
-      <li><a href="https://www.apple.com/newsroom/2026/07/apple-upgrade-launches-in-the-united-states/"><strong>Apple Upgrade launched in the U.S.</strong></a>: Apple and Klarna now offer leasing for iPhone, Apple Watch, Mac, and iPad, and Apple says this replaces the old iPhone Upgrade Program and iPhone Payments in the U.S. That is not a side quest — it is Apple making hardware access look a lot more subscription-shaped.</li>
-      <li><a href="https://9to5mac.com/2026/08/01/apple-upgrade-will-it-replace-apple-card-monhtly-installments/"><strong>9to5Mac’s read</strong></a> is that this may hint at future Apple Card changes. Worth watching if Apple keeps pulling financing deeper into its services logic.</li>
-      <li><a href="https://www.macrumors.com/2026/08/01/top-stories-apple-upgrade-launches/"><strong>MacRumors’ weekly stack</strong></a> also flags <strong>iOS 26.6</strong> shipping and the usual pre-September hardware murmuring.</li>
-    </ul>
-    <h3>AI &amp; Models</h3>
-    <ul>
-      <li><a href="https://arstechnica.com/ai/2026/08/reddit-ceo-on-ai-overviews-were-still-looking-for-that-win-win/"><strong>Reddit’s CEO is publicly questioning Google AI Overviews</strong></a> as the company’s stock falls. Useful reminder that AI summary products still have an unresolved “who captures the value?” problem.</li>
-    </ul>
-    <h3>Science &amp; Tech</h3>
-    <ul>
-      <li><a href="https://arstechnica.com/security/2026/08/defcons-new-badge-is-a-security-key-you-can-see-inside/"><strong>Defcon’s new badge is an inspectable security key</strong></a>. That is elegant as hell: transparent trust hardware for a room full of people professionally allergic to black boxes.</li>
-      <li><a href="https://arstechnica.com/tech-policy/2026/08/after-noise-complaints-judge-orders-waymo-to-stop-overnight-charging-in-santa-monica/"><strong>Waymo was ordered to stop overnight charging in Santa Monica</strong></a> after noise complaints. A tidy reminder that infrastructure success still loses if the neighbors want to throw it into the sea.</li>
-      <li><a href="https://arstechnica.com/space/2026/08/heres-how-engineers-plan-to-save-the-satellite-sent-to-save-nasas-swift-mission/"><strong>Engineers are still trying to save the Swift rescue satellite</strong></a>. Good space-ops story; stubborn engineering remains undefeated as a genre.</li>
-    </ul>
-    <h3>Home Automation</h3>
-    <ul>
-      <li>The raw Home Assistant source failed again on this run with <code>no element found: line 1, column 0</code>, so the feed itself was frakked.</li>
-      <li>Fallback context is still solid: <a href="https://www.home-assistant.io/blog/2026/07/01/release-20267/"><strong>Home Assistant 2026.7 — “Automations that speak your language”</strong></a> made the natural-language automation builder the default and pushed more human-readable authoring. Good direction, even if the source feed briefly chose chaos.</li>
-    </ul>]]></description>
-    </item>
+
   </channel>
 </rss>
