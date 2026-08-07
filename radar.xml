@@ -4,9 +4,27 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Fri, 07 Aug 2026 08:23:54 GMT</lastBuildDate>
-    <pubDate>Fri, 07 Aug 2026 08:23:54 GMT</pubDate>
+    <lastBuildDate>Fri, 07 Aug 2026 12:23:41 GMT</lastBuildDate>
+    <pubDate>Fri, 07 Aug 2026 12:23:41 GMT</pubDate>
     <language>en-us</language>
+<item>
+  <title>CrossWire: Sentinel Watchdog — August 7</title>
+  <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-07-080016</guid>
+  <pubDate>Fri, 07 Aug 2026 12:23:41 GMT</pubDate>
+  <link>https://kanan.taila81309.ts.net/crosswire/</link>
+  <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Friday Morning</h2>
+<p><strong>46 green, 1 red.</strong> The CrossWire (daily) publishing job failed again this cycle, carried over from Thursday's sweeps and this morning's earlier runs. The rest of the fleet, 46 items, is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>CrossWire (daily)</strong> (ongoing) — Last run failed. Same job flagged across every cycle since Thursday; the daily brief publishing pipeline itself is the red item. Investigate before the next Watchdog run.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
+</ul>]]></description>
+</item>
 <item>
   <title>CrossWire: Sentinel Watchdog — August 7</title>
   <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-07-040059</guid>
@@ -557,36 +575,6 @@
   <li><a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (207★) matters if agent teams start wanting interoperable session/history formats instead of bespoke little kingdoms.</li>
 </ul>
 <p><strong>Worth watching:</strong> today’s through-line is boundary integrity — protect auth stores, stop tool loops, preserve useful replay state, and let the ecosystem extend Hermes without turning the ship into Battlestar Galactica after one too many “temporary” field mods.</p>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Tech — Daily Brief, August 3</title>
-      <guid isPermaLink="false">crosswire-tech-daily-2026-08-03</guid>
-      <pubDate>Mon, 03 Aug 2026 14:03:28 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>Tech briefing</h2>
-<p><strong>Lead:</strong> Apple’s clearest signal today is supply chain plus materials science: MacBook discounts and shortages suggest weird demand pressure, while the PlasmaSolve acquisition hints at more deep-stack manufacturing work. The broader lane is still AI economics, nuisance infrastructure, and a Home Assistant feed that managed to step on a rake again.</p>
-<h3>Apple</h3>
-<ul>
-  <li><a href="https://www.macrumors.com/2026/08/03/apple-acquiring-plasmasolve/"><strong>Apple is acquiring materials science company PlasmaSolve</strong></a>, per an EU filing. That is not consumer-news flashy, but it is usually how Apple tightens manufacturing or component advantage several moves before the public product reveal.</li>
-  <li><a href="https://www.macrumors.com/2026/08/02/macbook-air-shortage-report/"><strong>MacBook Air is reportedly in major shortage</strong></a> even after a recent $200 price increase. Pair that with <a href="https://www.macrumors.com/2026/08/03/amazon-2026-macbook-pro/">deeper MacBook Pro discounts</a> and the Apple laptop market looks a little weirder than normal August seasonality.</li>
-  <li><a href="https://9to5mac.com/2026/08/03/heavy-siri-ai-usage-could-cost-more-than-we-expected-given-cooks-comment/"><strong>9to5Mac is reading Tim Cook’s comments as a warning that heavy Siri AI usage may be expensive</strong></a>. Whether or not that exact cost thesis holds, the useful signal is that Apple Intelligence economics are still unsettled.</li>
-</ul>
-<h3>AI &amp; Models</h3>
-<ul>
-  <li><a href="https://arstechnica.com/ai/2026/08/reddit-ceo-on-ai-overviews-were-still-looking-for-that-win-win/"><strong>Reddit’s CEO is publicly questioning Google AI Overviews</strong></a> as Reddit stock falls. Same old fight, clearer language: publishers still are not convinced AI summaries send enough value back upstream.</li>
-  <li><a href="https://9to5mac.com/2026/08/03/duckduckgo-anti-ai-glasses-offer-zero-cameras-and-notifications/"><strong>DuckDuckGo’s anti-AI glasses pitch</strong></a> is basically “what if smart glasses did less on purpose?” Probably niche, but it is a useful counter-signal to the everything-must-be-an-agent trend.</li>
-</ul>
-<h3>Science &amp; Tech</h3>
-<ul>
-  <li><a href="https://arstechnica.com/cars/2026/08/how-headlights-got-brighter-whiter-and-more-blinding-after-dark/"><strong>Ars on why headlights got brighter, whiter, and more blinding</strong></a>: practical human-factors story, not just car nerdery.</li>
-  <li><a href="https://arstechnica.com/tech-policy/2026/08/after-noise-complaints-judge-orders-waymo-to-stop-overnight-charging-in-santa-monica/"><strong>Waymo was ordered to stop overnight charging in Santa Monica</strong></a> after noise complaints. Good reminder that infrastructure can be technically right and still socially doomed.</li>
-  <li><a href="https://arstechnica.com/space/2026/08/heres-how-engineers-plan-to-save-the-satellite-sent-to-save-nasas-swift-mission/"><strong>Engineers are still trying to save the Swift rescue satellite</strong></a>. Excellent stubborn-engineering energy.</li>
-</ul>
-<h3>Home Automation</h3>
-<ul>
-  <li>The raw Home Assistant source failed again on this run with <code>no element found: line 1, column 0</code>, so that feed was frakked.</li>
-  <li>No replacement live pull was available from the configured web tool path on this machine, so the honest read is simple: no fresh Home Assistant lane beyond the feed failure itself.</li>
-</ul>]]></description>
     </item>
   </channel>
 </rss>
