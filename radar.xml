@@ -4,9 +4,117 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Fri, 07 Aug 2026 16:32:58 GMT</lastBuildDate>
-    <pubDate>Fri, 07 Aug 2026 16:32:58 GMT</pubDate>
+    <lastBuildDate>Sat, 08 Aug 2026 04:26:51 GMT</lastBuildDate>
+    <pubDate>Sat, 08 Aug 2026 04:26:51 GMT</pubDate>
     <language>en-us</language>
+<item>
+  <title>CrossWire: Sentinel Watchdog — Aug 8</title>
+  <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-08-000015</guid>
+  <pubDate>Sat, 08 Aug 2026 04:26:51 GMT</pubDate>
+  <link>https://kanan.taila81309.ts.net/crosswire/</link>
+  <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Saturday Midnight</h2>
+<p><strong>46 green, 1 red.</strong> One failing job this cycle: CrossWire: Hermes Local Edition. The rest of the fleet is healthy (46 items green).</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>CrossWire: Hermes Local Edition</strong> (ongoing) — Last run failed. Investigate before the next Watchdog cycle.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the active red item before the next Watchdog cycle: CrossWire: Hermes Local Edition.</li>
+</ul>]]></description>
+</item>
+<item>
+  <title>CrossWire: Hermes — Daily Brief, August 7</title>
+  <guid isPermaLink="false">crosswire-hermes-daily-2026-08-07</guid>
+  <pubDate>Fri, 07 Aug 2026 16:39:05 GMT</pubDate>
+  <link>https://kanan.taila81309.ts.net/crosswire/</link>
+  <description><![CDATA[<h2>Hermes Agent ecosystem</h2>
+<p><strong>Lead:</strong> v0.20.0 (The Herald Release) is the settled headline, so today’s lane is automation resilience: a oneshot CLI bug that ignores <code>fallback_providers</code> at resolution time — exactly the class of landmine MOCR’s cron fleet sits on — plus a gateway session-key fix, WhatsApp mention support, and the usual community wave.</p>
+<h3>Release Radar</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3"><strong>v0.20.0 — The Herald Release</strong></a> (Aug 3) remains stable: real-time voice, A2A v1.0, signed outbound webhooks, grounded citations. v0.19.1 (Jul 30) was the rollup patch for downstream consumers.</li>
+</ul>
+<h3>Trending PRs / Issues</h3>
+<ul>
+  <li><a href="https://github.com/NousResearch/hermes-agent/issues/81209"><strong>#81209 — CLI/oneshot gets no resolution-time fallback</strong></a>: with a verified <code>fallback_providers</code> chain, <code>hermes -z</code> still dies for the entire quota window when the primary provider 429s (retry after ~39,750s). MOCR-relevant in the extreme: scheduled one-shots are exactly the runs that cannot wait out a provider quota window, and “fallback only works interactively” is the kind of silent assumption that breaks automation at 3 a.m.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/81207"><strong>#81207 — gateway session keys honor per-platform group/thread isolation</strong></a>: session keys now read per-platform <code>extra.*</code> overrides instead of only the global config, so a WhatsApp group with per-user isolation disabled no longer splits into per-user sessions.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/81208"><strong>#81208 — WhatsApp @mention tagging</strong></a>: inbound <code>mentionedJid</code> now reaches the agent (was silently dropped), and outbound can @tag group members.</li>
+  <li><a href="https://github.com/NousResearch/hermes-agent/pull/81202"><strong>#81202 — vision retries container exec-read on Docker cold-start</strong></a> and surfaces stderr; <a href="https://github.com/NousResearch/hermes-agent/pull/80155"><strong>#80155 — gate finalization on active todos</strong></a>; <a href="https://github.com/NousResearch/hermes-agent/pull/76661"><strong>#76661 — P2P federation heartbeat for multi-device task relay</strong></a> round out a healthy fix+feat mix.</li>
+</ul>
+<h3>Community Builds</h3>
+<ul>
+  <li><a href="https://github.com/xyaz1313/phoenix"><strong>phoenix</strong></a> (150★): routing tiers, risk rails, self-heal, checkpoints, adaptive approvals — the plugin-layer policy kit stays the most interesting MOCR-adjacent build, second-policy-engine caveat included.</li>
+  <li><a href="https://github.com/Hermes-brasil/hermes-brasil"><strong>hermes-brasil</strong></a> (108★): the ecosystem keeps localizing into real community operating kits.</li>
+  <li>Fresh this week: <a href="https://github.com/bchop-studio/hermes-web-themes"><strong>hermes-web-themes</strong></a> (13★), <a href="https://github.com/hufeng173/kunpeng-skill"><strong>kunpeng-skill</strong></a> (13★), <a href="https://github.com/ptaranat/zeromem"><strong>zeromem</strong></a> (12★, Rust Zero-Mem memory provider — worth half an eye for MOCR), <a href="https://github.com/ch1109/portable-agent-skills"><strong>portable-agent-skills</strong></a> (12★), <a href="https://github.com/asimons81/hermes-desktop-achievements"><strong>hermes-desktop-achievements</strong></a> (12★), and <a href="https://github.com/CliffWade/hermes-desktop-theme-pack"><strong>hermes-desktop-theme-pack</strong></a> (10★, 59 WCAG-checked themes).</li>
+</ul>
+<h3>Gaining Popularity</h3>
+<ul>
+  <li><a href="https://github.com/SeanJ1ang/design-judge-skills"><strong>design-judge-skills</strong></a> (905★) keeps proving skills are a serious packaging layer; <a href="https://github.com/MemTensor/memmy-agent"><strong>memmy-agent</strong></a> (607★) stays the shared-memory hub to watch.</li>
+  <li><a href="https://github.com/gakonst/nanocodex"><strong>nanocodex</strong></a> (368★), <a href="https://github.com/letta-ai/trajectory"><strong>trajectory</strong></a> (216★), <a href="https://github.com/MadsGao/frakio-work"><strong>frakio-work</strong></a> (169★), <a href="https://github.com/asimons81/hermes-field-kit"><strong>hermes-field-kit</strong></a> (121★), and <a href="https://github.com/MaxFreedomPollard/Compartment"><strong>Compartment</strong></a> (112★) all point at lighter runtimes, shared memory, and interoperable session formats.</li>
+</ul>
+<p><strong>Worth watching:</strong> #81209 is the one to internalize. A configured fallback chain that only works in interactive sessions is a silent automation killer — for MOCR’s cron fleet and everyone else’s. When Hermes ships voice, A2A, and webhooks, “did it actually connect under load” checks matter more, not less.</p>]]></description>
+</item>
+<item>
+  <title>CrossWire: Tech — Daily Brief, August 7</title>
+  <guid isPermaLink="false">crosswire-tech-daily-2026-08-07</guid>
+  <pubDate>Fri, 07 Aug 2026 16:39:05 GMT</pubDate>
+  <link>https://kanan.taila81309.ts.net/crosswire/</link>
+  <description><![CDATA[<h2>Tech briefing</h2>
+<p><strong>Lead:</strong> Apple’s premium grip just got a number — 65% of the global premium market in H1 2026, with premium phones at a record 29% of all sales — while iOS 26.6.1 tests internally and the fall Mac lineup rumors sharpen. ByteDance is training a 10-trillion-parameter model, and the biggest solar telescope finally caught sun-surface vortexes we predicted but couldn’t see.</p>
+<h3>Apple</h3>
+<ul>
+  <li><a href="https://www.macrumors.com/2026/08/07/apple-captures-65-percent-of-global-premium-market/"><strong>Apple captured 65% of the global premium smartphone market in H1 2026</strong></a>, and the premium segment itself hit a record 29% of all smartphone sales. The high end is consolidating, and Apple owns it.</li>
+  <li><a href="https://www.macrumors.com/2026/08/07/apple-testing-ios-26-6-1/"><strong>iOS 26.6.1 is in internal testing</strong></a> — a likely point-fix release ahead of the September wave.</li>
+  <li><a href="https://9to5mac.com/2026/08/07/macbook-pro-users-will-soon-have-two-compelling-new-upgrade-options/"><strong>MacBook Pro users face two compelling upgrade paths this fall</strong></a>: the rumored MacBook Ultra and a new MacBook Pro. The portable line is about to get genuinely interesting.</li>
+  <li><a href="https://www.macrumors.com/2026/08/07/apple-flags-delays-in-its-prosser-lawsuit/"><strong>Apple told a court its trade-secret case against leaker Jon Prosser is stalling</strong></a> — no word from his legal team in a month, per Apple. Discovery drags on.</li>
+  <li>iPhone Air turns one and successor talk has started (<a href="https://www.macrumors.com/2026/08/07/the-macrumors-show-iphone-air-2/">MacRumors Show</a>); <a href="https://9to5mac.com/2026/08/07/apple-expands-refurb-store-with-rare-m5-macbook-pro-configs-apple-tv-4k-more/"><strong>rare M5 MacBook Pro configs hit the refurb store</strong></a>, and <a href="https://www.macrumors.com/2026/08/07/best-apple-deals-of-the-week-8-7-26/"><strong>AirPods Pro 3 at $189.99</strong></a> leads this week’s deals.</li>
+</ul>
+<h3>AI &amp; Models</h3>
+<ul>
+  <li><a href="https://arstechnica.com/ai/2026/08/bytedance-trains-massive-ai-model-in-bid-to-rival-anthropic/"><strong>ByteDance is training a 10-trillion-parameter model</strong></a> aimed squarely at Anthropic. Frontier compute keeps escalating; the “who can afford the cluster” arms race is not cooling.</li>
+  <li><a href="https://arstechnica.com/ai/2026/08/ai-chatbots-have-failed-people-in-crisis-can-that-be-fixed/"><strong>AI chatbots have failed people in crisis</strong></a>, and researchers say the fix starts with opening safety data. A needed corrective as assistants get more conversational — and more trusted with vulnerable moments.</li>
+</ul>
+<h3>Science &amp; Tech</h3>
+<ul>
+  <li><a href="https://arstechnica.com/science/2026/08/the-worlds-biggest-solar-telescope-caught-vortexes-on-the-suns-surface/"><strong>The world’s biggest solar telescope caught vortexes on the Sun’s surface</strong></a> — predicted for years, too small to see until now.</li>
+  <li><a href="https://arstechnica.com/science/2026/08/trump-is-losing-his-war-on-wind-power/"><strong>A federal court ruled the administration’s hold on wind projects violates the law</strong></a>. A rare decisive loss in the energy-policy fight.</li>
+  <li><a href="https://arstechnica.com/health/2026/08/report-white-house-drafting-executive-order-linking-vaccines-and-autism/"><strong>Report: the White House is drafting an executive order linking vaccines and autism</strong></a>, against the science and with real political risk. Not tech, but the kind of policy signal that moves public-health markets and misinformation infrastructure.</li>
+</ul>]]></description>
+</item>
+<item>
+  <title>CrossWire: Commanders — Daily Brief, August 7</title>
+  <guid isPermaLink="false">crosswire-commanders-daily-2026-08-07</guid>
+  <pubDate>Fri, 07 Aug 2026 16:39:05 GMT</pubDate>
+  <link>https://kanan.taila81309.ts.net/crosswire/</link>
+  <description><![CDATA[<h2>Washington Commanders briefing</h2>
+<p><strong>Lead:</strong> Stefon Diggs’ first real practice is in the books, and the beat’s verdict is exactly what the front office paid for: 11-on-11 work, a corner beaten in 1-on-1s, and extra route reps with Jayden Daniels after practice — plus quotes like “it’s going to be hard to double guys in this offense.” The kicker battle keeps simmering, and the preseason opener is seven days out.</p>
+<h3>Team News</h3>
+<ul>
+  <li><strong>Diggs is fully in the mix.</strong> He worked in 11-on-11s, ran past a cornerback in 1-on-1 work, and stayed after practice throwing with Jayden Daniels — John Keim and Nicki Jhabvala both clocked the post-practice route talk. The chemistry work is happening on purpose.</li>
+  <li>Preseason opener is <strong>Aug. 14 at home vs. Miami — seven days out</strong> — then Aug. 22 at Detroit and Aug. 28 at Baltimore.</li>
+</ul>
+<h3>Training Camp</h3>
+<ul>
+  <li><strong>Kicker battle, still hot:</strong> Ben Standig’s charting had Drew Stevens 8-of-8 while Jake Moody went 5-of-7, with Tress Way holding for both. The camp-long pattern holds: Stevens clean, Moody inconsistent under August pressure.</li>
+  <li>Fred Davis II came away with an interception; Amos practiced and “looked spry,” per Standig.</li>
+  <li>Diggs on the room: “Gratitude eliminates entitlement. I’m happy to be here.” On rookie Antonio Williams: “Young guy 14 can hoop a little bit.” And on DC’s humidity, it’s “one thing he doesn’t miss” about being back.</li>
+</ul>
+<h3>Around the NFL</h3>
+<ul>
+  <li>Carson Beck’s Hall of Fame Game debut has him on superflex radars — early, but the preseason QB storyline to watch.</li>
+  <li>Fantasy season is warming up: ESPN is asking whether to trust Jayden Daniels in a “comeback season.” Useful if you draft, noise if you want real Washington intel.</li>
+</ul>
+<h3>Beat Writers on X (Pilot)</h3>
+<ul>
+  <li><strong>John Keim:</strong> Jayden Daniels and Stefon Diggs communicated after throwing for several minutes following practice. <a href="https://x.com/john_keim/status/2085758471102722091">Link</a></li>
+  <li><strong>Nicki Jhabvala:</strong> Diggs got in extra reps with Jayden Daniels and talked through routes after practice. <a href="https://x.com/NickiJhabvala/status/2085757636897620128">Link</a></li>
+  <li><strong>JP Finlay:</strong> Diggs on his impact: “It’s going to be hard to double guys in this offense.” <a href="https://x.com/JPFinlayNBCS/status/2085742192438473107">Link</a></li>
+  <li><strong>Ben Standig:</strong> practice notes — Diggs ran past a CB in 1-on-1s; Stevens 8-of-8, Moody 5-of-7; Fred Davis II INT. <a href="https://x.com/BenStandig/status/2085736777633894762">Link</a></li>
+  <li><strong>JP Finlay:</strong> Diggs: “Gratitude eliminates entitlement. I’m happy to be here.” <a href="https://x.com/JPFinlayNBCS/status/2085740863930487220">Link</a></li>
+</ul>]]></description>
+</item>
 <item>
   <title>CrossWire: Sentinel Watchdog — August 7</title>
   <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-07-120033</guid>
@@ -78,42 +186,6 @@
 </ul>
 <h3>&#x1F7E2; Green — 46 Items Healthy</h3>
 <p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 6</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-200048</guid>
-      <pubDate>Fri, 07 Aug 2026 00:24:26 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Evening</h2>
-<p><strong>46 green, 1 red.</strong> The CrossWire (daily) publishing job failed again this cycle, carried over from the midday and afternoon sweeps. The rest of the fleet, 46 items, is healthy.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>CrossWire (daily)</strong> (ongoing) — Last run failed. Same job flagged across every cycle today; investigate before the next Watchdog run.</li>
-</ul>
-<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 6</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-160044</guid>
-      <pubDate>Thu, 06 Aug 2026 20:21:05 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Afternoon</h2>
-<p><strong>46 green, 1 red.</strong> The CrossWire (daily) publishing job failed again this cycle, carried over from the midday sweep. The notable change: Up Ahead Sync finally recovered after failing since Wednesday morning, which is why the green count jumped from 44 to 46.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>CrossWire (daily)</strong> (ongoing) — Last run failed. Same job flagged across the midday and afternoon cycles; investigate before the next Watchdog run.</li>
-</ul>
-<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy, including the previously red Up Ahead Sync.</p>
 <h3>Recommended Actions</h3>
 <ul>
   <li>Resolve the active red item before the next Watchdog cycle: CrossWire (daily).</li>
@@ -204,137 +276,6 @@
   <li><strong>Mitch Tischler:</strong> “Stefon Diggs is in the building!” — the first confirmation of the day. <a href="https://x.com/Mitch_Tischler/status/2085398132116820126">Link</a></li>
   <li><strong>Martenzie Johnson:</strong> Diggs has touched down at the Commanders facility. <a href="https://x.com/10zJohnson/status/2085393407501795487">Link</a></li>
   <li><strong>JP Finlay:</strong> Coach Locks on Diggs: “He’s a guy that knows how to fit in a locker room… He’s always produced. I think he’ll work great with Terry McLaurin and be a great safety valve for Jayden Daniels.” <a href="https://x.com/JPFinlayNBCS/status/2085385850494271554">Link</a></li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 6</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-120037</guid>
-      <pubDate>Thu, 06 Aug 2026 16:26:00 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Midday</h2>
-<p><strong>44 green, 2 red, 1 yellow.</strong> Up Ahead Sync remains red — last run failed again, carried over from the morning sweeps. New this cycle: the CrossWire (daily) job failed, and CrossWire's feed verification is flagged yellow.</p>
-<h3>&#x1F534; Red — 2 Failing Jobs</h3>
-<ul>
-  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged across every cycle since Wednesday morning; investigate before the next Watchdog run.</li>
-  <li><strong>CrossWire (daily)</strong> (new) — Last run failed. The daily brief publishing job failed this cycle.</li>
-</ul>
-<h3>&#x1F7E1; Yellow — 1 Service Flag</h3>
-<ul>
-  <li><strong>CrossWire</strong> (new) — Feed verification failed. Likely tied to the CrossWire (daily) job failure; confirm the feed renders before the next cycle.</li>
-</ul>
-<h3>&#x1F7E2; Green — 44 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the active red items before the next Watchdog cycle: Up Ahead Sync, CrossWire (daily).</li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 6</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-080021</guid>
-      <pubDate>Thu, 06 Aug 2026 12:25:56 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Morning</h2>
-<p><strong>46 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again, carried over from the midnight and early-morning sweeps. Green count holds at 46; the rest of the fleet is healthy.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged across every cycle since Wednesday morning; investigate before the next Watchdog run and check for a shared dependency with earlier sync or backup failures.</li>
-</ul>
-<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 6</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-040008</guid>
-      <pubDate>Thu, 06 Aug 2026 08:23:41 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Early Morning</h2>
-<p><strong>46 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again, carried over from the midnight sweep and all of Wednesday's cycles. Green count holds at 46; the rest of the fleet is healthy.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged across every cycle since Wednesday morning; investigate before the next Watchdog run and check for a shared dependency with earlier sync or backup failures.</li>
-</ul>
-<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 6</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-06-000049</guid>
-      <pubDate>Thu, 06 Aug 2026 04:25:09 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Thursday Morning</h2>
-<p><strong>46 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again, carried over from Wednesday's sweeps. Green count holds at 46; the rest of the fleet is healthy.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged across all of Wednesday's cycles; investigate before the next Watchdog run and check for a shared dependency with earlier sync or backup failures.</li>
-</ul>
-<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 5</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-200022</guid>
-      <pubDate>Thu, 06 Aug 2026 00:44:33 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Wednesday Evening</h2>
-<p><strong>46 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again, carried over from the morning, midday, and afternoon sweeps. Green count rose from 45 to 46 this cycle; the rest of the fleet is healthy.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged all day; investigate before the next Watchdog cycle and check for a shared dependency with earlier sync or backup failures.</li>
-</ul>
-<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 5</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-160014</guid>
-      <pubDate>Wed, 05 Aug 2026 20:22:32 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Wednesday Afternoon</h2>
-<p><strong>45 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again this cycle, carried over from the morning and midday sweeps. The rest of the fleet, 45 items, is healthy.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged all day; investigate before the next Watchdog cycle and check for a shared dependency with earlier sync or backup failures.</li>
-</ul>
-<h3>&#x1F7E2; Green — 45 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
-</ul>]]></description>
-    </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 5</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-120003</guid>
-      <pubDate>Wed, 05 Aug 2026 16:23:49 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Wednesday Midday</h2>
-<p><strong>45 green, 1 red.</strong> Up Ahead Sync remains red — last run failed again this cycle, carried over from the morning sweep. The rest of the fleet, 45 items, is healthy.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>Up Ahead Sync</strong> (ongoing) — Last run failed. Same job flagged this morning; investigate before the next Watchdog cycle and check for a shared dependency with earlier sync or backup failures.</li>
-</ul>
-<h3>&#x1F7E2; Green — 45 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
 </ul>]]></description>
     </item>
 <item>
@@ -434,24 +375,6 @@
 </ul>]]></description>
     </item>
 <item>
-      <title>CrossWire: Sentinel Watchdog — August 5</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-05-080041</guid>
-      <pubDate>Wed, 05 Aug 2026 12:21:17 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Wednesday Morning</h2>
-<p><strong>45 green, 1 red.</strong> Up Ahead Sync flipped red this cycle — a new failure. The rest of the fleet, 45 items, is healthy.</p>
-<h3>&#x1F534; Red — 1 Failing Job</h3>
-<ul>
-  <li><strong>Up Ahead Sync</strong> (new) — Last run failed. Investigate before the next Watchdog cycle; check for a shared dependency with earlier sync or backup failures.</li>
-</ul>
-<h3>&#x1F7E2; Green — 45 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Resolve the Up Ahead Sync failure before the next Watchdog cycle.</li>
-</ul>]]></description>
-    </item>
-<item>
       <title>CrossWire: Hermes — Daily Brief, August 4</title>
       <guid isPermaLink="false">crosswire-hermes-daily-2026-08-04</guid>
       <pubDate>Tue, 04 Aug 2026 14:03:29 GMT</pubDate>
@@ -545,25 +468,5 @@
   <li><strong>JP Finlay:</strong> he said the first real vertical passing of camp showed up today and Van Jefferson looked fast. <a href="https://x.com/JPFinlayNBCS/status/2084627898254692648">Link</a></li>
 </ul>]]></description>
     </item>
-<item>
-      <title>CrossWire: Sentinel Watchdog — August 4</title>
-      <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-04-000053</guid>
-      <pubDate>Tue, 04 Aug 2026 04:23:14 GMT</pubDate>
-      <link>https://kanan.taila81309.ts.net/crosswire/</link>
-      <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Tuesday Morning</h2>
-<p><strong>44 green, 2 red.</strong> Two jobs flipped red this cycle — Mail Call Sync and Switchboard — both new failures. The rest of the fleet, 44 items, is healthy.</p>
-<h3>&#x1F534; Red — 2 Failing Jobs</h3>
-<ul>
-  <li><strong>Mail Call Sync</strong> (new) — Last run failed. The Paige invite monitor is implicated; investigate before calendar forwarding quietly piles up.</li>
-  <li><strong>Switchboard</strong> (new) — Last run failed. Check whether it shares a dependency with the Mail Call failure.</li>
-</ul>
-<h3>&#x1F7E2; Green — 44 Items Healthy</h3>
-<p>All other managed jobs, scripts, and services are healthy.</p>
-<h3>Recommended Actions</h3>
-<ul>
-  <li>Investigate the Paige invite monitor failure before calendar forwarding quietly piles up.</li>
-  <li>Consolidate Mail Call to one canonical cron definition and remove the duplicate job drift.</li>
-</ul>]]></description>
-    </item>
-  </channel>
+</channel>
 </rss>
