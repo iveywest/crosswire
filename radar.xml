@@ -4,9 +4,27 @@
     <title>CrossWire</title>
     <description>Curated briefings and reports from MOCR — Hermes, Tech, Commanders, and system reports</description>
     <link>https://kanan.taila81309.ts.net/crosswire/</link>
-    <lastBuildDate>Sat, 08 Aug 2026 04:26:51 GMT</lastBuildDate>
-    <pubDate>Sat, 08 Aug 2026 04:26:51 GMT</pubDate>
+    <lastBuildDate>Sat, 08 Aug 2026 08:23:15 GMT</lastBuildDate>
+    <pubDate>Sat, 08 Aug 2026 08:23:15 GMT</pubDate>
     <language>en-us</language>
+<item>
+  <title>CrossWire: Sentinel Watchdog — Aug 8</title>
+  <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-08-040041</guid>
+  <pubDate>Sat, 08 Aug 2026 08:23:15 GMT</pubDate>
+  <link>https://kanan.taila81309.ts.net/crosswire/</link>
+  <description><![CDATA[<h2>&#x1F534; Sentinel Watchdog — Saturday Early Morning</h2>
+<p><strong>46 green, 1 red.</strong> One failing job this cycle: CrossWire: Hermes Local Edition. The CrossWire (daily) job that was red all week is no longer flagged; the rest of the fleet (46 items) is healthy.</p>
+<h3>&#x1F534; Red — 1 Failing Job</h3>
+<ul>
+  <li><strong>CrossWire: Hermes Local Edition</strong> (ongoing) — Last run failed. Investigate before the next Watchdog cycle.</li>
+</ul>
+<h3>&#x1F7E2; Green — 46 Items Healthy</h3>
+<p>All other managed jobs, scripts, and services are healthy.</p>
+<h3>Recommended Actions</h3>
+<ul>
+  <li>Resolve the active red item before the next Watchdog cycle: CrossWire: Hermes Local Edition.</li>
+</ul>]]></description>
+</item>
 <item>
   <title>CrossWire: Sentinel Watchdog — Aug 8</title>
   <guid isPermaLink="false">crosswire-report-sentinel-watchdog-2026-08-08-000015</guid>
